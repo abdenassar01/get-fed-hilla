@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="setting up tailwind css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/themes/get-fed/theme.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/themes/get-fed/theme.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,11 +77,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685875259703</updated>
-      <workItem from="1685875262516" duration="725000" />
+      <workItem from="1685875262516" duration="1797000" />
     </task>
+    <task id="LOCAL-00001" summary="setting up tailwind css">
+      <created>1685876343992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685876343992</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setting up tailwind css" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting up tailwind css" />
   </component>
 </project>
