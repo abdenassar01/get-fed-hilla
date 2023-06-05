@@ -1,6 +1,7 @@
 package com.example.application.endpoints.helloreact.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
+@Table(name="MEAL")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -16,7 +18,7 @@ import java.util.List;
 public class Meal {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -25,14 +27,13 @@ public class Meal {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true)
+    @OneToMany(mappedBy = "meal", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Size(min=1, message="You must choose at least 1 ingredient")
     private List<Ingredient> ingredients;
 
-    @ManyToOne
-    @JoinColumn(name = "meal_id", referencedColumnName = "id")
-    private Order order;
+    @ManyToMany
+    private List<Order> order;
 
 }

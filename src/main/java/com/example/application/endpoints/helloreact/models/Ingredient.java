@@ -15,7 +15,7 @@ public class Ingredient {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String label;
@@ -23,6 +23,6 @@ public class Ingredient {
     private Double price;
 
     @ManyToOne
-    @JoinColumn(name = "meal_id", referencedColumnName = "id")
+//    @JoinColumn(name = "meal_id", referencedColumnName = "id")
     private Meal meal;
 }

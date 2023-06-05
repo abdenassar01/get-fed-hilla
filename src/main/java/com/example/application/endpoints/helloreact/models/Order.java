@@ -11,7 +11,7 @@ import lombok.Setter;
 import java.util.Date;
 import java.util.List;
 
-@Entity(name = "order")
+@Entity(name = "orders")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,7 +19,7 @@ import java.util.List;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private OrderStatus status;
@@ -36,6 +36,6 @@ public class Order {
     @ManyToMany
     private List<Drink> drinks;
 
-    @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true)
+    @ManyToMany
     private List<Meal> meals;
 }
