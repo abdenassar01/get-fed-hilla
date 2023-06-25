@@ -33,7 +33,7 @@ public class Order {
     @JoinColumn(name = "delivery_id", referencedColumnName = "id")
     private Delivery delivery;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "drink")
     private List<Drink> drinks;
 
     @ManyToMany
