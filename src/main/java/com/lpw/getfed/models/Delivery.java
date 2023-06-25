@@ -1,6 +1,5 @@
-package com.example.application.endpoints.helloreact.models;
+package com.lpw.getfed.models;
 
-import com.example.application.endpoints.helloreact.models.Order;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

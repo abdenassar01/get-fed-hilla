@@ -18,8 +18,8 @@ export default function HelloReactView() {
         />
         <Button
           onClick={async () => {
-            const serverResponse = await HelloReactEndpoint.sayHello(name);
-            Notification.show(serverResponse);
+            const data = await HelloReactEndpoint.sayHello();
+            console.log(data)
           }}
         >
           Say hello

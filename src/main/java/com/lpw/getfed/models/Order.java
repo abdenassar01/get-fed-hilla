@@ -1,6 +1,6 @@
-package com.example.application.endpoints.helloreact.models;
+package com.lpw.getfed.models;
 
-import com.example.application.endpoints.helloreact.models.enums.OrderStatus;
+import com.lpw.getfed.models.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

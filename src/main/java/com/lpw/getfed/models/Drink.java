@@ -1,4 +1,5 @@
-package com.example.application.endpoints.helloreact.models;
+package com.lpw.getfed.models;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,25 +9,24 @@ import lombok.Setter;
 
 import java.util.List;
 
+@Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name="CATEGORY")
-public class Category {
-
+@AllArgsConstructor
+public class Drink {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 100)
+    @Column(length = 255)
     private String label;
 
-    @Column(length = 50)
-    private String icon;
+    private String image;
 
-    @OneToMany(mappedBy = "category")
-    private List<Meal> meals;
+    private Double price;
+
+    @ManyToMany
+    private List<Order> orders;
 }

@@ -1,4 +1,4 @@
-package com.example.application.endpoints.helloreact.models.enums;
+package com.lpw.getfed.models.enums;
 
 public enum OrderStatus {
     AWAITING,

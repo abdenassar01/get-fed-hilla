@@ -1,4 +1,4 @@
-package com.example.application.endpoints.helloreact.models;
+package com.lpw.getfed.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
