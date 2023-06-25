@@ -1,11 +1,14 @@
 package com.lpw.getfed;
 
+import com.lpw.getfed.models.Category;
 import com.lpw.getfed.models.Employee;
 import com.lpw.getfed.repositories.EmployeeRepository;
+import com.lpw.getfed.services.CategoryService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
 import dev.hilla.Nonnull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -13,16 +16,20 @@ import java.util.List;
 @AnonymousAllowed
 public class HelloReactEndpoint {
 
-    private final EmployeeRepository repo;
-
+    private final CategoryService service;
     @Autowired
-    public HelloReactEndpoint(EmployeeRepository repo) {
-        this.repo = repo;
+    public HelloReactEndpoint(CategoryService service) {
+        this.service = service;
     }
 
 
     @Nonnull
-    public List<Employee> sayHello() {
-        return repo.findAll();
+    public ResponseEntity<List<Category>> sayHello() {
+        return service.getCategories();
+    }
+
+    @Nonnull
+    public ResponseEntity<Category> addCategory(Category category) {
+        return service.addCategory(category);
     }
 }

@@ -18,6 +18,7 @@ public class Drink {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "drink_id")
     private Long id;
 
     @Column(length = 255)
@@ -27,6 +28,6 @@ public class Drink {
 
     private Double price;
 
-    @ManyToMany
+    @ManyToMany()
     private List<Order> orders;
 }
