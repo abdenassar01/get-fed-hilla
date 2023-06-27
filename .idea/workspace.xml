@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/DeliveryServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/DrinkServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/EmployeeServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/DrinkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/DrinkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DeliveryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DrinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DrinkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +101,8 @@
       <workItem from="1687705596193" duration="3955000" />
       <workItem from="1687732608601" duration="3145000" />
       <workItem from="1687735956065" duration="878000" />
-      <workItem from="1687857225416" duration="3423000" />
+      <workItem from="1687857225416" duration="4975000" />
+      <workItem from="1687875392980" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -159,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687736828406</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding sevices implementations for delivery, drink, employee and ingredient">
+      <created>1687861599925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687861599925</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +174,7 @@
     <MESSAGE value="adding annotations to repos" />
     <MESSAGE value="adding service interfaces" />
     <MESSAGE value="adding category service and test endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding category service and test endpoints" />
+    <MESSAGE value="adding sevices implementations for delivery, drink, employee and ingredient" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding sevices implementations for delivery, drink, employee and ingredient" />
   </component>
 </project>
