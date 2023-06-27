@@ -3,6 +3,7 @@ import { Notification } from '@hilla/react-components/Notification.js';
 import { TextField } from '@hilla/react-components/TextField.js';
 import { HelloReactEndpoint } from 'Frontend/generated/endpoints.js';
 import { useState } from 'react';
+import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 
 export default function HelloReactView() {
   const [name, setName] = useState('');
@@ -18,6 +19,16 @@ export default function HelloReactView() {
         />
         <Button
           onClick={async () => {
+              const cat: Category = {
+                  icon: "MyIcon",
+                  label: "breakfast",
+                  meals: [
+                      {
+                          description: "my first meal desc",
+                          title: "meal title"
+                      }
+                  ]
+              }
             const data = await HelloReactEndpoint.sayHello();
             console.log(data)
           }}

@@ -19,6 +19,7 @@ public class Meal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "meal_id")
     private Long id;
 
     private String title;

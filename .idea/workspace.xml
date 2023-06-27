@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix database structure">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/DeliveryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/about/AboutView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/about/AboutView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/helloreact/HelloReactView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/helloreact/HelloReactView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/HelloReactEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/HelloReactEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Delivery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/application/endpoints/helloreact/models/enums/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/enums/OrderStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding meal service implementation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +16,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -59,27 +48,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
-    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;services&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="get-fed" />
@@ -99,7 +95,12 @@
       <updated>1685875259703</updated>
       <workItem from="1685875262516" duration="1797000" />
       <workItem from="1686002979533" duration="4660000" />
-      <workItem from="1687694414322" duration="1067000" />
+      <workItem from="1687694414322" duration="2359000" />
+      <workItem from="1687705596193" duration="3955000" />
+      <workItem from="1687732608601" duration="3145000" />
+      <workItem from="1687735956065" duration="878000" />
+      <workItem from="1687857225416" duration="4975000" />
+      <workItem from="1687875392980" duration="996000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -122,7 +123,49 @@
       <option name="project" value="LOCAL" />
       <updated>1686007501462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactoring package structure and adding repos">
+      <created>1687695661682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687695661682</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adding annotations to repos">
+      <created>1687695765228</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687695765228</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adding service interfaces">
+      <created>1687708880814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687708880814</updated>
+    </task>
+    <task id="LOCAL-00007" summary="adding category service and test endpoints">
+      <created>1687736828406</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687736828406</updated>
+    </task>
+    <task id="LOCAL-00008" summary="adding sevices implementations for delivery, drink, employee and ingredient">
+      <created>1687861599925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687861599925</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adding meal service implementation">
+      <created>1687876304668</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687876304668</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +175,12 @@
     <MESSAGE value="setting up tailwind css" />
     <MESSAGE value="adding required modals" />
     <MESSAGE value="fix database structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix database structure" />
+    <MESSAGE value="refactoring package structure and adding repos" />
+    <MESSAGE value="adding annotations to repos" />
+    <MESSAGE value="adding service interfaces" />
+    <MESSAGE value="adding category service and test endpoints" />
+    <MESSAGE value="adding sevices implementations for delivery, drink, employee and ingredient" />
+    <MESSAGE value="adding meal service implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding meal service implementation" />
   </component>
 </project>

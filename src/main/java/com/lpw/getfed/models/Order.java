@@ -20,6 +20,7 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "order_id")
     private Long id;
 
     private OrderStatus status;
@@ -33,9 +34,9 @@ public class Order {
     @JoinColumn(name = "delivery_id", referencedColumnName = "id")
     private Delivery delivery;
 
-    @ManyToMany
+    @ManyToMany()
     private List<Drink> drinks;
 
-    @ManyToMany
+    @ManyToMany()
     private List<Meal> meals;
 }
