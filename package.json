@@ -15,6 +15,7 @@
     "@hilla/generator-typescript-utils": "2.0.5",
     "@hilla/react-components": "2.0.3",
     "@polymer/polymer": "3.5.1",
+    "@tailwindcss/typography": "^0.5.9",
     "@vaadin-component-factory/vcf-nav": "1.1.0",
     "@vaadin/bundles": "24.0.3",
     "@vaadin/common-frontend": "0.0.18",
@@ -27,10 +28,12 @@
     "@vaadin/vaadin-material-styles": "24.0.3",
     "@vaadin/vaadin-themable-mixin": "24.0.3",
     "classnames": "^2.3.2",
+    "clsx": "^1.2.1",
     "construct-style-sheets-polyfill": "3.1.0",
     "lit": "2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
@@ -85,7 +88,10 @@
     "@vaadin/polymer-legacy-adapter": "$@vaadin/polymer-legacy-adapter",
     "@vaadin/vaadin-themable-mixin": "$@vaadin/vaadin-themable-mixin",
     "@vaadin/vaadin-lumo-styles": "$@vaadin/vaadin-lumo-styles",
-    "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles"
+    "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
+    "clsx": "$clsx",
+    "react-icons": "$react-icons",
+    "@tailwindcss/typography": "$@tailwindcss/typography"
   },
   "vaadin": {
     "dependencies": {
@@ -130,6 +136,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "4d7b3842f19bfba676d0b8f26dc90876e870c822d6dc67bbecc17d776e7099a3"
+    "hash": "4b00a8c06f771becc5849471e1bb8c697c571d78054bac4261d6abf6a331478b"
   }
 }

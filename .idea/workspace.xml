@@ -4,24 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fixing logger">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/configs/SpringFoxConfig.java" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding frontend components and setting up frontend">
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-LightItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-LightItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Black.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BlackItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BlackItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BoldItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BoldItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Book.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Book.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BookItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BookItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-MediumItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-MediumItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/NovaScript.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/NovaScript.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/background.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/hero-section-blob.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/separator.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/services/service-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/services/service-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/services/service-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/logo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/dish-card/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/footer/footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/footer/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/header-title/header-title.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/header-title/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/header/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utils/classnames.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/category/category.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/category/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/home/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/home/sections/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/home/sections/special-dishes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/menu/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/menu/menu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/helloreact/HelloReactView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/helloreact/HelloReactView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/DeliveryEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/DeliveryEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/DrinkEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/DrinkEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/EmployeeEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/EmployeeEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/IngredientEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/IngredientEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/MealEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/MealEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/OrderEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/OrderEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,34 +105,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed-hilla/frontend/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
+    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/assets/images" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/frontend/common" />
+      <recent name="$PROJECT_DIR$/frontend/views" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -125,7 +174,7 @@
       <workItem from="1687857225416" duration="4975000" />
       <workItem from="1687875392980" duration="996000" />
       <workItem from="1687949109590" duration="13639000" />
-      <workItem from="1687967048145" duration="2296000" />
+      <workItem from="1687967048145" duration="8300000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -204,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687957549075</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="testing endpoints and fix errors">
+      <created>1687971190215</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1687971190215</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +278,8 @@
     <MESSAGE value="adding meal service implementation" />
     <MESSAGE value="adding all endpoints" />
     <MESSAGE value="fixing logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing logger" />
+    <MESSAGE value="testing endpoints and fix errors" />
+    <MESSAGE value="adding frontend components and setting up frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding frontend components and setting up frontend" />
   </component>
 </project>
