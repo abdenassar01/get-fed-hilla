@@ -27,6 +27,10 @@ public class MealEndpoint {
         this.service = service;
     }
 
+    public ResponseEntity<Meal> addMeal(Meal meal){
+        return service.addMeal(meal);
+    }
+
     public ResponseEntity<Meal> getMealById(Long id){
         logger.info("getting meal " + id + " details");
         return service.getMealById(id);
@@ -54,7 +58,7 @@ public class MealEndpoint {
 
     public ResponseEntity<Page<Meal>> getMealByCategory(Category category){
         logger.info("getting page " + 1 + " by category " + category.getLabel());
-        return service.getMealByCategory(category, PageRequest.of(1, 12));
+        return service.getMealByCategory(category, PageRequest.of(0, 12));
     }
 
     public ResponseEntity<List<Meal>> searchMeal(String query){

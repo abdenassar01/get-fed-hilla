@@ -4,6 +4,7 @@ import { lazy } from 'react';
 import { createBrowserRouter, IndexRouteObject, NonIndexRouteObject, useMatches } from 'react-router-dom';
 
 const AboutView = lazy(async () => import('Frontend/views/about/AboutView.js'));
+
 export type MenuProps = Readonly<{
   icon?: string;
   title?: string;

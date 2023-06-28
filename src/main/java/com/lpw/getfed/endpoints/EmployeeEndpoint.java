@@ -51,7 +51,7 @@ public class EmployeeEndpoint {
 
     public ResponseEntity<Page<Employee>> getPageEmployees(){
         logger.info("getting the first page of employees");
-        return service.getPageEmployees(PageRequest.of(1, 10));
+        return service.getPageEmployees(PageRequest.of(0, 10));
     }
 
 }

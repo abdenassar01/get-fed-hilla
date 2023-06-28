@@ -11,6 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 
+import java.util.Objects;
+
 @Endpoint
 @AnonymousAllowed
 public class DrinkEndpoint {
@@ -49,13 +51,15 @@ public class DrinkEndpoint {
         return service.updateDrink(id, drink);
     }
 
-    public ResponseEntity<Page<Drink>> searchDrink(String query, int page, int size){
+    public ResponseEntity<Page<Drink>> searchDrinkPaging(String query, int page, int size){
         logger.info("searching with value: " + query);
-        return service.searchDrink(query, PageRequest.of(page, size));
+        ResponseEntity<Page<Drink>> data = service.searchDrink(query, PageRequest.of(page, size));
+        System.out.println(Objects.requireNonNull(data.getBody()).getTotalElements());
+        return data;
     }
 
-    public ResponseEntity<Page<Drink>> searchDrink(String query){
-        logger.info("searching with value: " + query);
-        return service.searchDrink(query, PageRequest.of(1, 10));
-    }
+//    public ResponseEntity<Page<Drink>> searchDrink(String query){
+//        logger.info("searching with value: " + query);
+//        return service.searchDrink(query, PageRequest.of(1, 10));
+//    }
 }

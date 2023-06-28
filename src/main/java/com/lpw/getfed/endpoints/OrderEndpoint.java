@@ -32,7 +32,7 @@ public class OrderEndpoint {
 
     public ResponseEntity<Page<Order>> getRestorantOrders(){
         logger.info("getting page " + 1 + " of orders");
-        return service.getRestorantOrders(PageRequest.of(1, 12));
+        return service.getRestorantOrders(PageRequest.of(0, 12));
     }
 
     public ResponseEntity<Order> getOrderById(Long id){
@@ -67,6 +67,6 @@ public class OrderEndpoint {
 
     public ResponseEntity<Page<Order>> getOrdersByDelivery(Delivery delivery){
         logger.info("getting first page of orders by the delivery " + delivery.getId());
-        return service.getOrdersByDelivery(delivery, PageRequest.of(1, 12));
+        return service.getOrdersByDelivery(delivery, PageRequest.of(0, 12));
     }
 }

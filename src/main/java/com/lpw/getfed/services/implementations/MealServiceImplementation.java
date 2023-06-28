@@ -23,6 +23,11 @@ public class MealServiceImplementation implements MealService {
     }
 
     @Override
+    public ResponseEntity<Meal> addMeal(Meal meal) {
+        return ResponseEntity.ok(repository.save(meal));
+    }
+
+    @Override
     public ResponseEntity<Meal> getMealById(Long id) {
         return ResponseEntity.ok(
                 repository.findById(id).orElseThrow(

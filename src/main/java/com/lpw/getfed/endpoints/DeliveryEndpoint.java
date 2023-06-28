@@ -61,6 +61,6 @@ public class DeliveryEndpoint {
 
     public ResponseEntity<Page<Delivery>> getDeliveryOptions(){
         logger.info("getting a page of delivery options");
-        return service.getDeliveryOptions(PageRequest.of(1, 20));
+        return service.getDeliveryOptions(PageRequest.of(0, 20));
     }
 }

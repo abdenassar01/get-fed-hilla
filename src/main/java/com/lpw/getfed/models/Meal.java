@@ -1,5 +1,6 @@
 package com.lpw.getfed.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -35,6 +36,7 @@ public class Meal {
     private List<Ingredient> ingredients;
 
     @ManyToMany
+    @JsonIgnore
     private List<Order> order;
 
 }

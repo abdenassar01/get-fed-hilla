@@ -34,7 +34,7 @@ public class IngredientEndpoint {
 
     public ResponseEntity<Page<Ingredient>> getAll(){
         logger.info("getting page " + 1 + " of ingredients");
-        return service.getAll(PageRequest.of(1, 20));
+        return service.getAll(PageRequest.of(0, 20));
     }
 
     public ResponseEntity<Ingredient> addIngrediant(Ingredient ingredient){

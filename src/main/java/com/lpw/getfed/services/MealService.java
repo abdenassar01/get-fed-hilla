@@ -13,6 +13,7 @@ import java.util.List;
 @Qualifier("meal_service")
 public interface MealService {
 
+    ResponseEntity<Meal> addMeal(Meal meal);
     ResponseEntity<Meal> getMealById(Long id);
     ResponseEntity<Meal> removeMealById(Long id);
     ResponseEntity<String> removeMeal(Meal meal);

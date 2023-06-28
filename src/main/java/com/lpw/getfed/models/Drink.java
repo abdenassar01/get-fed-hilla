@@ -1,6 +1,7 @@
 package com.lpw.getfed.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,5 +30,6 @@ public class Drink {
     private Double price;
 
     @ManyToMany()
+    @JsonIgnore
     private List<Order> orders;
 }
