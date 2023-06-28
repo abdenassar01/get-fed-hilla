@@ -55,4 +55,10 @@ public class IngrediantServiceImplementation implements IngrediantService {
         mealRepository.findById(meal.getId()).orElseThrow(() -> new IllegalStateException("can't find meal with id:" + meal.getId()));
         return ResponseEntity.ok(repository.findAllByMeal(meal));
     }
+
+    @Override
+    public ResponseEntity<List<Ingredient>> getIngrediantsByMealId(Long id) {
+        Meal meal = mealRepository.findById(id).orElseThrow(() -> new IllegalStateException("can't find meal with id:" + id));
+        return ResponseEntity.ok(repository.findAllByMeal(meal));
+    }
 }
