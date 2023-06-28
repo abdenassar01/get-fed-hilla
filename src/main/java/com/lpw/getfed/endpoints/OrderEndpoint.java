@@ -5,19 +5,18 @@ import com.lpw.getfed.models.Order;
 import com.lpw.getfed.services.OrderService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 
-import java.util.logging.Logger;
-
 @Endpoint
 @AnonymousAllowed
 public class OrderEndpoint {
 
-    Logger logger = (Logger) LoggerFactory.getLogger(OrderEndpoint.class);
+    Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final OrderService service;
 
@@ -47,12 +46,12 @@ public class OrderEndpoint {
     }
 
     public ResponseEntity<String> deleteOrder(Order order){
-        logger.warning("deleting order " + order.getId());
+        logger.warn("deleting order " + order.getId());
         return service.deleteOrder(order);
     }
 
     public ResponseEntity<Order> deleteOrderById(Long id){
-        logger.warning("deleting order " + id);
+        logger.warn("deleting order " + id);
         return service.deleteOrderById(id);
     }
 

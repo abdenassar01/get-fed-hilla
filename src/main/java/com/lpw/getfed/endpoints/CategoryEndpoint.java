@@ -4,17 +4,17 @@ import com.lpw.getfed.models.Category;
 import com.lpw.getfed.services.CategoryService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @Endpoint
 @AnonymousAllowed
 public class CategoryEndpoint {
-    Logger logger = (Logger) LoggerFactory.getLogger(CategoryEndpoint.class);
+    Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final CategoryService service;
 
@@ -29,12 +29,12 @@ public class CategoryEndpoint {
     }
 
     public ResponseEntity<String> removeCategory(Category category){
-        logger.warning("removed category named: " + category.getLabel());
+        logger.warn("removed category named: " + category.getLabel());
         return service.removeCategory(category);
     }
 
     public ResponseEntity<Category> removeCategoryById(Long id){
-        logger.warning("removed category by id: " + id);
+        logger.warn("removed category by id: " + id);
         return service.removeCategoryById(id);
     }
 

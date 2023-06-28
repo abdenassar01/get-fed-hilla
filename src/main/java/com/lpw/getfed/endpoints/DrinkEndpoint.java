@@ -4,19 +4,18 @@ import com.lpw.getfed.models.Drink;
 import com.lpw.getfed.services.DrinkService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 
-import java.util.logging.Logger;
-
 @Endpoint
 @AnonymousAllowed
 public class DrinkEndpoint {
 
-    Logger logger = (Logger) LoggerFactory.getLogger(DrinkEndpoint.class);
+    Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final DrinkService service;
 
@@ -36,12 +35,12 @@ public class DrinkEndpoint {
     }
 
     public ResponseEntity<Drink> removeDrinkById(Long id){
-        logger.warning("deleting a drink item with id: " + id);
+        logger.warn("deleting a drink item with id: " + id);
         return service.removeDrinkById(id);
     }
 
     public ResponseEntity<String> removeDrink(Drink drink){
-        logger.warning("removing drink item with object " + drink.getLabel());
+        logger.warn("removing drink item with object " + drink.getLabel());
         return service.removeDrink(drink);
     }
 

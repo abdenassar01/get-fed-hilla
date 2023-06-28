@@ -4,20 +4,18 @@ import com.lpw.getfed.models.Employee;
 import com.lpw.getfed.services.EmployeeService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-
-import java.util.logging.Logger;
 
 @Endpoint
 @AnonymousAllowed
 public class EmployeeEndpoint {
 
-    Logger logger = (Logger) LoggerFactory.getLogger(EmployeeEndpoint.class);
+    Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final EmployeeService service;
 
@@ -32,12 +30,12 @@ public class EmployeeEndpoint {
     }
 
     public ResponseEntity<String> removeEmployee(Employee employee){
-        logger.warning("deleting employee " + employee.getUsername());
+        logger.warn("deleting employee " + employee.getUsername());
         return service.removeEmployee(employee);
     }
 
     public ResponseEntity<Employee> removeEmployeeById(Long id){
-        logger.warning("deleting employee: " + id);
+        logger.warn("deleting employee: " + id);
         return service.removeEmployeeById(id);
     }
 

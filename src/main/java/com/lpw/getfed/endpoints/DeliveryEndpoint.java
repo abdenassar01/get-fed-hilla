@@ -4,19 +4,18 @@ import com.lpw.getfed.models.Delivery;
 import com.lpw.getfed.services.DeliveryService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 
-import java.util.logging.Logger;
-
 @Endpoint
 @AnonymousAllowed
 public class DeliveryEndpoint {
 
-    Logger logger = (Logger) LoggerFactory.getLogger(DeliveryEndpoint.class);
+    Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final DeliveryService service;
 
@@ -36,7 +35,7 @@ public class DeliveryEndpoint {
     }
 
     public ResponseEntity<String> removeDelivery(Delivery delivery){
-        logger.warning("deleting a delivery item: " + delivery.getId());
+        logger.warn("deleting a delivery item: " + delivery.getId());
         return service.removeDelivery(delivery);
     }
 
@@ -46,7 +45,7 @@ public class DeliveryEndpoint {
     }
 
     public ResponseEntity<Delivery> removeDeliveryById(Long id){
-        logger.warning("deleting a delivery item: " + id);
+        logger.warn("deleting a delivery item: " + id);
         return service.removeDeliveryById(id);
     }
 

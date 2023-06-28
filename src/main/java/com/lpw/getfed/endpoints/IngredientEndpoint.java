@@ -5,20 +5,20 @@ import com.lpw.getfed.models.Meal;
 import com.lpw.getfed.services.IngrediantService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @Endpoint
 @AnonymousAllowed
 public class IngredientEndpoint {
 
-    Logger logger = (Logger) LoggerFactory.getLogger(IngredientEndpoint.class);
+    Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final IngrediantService service;
 
@@ -43,12 +43,12 @@ public class IngredientEndpoint {
     }
 
     public ResponseEntity<String> removeIngrediant(Ingredient ingredient){
-        logger.warning("removing ingredient: " + ingredient.getId());
+        logger.warn("removing ingredient: " + ingredient.getId());
         return service.removeIngrediant(ingredient);
     }
 
     public ResponseEntity<Ingredient> removeIngrediantById(Long id){
-        logger.warning("removing ingredient by id: " + id);
+        logger.warn("removing ingredient by id: " + id);
         return service.removeIngrediantById(id);
     }
 
