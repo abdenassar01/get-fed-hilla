@@ -1,10 +1,10 @@
-import HelloReactView from 'Frontend/views/helloreact/HelloReactView.js';
 import MainLayout from 'Frontend/views/MainLayout.js';
 import { lazy } from 'react';
 import { createBrowserRouter, IndexRouteObject, NonIndexRouteObject, useMatches } from 'react-router-dom';
-import {Home} from "Frontend/views/index.js";
+import { Home } from "Frontend/views/index.js";
 
-const AboutView = lazy(async () => import('Frontend/views/about/AboutView.js'));
+const CategoryDetails = lazy(async () => import('Frontend/views/category/category-details.js'));
+const MenuLayout = lazy(async () => import('Frontend/views/menu/menu-layout.js'));
 
 export type MenuProps = Readonly<{
   icon?: string;
@@ -35,8 +35,16 @@ export const routes: readonly ViewRouteObject[] = [
     element: <MainLayout />,
     handle: { icon: 'null', title: 'Main' },
     children: [
-      { path: '/', element: <Home />, handle: { icon: 'globe-solid', title: 'Hello React' } },
-      { path: '/about', element: <AboutView />, handle: { icon: 'file', title: 'About' } },
+      { path: '/', element: <Home />, handle: { icon: 'globe-solid', title: 'Get Fed | order foods online' } },
+      {
+        path: '/menu',
+        element: <MenuLayout />,
+        handle: {  },
+        children: [
+          {path: '/menu/:category', element: <CategoryDetails />}
+        ]
+      },
+      // { path: '/about', element: <AboutView />, handle: { icon: 'file', title: 'About' } },
     ],
   },
 ];

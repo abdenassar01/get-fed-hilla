@@ -5,64 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding frontend components and setting up frontend">
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-LightItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularSpotifyText-LightItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Black.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BlackItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BlackItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BoldItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Book.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Book.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BookItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-BookItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-MediumItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/CircularStd-MediumItalic.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/NovaScript.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/fonts/NovaScript.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/background.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/hero-section-blob.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/separator.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/services/service-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/services/service-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/services/service-3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/icons/star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/logo.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/images/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/dish-card/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/footer/footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/footer/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/header-title/header-title.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/header-title/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/header/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/utils/classnames.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/category/category.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/category/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/home/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/home/sections/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/home/sections/special-dishes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/menu/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/menu/menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/category/category.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/category/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
     "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -174,7 +127,8 @@
       <workItem from="1687857225416" duration="4975000" />
       <workItem from="1687875392980" duration="996000" />
       <workItem from="1687949109590" duration="13639000" />
-      <workItem from="1687967048145" duration="8300000" />
+      <workItem from="1687967048145" duration="8663000" />
+      <workItem from="1687995380566" duration="2346000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -260,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687971190215</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="adding frontend components and setting up frontend">
+      <created>1687976893652</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1687976893652</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,5 +242,9 @@
     <MESSAGE value="testing endpoints and fix errors" />
     <MESSAGE value="adding frontend components and setting up frontend" />
     <option name="LAST_COMMIT_MESSAGE" value="adding frontend components and setting up frontend" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

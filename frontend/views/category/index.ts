@@ -1,1 +1,1 @@
-export {Category} from "./category.js"
+export * from "./category-details.js"

@@ -13,7 +13,7 @@ type MenuRoute = ViewRouteObject &
 export default function MenuOnLeftLayout() {
 
   return (
-     <div className="bg-[url('https://i.imgur.com/o1oOjuM.png')]">
+     <div>
          <Header />
           <Suspense fallback={<Placeholder />}>
             <Outlet />
