@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding terms of use other fixes">
-      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/toggle-closed.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/toggle-open.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/image-shape-maker/image-shape-maker.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/image-shape-maker/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/text-toggle/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/text-toggle/text-toggle.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding faq and required components">
+      <change afterPath="$PROJECT_DIR$/frontend/views/meal-details/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/meal-details/meal-details.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/about/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/about/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +142,7 @@
       <workItem from="1688118110622" duration="6533000" />
       <workItem from="1688135151973" duration="432000" />
       <workItem from="1688135590233" duration="17033000" />
-      <workItem from="1688161528152" duration="1819000" />
+      <workItem from="1688161528152" duration="3006000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -309,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688162369993</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adding faq and required components">
+      <created>1688163834987</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1688163834987</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +354,8 @@
     <MESSAGE value="fix header + adding about page" />
     <MESSAGE value="adding rich text parser component" />
     <MESSAGE value="adding terms of use other fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding terms of use other fixes" />
+    <MESSAGE value="adding faq and required components" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding faq and required components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

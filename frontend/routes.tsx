@@ -6,7 +6,7 @@ import {
   NonIndexRouteObject,
   useMatches,
 } from "react-router-dom";
-import { Home } from "Frontend/views/index.js";
+import { Home, Meal, MealDetails } from "Frontend/views/index.js";
 
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
@@ -60,6 +60,12 @@ export const routes: readonly ViewRouteObject[] = [
         element: <MenuLayout />,
         handle: {},
         children: [{ path: "/menu/:category", element: <CategoryDetails /> }],
+      },
+      {
+        path: "/meal",
+        element: <Meal />,
+        handle: {},
+        children: [{ path: "/meal/:meal", element: <MealDetails /> }],
       },
     ],
   },
