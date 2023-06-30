@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="setting up menu page">
-      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/dinner.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/icon/icon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/icon/index.ts" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix icon component">
+      <change afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/utils/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +136,7 @@
       <workItem from="1687995380566" duration="2346000" />
       <workItem from="1687997761776" duration="199000" />
       <workItem from="1688057520289" duration="8445000" />
-      <workItem from="1688118110622" duration="1563000" />
+      <workItem from="1688118110622" duration="4867000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -233,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687997848333</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix icon component">
+      <created>1688119815365</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688119815365</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +275,8 @@
     <MESSAGE value="testing endpoints and fix errors" />
     <MESSAGE value="adding frontend components and setting up frontend" />
     <MESSAGE value="setting up menu page" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up menu page" />
+    <MESSAGE value="fix icon component" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix icon component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
