@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { FaCartPlus } from "react-icons/fa";
 import { Button, StartRating } from "Frontend/common/index.js";
 
@@ -42,17 +40,12 @@ export function DishCard({
         </div>
       </div>
       <div className="flex mt-[20px] justify-end items-center gap-[10px] w-[100%]">
-        {/*<Link*/}
-        {/*  to={}*/}
-        {/*  className="  border-b-[transparent] border-b-[2px] hover:border-b-main"*/}
-        {/*></Link>*/}
         <Button
           text="see details"
           link={`/meal/${id}`}
           theme="tertiary"
           className=""
         />
-
         <button className="px-[18px] py-[3px] transition-all ease-in delay-75 flex items-center border-[1px] border-main gap-[4px] bg-main rounded-[50px] text-white hover:text-main hover:bg-[transparent]">
           <FaCartPlus size={24} />
           add to cart
