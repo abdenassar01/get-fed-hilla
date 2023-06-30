@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding terms of use other fixes">
+      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/toggle-closed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/toggle-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/image-shape-maker/image-shape-maker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/image-shape-maker/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/text-toggle/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/text-toggle/text-toggle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header-title/header-title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header-title/header-title.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/utils/use-fetch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/use-fetch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/about/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/about/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/helloreact/HelloReactView.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/sections/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/sections/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,39 +59,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed-hilla/frontend/assets/icons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
+    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/assets/icons" />
       <recent name="$PROJECT_DIR$/frontend/common" />
       <recent name="$PROJECT_DIR$/frontend/assets/images" />
       <recent name="$PROJECT_DIR$/frontend" />
@@ -149,7 +146,7 @@
       <workItem from="1688118110622" duration="6533000" />
       <workItem from="1688135151973" duration="432000" />
       <workItem from="1688135590233" duration="17033000" />
-      <workItem from="1688161528152" duration="748000" />
+      <workItem from="1688161528152" duration="1819000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -305,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688149300248</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="adding terms of use other fixes">
+      <created>1688162369993</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688162369993</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +350,8 @@
     <MESSAGE value="adding alert, loading and pagination" />
     <MESSAGE value="fix header + adding about page" />
     <MESSAGE value="adding rich text parser component" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding rich text parser component" />
+    <MESSAGE value="adding terms of use other fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding terms of use other fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

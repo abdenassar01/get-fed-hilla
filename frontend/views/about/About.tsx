@@ -2,6 +2,7 @@ import {
   HeaderTitle,
   RichTextParser,
   Services,
+  TextToggle,
 } from "Frontend/common/index.js";
 
 export default function About() {
@@ -46,6 +47,37 @@ export default function About() {
     <p>We reserve the right to modify or update these Terms at any time without prior notice. The most current version of the Terms will be posted on our platform.</p>`}
           className="prose-h2:text-tertiary prose-h2:text-center prose-h2:font-bold prose-h2:text-xbase prose-p:text-base"
         />
+        <h1 id="faq" className="text-main text-xxl font-bold">
+          F&Q
+        </h1>
+        <div className="flex flex-col w-full">
+          <TextToggle
+            className=""
+            isOpen
+            question="1. How do I place an order?"
+            answer="<p>To place an order, follow these steps:
+        <ol>
+            <li>Log in to your account or create a new account if you don't have one.</li>
+            <li>Browse through the available restaurants and select the desired items from their menus.</li>
+            <li>Review your order and proceed to the checkout.</li>
+            <li>Provide the necessary delivery information and choose your preferred payment method.</li>
+            <li>Submit your order, and you will receive a confirmation email with the details.</li>
+        </ol>
+    </p>"
+          />
+          <TextToggle
+            question="2. Can I modify or cancel my order?"
+            answer="<p>Once you have submitted your order, it is sent directly to the restaurant for preparation. Therefore, modifications or cancellations may not be possible, especially if the restaurant has already started working on your order. We recommend contacting the restaurant directly to inquire about any changes or cancellations.</p>"
+          />
+          <TextToggle
+            question="3. How long does the delivery take?"
+            answer="The delivery time depends on various factors, including the distance between the restaurant and your location, traffic conditions, and the restaurant's workload. When placing an order, you will typically see an estimated delivery time provided by the restaurant. However, please note that these are estimates and may vary."
+          />
+          <TextToggle
+            question="4. Are there any additional fees for using the food ordering system?"
+            answer="We do not charge any additional fees for using our food ordering system. However, please note that some restaurants may apply their own delivery fees or minimum order requirements. These details will be displayed during the ordering process."
+          />
+        </div>
       </div>
     </div>
   );
