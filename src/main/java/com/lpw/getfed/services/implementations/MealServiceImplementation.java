@@ -40,6 +40,11 @@ public class MealServiceImplementation implements MealService {
     }
 
     @Override
+    public ResponseEntity<Page<Meal>> getMeals(Pageable pageable) {
+        return ResponseEntity.ok(repository.findAll(pageable));
+    }
+
+    @Override
     public ResponseEntity<Meal> removeMealById(Long id) {
 
         Meal meal = repository.findById(id).orElseThrow(

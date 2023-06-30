@@ -1,12 +1,7 @@
 import * as React from "react";
 
 import { FaCartPlus } from "react-icons/fa";
-
-import { Link } from "react-router-dom";
-
-import star from "../../assets/images/icons/star.svg";
-import * as url from "url";
-import { Button } from "Frontend/common/index.js";
+import { Button, StartRating } from "Frontend/common/index.js";
 
 type Props = {
   id: number;
@@ -40,17 +35,7 @@ export function DishCard({
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <div className="flex justify-between w-[100%]">
-        <div className="flex gap-[0.278vw] items-center">
-          {[...Array(rating)].map((index) => (
-            <img
-              key={index}
-              className="w-[1.042vw]"
-              src={star}
-              alt="rating star"
-            />
-          ))}
-          <div className="font-semibold">{rating}</div>
-        </div>
+        <StartRating rating={rating} />
         <div className="text-main flex">
           <s className="text-xl">{price}</s>
           <p className="xbase font-medium">/{price - 2}MAD</p>

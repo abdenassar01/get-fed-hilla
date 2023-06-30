@@ -15,6 +15,7 @@ public interface MealService {
 
     ResponseEntity<Meal> addMeal(Meal meal);
     ResponseEntity<Meal> getMealById(Long id);
+    ResponseEntity<Page<Meal>> getMeals(Pageable pageable);
     ResponseEntity<Meal> removeMealById(Long id);
     ResponseEntity<String> removeMeal(Meal meal);
     ResponseEntity<Meal> updateMeal(Long id, Meal meal);

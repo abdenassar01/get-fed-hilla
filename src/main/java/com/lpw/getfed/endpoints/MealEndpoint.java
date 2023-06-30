@@ -36,6 +36,11 @@ public class MealEndpoint {
         return service.getMealById(id);
     }
 
+    public ResponseEntity<Page<Meal>> getMeals(int page, int size){
+        logger.info("getting page " + page + " of meals");
+        return service.getMeals(PageRequest.of(page, size));
+    }
+
     public ResponseEntity<Meal> removeMealById(Long id){
         logger.warn("deleting meal: " + id);
         return service.removeMealById(id);

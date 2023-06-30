@@ -15,9 +15,14 @@ export default function MenuLayout() {
 
   useEffect(() => {
     CategoryEndpoint.getCategories()
-      // @ts-ignore
-      .then((res) => setCategories(res?.body))
-      .then((data) => navigate(categories[0]?.id?.toString() || ""));
+      .then((res) => {
+        // @ts-ignore
+        setCategories(res?.body);
+      })
+      .then(() => {
+        setCurrentCategory(1);
+        navigate("/menu/1");
+      });
   }, []);
 
   return (
