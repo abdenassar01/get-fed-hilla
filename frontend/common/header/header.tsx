@@ -51,19 +51,6 @@ export function Header() {
           </li>
           <li>
             <NavLink
-              to="/foor"
-              className={({ isActive }) =>
-                ClassNames(
-                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
-                  isActive ? "text-main underline" : ""
-                )
-              }
-            >
-              Food
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/about"
               className={({ isActive }) =>
                 ClassNames(

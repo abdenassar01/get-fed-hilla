@@ -1,10 +1,20 @@
-import MainLayout from 'Frontend/views/MainLayout.js';
-import { lazy } from 'react';
-import { createBrowserRouter, IndexRouteObject, NonIndexRouteObject, useMatches } from 'react-router-dom';
+import MainLayout from "Frontend/views/MainLayout.js";
+import { lazy } from "react";
+import {
+  createBrowserRouter,
+  IndexRouteObject,
+  NonIndexRouteObject,
+  useMatches,
+} from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
 
-const CategoryDetails = lazy(async () => import('Frontend/views/category/category-details.js'));
-const MenuLayout = lazy(async () => import('Frontend/views/menu/menu-layout.js'));
+const CategoryDetails = lazy(
+  async () => import("Frontend/views/category/category-details.js")
+);
+const MenuLayout = lazy(
+  async () => import("Frontend/views/menu/menu-layout.js")
+);
+const About = lazy(async () => import("Frontend/views/about/About.js"));
 
 export type MenuProps = Readonly<{
   icon?: string;
@@ -33,18 +43,24 @@ export const useViewMatches = useMatches as () => readonly ViewRouteMatch[];
 export const routes: readonly ViewRouteObject[] = [
   {
     element: <MainLayout />,
-    handle: { icon: 'null', title: 'Main' },
+    handle: { icon: "null", title: "Main" },
     children: [
-      { path: '/', element: <Home />, handle: { icon: 'globe-solid', title: 'Get Fed | order foods online' } },
       {
-        path: '/menu',
-        element: <MenuLayout />,
-        handle: {  },
-        children: [
-          {path: '/menu/:category', element: <CategoryDetails />}
-        ]
+        path: "/",
+        element: <Home />,
+        handle: { icon: "globe-solid", title: "Get Fed | order foods online" },
       },
-      // { path: '/about', element: <AboutView />, handle: { icon: 'file', title: 'About' } },
+      {
+        path: "/about",
+        element: <About />,
+        handle: { icon: "globe-solid", title: "Get Fed | About us" },
+      },
+      {
+        path: "/menu",
+        element: <MenuLayout />,
+        handle: {},
+        children: [{ path: "/menu/:category", element: <CategoryDetails /> }],
+      },
     ],
   },
 ];

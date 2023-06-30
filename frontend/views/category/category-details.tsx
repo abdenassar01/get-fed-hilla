@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MealEndpoint } from "Frontend/generated/endpoints.js";
 import { Alert, Button, DishCard, Loading } from "Frontend/common/index.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
