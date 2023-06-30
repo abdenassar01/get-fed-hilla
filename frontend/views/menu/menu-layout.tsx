@@ -1,5 +1,4 @@
 import * as React from "react";
-import { IoFastFoodSharp } from "react-icons/io5";
 import { Suspense, useEffect, useState } from "react";
 import { HeaderTitle } from "Frontend/common/index.js";
 import { Link, Outlet, useNavigate } from "react-router-dom";
@@ -22,22 +21,11 @@ export default function MenuLayout() {
   }, []);
 
   return (
-    <div className="py-[3.819vw] bg-background">
+    <div className="py-[3.819vw]">
       {/*<div className="bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-cover py-[3.819vw]">*/}
       <div className="container flex flex-col items-center">
         <HeaderTitle title="Menu" />
         <div className="mt-[1.5vw] flex gap-[24px]">
-          {/*<Link*/}
-          {/*  onClick={() => setCurrentCategory("All")}*/}
-          {/*  to="/menu/all"*/}
-          {/*  className={ClassNames(*/}
-          {/*    "px-[32px] py-[7px] gap-[10px] font-bold w-[11.389vw] text-main flex justify-center items-center rounded-[50px] border-[1px] border-main hover:text-white hover:bg-main",*/}
-          {/*    currentCategory === "All" ? "text-white bg-main" : ""*/}
-          {/*  )}*/}
-          {/*>*/}
-          {/*  /!*<IoFastFoodSharp size={20} />*!/*/}
-          {/*  <span className="mb-[-3px]">All</span>*/}
-          {/*</Link>*/}
           {categories.map((category) => (
             <Link
               key={`category-item-${category.id}`}

@@ -51,15 +51,15 @@ public class MealEndpoint {
         return service.updateMeal(id, meal);
     }
 
-    public ResponseEntity<Page<Meal>> getMealByCategory(Category category, int page, int size){
-        logger.info("getting page " + page + " by category " + category.getLabel());
+    public ResponseEntity<Page<Meal>> getMealByCategory(Long category, int page, int size){
+        logger.info("getting page " + page + " by category " + category);
         return service.getMealByCategory(category, PageRequest.of(page, size));
     }
 
-    public ResponseEntity<Page<Meal>> getMealByCategory(Category category){
-        logger.info("getting page " + 1 + " by category " + category.getLabel());
-        return service.getMealByCategory(category, PageRequest.of(0, 12));
-    }
+//    public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId){
+//        logger.info("getting page " + 1 + " by category " + categoryId);
+//        return service.getMealByCategory(categoryId, PageRequest.of(0, 12));
+//    }
 
     public ResponseEntity<List<Meal>> searchMeal(String query){
         logger.info("searching for: " + query);

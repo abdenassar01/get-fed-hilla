@@ -18,6 +18,6 @@ public interface MealService {
     ResponseEntity<Meal> removeMealById(Long id);
     ResponseEntity<String> removeMeal(Meal meal);
     ResponseEntity<Meal> updateMeal(Long id, Meal meal);
-    ResponseEntity<Page<Meal>> getMealByCategory(Category category, Pageable pageable);
+    ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable);
     ResponseEntity<List<Meal>> searchMeal(String query);
 }

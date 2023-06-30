@@ -2,6 +2,7 @@ package com.lpw.getfed.services.implementations;
 
 import com.lpw.getfed.models.Category;
 import com.lpw.getfed.models.Meal;
+import com.lpw.getfed.repositories.CategoryRepository;
 import com.lpw.getfed.repositories.MealRepository;
 import com.lpw.getfed.services.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,12 @@ import java.util.List;
 public class MealServiceImplementation implements MealService {
 
     private final MealRepository repository;
+    private final CategoryRepository categoryRepository;
 
     @Autowired
-    public MealServiceImplementation(MealRepository repository) {
+    public MealServiceImplementation(MealRepository repository, CategoryRepository categoryRepository) {
         this.repository = repository;
+        this.categoryRepository = categoryRepository;
     }
 
     @Override
@@ -65,7 +68,8 @@ public class MealServiceImplementation implements MealService {
     }
 
     @Override
-    public ResponseEntity<Page<Meal>> getMealByCategory(Category category, Pageable pageable) {
+    public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable) {
+        Category category = categoryRepository.getReferenceById(categoryId);
         return ResponseEntity.ok(repository.findAllByCategory(category, pageable));
     }
 

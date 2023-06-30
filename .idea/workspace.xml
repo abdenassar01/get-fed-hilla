@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix icon component">
-      <change afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/utils/index.ts" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/sections/services.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/MealEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/MealEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,36 +53,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/frontend/common&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed-hilla",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
+    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/common" />
@@ -108,6 +103,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="get-fed" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lpw.getfed.Application" />
       <method v="2">
@@ -136,7 +133,8 @@
       <workItem from="1687995380566" duration="2346000" />
       <workItem from="1687997761776" duration="199000" />
       <workItem from="1688057520289" duration="8445000" />
-      <workItem from="1688118110622" duration="4867000" />
+      <workItem from="1688118110622" duration="6533000" />
+      <workItem from="1688135151973" duration="432000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -243,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688119815365</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="refactoring">
+      <created>1688123128782</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688123128782</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +281,8 @@
     <MESSAGE value="adding frontend components and setting up frontend" />
     <MESSAGE value="setting up menu page" />
     <MESSAGE value="fix icon component" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix icon component" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

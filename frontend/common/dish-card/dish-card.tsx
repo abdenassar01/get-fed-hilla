@@ -29,7 +29,8 @@ export function DishCard({
     <div className="mt-[25%] flex flex-col items-center w-[20.833vw] text-center bg-white shadow rounded-[10px] p-[10px]">
       <div
         style={{
-          backgroundImage: img || "url('https://i.imgur.com/iqWUU6x.png')",
+          backgroundImage:
+            `url('${img}')` || "url('https://i.imgur.com/iqWUU6x.png')",
         }}
         className="mt-[-25%] bg-cover bg-no-repeat w-[13.472vw] h-[9.653vw]"
       />
