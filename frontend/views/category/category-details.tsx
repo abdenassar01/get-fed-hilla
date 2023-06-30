@@ -1,10 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
+import { useParams } from "react-router-dom";
 
 export default function CategoryDetails() {
-    return (
-        <div className="h-[40px] w-full bg-main">
-
-            by category
-        </div>
-    );
-};
+  const { category } = useParams();
+  console.log(category);
+  return <div className="h-[40px] my-20 w-full ">by category</div>;
+}
