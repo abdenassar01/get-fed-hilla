@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function useFetch<T>(fetcher: () => any, dep: any = 0) {
+function useFetch<T>(fetcher: () => any, dep: any[]) {
   const [data, setData] = useState<T>();
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
@@ -19,7 +19,7 @@ function useFetch<T>(fetcher: () => any, dep: any = 0) {
     } finally {
       setLoading(false);
     }
-  }, [dep]);
+  }, dep);
 
   return { data, loading, error };
 }

@@ -12,18 +12,18 @@ export default function CategoryDetails() {
   const getData = async () => {
     if (category && parseInt(category) === 1) {
       // @ts-ignore
-      return await MealEndpoint.getMeals(0, 12).then((res) => res?.body);
+      return await MealEndpoint.getMeals(page, 12).then((res) => res?.body);
     } else {
       // @ts-ignore
       return await MealEndpoint.getMealByCategory(
         parseInt(category || "1"),
         page,
-        10
+        12
       ).then((res) => res?.body);
     }
   };
 
-  const { data, loading, error } = useFetch<Meal[]>(getData, category);
+  const { data, loading, error } = useFetch<Meal[]>(getData, [category, page]);
 
   if (loading) return <Loading />;
   if (error) return <div>error</div>;

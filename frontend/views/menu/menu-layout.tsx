@@ -10,7 +10,6 @@ import useFetch from "Frontend/utils/use-fetch.js";
 
 export default function MenuLayout() {
   const [currentCategory, setCurrentCategory] = useState<number>();
-  const [categories, setCategories] = useState<Category[]>([]);
 
   const navigate = useNavigate();
 
@@ -23,7 +22,7 @@ export default function MenuLayout() {
     });
   };
 
-  const { data, error, loading } = useFetch<Category[]>(getData);
+  const { data, error, loading } = useFetch<Category[]>(getData, []);
 
   if (loading) return <div>loading...</div>;
   if (error) return <div>error</div>;

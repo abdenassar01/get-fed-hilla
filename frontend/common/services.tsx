@@ -4,7 +4,7 @@ export function Services() {
   const services = [
     {
       id: 1,
-      img: "https://i.imgur.com/HqpdseB.png",
+      img: "https://i.imgur.com/9z1P1uE.png",
       name: "Best Taste",
       description:
         "we offer the worst tast in the town we are known to be the best over a decate now.",
@@ -12,7 +12,7 @@ export function Services() {
     {
       id: 2,
       img: "https://i.imgur.com/7QAsPM2.png",
-      name: "Best Taste",
+      name: "Fast Delivery",
       description:
         "we offer the best tast in the town we are known to be the best over a decate now.",
     },

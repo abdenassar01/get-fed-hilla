@@ -113,7 +113,8 @@
     "clsx": "$clsx",
     "react-icons": "$react-icons",
     "@tailwindcss/typography": "$@tailwindcss/typography",
-    "@loadable/component": "$@loadable/component"
+    "@loadable/component": "$@loadable/component",
+    "react-spinners": "$react-spinners"
   },
   "vaadin": {
     "dependencies": {
@@ -158,6 +159,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "103d1143e5141760ca875c1cf9026ec037c6ffc6c82dea7454eb73e57b149420"
+    "hash": "b8e740c52710cbc85be018aa9eb29816c33e14b5a50726cfb19a70a2eb9c0939"
   }
 }
