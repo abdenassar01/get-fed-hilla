@@ -1,8 +1,13 @@
-import Placeholder from 'Frontend/components/placeholder/Placeholder.js';
-import { MenuProps, routes, useViewMatches, ViewRouteObject } from 'Frontend/routes.js';
-import { Suspense } from 'react';
-import { Outlet } from 'react-router-dom';
-import {Footer, Header} from "Frontend/common/index.js";
+import Placeholder from "Frontend/components/placeholder/Placeholder.js";
+import {
+  MenuProps,
+  routes,
+  useViewMatches,
+  ViewRouteObject,
+} from "Frontend/routes.js";
+import { Suspense } from "react";
+import { Outlet } from "react-router-dom";
+import { Footer, Header } from "Frontend/common/index.js";
 
 type MenuRoute = ViewRouteObject &
   Readonly<{
@@ -11,14 +16,13 @@ type MenuRoute = ViewRouteObject &
   }>;
 
 export default function MenuOnLeftLayout() {
-
   return (
-     <div>
-         <Header />
-          <Suspense fallback={<Placeholder />}>
-            <Outlet />
-          </Suspense>
-         <Footer />
+    <div className="text-sm sm:text-mb-xxs">
+      <Header />
+      <Suspense fallback={<Placeholder />}>
+        <Outlet />
+      </Suspense>
+      <Footer />
     </div>
   );
 }
