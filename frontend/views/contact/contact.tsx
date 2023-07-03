@@ -14,18 +14,15 @@ export default function Contact() {
         <div className="flex gap-[3.333vw] sm:flex-col-reverse">
           <div className="flex w-[21.250vw] flex-col items-center gap-[0.972vw] sm:w-[74.272vw]">
             <img src={location} alt="location icon" />
-            <div className="text-center text-cardText">
-              Mega Business Center, Lot. N 2, 4ème étage Bureau N20, Bd Zoulikha
-              Nasri, Casablanca 20520
-            </div>
+            <div className="text-center text-cardText">Taounate, Morocco</div>
           </div>
           <div className="flex w-[21.250vw] flex-col items-center gap-[0.972vw] sm:w-[74.272vw]">
             <img src={letter} alt="letter icon" />
-            <div className="text-center text-cardText">contact@khabiry.com</div>
+            <div className="text-center text-cardText">contact@getfed.com</div>
           </div>
           <div className="flex w-[21.250vw] flex-col items-center gap-[0.972vw] sm:w-[74.272vw]">
             <img src={phone} alt="phone icon" />
-            <div className="text-center text-cardText">(+212)0711199828</div>
+            <div className="text-center text-cardText">(+212)696788244</div>
           </div>
         </div>
         <Form />

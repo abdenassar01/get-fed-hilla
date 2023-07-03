@@ -1,1 +1,1 @@
-export { FieldPhoneWithCountry } from "./field-phone-with-country";
+export { FieldPhoneWithCountry } from "./field-phone-with-country.js";

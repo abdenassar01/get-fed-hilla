@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix forms fields [custom-form-fields]">
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/field-phone-with-country/drop-down-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/field-phone-with-country/field-phone-with-country.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/field-phone-with-country/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding phone number field">
+      <change afterPath="$PROJECT_DIR$/frontend/common/utils/hooks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/utils/hooks/use-outside-click.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/checkbox-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/checkbox-field.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-area-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-area-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/field-phone-with-country/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/field-phone-with-country/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/contact.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,7 @@
       <workItem from="1688319817301" duration="733000" />
       <workItem from="1688397802314" duration="8209000" />
       <workItem from="1688422024051" duration="1563000" />
-      <workItem from="1688423616642" duration="3035000" />
+      <workItem from="1688423616642" duration="3942000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -354,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688424541709</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="adding phone number field">
+      <created>1688426739078</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1688426739078</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +379,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactoring package structure and adding repos" />
     <MESSAGE value="adding annotations to repos" />
     <MESSAGE value="adding service interfaces" />
     <MESSAGE value="adding category service and test endpoints" />
@@ -398,7 +403,8 @@
     <MESSAGE value="adding auth pages and contact form" />
     <MESSAGE value="adding dialogue and textarea components" />
     <MESSAGE value="fix forms fields [custom-form-fields]" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix forms fields [custom-form-fields]" />
+    <MESSAGE value="adding phone number field" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding phone number field" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

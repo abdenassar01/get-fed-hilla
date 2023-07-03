@@ -7,7 +7,6 @@ import { TextInput } from "Frontend/common/form-fields/index.js";
 import { Alert, Button } from "Frontend/common/index.js";
 import { CheckboxField } from "Frontend/common/form-fields/checkbox-field.js";
 import { TextAreaField } from "Frontend/common/form-fields/text-area-field.js";
-import PhoneInputWithCountrySelect from "react-phone-number-input";
 import { FieldPhoneWithCountry } from "Frontend/common/form-fields/field-phone-with-country/index.js";
 
 const schema = zod.object({
@@ -95,7 +94,6 @@ export function Form() {
             control={control}
             label="Phone"
             name="phone"
-            placeholder="votre phone number"
             className=""
           />
         </div>
