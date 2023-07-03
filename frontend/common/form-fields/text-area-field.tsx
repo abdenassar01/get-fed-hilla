@@ -1,7 +1,6 @@
 import * as React from "react";
 import { HTMLProps } from "react";
 import { Control, useController } from "react-hook-form";
-import { TextArea } from "@hilla/react-components/TextArea";
 import { ClassNames } from "Frontend/utils/classnames.js";
 
 type Props = HTMLProps<HTMLInputElement> & {

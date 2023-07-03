@@ -1,21 +1,17 @@
-'use client'
-
-import { Control, useController } from 'react-hook-form'
-import Image from 'next/image'
-import React from 'react'
-import clsx from 'clsx'
+import { Control, useController } from "react-hook-form";
+import React from "react";
 
 type Props = {
-  name: string
-  control: Control<any>
-  children: React.ReactNode
-  accept?: string
-}
+  name: string;
+  control: Control<any>;
+  children: React.ReactNode;
+  accept?: string;
+};
 
 export function UploadFile({
   name,
   control,
-  accept = 'image/*',
+  accept = "image/*",
   children,
 }: Props) {
   const {
@@ -24,7 +20,7 @@ export function UploadFile({
   } = useController({
     name,
     control,
-  })
+  });
 
   return (
     <label htmlFor="file">
@@ -40,5 +36,5 @@ export function UploadFile({
       />
       <p className="text-xxs text-error">{error?.message}</p>
     </label>
-  )
+  );
 }
