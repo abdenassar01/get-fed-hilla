@@ -2,26 +2,26 @@ import * as React from "react";
 import { HTMLProps } from "react";
 import { Control, useController } from "react-hook-form";
 import { TextArea } from "@hilla/react-components/TextArea";
-import { FormItem } from "@hilla/react-components/FormItem";
+import { ClassNames } from "Frontend/utils/classnames.js";
 
 type Props = HTMLProps<HTMLInputElement> & {
   control: Control<any>;
   label: string;
   inputClassName?: string;
   className?: string;
-  labelClassName?: string;
   maxLenght?: number;
+  labelClassName?: string;
 };
 
 export function TextAreaField({
   control,
   inputClassName,
-  labelClassName,
   label,
   name,
   className,
   placeholder,
   maxLenght,
+  labelClassName,
 }: Props) {
   const {
     field: { value, onBlur, onChange },
@@ -33,19 +33,33 @@ export function TextAreaField({
 
   const charLimit = maxLenght || 200;
   return (
-    <FormItem className={className}>
-      <label className={labelClassName} slot="label">
+    <div className="flex w-[100%] flex-col ">
+      <label
+        htmlFor={name}
+        className={ClassNames(
+          "mb-2 text-xs font-bold text-cardText sm:text-mb-xbase",
+          labelClassName || ""
+        )}
+      >
         {label}
       </label>
-      <TextArea
-        placeholder={placeholder}
-        onBlur={onBlur}
-        onValueChanged={onChange}
+      <textarea
+        rows={4}
+        id={name}
         value={value}
-        className={inputClassName}
-        errorMessage={error?.message}
-        helperText={`${value.length}/${charLimit}`}
+        onChange={onChange}
+        onBlur={onBlur}
+        style={{ borderRadius: 4 }}
+        className={ClassNames(
+          "rounded-[10px] border-none bg-[#F3F4F6] px-6 py-4 placeholder-[#A6A6A6]",
+          className || "",
+          (error && "border-red-600") || ""
+        )}
+        placeholder={placeholder}
       />
-    </FormItem>
+      <p className="mb-[-1.667vw] h-[1.667vw] text-sm text-error">
+        {error?.message?.toString()}
+      </p>
+    </div>
   );
 }

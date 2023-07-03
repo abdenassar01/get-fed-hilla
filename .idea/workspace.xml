@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding auth pages and contact form">
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-area-field.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding dialogue and textarea components">
+      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/password-toggle.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/common/alert/alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/alert/alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/checkbox-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/checkbox-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-area-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-area-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/common/form-fields/text-area-field.tsx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -144,7 +152,9 @@
       <workItem from="1688135590233" duration="17033000" />
       <workItem from="1688161528152" duration="8761000" />
       <workItem from="1688319817301" duration="733000" />
-      <workItem from="1688397802314" duration="5214000" />
+      <workItem from="1688397802314" duration="8209000" />
+      <workItem from="1688422024051" duration="1563000" />
+      <workItem from="1688423616642" duration="839000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -328,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688403595217</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="adding dialogue and textarea components">
+      <created>1688404962835</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688404962835</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +364,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding required modals" />
     <MESSAGE value="fix database structure" />
     <MESSAGE value="refactoring package structure and adding repos" />
     <MESSAGE value="adding annotations to repos" />
@@ -372,7 +388,8 @@
     <MESSAGE value="adding faq and required components" />
     <MESSAGE value="meal details page" />
     <MESSAGE value="adding auth pages and contact form" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding auth pages and contact form" />
+    <MESSAGE value="adding dialogue and textarea components" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding dialogue and textarea components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

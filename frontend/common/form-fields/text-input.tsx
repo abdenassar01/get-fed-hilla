@@ -1,16 +1,16 @@
 import * as React from "react";
-import { HTMLProps } from "react";
+import { HTMLProps, useState } from "react";
 import { Control, useController } from "react-hook-form";
-import { FormItem } from "@hilla/react-components/FormItem";
 import { TextField } from "@hilla/react-components/TextField";
+import icon from "Frontend/assets/icons/password-toggle.svg";
+import { ClassNames } from "Frontend/utils/classnames.js";
 
 type Props = HTMLProps<HTMLInputElement> & {
   control: Control<any>;
   label: string;
   inputClassName?: string;
   className?: string;
-  labelClassName?: string;
-  suffix?: string;
+  labelClassname?: string;
 };
 
 export function TextInput({
@@ -18,11 +18,12 @@ export function TextInput({
   name,
   label,
   inputClassName,
-  labelClassName,
   className,
-  suffix,
+  labelClassname,
   placeholder,
+  type,
 }: Props) {
+  const [isPassword, setIsPassword] = useState<boolean>(type === "password");
   const {
     field: { value, onChange, onBlur },
     fieldState: { error },
@@ -32,20 +33,46 @@ export function TextInput({
   });
 
   return (
-    <FormItem className={className}>
-      <label className={labelClassName} slot="label">
+    <div
+      className={ClassNames(
+        "group relative flex w-[100%] flex-col gap-[8px]",
+        className || ""
+      )}
+    >
+      <label
+        htmlFor={name}
+        className={ClassNames(
+          "text-xs font-bold text-cardText sm:text-mb-xbase",
+          labelClassname || ""
+        )}
+      >
         {label}
       </label>
-      <TextField
-        className={inputClassName}
+      <input
+        id={name}
         onChange={onChange}
-        onBlur={onBlur}
         value={value}
+        onBlur={onBlur}
+        type={isPassword ? "password" : "text"}
+        style={{ borderRadius: 8 }}
+        className={ClassNames(
+          "rounded-[10px] border-none bg-[#F3F4F6] px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] sm:p-[5.097vw] sm:text-mb-xxs",
+          inputClassName || "",
+          (error && "border-red-600") || ""
+        )}
         placeholder={placeholder}
-        errorMessage={error?.message}
-      >
-        <span slot="suffix">{suffix}</span>
-      </TextField>
-    </FormItem>
+      />
+      {type === "password" && (
+        <img
+          onClick={() => setIsPassword((prev) => !prev)}
+          src={icon}
+          alt="password toggle"
+          className="absolute right-[2%] top-[50%]"
+        />
+      )}
+      <p className="mb-[-1.667vw] h-[1.667vw] text-xxs text-error">
+        {error?.message?.toString()}
+      </p>
+    </div>
   );
 }
