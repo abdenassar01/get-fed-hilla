@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import illustration from "Frontend/assets/images/illustrations/contact.svg";
 import { useForm } from "react-hook-form";
 import { TextInput } from "Frontend/common/form-fields/index.js";
-import { Button } from "Frontend/common/index.js";
+import { Alert, Button } from "Frontend/common/index.js";
 import { CheckboxField } from "Frontend/common/form-fields/checkbox-field.js";
+import { TextAreaField } from "Frontend/common/form-fields/text-area-field.js";
 
 const schema = zod.object({
   firstname: zod.string({
@@ -49,76 +50,84 @@ export function Form() {
     phone,
     comment,
   }: FormValues) => {
+    setAlert(true);
     console.log("firstname " + firstname + " lastname: " + lastname);
   };
 
+  const [alert, setAlert] = useState<boolean>(false);
+
   return (
     <div className="flex items-center gap-[4.444vw] sm:w-full sm:flex-col">
+      <Alert
+        message="You have successfully contacted the support"
+        status="success"
+        open={alert}
+      />
       <img
         src={illustration}
-        alt="khabiry contact page"
+        alt="get fed contact page"
         className="w-[352.86] sm:w-[43.689vw]"
       />
       <div className="flex w-[41.181vw] flex-col gap-[1.667vw] sm:w-full">
-        <div className="flex gap-[2.222vw] sm:flex-col">
-          <TextInput
-            control={control}
-            labelClassName="text-cardText text-xs font-bold"
-            label="Nom"
-            name="firstname"
-            placeholder="votre nom"
-            className=""
-          />
-          <TextInput
-            control={control}
-            labelClassName="text-cardText text-xs font-bold"
-            label="Prènom"
-            name="lastname"
-            placeholder="votre prènom"
-            className=""
-          />
-        </div>
-        <div className="flex gap-[2.222vw] sm:flex-col">
-          <TextInput
-            control={control}
-            labelClassName="text-cardText text-xs font-bold"
-            label="Adresse E-mail"
-            name="email"
-            placeholder="votre Adresse E-mail"
-            className=""
-          />
-          <TextInput
-            control={control}
-            labelClassName="text-cardText text-xs font-bold"
-            label="Tèlèphone"
-            name="phone"
-            placeholder="votre tèlèphone"
-            className=""
-          />
-        </div>
-        <div className="flex gap-[2.222vw] sm:flex-col">
-          <TextInput
-            control={control}
-            labelClassName="text-cardText text-xs font-bold"
-            label="Aide"
-            name="comment"
-            placeholder="Comment pouvons nous aider?"
-            className="w-[100%]"
-          />
-        </div>
-        <div className="flex items-center justify-between gap-[2.222vw] sm:flex-col sm:items-start">
-          <CheckboxField
-            name="terms"
-            control={control}
-            label="J’accepte les conditions"
-            checked
-          />
-          <Button
-            text="Envoyer"
-            className="w-fit sm:w-full"
-            onClick={handleSubmit(onSubmit)}
-          />
-        </div>
+        {/*<div className="flex gap-[2.222vw] sm:flex-col">*/}
+        <TextInput
+          control={control}
+          labelClassName="text-cardText text-xs font-bold"
+          label="Name"
+          name="firstname"
+          placeholder="Your name?"
+          className=""
+        />
+        <TextInput
+          control={control}
+          labelClassName="text-cardText text-xs font-bold"
+          label="Lastname"
+          name="lastname"
+          placeholder="your lastname?"
+          className=""
+        />
+        {/*</div>*/}
+        {/*<div className="flex gap-[2.222vw] sm:flex-col">*/}
+        <TextInput
+          control={control}
+          labelClassName="text-cardText text-xs font-bold"
+          label="E-mail"
+          name="email"
+          placeholder="Your E-mail address"
+          className=""
+        />
+        <TextInput
+          control={control}
+          labelClassName="text-cardText text-xs font-bold w-full"
+          label="Phone"
+          name="phone"
+          placeholder="votre phone number"
+          className=""
+        />
+        {/*</div>*/}
+        {/*<div className="flex gap-[2.222vw] sm:flex-col">*/}
+        <TextAreaField
+          control={control}
+          labelClassName="text-cardText text-xs font-bold"
+          label="Help"
+          name="comment"
+          placeholder="How can we help you?"
+          className="w-[100%]"
+        />
+        {/*</div>*/}
+        {/*<div className="flex items-center justify-between gap-[2.222vw] sm:flex-col sm:items-start">*/}
+        <CheckboxField
+          name="terms"
+          control={control}
+          label="J’accepte les conditions"
+          checked
+        />
+        <Button
+          text="Envoyer"
+          className="w-fit sm:w-full"
+          onClick={handleSubmit(onSubmit)}
+        />
+        {/*</div>*/}
       </div>
     </div>
   );
