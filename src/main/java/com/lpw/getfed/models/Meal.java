@@ -41,6 +41,7 @@ public class Meal {
     private List<Ingredient> ingredients;
 
     @ManyToMany
+    @JsonIgnore
     private List<Order> order;
 
 }

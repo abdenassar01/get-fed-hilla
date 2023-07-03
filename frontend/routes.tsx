@@ -6,7 +6,7 @@ import {
   NonIndexRouteObject,
   useMatches,
 } from "react-router-dom";
-import { Home, Meal, MealDetails } from "Frontend/views/index.js";
+import { Home } from "Frontend/views/index.js";
 
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
@@ -15,6 +15,8 @@ const MenuLayout = lazy(
   async () => import("Frontend/views/menu/menu-layout.js")
 );
 const About = lazy(async () => import("Frontend/views/about/About.js"));
+const Meal = lazy(async () => import("Frontend/views/meal/meal.js"));
+const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
 
 export type MenuProps = Readonly<{
   icon?: string;
@@ -59,13 +61,20 @@ export const routes: readonly ViewRouteObject[] = [
         path: "/menu",
         element: <MenuLayout />,
         handle: {},
-        children: [{ path: "/menu/:category", element: <CategoryDetails /> }],
+        children: [
+          {
+            path: "/menu/:category",
+            element: <CategoryDetails category={1} />,
+          },
+        ],
       },
       {
-        path: "/meal",
+        path: "/meal/:meal",
         element: <Meal />,
-        handle: {},
-        children: [{ path: "/meal/:meal", element: <MealDetails /> }],
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

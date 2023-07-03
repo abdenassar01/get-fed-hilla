@@ -4,12 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding faq and required components">
-      <change afterPath="$PROJECT_DIR$/frontend/views/meal-details/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/meal-details/meal-details.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="meal details page">
+      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/letter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/location-outline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/checkbox-field.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/long-text/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/long-text/long-text.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utils/truncate-html.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/login/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/register/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/reset-password/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/reset-password/reset-password.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/contact/contact.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/contact/form/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/contact/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal-details/meal-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal-details/meal-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,46 +80,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed-hilla/frontend/assets/icons",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
-    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/frontend/utils&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/assets/icons" />
+      <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/common" />
+      <recent name="$PROJECT_DIR$/frontend/assets/icons" />
       <recent name="$PROJECT_DIR$/frontend/assets/images" />
       <recent name="$PROJECT_DIR$/frontend" />
-      <recent name="$PROJECT_DIR$/frontend/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/common" />
       <recent name="$PROJECT_DIR$/frontend/common/rich-text-parser" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
@@ -142,7 +168,9 @@
       <workItem from="1688118110622" duration="6533000" />
       <workItem from="1688135151973" duration="432000" />
       <workItem from="1688135590233" duration="17033000" />
-      <workItem from="1688161528152" duration="3006000" />
+      <workItem from="1688161528152" duration="8761000" />
+      <workItem from="1688319817301" duration="733000" />
+      <workItem from="1688397802314" duration="3927000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -312,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688163834987</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="meal details page">
+      <created>1688165253201</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1688165253201</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +390,8 @@
     <MESSAGE value="adding rich text parser component" />
     <MESSAGE value="adding terms of use other fixes" />
     <MESSAGE value="adding faq and required components" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding faq and required components" />
+    <MESSAGE value="meal details page" />
+    <option name="LAST_COMMIT_MESSAGE" value="meal details page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

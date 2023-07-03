@@ -1,22 +1,29 @@
 import * as React from "react";
 import { Suspense, useEffect, useState } from "react";
 import { HeaderTitle } from "Frontend/common/index.js";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
 import Placeholder from "Frontend/components/placeholder/Placeholder.js";
 import { ClassNames } from "Frontend/utils/classnames.js";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 import useFetch from "Frontend/utils/use-fetch.js";
+import CategoryDetails from "Frontend/views/category/category-details.js";
 
 export default function MenuLayout() {
   const [currentCategory, setCurrentCategory] = useState<number>();
 
   const navigate = useNavigate();
+  const { meal } = useParams();
 
   const getData = async () => {
     return await CategoryEndpoint.getCategories().then((res) => {
-      setCurrentCategory(1);
-      navigate("/menu/1");
+      if (meal) {
+        setCurrentCategory(parseInt(meal));
+        navigate(`/menu/${meal}`);
+      } else {
+        setCurrentCategory(1);
+        navigate("/menu/1");
+      }
       // @ts-ignore
       return res?.body;
     });
@@ -26,7 +33,6 @@ export default function MenuLayout() {
 
   if (loading) return <div>loading...</div>;
   if (error) return <div>error</div>;
-  console.log("data: " + data);
   return (
     <div className="py-[3.819vw]">
       <div className="container flex flex-col items-center">
@@ -49,7 +55,7 @@ export default function MenuLayout() {
         </div>
       </div>
       <Suspense fallback={<Placeholder />}>
-        <Outlet />
+        <CategoryDetails category={currentCategory || 1} />
       </Suspense>
     </div>
   );

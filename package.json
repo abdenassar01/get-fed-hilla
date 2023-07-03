@@ -14,6 +14,7 @@
     "@hilla/generator-typescript-plugin-push": "2.0.5",
     "@hilla/generator-typescript-utils": "2.0.5",
     "@hilla/react-components": "2.0.3",
+    "@hookform/resolvers": "^3.1.1",
     "@loadable/component": "^5.15.3",
     "@polymer/polymer": "3.5.1",
     "@tailwindcss/typography": "^0.5.9",
@@ -34,9 +35,11 @@
     "lit": "2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.1",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.4.2",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@lit-labs/react": "^1.1.0",

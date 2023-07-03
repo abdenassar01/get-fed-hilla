@@ -1,1 +1,1 @@
-export { Meal } from "./meal.js";
+export * from "./meal.js";

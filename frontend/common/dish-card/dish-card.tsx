@@ -1,5 +1,7 @@
 import { FaCartPlus } from "react-icons/fa";
-import { Button, StartRating } from "Frontend/common/index.js";
+import { Button, RichTextParser, StartRating } from "Frontend/common/index.js";
+import { LongText } from "Frontend/common/long-text/index.js";
+import { truncate } from "Frontend/utils/truncate-html.js";
 
 type Props = {
   id: number;
@@ -28,9 +30,9 @@ export function DishCard({
         className="mt-[-25%] bg-cover bg-no-repeat w-[13.472vw] h-[9.653vw]"
       />
       <h2 className="font-bold mt-[10px] text-xl">{title}</h2>
-      <div
-        className="text-sm font-[200] py-[20px]"
-        dangerouslySetInnerHTML={{ __html: description }}
+      <RichTextParser
+        className="font-normal py-5"
+        text={truncate(description, 80)}
       />
       <div className="flex justify-between w-[100%]">
         <StartRating rating={rating} />

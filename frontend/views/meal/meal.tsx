@@ -1,10 +1,9 @@
 import * as React from "react";
 import { Outlet } from "react-router-dom";
 
-export function Meal() {
+export default function Meal() {
   return (
-    <div>
-      Meals
+    <div className="py-12">
       <Outlet />
     </div>
   );

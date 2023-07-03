@@ -1,25 +1,19 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { MealEndpoint } from "Frontend/generated/endpoints.js";
 import { Alert, Button, DishCard, Loading } from "Frontend/common/index.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
 import useFetch from "Frontend/utils/use-fetch.js";
 
-export default function CategoryDetails() {
-  const { category } = useParams();
+export default function CategoryDetails({ category }: { category: number }) {
   const [page, setPage] = useState<number>(0);
   const getData = async () => {
-    if (category && parseInt(category) === 1) {
-      // @ts-ignore
+    if (category && category === 1) {
       return await MealEndpoint.getMeals(page, 12).then((res) => res?.body);
     } else {
-      // @ts-ignore
-      return await MealEndpoint.getMealByCategory(
-        parseInt(category || "1"),
-        page,
-        12
-      ).then((res) => res?.body);
+      return await MealEndpoint.getMealByCategory(category, page, 12).then(
+        (res) => res?.body
+      );
     }
   };
 
@@ -31,7 +25,7 @@ export default function CategoryDetails() {
     return <Alert message="There is no meals on this category" />;
 
   return (
-    <div className="container flex flex-col items-center gap-12">
+    <div className="pt-6 container flex flex-col items-center gap-12">
       <div className="grid grid-cols-4 gap-[20px]">
         {data &&
           data.map((item) => (
