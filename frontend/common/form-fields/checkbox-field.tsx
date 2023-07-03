@@ -29,7 +29,7 @@ export function CheckboxField({
   });
 
   return (
-    <div className={ClassNames("flex flex-col gap-[2.222vw]", className || "")}>
+    <div className={ClassNames("flex flex-col", className || "")}>
       <label>
         <input
           name={name}
@@ -57,7 +57,9 @@ export function CheckboxField({
           </div>
         </div>
       </label>
-      {error && <div className="text-error">{error?.message || ""}</div>}
+      <p className="mb-[-1.667vw] h-[1.667vw] text-xxs text-error">
+        {error?.message?.toString()}
+      </p>
     </div>
   );
 }

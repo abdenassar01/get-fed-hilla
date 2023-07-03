@@ -57,7 +57,7 @@ export function TextAreaField({
         )}
         placeholder={placeholder}
       />
-      <p className="mb-[-1.667vw] h-[1.667vw] text-sm text-error">
+      <p className="mb-[-1.667vw] h-[1.667vw] text-xxs text-error">
         {error?.message?.toString()}
       </p>
     </div>

@@ -7,27 +7,29 @@ import { TextInput } from "Frontend/common/form-fields/index.js";
 import { Alert, Button } from "Frontend/common/index.js";
 import { CheckboxField } from "Frontend/common/form-fields/checkbox-field.js";
 import { TextAreaField } from "Frontend/common/form-fields/text-area-field.js";
+import PhoneInputWithCountrySelect from "react-phone-number-input";
+import { FieldPhoneWithCountry } from "Frontend/common/form-fields/field-phone-with-country/index.js";
 
 const schema = zod.object({
   firstname: zod.string({
-    required_error: "Le Nom obligatoire",
+    required_error: "Firstname required",
   }),
   lastname: zod.string({
-    required_error: "Le Prènom obligatoire",
+    required_error: "Lastname required",
   }),
   email: zod
     .string({
-      required_error: "email obligatoire",
+      required_error: "email required",
     })
-    .email("email invalid: example@mail.com"),
+    .email("email format not valid: example@mail.com"),
   phone: zod.string({
-    required_error: "Le Numero de Tèlèphone obligatoire",
+    required_error: "phone number required",
   }),
-  comment: zod.string({
-    required_error: "Le message aide est obligatoire",
+  help: zod.string({
+    required_error: "Message required",
   }),
   terms: zod.boolean({
-    required_error: "Les condition de service est obligatoire",
+    required_error: "you must accept terms of use to contact support",
   }),
 });
 
@@ -89,7 +91,7 @@ export function Form() {
             placeholder="Your E-mail address"
             className=""
           />
-          <TextInput
+          <FieldPhoneWithCountry
             control={control}
             label="Phone"
             name="phone"
