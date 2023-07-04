@@ -46,7 +46,8 @@
     "react-slick": "^0.29.0",
     "react-spinners": "^0.13.8",
     "slick-carousel": "^1.8.1",
-    "zod": "^3.21.4"
+    "zod": "^3.21.4",
+    "zustand": "^4.3.9"
   },
   "devDependencies": {
     "@lit-labs/react": "^1.1.0",
