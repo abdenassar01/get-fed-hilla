@@ -9,6 +9,34 @@ import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/common/utils/hooks/index.js";
 
 export function Header() {
+  const headerLinks = [
+    {
+      id: 1,
+      label: "Home",
+      link: "/",
+    },
+    {
+      id: 1,
+      label: "Menu",
+      link: "/menu",
+    },
+    {
+      id: 1,
+      label: "Drink",
+      link: "/drink",
+    },
+    {
+      id: 1,
+      label: "Offers",
+      link: "/offers",
+    },
+    {
+      id: 1,
+      label: "About",
+      link: "/about",
+    },
+  ];
+
   const [showProfileDropdown, setShowProfileDropdown] =
     useState<boolean>(false);
   const dropdownRef = useRef(null);
@@ -22,58 +50,21 @@ export function Header() {
       <div className="container flex justify-between items-center">
         <img width={100} height={100} src={logo} alt="get fed" />
         <ul className="flex justify-between gap-[3vw]">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                ClassNames(
-                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
-                  isActive ? "text-main underline" : ""
-                )
-              }
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/menu"
-              className={({ isActive }) =>
-                ClassNames(
-                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
-                  isActive ? "text-main underline" : ""
-                )
-              }
-            >
-              Menu
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/offers"
-              className={({ isActive }) =>
-                ClassNames(
-                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
-                  isActive ? "text-main underline" : ""
-                )
-              }
-            >
-              Offers
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                ClassNames(
-                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
-                  isActive ? "text-main underline" : ""
-                )
-              }
-            >
-              About
-            </NavLink>
-          </li>
+          {headerLinks.map((link) => (
+            <li key={"header-link-" + link.id}>
+              <NavLink
+                to={link.link}
+                className={({ isActive }) =>
+                  ClassNames(
+                    "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
+                    isActive ? "text-main underline" : ""
+                  )
+                }
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
         <div className="flex items-center gap-2">
           <Link
@@ -101,7 +92,7 @@ export function Header() {
               )}
             >
               <Button theme="tertiary" text="Log in" link="/login" />
-              <Button theme="tertiary" text="Sign up" link="/login" />
+              <Button theme="tertiary" text="Sign up" link="/register" />
             </div>
           </div>
         </div>
