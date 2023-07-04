@@ -1,5 +1,9 @@
 package com.lpw.getfed.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,8 +18,8 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name="CATEGORY")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Category {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +31,8 @@ public class Category {
     @Column(length = 50)
     private String icon;
 
-    @OneToMany(mappedBy = "category")
+//    @OneToMany()
+    @JsonIgnore
+    @OneToMany(mappedBy = "category", cascade = CascadeType.MERGE, orphanRemoval = true)
     private List<Meal> meals;
 }

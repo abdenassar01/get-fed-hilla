@@ -1,5 +1,6 @@
 package com.lpw.getfed.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +24,7 @@ public class Ingredient {
     private Double price;
 
     @ManyToOne
+    @JsonIgnore
 //    @JoinColumn(name = "meal_id", referencedColumnName = "id")
     private Meal meal;
 }

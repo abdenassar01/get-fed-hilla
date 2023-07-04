@@ -1,0 +1,77 @@
+import * as React from "react";
+import { HTMLProps, useState } from "react";
+import { Control, useController } from "react-hook-form";
+import icon from "Frontend/assets/icons/password-toggle.svg";
+import { ClassNames } from "Frontend/utils/classnames.js";
+
+type Props = HTMLProps<HTMLInputElement> & {
+  control: Control<any>;
+  label: string;
+  inputClassName?: string;
+  className?: string;
+  labelClassname?: string;
+};
+
+export function TextInput({
+  control,
+  name,
+  label,
+  inputClassName,
+  className,
+  labelClassname,
+  placeholder,
+  type,
+}: Props) {
+  const [isPassword, setIsPassword] = useState<boolean>(type === "password");
+  const {
+    field: { value, onChange, onBlur },
+    fieldState: { error },
+  } = useController({
+    control,
+    name: name || "text",
+  });
+
+  return (
+    <div
+      className={ClassNames(
+        "group relative flex w-[100%] flex-col gap-[8px]",
+        className || ""
+      )}
+    >
+      <label
+        htmlFor={name}
+        className={ClassNames(
+          "text-xs font-bold text-cardText sm:text-mb-xbase",
+          labelClassname || ""
+        )}
+      >
+        {label}
+      </label>
+      <input
+        id={name}
+        onChange={onChange}
+        value={value}
+        onBlur={onBlur}
+        type={isPassword ? "password" : "text"}
+        style={{ borderRadius: 8 }}
+        className={ClassNames(
+          "rounded-[10px] border-none bg-[#F3F4F6] px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] sm:p-[5.097vw] sm:text-mb-xxs",
+          inputClassName || "",
+          (error && "border-red-600") || ""
+        )}
+        placeholder={placeholder}
+      />
+      {type === "password" && (
+        <img
+          onClick={() => setIsPassword((prev) => !prev)}
+          src={icon}
+          alt="password toggle"
+          className="absolute right-[2%] top-[50%]"
+        />
+      )}
+      <p className="mb-[-1.667vw] h-[1.667vw] text-xxs text-error">
+        {error?.message?.toString()}
+      </p>
+    </div>
+  );
+}

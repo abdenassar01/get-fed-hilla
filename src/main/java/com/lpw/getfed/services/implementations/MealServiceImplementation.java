@@ -2,6 +2,7 @@ package com.lpw.getfed.services.implementations;
 
 import com.lpw.getfed.models.Category;
 import com.lpw.getfed.models.Meal;
+import com.lpw.getfed.repositories.CategoryRepository;
 import com.lpw.getfed.repositories.MealRepository;
 import com.lpw.getfed.services.MealService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +17,17 @@ import java.util.List;
 public class MealServiceImplementation implements MealService {
 
     private final MealRepository repository;
+    private final CategoryRepository categoryRepository;
 
     @Autowired
-    public MealServiceImplementation(MealRepository repository) {
+    public MealServiceImplementation(MealRepository repository, CategoryRepository categoryRepository) {
         this.repository = repository;
+        this.categoryRepository = categoryRepository;
+    }
+
+    @Override
+    public ResponseEntity<Meal> addMeal(Meal meal) {
+        return ResponseEntity.ok(repository.save(meal));
     }
 
     @Override
@@ -29,6 +37,11 @@ public class MealServiceImplementation implements MealService {
                         () -> new IllegalStateException("can't find meal with id:" + id)
                 )
         );
+    }
+
+    @Override
+    public ResponseEntity<Page<Meal>> getMeals(Pageable pageable) {
+        return ResponseEntity.ok(repository.findAll(pageable));
     }
 
     @Override
@@ -60,7 +73,8 @@ public class MealServiceImplementation implements MealService {
     }
 
     @Override
-    public ResponseEntity<Page<Meal>> getMealByCategory(Category category, Pageable pageable) {
+    public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable) {
+        Category category = categoryRepository.getReferenceById(categoryId);
         return ResponseEntity.ok(repository.findAllByCategory(category, pageable));
     }
 

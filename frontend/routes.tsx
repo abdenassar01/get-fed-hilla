@@ -1,9 +1,31 @@
-import HelloReactView from 'Frontend/views/helloreact/HelloReactView.js';
-import MainLayout from 'Frontend/views/MainLayout.js';
-import { lazy } from 'react';
-import { createBrowserRouter, IndexRouteObject, NonIndexRouteObject, useMatches } from 'react-router-dom';
+import MainLayout from "Frontend/views/MainLayout.js";
+import { lazy } from "react";
+import {
+  createBrowserRouter,
+  IndexRouteObject,
+  NonIndexRouteObject,
+  useMatches,
+} from "react-router-dom";
+import { Home } from "Frontend/views/index.js";
 
-const AboutView = lazy(async () => import('Frontend/views/about/AboutView.js'));
+const CategoryDetails = lazy(
+  async () => import("Frontend/views/category/category-details.js")
+);
+const MenuLayout = lazy(
+  async () => import("Frontend/views/menu/menu-layout.js")
+);
+const About = lazy(async () => import("Frontend/views/about/About.js"));
+const Drink = lazy(async () => import("Frontend/views/drink/drink.js"));
+const Meal = lazy(async () => import("Frontend/views/meal/meal.js"));
+const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
+const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
+const Register = lazy(
+  async () => import("Frontend/views/auth/register/register.js")
+);
+const Reset = lazy(
+  async () => import("Frontend/views/auth/reset-password/reset-password.js")
+);
+
 export type MenuProps = Readonly<{
   icon?: string;
   title?: string;
@@ -31,10 +53,53 @@ export const useViewMatches = useMatches as () => readonly ViewRouteMatch[];
 export const routes: readonly ViewRouteObject[] = [
   {
     element: <MainLayout />,
-    handle: { icon: 'null', title: 'Main' },
+    handle: { icon: "null", title: "Main" },
     children: [
-      { path: '/', element: <HelloReactView />, handle: { icon: 'globe-solid', title: 'Hello React' } },
-      { path: '/about', element: <AboutView />, handle: { icon: 'file', title: 'About' } },
+      {
+        path: "/",
+        element: <Home />,
+        handle: { icon: "globe-solid", title: "Get Fed | order foods online" },
+      },
+      {
+        path: "/about",
+        element: <About />,
+        handle: { icon: "globe-solid", title: "Get Fed | About us" },
+      },
+      {
+        path: "/menu",
+        element: <MenuLayout />,
+        handle: {},
+        children: [
+          {
+            path: "/menu/:category",
+            element: <CategoryDetails category={1} />,
+          },
+        ],
+      },
+      {
+        path: "/meal/:meal",
+        element: <Meal />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/drink",
+        element: <Drink />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/reset",
+        element: <Reset />,
+      },
     ],
   },
 ];

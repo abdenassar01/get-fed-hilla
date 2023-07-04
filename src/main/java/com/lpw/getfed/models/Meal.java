@@ -1,5 +1,7 @@
 package com.lpw.getfed.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -24,10 +26,14 @@ public class Meal {
 
     private String title;
     private String image;
-    @Column(length = 2500)
+    @Column(name = "description", length = 2500)
     private String description;
+    private Integer rating;
+    private Double price;
 
     @ManyToOne
+    @JsonIdentityReference(alwaysAsId = true)
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
     @OneToMany(mappedBy = "meal", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -35,6 +41,7 @@ public class Meal {
     private List<Ingredient> ingredients;
 
     @ManyToMany
+    @JsonIgnore
     private List<Order> order;
 
 }
