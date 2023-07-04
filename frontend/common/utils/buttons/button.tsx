@@ -21,6 +21,7 @@ export function Button({
     <Link
       to={link || ""}
       className={ClassNames(
+        "text-center",
         theme === "primary"
           ? "bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"
           : theme === "secondary"

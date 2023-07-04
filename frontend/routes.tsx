@@ -17,6 +17,13 @@ const MenuLayout = lazy(
 const About = lazy(async () => import("Frontend/views/about/About.js"));
 const Meal = lazy(async () => import("Frontend/views/meal/meal.js"));
 const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
+const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
+const Register = lazy(
+  async () => import("Frontend/views/auth/register/register.js")
+);
+const Reset = lazy(
+  async () => import("Frontend/views/auth/reset-password/reset-password.js")
+);
 
 export type MenuProps = Readonly<{
   icon?: string;
@@ -75,6 +82,18 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/reset",
+        element: <Reset />,
       },
     ],
   },

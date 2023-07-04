@@ -1,1 +1,1 @@
-export { ResetPassword } from './reset-password'
+export { Reset } from "./reset-password.js";

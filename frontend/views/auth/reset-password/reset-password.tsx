@@ -1,27 +1,25 @@
-'use client'
+import React from "react";
 
-import Image from 'next/image'
-import React from 'react'
+import illustration from "Frontend/assets/images/illustrations/reset-password.svg";
+import { useForm } from "react-hook-form";
+import { Button, HeaderTitle } from "Frontend/common/index.js";
+import { TextInput } from "Frontend/common/form-fields/index.js";
 
-import illustration from '@/assets/images/illustrations/reset-password.svg'
-import { Button, FieldText, SectionHeader } from '@/components'
-import { useForm } from 'react-hook-form'
-
-export function ResetPassword() {
-  const { control, handleSubmit } = useForm()
+export default function ResetPassword() {
+  const { control, handleSubmit } = useForm();
 
   const onSubmit = (data: any) => {
-    console.log(data)
-  }
+    console.log(data);
+  };
 
   return (
     <div className="w-[100%] bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
       <div className="container flex items-center py-[6.667vw] sm:flex-col">
         <div className="hidden sm:block">
-          <SectionHeader title="MOT DE PASSE oUBLIé?" subTitle="" />
+          <HeaderTitle title="MOT DE PASSE oUBLIé?" subTitle="" />
         </div>
         <div className="flex w-[41.042vw] items-center justify-center px-[4.444vw] py-[2.222vw] sm:w-full">
-          <Image
+          <img
             src={illustration}
             alt="khabiry login page"
             className="w-[26.319vw] sm:my-[11.650vw] sm:w-[44.660vw]"
@@ -29,12 +27,11 @@ export function ResetPassword() {
         </div>
         <div className="flex w-[41.042vw] flex-col gap-[1.667vw] sm:w-full">
           <div className="mb-[3.472vw] sm:hidden">
-            <SectionHeader title="MOT DE PASSE oUBLIé?" subTitle="" />
+            <HeaderTitle title="MOT DE PASSE oUBLIé?" subTitle="" />
           </div>
           <div className="flex flex-col gap-[1.667vw]">
-            <FieldText
+            <TextInput
               control={control}
-              labelClassName="text-cardText text-xs font-bold"
               label="Adresse e-mail"
               name="mail"
               placeholder="Votre Adresse E-mail*"
@@ -49,5 +46,5 @@ export function ResetPassword() {
         </div>
       </div>
     </div>
-  )
+  );
 }
