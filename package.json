@@ -126,7 +126,12 @@
     "react-spinners": "$react-spinners",
     "@hookform/resolvers": "$@hookform/resolvers",
     "react-hook-form": "$react-hook-form",
-    "zod": "$zod"
+    "zod": "$zod",
+    "country-data": "$country-data",
+    "country-flag-icons": "$country-flag-icons",
+    "libphonenumber-js": "$libphonenumber-js",
+    "react-phone-input-2": "$react-phone-input-2",
+    "react-phone-number-input": "$react-phone-number-input"
   },
   "vaadin": {
     "dependencies": {
@@ -171,6 +176,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "36294811819aedb13081096f3613893faeedd474ee30a14fce8b83085b7d05a9"
+    "hash": "86a880db7715223d4f752aa43131f79aa13bd6bce1e4519da0e1ae1e3dafae81"
   }
 }

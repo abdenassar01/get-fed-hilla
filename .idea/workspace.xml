@@ -4,22 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fixing auth pages and routing">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add profile options to header">
       <change afterPath="$PROJECT_DIR$/frontend/assets/icons/profile.svg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/common/utils/hooks/use-hover-outside.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/common/utils/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/hooks/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/reset-password/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/reset-password/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/reset-password/reset-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/reset-password/reset-password.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,37 +61,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed-hilla/frontend/assets/images/icons",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
-    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/frontend/assets/images/icons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/assets/images/icons" />
@@ -161,7 +154,8 @@
       <workItem from="1688319817301" duration="733000" />
       <workItem from="1688397802314" duration="8209000" />
       <workItem from="1688422024051" duration="1563000" />
-      <workItem from="1688423616642" duration="8286000" />
+      <workItem from="1688423616642" duration="8385000" />
+      <workItem from="1688461678953" duration="1288000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -380,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688427813564</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add profile options to header">
+      <created>1688432180013</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1688432180013</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +400,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding sevices implementations for delivery, drink, employee and ingredient" />
     <MESSAGE value="adding meal service implementation" />
     <MESSAGE value="adding all endpoints" />
     <MESSAGE value="fixing logger" />
@@ -424,7 +424,8 @@
     <MESSAGE value="fixing drop down field" />
     <MESSAGE value="fixing upload file field" />
     <MESSAGE value="fixing auth pages and routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing auth pages and routing" />
+    <MESSAGE value="add profile options to header" />
+    <option name="LAST_COMMIT_MESSAGE" value="add profile options to header" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
