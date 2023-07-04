@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix header profile dropdown">
-      <change afterPath="$PROJECT_DIR$/frontend/assets/icons/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/common/navigation-header/navigation-header.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactor header">
+      <change afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/drink/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +153,7 @@
       <workItem from="1688397802314" duration="8209000" />
       <workItem from="1688422024051" duration="1563000" />
       <workItem from="1688423616642" duration="8385000" />
-      <workItem from="1688461678953" duration="3447000" />
+      <workItem from="1688461678953" duration="8810000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -385,7 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688463061705</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="adding navigation header component">
+      <created>1688465267020</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1688465267020</updated>
+    </task>
+    <task id="LOCAL-00035" summary="refactor header">
+      <created>1688465275227</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1688465275227</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,8 +419,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding all endpoints" />
-    <MESSAGE value="fixing logger" />
     <MESSAGE value="testing endpoints and fix errors" />
     <MESSAGE value="adding frontend components and setting up frontend" />
     <MESSAGE value="setting up menu page" />
@@ -429,7 +442,9 @@
     <MESSAGE value="fixing auth pages and routing" />
     <MESSAGE value="add profile options to header" />
     <MESSAGE value="fix header profile dropdown" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix header profile dropdown" />
+    <MESSAGE value="adding navigation header component" />
+    <MESSAGE value="refactor header" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor header" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

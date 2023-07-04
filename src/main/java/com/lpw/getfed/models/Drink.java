@@ -27,6 +27,9 @@ public class Drink {
 
     private String image;
 
+    @Column(length = 3000)
+    private String description;
+
     private Double price;
 
     @ManyToMany()
