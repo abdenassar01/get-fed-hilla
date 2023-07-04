@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 public interface DrinkService {
 
     ResponseEntity<Drink> getDrinkById(Long id);
+    ResponseEntity<Page<Drink>> getDrinks(Pageable pageable);
     ResponseEntity<Drink> addDrink(Drink drink);
     ResponseEntity<Drink> removeDrinkById(Long id);
     ResponseEntity<String> removeDrink(Drink drink);

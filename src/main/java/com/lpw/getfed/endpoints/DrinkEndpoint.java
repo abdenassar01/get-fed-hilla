@@ -31,6 +31,11 @@ public class DrinkEndpoint {
         return service.getDrinkById(id);
     }
 
+    public ResponseEntity<Page<Drink>> getDrinks(int page, int size){
+        logger.info("getting page " + page + " of drinks  details");
+        return service.getDrinks(PageRequest.of(page, size));
+    }
+
     public ResponseEntity<Drink> addDrink(Drink drink){
         logger.info("adding new drink item");
         return service.addDrink(drink);

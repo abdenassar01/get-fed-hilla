@@ -6,6 +6,10 @@ body{
     overflow-x: hidden;
 }
 
+.slick-slide{
+    margin-right: 16px;
+}
+
 .profile-dropdown:after {
     content: '';
     background: url('https://i.imgur.com/bMBEXRa.png');
@@ -16,6 +20,11 @@ body{
     height: 30px;
     clear: both;
     display: none;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    display: flex !important;
 }
 
 @font-face {

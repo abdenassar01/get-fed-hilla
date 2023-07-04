@@ -7,6 +7,7 @@ import {
   useMatches,
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
+import MealDetails from "Frontend/views/meal-details/meal-details.js";
 
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
@@ -16,7 +17,6 @@ const MenuLayout = lazy(
 );
 const About = lazy(async () => import("Frontend/views/about/About.js"));
 const Drink = lazy(async () => import("Frontend/views/drink/drink.js"));
-const Meal = lazy(async () => import("Frontend/views/meal/meal.js"));
 const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
 const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
 const Register = lazy(
@@ -78,7 +78,7 @@ export const routes: readonly ViewRouteObject[] = [
       },
       {
         path: "/meal/:meal",
-        element: <Meal />,
+        element: <MealDetails />,
       },
       {
         path: "/contact",

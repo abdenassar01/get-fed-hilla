@@ -43,7 +43,9 @@
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.2.23",
     "react-router-dom": "^6.4.2",
+    "react-slick": "^0.29.0",
     "react-spinners": "^0.13.8",
+    "slick-carousel": "^1.8.1",
     "zod": "^3.21.4"
   },
   "devDependencies": {
@@ -55,6 +57,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@types/react-icons": "^3.0.0",
+    "@types/react-slick": "^0.23.10",
     "@vitejs/plugin-react": "~3.0.1",
     "async": "3.2.2",
     "autoprefixer": "^10.4.14",
@@ -131,7 +134,9 @@
     "country-flag-icons": "$country-flag-icons",
     "libphonenumber-js": "$libphonenumber-js",
     "react-phone-input-2": "$react-phone-input-2",
-    "react-phone-number-input": "$react-phone-number-input"
+    "react-phone-number-input": "$react-phone-number-input",
+    "react-slick": "$react-slick",
+    "slick-carousel": "$slick-carousel"
   },
   "vaadin": {
     "dependencies": {
@@ -176,6 +181,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "86a880db7715223d4f752aa43131f79aa13bd6bce1e4519da0e1ae1e3dafae81"
+    "hash": "3939ff1178633ba074225dab29416a6b26f65aae57932d26a76b76caebfc2d54"
   }
 }
