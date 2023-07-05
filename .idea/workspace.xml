@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding zustand store to manage cart">
-      <change afterPath="$PROJECT_DIR$/frontend/stores/cart-store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/meal-details/drinks-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal-details/drinks-slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +157,8 @@
       <workItem from="1688423616642" duration="8385000" />
       <workItem from="1688461678953" duration="14691000" />
       <workItem from="1688480092085" duration="1760000" />
-      <workItem from="1688492582223" duration="6313000" />
+      <workItem from="1688492582223" duration="6697000" />
+      <workItem from="1688554065985" duration="4848000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -415,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688493068126</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="adding zustand store to manage cart">
+      <created>1688499183665</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1688499183665</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

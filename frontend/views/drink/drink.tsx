@@ -36,7 +36,7 @@ export default function Drink() {
 
   return (
     <div>
-      <div className="container">
+      <div className="container py-12">
         <HeaderTitle title="Drinks" />
         <div className="grid grid-cols-3 gap-4 mt-5">
           {drinks.map((drink) => (

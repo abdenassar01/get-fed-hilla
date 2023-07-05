@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import profile from "Frontend/assets/icons/profile.svg";
 import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/common/utils/hooks/index.js";
+import { BsBasket2Fill } from "react-icons/bs";
 
 export function Header() {
   const headerLinks = [
@@ -46,7 +47,7 @@ export function Header() {
   useOnHoverOutside(dropdownRef, closeDropdown);
 
   return (
-    <header className="font-nova">
+    <header className="font-nova ">
       <div className="container flex justify-between items-center">
         <img width={100} height={100} src={logo} alt="get fed" />
         <ul className="flex justify-between gap-[3vw]">
@@ -65,6 +66,21 @@ export function Header() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                ClassNames(
+                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
+                  isActive ? "text-main underline" : ""
+                )
+              }
+            >
+              <div className="">
+                <BsBasket2Fill size={18} />
+              </div>
+            </NavLink>
+          </li>
         </ul>
         <div className="flex items-center gap-2">
           <Link

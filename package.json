@@ -137,7 +137,8 @@
     "react-phone-input-2": "$react-phone-input-2",
     "react-phone-number-input": "$react-phone-number-input",
     "react-slick": "$react-slick",
-    "slick-carousel": "$slick-carousel"
+    "slick-carousel": "$slick-carousel",
+    "zustand": "$zustand"
   },
   "vaadin": {
     "dependencies": {
@@ -182,6 +183,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "3939ff1178633ba074225dab29416a6b26f65aae57932d26a76b76caebfc2d54"
+    "hash": "e0f707afad837c2d04a6721f20bb1e009ce2bb866646c9b9b600aca1015040b5"
   }
 }
