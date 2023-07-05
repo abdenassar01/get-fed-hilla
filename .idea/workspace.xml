@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/types/types.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fixing cart to manage quantity of each product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/cart-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/cart-store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +153,7 @@
       <workItem from="1688480092085" duration="1760000" />
       <workItem from="1688492582223" duration="6697000" />
       <workItem from="1688554065985" duration="8732000" />
-      <workItem from="1688575446178" duration="6893000" />
+      <workItem from="1688575446178" duration="7584000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -431,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688559438306</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fixing cart to manage quantity of each product">
+      <created>1688582621924</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1688582621924</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +454,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="fix getting meals by category" />
     <MESSAGE value="fix category page and meals cards" />
     <MESSAGE value="adding fetcher func and fix fetching data logique" />
@@ -475,7 +478,8 @@
     <MESSAGE value="fixing drinks slider in meal details" />
     <MESSAGE value="adding zustand store to manage cart" />
     <MESSAGE value="adding cart page and adding cart logique" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding cart page and adding cart logique" />
+    <MESSAGE value="fixing cart to manage quantity of each product" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing cart to manage quantity of each product" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
