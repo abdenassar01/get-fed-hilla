@@ -1,10 +1,11 @@
 import { create } from "zustand";
 import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
+import { DrinkItem, MealItem } from "Frontend/types/types.js";
 
 type State = {
-  drinks: Drink[] | [];
-  meals: Meal[] | [];
+  drinks: DrinkItem[] | [];
+  meals: MealItem[] | [];
 };
 
 type Action = {
@@ -19,18 +20,31 @@ export const useCartStore = create<State & Action>((set) => ({
   meals: [],
   removeMeal: (id: number) =>
     set((state) => ({
-      meals: state.meals.filter((meal) => meal.id !== id),
+      meals: state.meals.filter((meal) => meal.item.id !== id),
     })),
   removeDrink: (id: number) =>
     set((state) => ({
-      drinks: state.drinks.filter((drink) => drink.id !== id),
+      drinks: state.drinks.filter((drink) => drink.item.id !== id),
     })),
   addMeal: (meal: Meal) =>
     set((state) => ({
-      meals: [...state.meals, meal],
+      meals: [
+        ...state.meals,
+        {
+          item: meal,
+          qte: ++state.meals.filter((mealItem) => mealItem.item.id === meal.id)
+            .length,
+        },
+      ],
     })),
   addDrink: (drink: Drink) =>
     set((state) => ({
-      drinks: [...state.drinks, drink],
+      drinks: [
+        ...state.drinks,
+        {
+          item: drink,
+          qte: 2,
+        },
+      ],
     })),
 }));

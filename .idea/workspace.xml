@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding zustand store to manage cart">
-      <change afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/types/types.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/cart-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/cart-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +155,8 @@
       <workItem from="1688461678953" duration="14691000" />
       <workItem from="1688480092085" duration="1760000" />
       <workItem from="1688492582223" duration="6697000" />
-      <workItem from="1688554065985" duration="4848000" />
+      <workItem from="1688554065985" duration="8732000" />
+      <workItem from="1688575446178" duration="6893000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -426,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688499183665</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="adding cart page and adding cart logique">
+      <created>1688559438305</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1688559438306</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +450,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix icon component" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="fix getting meals by category" />
     <MESSAGE value="fix category page and meals cards" />
@@ -470,7 +474,8 @@
     <MESSAGE value="adding drink card component and display it in drinks page" />
     <MESSAGE value="fixing drinks slider in meal details" />
     <MESSAGE value="adding zustand store to manage cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding zustand store to manage cart" />
+    <MESSAGE value="adding cart page and adding cart logique" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding cart page and adding cart logique" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
