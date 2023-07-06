@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fixing cart to manage quantity of each product">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix style of meal/drink cards in cart">
+      <change afterPath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/SubCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/SubCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/SubCategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/SubCategoryServiceImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/CategoryEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/CategoryEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +32,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -95,11 +117,11 @@
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/views/custom-meal" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
       <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
       <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/common" />
-      <recent name="$PROJECT_DIR$/frontend/common/rich-text-parser" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +175,10 @@
       <workItem from="1688480092085" duration="1760000" />
       <workItem from="1688492582223" duration="6697000" />
       <workItem from="1688554065985" duration="8732000" />
-      <workItem from="1688575446178" duration="7584000" />
+      <workItem from="1688575446178" duration="7890000" />
+      <workItem from="1688597258429" duration="2746000" />
+      <workItem from="1688600037046" duration="767000" />
+      <workItem from="1688639029822" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -435,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688582621924</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="fix style of meal/drink cards in cart">
+      <created>1688583212909</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1688583212909</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix getting meals by category" />
     <MESSAGE value="fix category page and meals cards" />
     <MESSAGE value="adding fetcher func and fix fetching data logique" />
     <MESSAGE value="adding alert, loading and pagination" />
@@ -479,7 +510,8 @@
     <MESSAGE value="adding zustand store to manage cart" />
     <MESSAGE value="adding cart page and adding cart logique" />
     <MESSAGE value="fixing cart to manage quantity of each product" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing cart to manage quantity of each product" />
+    <MESSAGE value="fix style of meal/drink cards in cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix style of meal/drink cards in cart" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

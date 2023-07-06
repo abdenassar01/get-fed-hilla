@@ -1,7 +1,9 @@
 package com.lpw.getfed.endpoints;
 
 import com.lpw.getfed.models.Category;
+import com.lpw.getfed.models.SubCategory;
 import com.lpw.getfed.services.CategoryService;
+import com.lpw.getfed.services.SubCategoryService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +19,12 @@ public class CategoryEndpoint {
     Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final CategoryService service;
+    private final SubCategoryService subCategoryService;
 
     @Autowired
-    public CategoryEndpoint(CategoryService service) {
+    public CategoryEndpoint(CategoryService service, SubCategoryService subCategoryService) {
         this.service = service;
+        this.subCategoryService = subCategoryService;
     }
 
     public ResponseEntity<Category> addCategory(Category category){
@@ -46,5 +50,10 @@ public class CategoryEndpoint {
     public ResponseEntity<List<Category>> getCategories(){
         logger.info("getting all categories");
         return service.getCategories();
+    }
+
+    public ResponseEntity<List<SubCategory>> getSubCategories(){
+        logger.info("getting all sub categories");
+        return ResponseEntity.ok(subCategoryService.getSubCategories());
     }
 }

@@ -85,9 +85,9 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link
             className="px-[32px] py-[7px] rounded-[50px] bg-main text-white"
-            to="/special-dishes"
+            to="/custom-meal"
           >
-            special dishes
+            Customize Meal
           </Link>
           <div
             className="profile-dropdown relative hover:after:block"
