@@ -35,7 +35,7 @@ export default function Drink() {
   ];
 
   return (
-    <div>
+    <div className="bg-background">
       <div className="container py-12">
         <HeaderTitle title="Drinks" />
         <div className="grid grid-cols-3 gap-4 mt-5">

@@ -34,7 +34,7 @@ export default function MenuLayout() {
   if (loading) return <div>loading...</div>;
   if (error) return <div>error</div>;
   return (
-    <div className="py-[3.819vw]">
+    <div className="py-[3.819vw] bg-background">
       <div className="container flex flex-col items-center">
         <HeaderTitle title="Menu" />
         <div className="mt-[1.5vw] flex gap-[24px]">
