@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { HeaderTitle } from "Frontend/common/index.js";
-import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Placeholder from "Frontend/components/placeholder/Placeholder.js";
 import { ClassNames } from "Frontend/utils/classnames.js";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
@@ -34,7 +34,7 @@ export default function MenuLayout() {
   if (loading) return <div>loading...</div>;
   if (error) return <div>error</div>;
   return (
-    <div className="py-[3.819vw]">
+    <div className="py-[3.819vw] bg-background">
       <div className="container flex flex-col items-center">
         <HeaderTitle title="Menu" />
         <div className="mt-[1.5vw] flex gap-[24px]">

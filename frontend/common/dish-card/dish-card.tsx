@@ -1,7 +1,7 @@
 import { FaCartPlus } from "react-icons/fa";
 import { Button, RichTextParser, StartRating } from "Frontend/common/index.js";
-import { LongText } from "Frontend/common/long-text/index.js";
 import { truncate } from "Frontend/utils/truncate-html.js";
+import { useCartStore } from "Frontend/stores/cart-store.js";
 
 type Props = {
   id: number;
@@ -20,6 +20,19 @@ export function DishCard({
   description,
   title,
 }: Props) {
+  const { addMeal } = useCartStore();
+
+  const handleAddMeal = () => {
+    addMeal({
+      id,
+      image: img,
+      title,
+      price,
+      description,
+      rating,
+    });
+  };
+
   return (
     <div className="mt-[25%] flex flex-col items-center w-[20.833vw] text-center bg-white shadow rounded-[10px] p-[10px]">
       <div
@@ -27,7 +40,7 @@ export function DishCard({
           backgroundImage:
             `url('${img}')` || "url('https://i.imgur.com/iqWUU6x.png')",
         }}
-        className="mt-[-25%] bg-cover bg-no-repeat w-[13.472vw] h-[9.653vw]"
+        className="mt-[-25%] bg-cover bg-no-repeat w-[13.472vw] h-[9.653vw] rounded-[8px]"
       />
       <h2 className="font-bold mt-[10px] text-xl">{title}</h2>
       <RichTextParser
@@ -48,7 +61,10 @@ export function DishCard({
           theme="tertiary"
           className=""
         />
-        <button className="px-[18px] py-[3px] transition-all ease-in delay-75 flex items-center border-[1px] border-main gap-[4px] bg-main rounded-[50px] text-white hover:text-main hover:bg-[transparent]">
+        <button
+          onClick={handleAddMeal}
+          className="px-[18px] py-[3px] transition-all ease-in delay-75 flex items-center border-[1px] border-main gap-[4px] bg-main rounded-[50px] text-white hover:text-main hover:bg-[transparent]"
+        >
           <FaCartPlus size={24} />
           add to cart
         </button>

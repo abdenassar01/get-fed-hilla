@@ -16,9 +16,19 @@ const MenuLayout = lazy(
 );
 const About = lazy(async () => import("Frontend/views/about/About.js"));
 const Drink = lazy(async () => import("Frontend/views/drink/drink.js"));
-const Meal = lazy(async () => import("Frontend/views/meal/meal.js"));
 const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
 const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
+const Cart = lazy(async () => import("Frontend/views/cart/cart.js"));
+const CustomMealIngredients = lazy(
+  async () =>
+    import("Frontend/views/custom-meal-ingredients/custom-meal-ingredients.js")
+);
+const MealDetails = lazy(
+  async () => import("Frontend/views/meal-details/meal-details.js")
+);
+const CustomizeMeal = lazy(
+  async () => import("Frontend/views/custom-meal/customise-meal.js")
+);
 const Register = lazy(
   async () => import("Frontend/views/auth/register/register.js")
 );
@@ -77,16 +87,35 @@ export const routes: readonly ViewRouteObject[] = [
         ],
       },
       {
-        path: "/meal/:meal",
-        element: <Meal />,
+        path: "/meal",
+        children: [
+          {
+            path: "/meal/:meal",
+            element: <MealDetails />,
+          },
+        ],
       },
       {
         path: "/contact",
         element: <Contact />,
       },
       {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
         path: "/drink",
         element: <Drink />,
+      },
+      {
+        path: "/custom-meal",
+        element: <CustomizeMeal />,
+        children: [
+          {
+            path: "/custom-meal/:subCategoryId",
+            element: <CustomMealIngredients />,
+          },
+        ],
       },
       {
         path: "/login",

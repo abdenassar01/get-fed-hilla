@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    @variants responsive {
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+}
+
 body{
     overflow-x: hidden;
+}
+
+.slick-slide{
+    margin-right: 16px;
 }
 
 .profile-dropdown:after {
@@ -16,6 +33,11 @@ body{
     height: 30px;
     clear: both;
     display: none;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    display: flex !important;
 }
 
 @font-face {

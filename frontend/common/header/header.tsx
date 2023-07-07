@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import profile from "Frontend/assets/icons/profile.svg";
 import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/common/utils/hooks/index.js";
+import { BsBasket2Fill } from "react-icons/bs";
 
 export function Header() {
   const headerLinks = [
@@ -16,22 +17,22 @@ export function Header() {
       link: "/",
     },
     {
-      id: 1,
+      id: 2,
       label: "Menu",
       link: "/menu",
     },
     {
-      id: 1,
+      id: 3,
       label: "Drink",
       link: "/drink",
     },
     {
-      id: 1,
+      id: 4,
       label: "Offers",
       link: "/offers",
     },
     {
-      id: 1,
+      id: 5,
       label: "About",
       link: "/about",
     },
@@ -46,7 +47,7 @@ export function Header() {
   useOnHoverOutside(dropdownRef, closeDropdown);
 
   return (
-    <header className="font-nova">
+    <header className="font-nova bg-background">
       <div className="container flex justify-between items-center">
         <img width={100} height={100} src={logo} alt="get fed" />
         <ul className="flex justify-between gap-[3vw]">
@@ -65,13 +66,28 @@ export function Header() {
               </NavLink>
             </li>
           ))}
+          <li>
+            <NavLink
+              to="/cart"
+              className={({ isActive }) =>
+                ClassNames(
+                  "hover:text-main transition-all ease-in-out delay-100 font-bold text-black",
+                  isActive ? "text-main underline" : ""
+                )
+              }
+            >
+              <div className="">
+                <BsBasket2Fill size={18} />
+              </div>
+            </NavLink>
+          </li>
         </ul>
         <div className="flex items-center gap-2">
           <Link
             className="px-[32px] py-[7px] rounded-[50px] bg-main text-white"
-            to="/special-dishes"
+            to="/custom-meal"
           >
-            special dishes
+            Customize Meal
           </Link>
           <div
             className="profile-dropdown relative hover:after:block"

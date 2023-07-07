@@ -29,6 +29,11 @@ public class DrinkServiceImplementation implements DrinkService {
     }
 
     @Override
+    public ResponseEntity<Page<Drink>> getDrinks(Pageable pageable) {
+        return ResponseEntity.ok(repository.findAll(pageable));
+    }
+
+    @Override
     public ResponseEntity<Drink> addDrink(Drink drink) {
         return ResponseEntity.ok(repository.save(drink));
     }

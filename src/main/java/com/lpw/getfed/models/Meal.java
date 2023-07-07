@@ -31,6 +31,9 @@ public class Meal {
     private Integer rating;
     private Double price;
 
+    @Column(columnDefinition = "boolean default false")
+    private Boolean custom;
+
     @ManyToOne
     @JsonIdentityReference(alwaysAsId = true)
     @JoinColumn(name = "category_id", referencedColumnName = "id")

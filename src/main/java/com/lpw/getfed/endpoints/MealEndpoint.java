@@ -1,6 +1,5 @@
 package com.lpw.getfed.endpoints;
 
-import com.lpw.getfed.models.Category;
 import com.lpw.getfed.models.Meal;
 import com.lpw.getfed.services.MealService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
@@ -61,10 +60,6 @@ public class MealEndpoint {
         return service.getMealByCategory(category, PageRequest.of(page, size));
     }
 
-//    public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId){
-//        logger.info("getting page " + 1 + " by category " + categoryId);
-//        return service.getMealByCategory(categoryId, PageRequest.of(0, 12));
-//    }
 
     public ResponseEntity<List<Meal>> searchMeal(String query){
         logger.info("searching for: " + query);

@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactor header">
-      <change afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/drink/index.ts" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -59,51 +72,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/abdenassar/Desktop/get-fed-hilla/frontend/assets/icons",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "spring.configuration.checksum": "293e82991ad8703a09bb62523dd91fb9",
-    "ts.external.directory.path": "/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/frontend/common/form-fields&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
       <recent name="$PROJECT_DIR$/frontend/assets/images/icons" />
-      <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
       <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/views/custom-meal" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
       <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
       <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/common" />
-      <recent name="$PROJECT_DIR$/frontend/common/rich-text-parser" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +166,19 @@
       <workItem from="1688397802314" duration="8209000" />
       <workItem from="1688422024051" duration="1563000" />
       <workItem from="1688423616642" duration="8385000" />
-      <workItem from="1688461678953" duration="8810000" />
+      <workItem from="1688461678953" duration="14691000" />
+      <workItem from="1688480092085" duration="1760000" />
+      <workItem from="1688492582223" duration="6697000" />
+      <workItem from="1688554065985" duration="8732000" />
+      <workItem from="1688575446178" duration="7890000" />
+      <workItem from="1688597258429" duration="2746000" />
+      <workItem from="1688600037046" duration="767000" />
+      <workItem from="1688639029822" duration="2099000" />
+      <workItem from="1688740458589" duration="873000" />
+      <workItem from="1688742831436" duration="3749000" />
+      <workItem from="1688748322639" duration="10396000" />
+      <workItem from="1688760807355" duration="2470000" />
+      <workItem from="1688767333065" duration="1461000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -400,7 +425,98 @@
       <option name="project" value="LOCAL" />
       <updated>1688465275227</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="adding drink card component and display it in drinks page">
+      <created>1688472403924</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1688472403924</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fixing drinks slider in meal details">
+      <created>1688493068126</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1688493068126</updated>
+    </task>
+    <task id="LOCAL-00038" summary="adding zustand store to manage cart">
+      <created>1688499183665</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1688499183665</updated>
+    </task>
+    <task id="LOCAL-00039" summary="adding cart page and adding cart logique">
+      <created>1688559438305</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1688559438306</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fixing cart to manage quantity of each product">
+      <created>1688582621924</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1688582621924</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix style of meal/drink cards in cart">
+      <created>1688583212909</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1688583212909</updated>
+    </task>
+    <task id="LOCAL-00042" summary="adding sub category functionality">
+      <created>1688639529506</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1688639529506</updated>
+    </task>
+    <task id="LOCAL-00043" summary="refactor backend">
+      <created>1688750243372</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1688750243372</updated>
+    </task>
+    <task id="LOCAL-00044" summary="adding pack selector">
+      <created>1688755343944</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755343944</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix routing">
+      <created>1688755357690</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755357690</updated>
+    </task>
+    <task id="LOCAL-00046" summary="adding subcategorybyid endpoint">
+      <created>1688755380647</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755380647</updated>
+    </task>
+    <task id="LOCAL-00047" summary="change background">
+      <created>1688755394394</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755394394</updated>
+    </task>
+    <task id="LOCAL-00048" summary="finishing pack selector &quot;perfect&quot; component">
+      <created>1688757929463</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1688757929463</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,20 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="testing endpoints and fix errors" />
-    <MESSAGE value="adding frontend components and setting up frontend" />
-    <MESSAGE value="setting up menu page" />
-    <MESSAGE value="fix icon component" />
-    <MESSAGE value="refactoring" />
-    <MESSAGE value="fix getting meals by category" />
-    <MESSAGE value="fix category page and meals cards" />
-    <MESSAGE value="adding fetcher func and fix fetching data logique" />
-    <MESSAGE value="adding alert, loading and pagination" />
-    <MESSAGE value="fix header + adding about page" />
-    <MESSAGE value="adding rich text parser component" />
-    <MESSAGE value="adding terms of use other fixes" />
-    <MESSAGE value="adding faq and required components" />
-    <MESSAGE value="meal details page" />
     <MESSAGE value="adding auth pages and contact form" />
     <MESSAGE value="adding dialogue and textarea components" />
     <MESSAGE value="fix forms fields [custom-form-fields]" />
@@ -444,7 +546,21 @@
     <MESSAGE value="fix header profile dropdown" />
     <MESSAGE value="adding navigation header component" />
     <MESSAGE value="refactor header" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor header" />
+    <MESSAGE value="adding drink card component and display it in drinks page" />
+    <MESSAGE value="fixing drinks slider in meal details" />
+    <MESSAGE value="adding zustand store to manage cart" />
+    <MESSAGE value="adding cart page and adding cart logique" />
+    <MESSAGE value="fixing cart to manage quantity of each product" />
+    <MESSAGE value="fix style of meal/drink cards in cart" />
+    <MESSAGE value="adding sub category functionality" />
+    <MESSAGE value="adding sub category endpoint" />
+    <MESSAGE value="refactor backend" />
+    <MESSAGE value="adding pack selector" />
+    <MESSAGE value="fix routing" />
+    <MESSAGE value="adding subcategorybyid endpoint" />
+    <MESSAGE value="change background" />
+    <MESSAGE value="finishing pack selector &quot;perfect&quot; component" />
+    <option name="LAST_COMMIT_MESSAGE" value="finishing pack selector &quot;perfect&quot; component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
