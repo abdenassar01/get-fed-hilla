@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactor backend">
-      <change afterPath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="change background">
+      <change afterPath="$PROJECT_DIR$/frontend/common/ingredient-card/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/ingredient-card/ingredient-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/footer/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/utils/use-fetch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/use-fetch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/CategoryEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/CategoryEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/SubCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/SubCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/SubCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/SubCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/SubCategoryServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/SubCategoryServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,9 +105,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
       <recent name="$PROJECT_DIR$/frontend/assets/images/icons" />
-      <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
       <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
@@ -185,7 +176,7 @@
       <workItem from="1688639029822" duration="2099000" />
       <workItem from="1688740458589" duration="873000" />
       <workItem from="1688742831436" duration="3749000" />
-      <workItem from="1688748322639" duration="6751000" />
+      <workItem from="1688748322639" duration="9540000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -488,7 +479,35 @@
       <option name="project" value="LOCAL" />
       <updated>1688750243372</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="adding pack selector">
+      <created>1688755343944</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755343944</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix routing">
+      <created>1688755357690</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755357690</updated>
+    </task>
+    <task id="LOCAL-00046" summary="adding subcategorybyid endpoint">
+      <created>1688755380647</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755380647</updated>
+    </task>
+    <task id="LOCAL-00047" summary="change background">
+      <created>1688755394394</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1688755394394</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,10 +526,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix header + adding about page" />
-    <MESSAGE value="adding rich text parser component" />
-    <MESSAGE value="adding terms of use other fixes" />
-    <MESSAGE value="adding faq and required components" />
     <MESSAGE value="meal details page" />
     <MESSAGE value="adding auth pages and contact form" />
     <MESSAGE value="adding dialogue and textarea components" />
@@ -532,7 +547,11 @@
     <MESSAGE value="adding sub category functionality" />
     <MESSAGE value="adding sub category endpoint" />
     <MESSAGE value="refactor backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor backend" />
+    <MESSAGE value="adding pack selector" />
+    <MESSAGE value="fix routing" />
+    <MESSAGE value="adding subcategorybyid endpoint" />
+    <MESSAGE value="change background" />
+    <option name="LAST_COMMIT_MESSAGE" value="change background" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
