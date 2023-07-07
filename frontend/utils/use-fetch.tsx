@@ -4,10 +4,12 @@ function useFetch<T>(fetcher: () => any, dep: any[]) {
   const [data, setData] = useState<T>();
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<any>(null);
+  const [isFetching, setIsFetching] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(true);
     setError(null);
+    setIsFetching(data !== undefined);
     async function fetchData() {
       return await fetcher();
     }
@@ -18,9 +20,10 @@ function useFetch<T>(fetcher: () => any, dep: any[]) {
       setError(e);
     } finally {
       setLoading(false);
+      setIsFetching(false);
     }
   }, dep);
 
-  return { data, loading, error };
+  return { data, loading, error, isFetching };
 }
 export default useFetch;

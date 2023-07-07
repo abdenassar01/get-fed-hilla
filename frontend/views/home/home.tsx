@@ -5,7 +5,7 @@ import { Button } from "Frontend/common/index.js";
 
 export function Home() {
   return (
-    <main className="bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-contain overflow-x-hidden">
+    <main className="bg-background bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-contain overflow-x-hidden">
       <div className="container flex flex-col gap-[2.361vw] items-center">
         <div className="flex items-center justify-between">
           <div className="w-[45vw] flex flex-col gap-[24px]">

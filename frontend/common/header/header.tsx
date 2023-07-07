@@ -47,7 +47,7 @@ export function Header() {
   useOnHoverOutside(dropdownRef, closeDropdown);
 
   return (
-    <header className="font-nova ">
+    <header className="font-nova bg-background">
       <div className="container flex justify-between items-center">
         <img width={100} height={100} src={logo} alt="get fed" />
         <ul className="flex justify-between gap-[3vw]">
