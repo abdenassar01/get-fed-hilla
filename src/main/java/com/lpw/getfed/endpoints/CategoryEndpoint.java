@@ -56,4 +56,9 @@ public class CategoryEndpoint {
         logger.info("getting all sub categories");
         return ResponseEntity.ok(subCategoryService.getSubCategories());
     }
+
+    public ResponseEntity<SubCategory> getSubCategoryById(Long id){
+        logger.info("getting sub categories: " + id );
+        return ResponseEntity.ok(subCategoryService.getSubCategoryById(id));
+    }
 }

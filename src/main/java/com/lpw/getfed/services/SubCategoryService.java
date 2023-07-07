@@ -9,6 +9,5 @@ import java.util.List;
 public interface SubCategoryService {
 
     List<SubCategory> getSubCategories();
-
-
+    SubCategory getSubCategoryById(Long id);
 }

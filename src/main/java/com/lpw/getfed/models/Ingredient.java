@@ -30,7 +30,7 @@ public class Ingredient {
     private Meal meal;
 
     @ManyToOne
-    @JsonIdentityReference(alwaysAsId = true)
+//    @JsonIdentityReference(alwaysAsId = true)
     @JoinColumn(name = "sub_category_id", referencedColumnName = "id")
     private SubCategory subCategory;
 }

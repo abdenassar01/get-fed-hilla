@@ -23,4 +23,9 @@ public class SubCategoryServiceImplementation implements SubCategoryService {
     public List<SubCategory> getSubCategories() {
         return repository.findAll();
     }
+
+    @Override
+    public SubCategory getSubCategoryById(Long id) {
+        return repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find sub category with id: " + id));
+    }
 }

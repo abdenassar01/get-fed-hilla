@@ -25,9 +25,9 @@ public class SubCategory {
     private String image;
     private String label;
     private String description;
-    private double price;
+    private Double price;
 
     @JsonIgnore
     @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true)
-    private List<Ingredient> meals;
+    private List<Ingredient> ingredients;
 }
