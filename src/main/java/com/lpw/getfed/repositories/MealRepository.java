@@ -2,6 +2,7 @@ package com.lpw.getfed.repositories;
 
 import com.lpw.getfed.models.Category;
 import com.lpw.getfed.models.Meal;
+import com.lpw.getfed.models.SubCategory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -2,6 +2,7 @@ package com.lpw.getfed.repositories;
 
 import com.lpw.getfed.models.Ingredient;
 import com.lpw.getfed.models.Meal;
+import com.lpw.getfed.models.SubCategory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,4 +14,6 @@ import java.util.List;
 public interface IngrediantRepository extends JpaRepository<Ingredient, Long> {
 
     List<Ingredient> findAllByMeal(Meal meal);
+    Page<Ingredient> findAllBySubCategory(SubCategory subCategory, Pageable pageable);
+
 }

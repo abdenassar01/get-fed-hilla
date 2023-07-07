@@ -17,22 +17,22 @@ export function Header() {
       link: "/",
     },
     {
-      id: 1,
+      id: 2,
       label: "Menu",
       link: "/menu",
     },
     {
-      id: 1,
+      id: 3,
       label: "Drink",
       link: "/drink",
     },
     {
-      id: 1,
+      id: 4,
       label: "Offers",
       link: "/offers",
     },
     {
-      id: 1,
+      id: 5,
       label: "About",
       link: "/about",
     },

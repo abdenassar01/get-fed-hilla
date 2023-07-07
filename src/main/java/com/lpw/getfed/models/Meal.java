@@ -36,11 +36,6 @@ public class Meal {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    @ManyToOne
-    @JsonIdentityReference(alwaysAsId = true)
-    @JoinColumn(name = "sub_category_id", referencedColumnName = "id")
-    private SubCategory subCategory;
-
     @OneToMany(mappedBy = "meal", cascade = CascadeType.ALL, orphanRemoval = true)
     @Size(min=1, message="You must choose at least 1 ingredient")
     private List<Ingredient> ingredients;

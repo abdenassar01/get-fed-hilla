@@ -28,7 +28,7 @@ public class Category {
     @Column(length = 100)
     private String label;
 
-    @Column(length = 50)
+    @Column(length = 100)
     private String icon;
 
     @JsonIgnore

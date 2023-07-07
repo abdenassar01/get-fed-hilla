@@ -7,7 +7,6 @@ import {
   useMatches,
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
-import MealDetails from "Frontend/views/meal-details/meal-details.js";
 
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
@@ -20,6 +19,13 @@ const Drink = lazy(async () => import("Frontend/views/drink/drink.js"));
 const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
 const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
 const Cart = lazy(async () => import("Frontend/views/cart/cart.js"));
+const CustomMealIngredients = lazy(
+  async () =>
+    import("Frontend/views/custom-meal-ingredients/custom-meal-ingredients.js")
+);
+const MealDetails = lazy(
+  async () => import("Frontend/views/meal-details/meal-details.js")
+);
 const CustomizeMeal = lazy(
   async () => import("Frontend/views/custom-meal/customise-meal.js")
 );
@@ -104,6 +110,12 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: "/custom-meal",
         element: <CustomizeMeal />,
+        children: [
+          {
+            path: "/custom-meal/:id",
+            element: <CustomMealIngredients />,
+          },
+        ],
       },
       {
         path: "/login",

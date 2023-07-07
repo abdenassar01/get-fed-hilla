@@ -1,5 +1,6 @@
 package com.lpw.getfed.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -27,4 +28,9 @@ public class Ingredient {
     @JsonIgnore
 //    @JoinColumn(name = "meal_id", referencedColumnName = "id")
     private Meal meal;
+
+    @ManyToOne
+    @JsonIdentityReference(alwaysAsId = true)
+    @JoinColumn(name = "sub_category_id", referencedColumnName = "id")
+    private SubCategory subCategory;
 }

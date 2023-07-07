@@ -20,11 +20,14 @@ public class SubCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String label;
+    private String title;
+    private String icon;
     private String image;
+    private String label;
+    private String description;
+    private double price;
 
     @JsonIgnore
     @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true)
-    private List<Meal> meals;
-
+    private List<Ingredient> meals;
 }

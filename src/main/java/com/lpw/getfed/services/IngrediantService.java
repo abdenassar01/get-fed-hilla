@@ -18,5 +18,7 @@ public interface IngrediantService {
     ResponseEntity<String> removeIngrediant(Ingredient ingredient);
     ResponseEntity<Ingredient> removeIngrediantById(Long id);
     ResponseEntity<List<Ingredient>> getIngrediantsByMeal(Meal meal);
+    ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, Pageable pageable);
+
     ResponseEntity<List<Ingredient>> getIngrediantsByMealId(Long id);
 }
