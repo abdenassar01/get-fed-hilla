@@ -112,7 +112,7 @@ export const routes: readonly ViewRouteObject[] = [
         element: <CustomizeMeal />,
         children: [
           {
-            path: "/custom-meal/:id",
+            path: "/custom-meal/:subCategoryId",
             element: <CustomMealIngredients />,
           },
         ],

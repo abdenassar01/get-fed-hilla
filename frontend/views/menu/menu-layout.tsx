@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { HeaderTitle } from "Frontend/common/index.js";
-import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Placeholder from "Frontend/components/placeholder/Placeholder.js";
 import { ClassNames } from "Frontend/utils/classnames.js";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
