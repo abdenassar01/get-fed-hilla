@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/loading/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/drink/drink.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/drink/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/drink/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +180,8 @@
       <workItem from="1688742831436" duration="3749000" />
       <workItem from="1688748322639" duration="10396000" />
       <workItem from="1688760807355" duration="2470000" />
-      <workItem from="1688767333065" duration="1461000" />
+      <workItem from="1688767333065" duration="1599000" />
+      <workItem from="1688811222697" duration="913000" />
     </task>
     <task id="LOCAL-00001" summary="setting up tailwind css">
       <created>1685876343992</created>
@@ -516,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688757929463</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fix custom meal and fix other styling">
+      <created>1688768895263</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1688768895264</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +545,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding auth pages and contact form" />
     <MESSAGE value="adding dialogue and textarea components" />
     <MESSAGE value="fix forms fields [custom-form-fields]" />
     <MESSAGE value="adding phone number field" />
@@ -560,7 +569,8 @@
     <MESSAGE value="adding subcategorybyid endpoint" />
     <MESSAGE value="change background" />
     <MESSAGE value="finishing pack selector &quot;perfect&quot; component" />
-    <option name="LAST_COMMIT_MESSAGE" value="finishing pack selector &quot;perfect&quot; component" />
+    <MESSAGE value="fix custom meal and fix other styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix custom meal and fix other styling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

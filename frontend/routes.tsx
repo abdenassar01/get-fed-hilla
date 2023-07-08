@@ -15,7 +15,7 @@ const MenuLayout = lazy(
   async () => import("Frontend/views/menu/menu-layout.js")
 );
 const About = lazy(async () => import("Frontend/views/about/About.js"));
-const Drink = lazy(async () => import("Frontend/views/drink/drink.js"));
+const Drinks = lazy(async () => import("Frontend/views/drink/drinks.js"));
 const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
 const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
 const Cart = lazy(async () => import("Frontend/views/cart/cart.js"));
@@ -105,7 +105,7 @@ export const routes: readonly ViewRouteObject[] = [
       },
       {
         path: "/drink",
-        element: <Drink />,
+        element: <Drinks />,
       },
       {
         path: "/custom-meal",

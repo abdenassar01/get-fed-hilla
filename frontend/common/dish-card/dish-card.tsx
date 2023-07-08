@@ -40,7 +40,7 @@ export function DishCard({
           backgroundImage:
             `url('${img}')` || "url('https://i.imgur.com/iqWUU6x.png')",
         }}
-        className="mt-[-25%] bg-cover bg-no-repeat w-[13.472vw] h-[9.653vw] rounded-[8px]"
+        className="mt-[-25%] bg-cover shadow bg-no-repeat w-[13.472vw] h-[9.653vw] rounded-[8px]"
       />
       <h2 className="font-bold mt-[10px] text-xl">{title}</h2>
       <RichTextParser

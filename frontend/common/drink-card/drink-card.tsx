@@ -2,7 +2,6 @@ import * as React from "react";
 import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 import { FaCartPlus } from "react-icons/fa";
 import { useCartStore } from "Frontend/stores/cart-store.js";
-import drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 
 type Props = {
   drink: Drink;
@@ -14,7 +13,7 @@ export function DrinkCard({
   const { addDrink } = useCartStore();
 
   return (
-    <div className="shadow-1 border-[1px] border-[#F4F4F4] h-[10vw] rounded-[8px] flex justify-between">
+    <div className="shadow-1 bg-white h-[10vw] rounded-[8px] flex justify-between">
       <div className="flex flex-col p-4 justify-between">
         <div className="text-[#949494] text-xbase">{label}</div>
         <div className="flex justify-between items-center gap-2">
