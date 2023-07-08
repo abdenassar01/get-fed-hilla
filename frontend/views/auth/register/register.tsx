@@ -54,7 +54,7 @@ export default function Register() {
   };
 
   return (
-    <div className="w-[100%] bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
+    <div className="w-[100%] bg-background bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
       <div className="container flex items-center py-[48px] sm:flex-col">
         <div className="hidden w-full justify-center sm:flex ">
           <HeaderTitle title="Connectez vous" subTitle="" />

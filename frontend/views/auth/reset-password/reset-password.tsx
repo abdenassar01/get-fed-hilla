@@ -13,7 +13,7 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="w-[100%] bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
+    <div className="w-full bg-background bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
       <div className="container flex items-center py-[6.667vw] sm:flex-col">
         <div className="hidden sm:block">
           <HeaderTitle title="MOT DE PASSE oUBLIé?" subTitle="" />

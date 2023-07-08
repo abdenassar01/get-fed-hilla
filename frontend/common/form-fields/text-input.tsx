@@ -55,7 +55,7 @@ export function TextInput({
         type={isPassword ? "password" : "text"}
         style={{ borderRadius: 8 }}
         className={ClassNames(
-          "rounded-[10px] border-none bg-[#F3F4F6] px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] sm:p-[5.097vw] sm:text-mb-xxs",
+          "rounded-[10px] border-none bg-white px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] sm:p-[5.097vw] sm:text-mb-xxs",
           inputClassName || "",
           (error && "border-red-600") || ""
         )}

@@ -31,7 +31,7 @@ export default function Login() {
   };
 
   return (
-    <div className="w-[100%] bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
+    <div className="w-[100%] bg-background bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
       <div className="container flex flex-col items-center py-[6.667vw]">
         <div className="flex w-full items-end gap-[24px] sm:flex-col">
           <div className="hidden w-full justify-center sm:flex ">

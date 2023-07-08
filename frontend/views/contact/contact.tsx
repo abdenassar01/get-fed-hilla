@@ -8,7 +8,7 @@ import { HeaderTitle } from "Frontend/common/index.js";
 
 export default function Contact() {
   return (
-    <div className="w-[100%] bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
+    <div className="w-full bg-background bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
       <div className="container flex flex-col items-center gap-[4.444vw] py-[6.667vw]">
         <HeaderTitle title="Contact Support" />
         <div className="flex gap-[3.333vw] sm:flex-col-reverse">
