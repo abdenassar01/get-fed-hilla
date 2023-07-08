@@ -40,6 +40,28 @@ body{
     display: flex !important;
 }
 
+.board-link-active em:first-child::after{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: #F3F4F6;
+    border-end-end-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.board-link-active em:last-child::after{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: #F3F4F6;
+    border-start-end-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 @font-face {
     font-family: 'Nova Script';
     src: url('./assets/fonts/NovaScript.woff') format('woff2'),

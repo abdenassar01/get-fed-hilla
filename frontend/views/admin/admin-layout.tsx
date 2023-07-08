@@ -1,8 +1,10 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 
 function AdminLayout() {
+  const navigate = useNavigate();
+
   const pages = [
     {
       id: 1,
@@ -31,18 +33,25 @@ function AdminLayout() {
     },
   ];
 
+  useEffect(() => {
+    // TODO: to be changed to admin/board
+    navigate("/admin/add-meal");
+  }, []);
+
   return (
     <div className="bg-background py-4">
       <div className="container flex sm:flex-col">
         <div className="w-[19.444vw] sm:w-[100%]">
-          <ul className="sm:no-scrollbar w-full sm:flex sm:gap-[24px] sm:overflow-y-scroll">
+          <ul className="mt-[30px] sm:no-scrollbar w-full sm:flex sm:gap-[24px] sm:overflow-y-scroll">
             {pages.map((page) => (
               <li key={page.id} className="w-full text-base text-cardText">
                 <NoStyleLink
                   link={page.link}
-                  className="block h-full rounded-s-[8px] w-full whitespace-nowrap p-[1.667vw] sm:bg-background sm:px-[24px] sm:py-[20px] sm:text-mb-base"
-                  activeClassName="bg-white !text-main border-l-[8px] border-blue-500 font-normal sm:border-l-0 sm:border-b-[4px]"
+                  className="relative block h-full rounded-s-[8px] w-full whitespace-nowrap p-[1.667vw] sm:bg-background sm:px-[24px] sm:py-[20px] sm:text-mb-base"
+                  activeClassName="prose-em:block bg-white board-link-active !text-main border-l-[8px] border-blue-500 font-normal sm:border-l-0 sm:border-b-[4px]"
                 >
+                  <em className="hidden absolute w-[24px] h-[24px] right-0 top-[-24px] bg-white" />
+                  <em className="hidden absolute w-[24px] h-[24px] right-0 bottom-[-24px] bg-white" />
                   {page.label}
                 </NoStyleLink>
               </li>

@@ -3,7 +3,7 @@ import { uploadFile } from "@uploadcare/upload-client";
 export async function useUploadImage(image: any) {
   try {
     const res = await uploadFile(image, {
-      publicKey: process.env.UPLOAD_CARE_PUBLIC_KEY || "",
+      publicKey: "4a3ffc8c82b28b73b6ad",
       store: "auto",
       metadata: {
         subsystem: "uploader",
