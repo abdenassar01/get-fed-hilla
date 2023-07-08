@@ -54,10 +54,10 @@ export default function Register() {
   };
 
   return (
-    <div className="w-[100%] bg-background bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
+    <div className="w-full bg-background">
       <div className="container flex items-center py-[48px] sm:flex-col">
         <div className="hidden w-full justify-center sm:flex ">
-          <HeaderTitle title="Connectez vous" subTitle="" />
+          <HeaderTitle title="Sign Up" subTitle="" />
         </div>
         <div className="flex w-[41.042vw] items-center justify-center px-[4.444vw] py-[2.222vw] sm:w-full">
           <img
@@ -68,58 +68,58 @@ export default function Register() {
         </div>
         <div className="flex w-[41.042vw] flex-col gap-[24px] sm:w-full">
           <div className="mb-[3.472vw] sm:hidden">
-            <HeaderTitle title="S'inscrire" subTitle="" />
+            <HeaderTitle title="Sign up" subTitle="" />
           </div>
           <div className="flex flex-col gap-[24px]">
             <TextInput
               control={control}
-              label="Adresse e-mail"
-              name="mail"
-              placeholder="Votre Adresse E-mail*"
+              label="e-mail / username"
+              name="username"
+              placeholder="Your username/e-mail*"
             />
             <TextInput
               control={control}
-              label="Prènom"
-              name="name"
-              placeholder="Prènom*"
+              label="fistname"
+              name="firstname"
+              placeholder="Your firstname*"
             />
             <TextInput
               control={control}
-              label="Nom"
+              label="lastname"
               name="lastname"
-              placeholder="nom*"
+              placeholder="Your lastname*"
             />
             <TextInput
               control={control}
-              label="Mot de passe"
+              label="password"
               name="password"
               type="password"
-              placeholder="mot de passe*"
+              placeholder="Your password*"
             />
             <TextInput
               control={control}
-              label="Confirmer le mot de passe"
+              label="confirm password"
               name="repassword"
               type="password"
-              placeholder="Confirmer le mot de passe *"
+              placeholder="Repeat password*"
             />
             <CheckboxField
               control={control}
-              label="j'accepte que les informations saisies sont exploitées par Khabiry dans le cadre de l'inscription au site"
+              label="By registring I accept get-fed terms of use."
               name="terms"
             />
             <div className="w-full flex justify-end">
               <Button
                 className="w-fit"
-                text="Envoyer"
+                text="sign up"
                 onClick={handleSubmit(onSubmit)}
               />
             </div>
 
             <div className="w-[100%] text-center text-xs font-medium text-[#B7B7B7] sm:text-mb-xxs">
-              Vous avez déjà un compte?
+              You already have an account?
               <Link to="/login" className="text-secondary">
-                &nbsp; Connectez-vous
+                &nbsp; Log in
               </Link>
             </div>
           </div>

@@ -52,7 +52,7 @@ export function Form() {
   };
 
   const [alert, setAlert] = useState<boolean>(false);
-  console.log(errors);
+
   return (
     <div className="flex items-center gap-[4.444vw] sm:w-full sm:flex-col">
       <Alert

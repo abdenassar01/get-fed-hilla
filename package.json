@@ -18,6 +18,7 @@
     "@loadable/component": "^5.15.3",
     "@polymer/polymer": "3.5.1",
     "@tailwindcss/typography": "^0.5.9",
+    "@uploadcare/upload-client": "^6.6.1",
     "@vaadin-component-factory/vcf-nav": "1.1.0",
     "@vaadin/bundles": "24.0.3",
     "@vaadin/common-frontend": "0.0.18",
@@ -29,6 +30,7 @@
     "@vaadin/vaadin-lumo-styles": "24.0.3",
     "@vaadin/vaadin-material-styles": "24.0.3",
     "@vaadin/vaadin-themable-mixin": "24.0.3",
+    "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
     "construct-style-sheets-polyfill": "3.1.0",
@@ -138,7 +140,9 @@
     "react-phone-number-input": "$react-phone-number-input",
     "react-slick": "$react-slick",
     "slick-carousel": "$slick-carousel",
-    "zustand": "$zustand"
+    "zustand": "$zustand",
+    "@uploadcare/upload-client": "$@uploadcare/upload-client",
+    "axios": "$axios"
   },
   "vaadin": {
     "dependencies": {
@@ -183,6 +187,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "e0f707afad837c2d04a6721f20bb1e009ce2bb866646c9b9b600aca1015040b5"
+    "hash": "d86839d5f47c0b82c60c29417bfbd835419f716e4dd7596e0a9e1b81997fd2ca"
   }
 }
