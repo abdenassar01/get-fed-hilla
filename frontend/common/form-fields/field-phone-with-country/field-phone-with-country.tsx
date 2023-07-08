@@ -80,7 +80,7 @@ export function FieldPhoneWithCountry({
                 value={value?.phone}
                 name={name}
                 className={ClassNames(
-                  "w-full rounded-[10px] border-none bg-[#F3F4F6] px-[24px] py-[16px] text-sm leading-4 sm:p-[5.097vw] sm:text-mb-xxs",
+                  "w-full rounded-[10px] border-none bg-white px-[24px] py-[16px] text-sm leading-4 sm:p-[5.097vw] sm:text-mb-xxs",
                   className || "",
                   (error && "border-red-600") || ""
                 )}

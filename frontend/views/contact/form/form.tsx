@@ -115,7 +115,7 @@ export function Form() {
             checked
           />
           <Button
-            text="Envoyer"
+            text="Send"
             className="w-fit sm:w-full"
             onClick={handleSubmit(onSubmit)}
           />

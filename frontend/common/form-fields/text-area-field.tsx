@@ -50,7 +50,7 @@ export function TextAreaField({
         onBlur={onBlur}
         style={{ borderRadius: 4 }}
         className={ClassNames(
-          "rounded-[10px] border-none bg-[#F3F4F6] px-6 py-4 placeholder-[#A6A6A6]",
+          "rounded-[10px] border-none bg-white px-6 py-4 placeholder-[#A6A6A6]",
           className || "",
           (error && "border-red-600") || ""
         )}
