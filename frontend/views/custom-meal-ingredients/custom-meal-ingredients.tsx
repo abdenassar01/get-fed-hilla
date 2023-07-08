@@ -1,5 +1,5 @@
 import * as React from "react";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import {
   CategoryEndpoint,
   IngredientEndpoint,

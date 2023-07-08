@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useParams } from "react-router-dom";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
 import { MealEndpoint } from "Frontend/generated/endpoints.js";
 import {

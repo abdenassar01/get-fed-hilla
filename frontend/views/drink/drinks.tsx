@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DrinkCard } from "Frontend/common/drink-card/drink-card.js";
 import { HeaderTitle, Loading } from "Frontend/common/index.js";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 import { DrinkEndpoint } from "Frontend/generated/endpoints.js";
 

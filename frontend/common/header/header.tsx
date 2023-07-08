@@ -6,7 +6,7 @@ import { ClassNames } from "Frontend/utils/classnames.js";
 import { useRef, useState } from "react";
 import profile from "Frontend/assets/icons/profile.svg";
 import { Button } from "Frontend/common/index.js";
-import { useOnHoverOutside } from "Frontend/common/utils/hooks/index.js";
+import { useOnHoverOutside } from "Frontend/utils/hooks/index.js";
 import { BsBasket2Fill } from "react-icons/bs";
 
 export function Header() {

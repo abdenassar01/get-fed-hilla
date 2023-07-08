@@ -1,6 +1,6 @@
 import * as React from "react";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 import { Loading } from "Frontend/common/index.js";
 import { Suspense, useEffect } from "react";

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MealEndpoint } from "Frontend/generated/endpoints.js";
 import { Alert, Button, DishCard, Loading } from "Frontend/common/index.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 
 export default function CategoryDetails({ category }: { category: number }) {
   const [page, setPage] = useState<number>(0);

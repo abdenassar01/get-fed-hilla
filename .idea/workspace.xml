@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix field to match new background">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/add-meal/add-meal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utils/hooks/use-upload-image.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/utils/classnames.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/classnames.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/reset-password/reset-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/reset-password/reset-password.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/hooks/use-hover-outside.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/use-hover-outside.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/hooks/use-outside-click.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/use-outside-click.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/utils/use-fetch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/use-fetch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/contact/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/form/form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal-details/drinks-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal-details/drinks-slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal-details/meal-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal-details/meal-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,11 +124,11 @@
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/utils/hooks" />
+      <recent name="$PROJECT_DIR$/frontend/utils" />
       <recent name="$PROJECT_DIR$/frontend/views/admin" />
       <recent name="$PROJECT_DIR$/frontend/views/custom-meal" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
-      <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
-      <recent name="$PROJECT_DIR$/frontend/utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -188,14 +193,8 @@
       <workItem from="1688767333065" duration="1599000" />
       <workItem from="1688811222697" duration="7615000" />
       <workItem from="1688825913799" duration="1053000" />
-      <workItem from="1688828099940" duration="1467000" />
-    </task>
-    <task id="LOCAL-00005" summary="adding annotations to repos">
-      <created>1687695765228</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687695765228</updated>
+      <workItem from="1688828099940" duration="3950000" />
+      <workItem from="1688835216981" duration="792000" />
     </task>
     <task id="LOCAL-00006" summary="adding service interfaces">
       <created>1687708880814</created>
@@ -533,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688812969276</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fixes and adding admin panel wrapper">
+      <created>1688830417897</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1688830417898</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixing upload file field" />
     <MESSAGE value="fixing auth pages and routing" />
     <MESSAGE value="add profile options to header" />
     <MESSAGE value="fix header profile dropdown" />
@@ -577,7 +582,8 @@
     <MESSAGE value="update background" />
     <MESSAGE value="fix loading indicator" />
     <MESSAGE value="fix field to match new background" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix field to match new background" />
+    <MESSAGE value="fixes and adding admin panel wrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes and adding admin panel wrapper" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
