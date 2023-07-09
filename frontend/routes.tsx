@@ -25,6 +25,19 @@ const AdminLayout = lazy(
 const AddMeal = lazy(
   async () => import("Frontend/views/admin/add-meal/add-meal.js")
 );
+const Dashboard = lazy(
+  async () => import("Frontend/views/admin/dashboard/dashboard.js")
+);
+const Orders = lazy(
+  async () => import("Frontend/views/admin/orders/orders.js")
+);
+const UpdatePassword = lazy(
+  async () => import("Frontend/views/admin/update-password/update-password.js")
+);
+
+const UserManagement = lazy(
+  async () => import("Frontend/views/admin/users-management/user-management.js")
+);
 const CustomMealIngredients = lazy(
   async () =>
     import("Frontend/views/custom-meal-ingredients/custom-meal-ingredients.js")
@@ -108,6 +121,22 @@ export const routes: readonly ViewRouteObject[] = [
           {
             path: "/admin/add-meal",
             element: <AddMeal />,
+          },
+          {
+            path: "/admin/board",
+            element: <Dashboard />,
+          },
+          {
+            path: "/admin/orders",
+            element: <Orders />,
+          },
+          {
+            path: "/admin/users",
+            element: <UserManagement />,
+          },
+          {
+            path: "/admin/security",
+            element: <UpdatePassword />,
           },
         ],
       },

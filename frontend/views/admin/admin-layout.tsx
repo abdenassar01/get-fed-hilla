@@ -28,7 +28,7 @@ function AdminLayout() {
     },
     {
       id: 6,
-      link: "/profile/security",
+      link: "/admin/security",
       label: "Update password",
     },
   ];
@@ -51,8 +51,11 @@ function AdminLayout() {
                   activeClassName="prose-em:block bg-white board-link-active !text-main border-l-[8px] border-blue-500 font-normal sm:border-l-0 sm:border-b-[4px]"
                 >
                   <em className="hidden absolute w-[24px] h-[24px] right-0 top-[-24px] bg-white" />
+                  <div className="flex">
+                    <img src="" alt="" className="" />
+                    {page.label}
+                  </div>
                   <em className="hidden absolute w-[24px] h-[24px] right-0 bottom-[-24px] bg-white" />
-                  {page.label}
                 </NoStyleLink>
               </li>
             ))}
