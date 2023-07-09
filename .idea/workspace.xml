@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="update design of admin panel...">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/update-password/update-password.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add admin dashboard layout">
+      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,21 +180,7 @@
       <workItem from="1688835216981" duration="5630000" />
       <workItem from="1688888826615" duration="407000" />
       <workItem from="1688889262668" duration="172000" />
-      <workItem from="1688889477391" duration="1164000" />
-    </task>
-    <task id="LOCAL-00008" summary="adding sevices implementations for delivery, drink, employee and ingredient">
-      <created>1687861599925</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1687861599925</updated>
-    </task>
-    <task id="LOCAL-00009" summary="adding meal service implementation">
-      <created>1687876304668</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1687876304668</updated>
+      <workItem from="1688889477391" duration="1505000" />
     </task>
     <task id="LOCAL-00010" summary="adding all endpoints">
       <created>1687954196566</created>
@@ -533,7 +511,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688841760914</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="fix card item header">
+      <created>1688890824056</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1688890824057</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add admin dashboard layout">
+      <created>1688890842273</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1688890842274</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,8 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix header profile dropdown" />
-    <MESSAGE value="adding navigation header component" />
     <MESSAGE value="refactor header" />
     <MESSAGE value="adding drink card component and display it in drinks page" />
     <MESSAGE value="fixing drinks slider in meal details" />
@@ -577,7 +567,9 @@
     <MESSAGE value="fixes and adding admin panel wrapper" />
     <MESSAGE value="add upload file - update design" />
     <MESSAGE value="update design of admin panel..." />
-    <option name="LAST_COMMIT_MESSAGE" value="update design of admin panel..." />
+    <MESSAGE value="fix card item header" />
+    <MESSAGE value="add admin dashboard layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add admin dashboard layout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

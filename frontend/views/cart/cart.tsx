@@ -93,7 +93,7 @@ export default function Cart() {
                         className="h-full w-[10vw] bg-no-repeat bg-cover bg-center"
                       />
                       <div
-                        onClick={() => removeMeal(drink.item.id || 0)}
+                        onClick={() => removeDrink(drink.item.id || 0)}
                         className="absolute top-1 right-3 text-error"
                       >
                         <IoIosCloseCircle size={24} />
