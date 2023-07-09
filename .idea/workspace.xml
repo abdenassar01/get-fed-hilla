@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add admin dashboard layout">
-      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix remove drink from cart">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/update-password/update-password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/update-password/update-password.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,14 +184,7 @@
       <workItem from="1688835216981" duration="5630000" />
       <workItem from="1688888826615" duration="407000" />
       <workItem from="1688889262668" duration="172000" />
-      <workItem from="1688889477391" duration="1505000" />
-    </task>
-    <task id="LOCAL-00010" summary="adding all endpoints">
-      <created>1687954196566</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1687954196566</updated>
+      <workItem from="1688889477391" duration="4661000" />
     </task>
     <task id="LOCAL-00011" summary="fixing logger">
       <created>1687957549074</created>
@@ -525,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688890842274</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="fix remove drink from cart">
+      <created>1688891089052</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1688891089052</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +548,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor header" />
     <MESSAGE value="adding drink card component and display it in drinks page" />
     <MESSAGE value="fixing drinks slider in meal details" />
     <MESSAGE value="adding zustand store to manage cart" />
@@ -569,7 +572,8 @@
     <MESSAGE value="update design of admin panel..." />
     <MESSAGE value="fix card item header" />
     <MESSAGE value="add admin dashboard layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add admin dashboard layout" />
+    <MESSAGE value="fix remove drink from cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix remove drink from cart" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

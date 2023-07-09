@@ -29,6 +29,7 @@ export function TextInput({
   } = useController({
     control,
     name: name || "text",
+    defaultValue: "",
   });
 
   return (
@@ -55,7 +56,7 @@ export function TextInput({
         type={isPassword ? "password" : "text"}
         style={{ borderRadius: 8 }}
         className={ClassNames(
-          "rounded-[10px] border-none bg-white px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] sm:p-[5.097vw] sm:text-mb-xxs",
+          "rounded-[10px] border-none bg-white px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] focus-visible:outline-none focus:shadow-md sm:p-[5.097vw] sm:text-mb-xxs",
           inputClassName || "",
           (error && "border-red-600") || ""
         )}
@@ -66,10 +67,10 @@ export function TextInput({
           onClick={() => setIsPassword((prev) => !prev)}
           src={icon}
           alt="password toggle"
-          className="absolute right-[2%] top-[50%]"
+          className="absolute right-[2%] top-[35%]"
         />
       )}
-      <p className="mb-[-1.667vw] h-[1.667vw] text-xxs text-error">
+      <p className="h-[1.667vw] text-xxs text-error">
         {error?.message?.toString()}
       </p>
     </div>

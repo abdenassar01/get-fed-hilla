@@ -12,7 +12,7 @@ export default function AddMeal() {
     useUploadImage(file).then((res) => console.log(res));
   };
   return (
-    <div className="w-full bg-white p-4 rounded-[8px] min-h-full">
+    <div className="w-full bg-white p-4 rounded-[8px] min-h-[120%]">
       <input name="file" type="file" onChange={onFileChange} />
       <button onClick={onFileUpload}>Upload</button>
     </div>
