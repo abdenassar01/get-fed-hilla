@@ -8,6 +8,7 @@ import profile from "Frontend/assets/icons/profile.svg";
 import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/utils/hooks/index.js";
 import { BsBasket2Fill } from "react-icons/bs";
+import { useCartStore } from "Frontend/stores/cart-store.js";
 
 export function Header() {
   const headerLinks = [
@@ -45,7 +46,7 @@ export function Header() {
     setShowProfileDropdown(false);
   };
   useOnHoverOutside(dropdownRef, closeDropdown);
-
+  const { meals, drinks } = useCartStore();
   return (
     <header className="font-nova bg-background">
       <div className="container flex justify-between items-center">
@@ -76,7 +77,13 @@ export function Header() {
                 )
               }
             >
-              <div className="">
+              <div
+                className={ClassNames(
+                  "relative ",
+                  meals.length + drinks.length > 0 ? "cart-nav-item" : ""
+                )}
+                after-data={meals.length + drinks.length}
+              >
                 <BsBasket2Fill size={18} />
               </div>
             </NavLink>

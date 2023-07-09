@@ -49,6 +49,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 20;
 }
 
 .board-link-active em:last-child::after{
@@ -60,6 +61,23 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
+}
+
+.cart-nav-item::after{
+    content: attr(after-data);
+    height: 15px;
+    width: 15px;
+    background: #FF385C;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
 }
 
 @font-face {
