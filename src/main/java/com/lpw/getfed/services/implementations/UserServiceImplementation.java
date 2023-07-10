@@ -3,26 +3,33 @@ package com.lpw.getfed.services.implementations;
 import com.lpw.getfed.models.User;
 import com.lpw.getfed.repositories.UserRepository;
 import com.lpw.getfed.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service("user_service")
-public class UserServiceImplementation implements UserService, UserDetailsService {
+public class UserServiceImplementation implements UserService {
 
     private final UserRepository repository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserServiceImplementation(UserRepository repository) {
+    @Autowired
+    public UserServiceImplementation(UserRepository repository, PasswordEncoder passwordEncoder) {
         this.repository = repository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
-    public ResponseEntity<User> addEmployee(User employee) {
-        return ResponseEntity.ok(repository.save(employee));
+    public ResponseEntity<User> addEmployee(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return ResponseEntity.ok(repository.save(user));
     }
 
     @Override
@@ -59,14 +66,23 @@ public class UserServiceImplementation implements UserService, UserDetailsServic
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) {
+        try {
+            User user = repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username));
 
-        User user = repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username));
-
-        return new org.springframework.security.core.userdetails.User(
-                user.getUsername(),
-                user.getPassword(),
-                user.getAuthorities()
-        );
+            return new org.springframework.security.core.userdetails.User(
+                    user.getUsername(),
+                    user.getPassword(),
+                    user.getAuthorities()
+            );
+        }catch (IndexOutOfBoundsException e){
+            throw new UsernameNotFoundException("Wrong username");
+        }catch(DataAccessException e){
+            e.printStackTrace();
+            throw new UsernameNotFoundException("Database Error");
+        }catch(Exception e){
+            e.printStackTrace();
+            throw new UsernameNotFoundException("Unknown Error");
+        }
     }
 }
