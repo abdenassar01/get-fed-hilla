@@ -1,7 +1,6 @@
 package com.lpw.getfed.services.implementations;
 
 import com.lpw.getfed.models.Delivery;
-import com.lpw.getfed.models.Employee;
 import com.lpw.getfed.models.Order;
 import com.lpw.getfed.repositories.OrderRepository;
 import com.lpw.getfed.services.OrderService;

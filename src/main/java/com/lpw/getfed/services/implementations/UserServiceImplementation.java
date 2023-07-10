@@ -1,36 +1,36 @@
 package com.lpw.getfed.services.implementations;
 
-import com.lpw.getfed.models.Employee;
-import com.lpw.getfed.repositories.EmployeeRepository;
-import com.lpw.getfed.services.EmployeeService;
+import com.lpw.getfed.models.User;
+import com.lpw.getfed.repositories.UserRepository;
+import com.lpw.getfed.services.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-@Service("employee_service")
-public class EmployeeServiceImplementation implements EmployeeService {
+@Service("user_service")
+public class UserServiceImplementation implements UserService {
 
-    private final EmployeeRepository repository;
+    private final UserRepository repository;
 
-    public EmployeeServiceImplementation(EmployeeRepository repository) {
+    public UserServiceImplementation(UserRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public ResponseEntity<Employee> addEmployee(Employee employee) {
+    public ResponseEntity<User> addEmployee(User employee) {
         return ResponseEntity.ok(repository.save(employee));
     }
 
     @Override
-    public ResponseEntity<String> removeEmployee(Employee employee) {
+    public ResponseEntity<String> removeEmployee(User employee) {
         repository.delete(employee);
         return ResponseEntity.ok("Employee " + employee.getUsername() + " removed successfully");
     }
 
     @Override
-    public ResponseEntity<Employee> removeEmployeeById(Long id) {
-        Employee employee =
+    public ResponseEntity<User> removeEmployeeById(Long id) {
+        User employee =
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find employee with id: " + id)
                 );
@@ -39,8 +39,8 @@ public class EmployeeServiceImplementation implements EmployeeService {
     }
 
     @Override
-    public ResponseEntity<Employee> updateEmployee(Employee employee, Long id) {
-        Employee oldEmployee =
+    public ResponseEntity<User> updateEmployee(User employee, Long id) {
+        User oldEmployee =
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find employee with id: " + id)
                 );
@@ -51,7 +51,7 @@ public class EmployeeServiceImplementation implements EmployeeService {
     }
 
     @Override
-    public ResponseEntity<Page<Employee>> getPageEmployees(Pageable pageable) {
+    public ResponseEntity<Page<User>> getPageEmployees(Pageable pageable) {
         return ResponseEntity.ok(repository.findAll(pageable));
     }
 }

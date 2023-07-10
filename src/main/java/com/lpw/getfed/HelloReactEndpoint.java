@@ -1,8 +1,6 @@
 package com.lpw.getfed;
 
 import com.lpw.getfed.models.Category;
-import com.lpw.getfed.models.Employee;
-import com.lpw.getfed.repositories.EmployeeRepository;
 import com.lpw.getfed.services.CategoryService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
