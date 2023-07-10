@@ -6,10 +6,13 @@ import com.lpw.getfed.services.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service("user_service")
-public class UserServiceImplementation implements UserService {
+public class UserServiceImplementation implements UserService, UserDetailsService {
 
     private final UserRepository repository;
 
@@ -53,5 +56,17 @@ public class UserServiceImplementation implements UserService {
     @Override
     public ResponseEntity<Page<User>> getPageEmployees(Pageable pageable) {
         return ResponseEntity.ok(repository.findAll(pageable));
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        User user = repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username));
+
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),
+                user.getAuthorities()
+        );
     }
 }
