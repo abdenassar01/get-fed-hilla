@@ -52,7 +52,7 @@ export default function UpdatePassword() {
           label="current password"
           type="password"
           name="current_password"
-          inputClassName="!bg-background"
+          inputClassName="bg-[#F3F3F3]"
         />
         <TextInput
           placeholder="********"
@@ -60,7 +60,7 @@ export default function UpdatePassword() {
           label="new password"
           type="password"
           name="new_password"
-          inputClassName="!bg-background"
+          inputClassName="bg-[#F3F3F3]"
         />
         <TextInput
           placeholder="********"
@@ -68,7 +68,7 @@ export default function UpdatePassword() {
           label="repeat new password"
           type="password"
           name="new_password_confirm"
-          inputClassName="!bg-background"
+          inputClassName="bg-[#F3F3F3]"
         />
         <button
           className="bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"

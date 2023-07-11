@@ -67,7 +67,7 @@ export function TextInput({
           onClick={() => setIsPassword((prev) => !prev)}
           src={icon}
           alt="password toggle"
-          className="absolute right-[2%] top-[35%]"
+          className="absolute right-[2%] top-[42%]"
         />
       )}
       <p className="text-xxs text-error">{error?.message?.toString()}</p>

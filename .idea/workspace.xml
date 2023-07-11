@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix login in register page">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix bug adding items to cart">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/utils/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,21 +187,7 @@
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
       <workItem from="1689067443809" duration="11989000" />
-      <workItem from="1689085079117" duration="3735000" />
-    </task>
-    <task id="LOCAL-00025" summary="meal details page">
-      <created>1688165253201</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1688165253201</updated>
-    </task>
-    <task id="LOCAL-00026" summary="adding auth pages and contact form">
-      <created>1688403595217</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1688403595217</updated>
+      <workItem from="1689085079117" duration="5121000" />
     </task>
     <task id="LOCAL-00027" summary="adding dialogue and textarea components">
       <created>1688404962835</created>
@@ -534,7 +518,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689087977251</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="add authentication logic to adding items to cart">
+      <created>1689088858042</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1689088858042</updated>
+    </task>
+    <task id="LOCAL-00075" summary="fix bug adding items to cart">
+      <created>1689089175441</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1689089175441</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,8 +551,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix custom meal and fix other styling" />
-    <MESSAGE value="fetching drink from db" />
     <MESSAGE value="update background" />
     <MESSAGE value="fix loading indicator" />
     <MESSAGE value="fix field to match new background" />
@@ -578,7 +574,9 @@
     <MESSAGE value="fix private route and other fixes" />
     <MESSAGE value="redirect from register if logged in user" />
     <MESSAGE value="fix login in register page" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix login in register page" />
+    <MESSAGE value="add authentication logic to adding items to cart" />
+    <MESSAGE value="fix bug adding items to cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug adding items to cart" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
