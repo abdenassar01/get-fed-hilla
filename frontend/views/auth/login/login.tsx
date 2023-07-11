@@ -28,7 +28,7 @@ export default function Login() {
   const [error, setError] = useState<boolean>(false);
   const [msgError, setMsgError] = useState<string>("");
 
-  const { setUser } = useUserStore();
+  const { setUser, user } = useUserStore();
   const navigate = useNavigate();
 
   const { control, handleSubmit } = useForm<FormValues>({
@@ -40,7 +40,7 @@ export default function Login() {
     if (sessionStorage.getItem("user") !== null) {
       navigate("/");
     }
-  }, []);
+  }, [user]);
 
   const onSubmit = (credentials: FormValues) => {
     setLoading(true);

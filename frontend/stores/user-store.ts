@@ -2,7 +2,7 @@ import User from "Frontend/generated/com/lpw/getfed/models/User.js";
 import { create } from "zustand";
 
 type State = {
-  user: User | {};
+  user: User;
 };
 
 type Action = {

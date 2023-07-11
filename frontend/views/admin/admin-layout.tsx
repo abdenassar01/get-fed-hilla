@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
+import { useUserStore } from "Frontend/stores/user-store.js";
 
 function AdminLayout() {
+  const [error, setError] = useState<boolean>(false);
   const navigate = useNavigate();
-
+  const { user } = useUserStore();
   const pages = [
     {
       id: 1,
@@ -34,8 +36,13 @@ function AdminLayout() {
   ];
 
   useEffect(() => {
-    // TODO: to be changed to admin/board
-    navigate("/admin/add-meal");
+    if (!user) {
+      return navigate("/login");
+    }
+    if (user.role !== "ADMIN") {
+      return navigate("/error");
+    }
+    navigate("/admin/board");
   }, []);
 
   return (
