@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import zod from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,7 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import illustration from "Frontend/assets/images/illustrations/register.svg";
 import { Button, HeaderTitle } from "Frontend/common/index.js";
 import { CheckboxField, TextInput } from "Frontend/common/form-fields/index.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserStore } from "Frontend/stores/user-store.js";
 
 const schema = zod.object({
   name: zod.string({
@@ -44,10 +45,19 @@ const schema = zod.object({
 type FormValues = zod.infer<typeof schema>;
 
 export default function Register() {
+  const { setUser, user } = useUserStore();
+  const navigate = useNavigate();
+
   const { control, handleSubmit } = useForm<FormValues>({
     mode: "onChange",
     resolver: zodResolver(schema),
   });
+
+  useEffect(() => {
+    if (sessionStorage.getItem("user") !== null) {
+      navigate("/");
+    }
+  }, [user]);
 
   const onSubmit = (data: any) => {
     console.log(data);
