@@ -6,7 +6,7 @@ import { useUserStore } from "Frontend/stores/user-store.js";
 function AdminLayout() {
   const [error, setError] = useState<boolean>(false);
   const navigate = useNavigate();
-  const { user } = useUserStore();
+  const { user, authenticated } = useUserStore();
   const pages = [
     {
       id: 1,
@@ -36,14 +36,14 @@ function AdminLayout() {
   ];
 
   useEffect(() => {
-    if (!user) {
+    if (!authenticated) {
       return navigate("/login");
     }
     if (user.role !== "ADMIN") {
       return navigate("/error");
     }
     navigate("/admin/board");
-  }, []);
+  }, [authenticated]);
 
   return (
     <div className="bg-background py-4">
