@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix header drop down appearance">
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/orders/table-row.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,14 +189,7 @@
       <workItem from="1689029007117" duration="6826000" />
       <workItem from="1689067443809" duration="11989000" />
       <workItem from="1689085079117" duration="14528000" />
-      <workItem from="1689114979219" duration="895000" />
-    </task>
-    <task id="LOCAL-00032" summary="add profile options to header">
-      <created>1688432180013</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1688432180013</updated>
+      <workItem from="1689114979219" duration="3996000" />
     </task>
     <task id="LOCAL-00033" summary="fix header profile dropdown">
       <created>1688463061705</created>
@@ -533,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689100755324</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="fix header drop down appearance">
+      <created>1689116395295</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1689116395297</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update design of admin panel..." />
     <MESSAGE value="fix card item header" />
     <MESSAGE value="add admin dashboard layout" />
     <MESSAGE value="fix remove drink from cart" />
@@ -577,7 +577,8 @@
     <MESSAGE value="update backend for meal" />
     <MESSAGE value="adding the count ability to backend modals" />
     <MESSAGE value="fixing count endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing count endpoint" />
+    <MESSAGE value="fix header drop down appearance" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix header drop down appearance" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
