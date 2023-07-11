@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 @Endpoint
 @AnonymousAllowed
@@ -44,14 +45,14 @@ public class UserEndpoint {
         return service.updateEmployee(employee, id);
     }
 
-    public ResponseEntity<Page<User>> getPageEmployees(int page){
+    public ResponseEntity<Page<User>> getPageUsers(int page){
         logger.info("getting page " + page + " of employees");
         return service.getPageEmployees(PageRequest.of(page, 10));
     }
 
-    public ResponseEntity<Page<User>> getPageEmployees(){
-        logger.info("getting the first page of employees");
-        return service.getPageEmployees(PageRequest.of(0, 10));
+    public ResponseEntity<User> getUserByUsername(String username){
+        logger.info("getting user: " + username);
+        return service.getUserByUsername(username);
     }
 
 }

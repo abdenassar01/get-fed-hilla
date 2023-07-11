@@ -17,6 +17,23 @@ export function Button({
   className,
   theme = "primary",
 }: Props) {
+  if (!link)
+    return (
+      <button
+        onClick={onClick}
+        className={ClassNames(
+          "text-center",
+          theme === "primary"
+            ? "bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"
+            : theme === "secondary"
+            ? "px-[32px] py-[7px] transition-all ease-in delay-75  !bg-[transparent] !text-main hover:!text-white hover:!bg-main bg-main border-[1px] rounded-full border-main  hover:bg-[transparent]"
+            : "p-0 bg-[transparent] transition-all ease-in delay-75 !text-main hover:border-b-[1px] hover:border-b-main",
+          className || ""
+        )}
+      >
+        {text}
+      </button>
+    );
   return (
     <Link
       to={link || ""}
@@ -30,7 +47,7 @@ export function Button({
         className || ""
       )}
     >
-      <button onClick={onClick}>{text}</button>
+      <div>{text}</div>
     </Link>
   );
 }

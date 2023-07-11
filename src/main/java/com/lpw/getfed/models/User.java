@@ -42,21 +42,29 @@ public class User implements UserDetails {
     }
 
     @Override
+    @JsonIgnore
+    @Column(columnDefinition = "boolean default true")
     public boolean isAccountNonExpired() {
         return true;
     }
 
     @Override
+    @JsonIgnore
+    @Column(columnDefinition = "boolean default true")
     public boolean isAccountNonLocked() {
         return true;
     }
 
     @Override
+    @JsonIgnore
+    @Column(columnDefinition = "boolean default true")
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
     @Override
+    @JsonIgnore
+    @Column(columnDefinition = "boolean default true")
     public boolean isEnabled() {
         return true;
     }

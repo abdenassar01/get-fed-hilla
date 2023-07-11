@@ -66,6 +66,11 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
+    public ResponseEntity<User> getUserByUsername(String username) {
+        return ResponseEntity.ok(repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username)));
+    }
+
+    @Override
     public UserDetails loadUserByUsername(String username) {
         try {
             User user = repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username));

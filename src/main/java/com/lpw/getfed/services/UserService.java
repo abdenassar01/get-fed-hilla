@@ -14,5 +14,5 @@ public interface UserService extends UserDetailsService {
     ResponseEntity<User> removeEmployeeById(Long id);
     ResponseEntity<User> updateEmployee(User employee, Long id);
     ResponseEntity<Page<User>> getPageEmployees(Pageable pageable);
-
+    ResponseEntity<User> getUserByUsername(String username);
 }

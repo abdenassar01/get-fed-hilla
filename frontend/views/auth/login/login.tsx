@@ -7,15 +7,17 @@ import illustration from "Frontend/assets/images/illustrations/login.svg";
 import { Button, HeaderTitle } from "Frontend/common/index.js";
 import { CheckboxField, TextInput } from "Frontend/common/form-fields/index.js";
 import { Link } from "react-router-dom";
+import { login } from "@hilla/frontend";
+import { UserEndpoint } from "Frontend/generated/endpoints.js";
 
 const schema = zod.object({
   username: zod.string({
     required_error: "username / email required",
   }),
-  lastname: zod.string({
+  password: zod.string({
     required_error: "password required",
   }),
-  terms: zod.boolean(),
+  remember_me: zod.optional(zod.boolean()),
 });
 
 type FormValues = zod.infer<typeof schema>;
@@ -26,8 +28,12 @@ export default function Login() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = (credentials: FormValues) => {
+    login(credentials.username, credentials.password)
+      .then(console.log)
+      .then(() =>
+        UserEndpoint.getUserByUsername(credentials.username).then(console.log)
+      );
   };
 
   return (
@@ -44,11 +50,11 @@ export default function Login() {
               className="w-[26.319vw] sm:w-[41.988vw]"
             />
           </div>
-          <div className="flex w-[41.042vw] flex-col gap-[1.667vw] sm:w-full">
+          <div className="flex w-[41.042vw] flex-col  sm:w-full">
             <div className="mb-[3.472vw] sm:hidden">
               <HeaderTitle title="Log in" subTitle="" />
             </div>
-            <div className="flex flex-col gap-[24px]">
+            <div className="flex flex-col gap-2">
               <TextInput
                 control={control}
                 label="username / email"
@@ -60,7 +66,7 @@ export default function Login() {
                 type="password"
                 control={control}
                 label="Your password?"
-                name="mail"
+                name="password"
                 placeholder="password"
                 className=""
               />
