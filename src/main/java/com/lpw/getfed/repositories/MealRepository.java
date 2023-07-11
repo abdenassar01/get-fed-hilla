@@ -17,4 +17,7 @@ public interface MealRepository extends JpaRepository<Meal, Long> {
     Page<Meal> findAllByCategoryAndCustom(Category category, boolean custom, Pageable pageable);
     Page<Meal> findAllByCustom(boolean custom, Pageable pageable);
     List<Meal> findAllByTitleContaining(String title);
+    int countAll();
+    int countAllByCustom(boolean custom);
+    int countAllByCategory(Category category);
 }

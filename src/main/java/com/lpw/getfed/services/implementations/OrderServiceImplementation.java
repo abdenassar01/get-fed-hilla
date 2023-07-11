@@ -9,6 +9,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service("order_service")
 public class OrderServiceImplementation implements OrderService {
 
@@ -70,5 +73,12 @@ public class OrderServiceImplementation implements OrderService {
     @Override
     public ResponseEntity<Page<Order>> getOrdersByDelivery(Delivery delivery, Pageable pageable) {
         return ResponseEntity.ok(repository.findAllByDelivery(delivery, pageable));
+    }
+
+    @Override
+    public Map<String, Object> countAll() {
+        Map<String, Object> count = new HashMap<>();
+        count.put("orders", repository.countAll());
+        return count;
     }
 }

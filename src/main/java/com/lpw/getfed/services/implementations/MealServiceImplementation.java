@@ -11,7 +11,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service("meal_service")
 public class MealServiceImplementation implements MealService {
@@ -81,5 +83,28 @@ public class MealServiceImplementation implements MealService {
     @Override
     public ResponseEntity<List<Meal>> searchMeal(String query) {
         return ResponseEntity.ok(repository.findAllByTitleContaining(query));
+    }
+
+    @Override
+    public Map<String, Object> countAll() {
+        Map<String, Object> count = new HashMap<>();
+        count.put("meals", repository.countAll());
+        return count;
+    }
+
+    @Override
+    public Map<String, Object> countAllByCustom() {
+        Map<String, Object> count = new HashMap<>();
+        count.put("meals", repository.countAllByCustom(false));
+        return count;
+    }
+
+    @Override
+    public Map<String, Object> countAllByCategory(Long categoryId) {
+        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new IllegalStateException("can't find category with id: " + categoryId));
+
+        Map<String, Object> count = new HashMap<>();
+        count.put("meals", repository.countAllByCategory(category));
+        return count;
     }
 }

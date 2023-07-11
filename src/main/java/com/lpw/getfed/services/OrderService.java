@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
+import java.util.Map;
+
 @Qualifier("order_service")
 public interface OrderService {
 
@@ -18,5 +20,6 @@ public interface OrderService {
     ResponseEntity<Order> deleteOrderById(Long id);
     ResponseEntity<Order> updateOrder(Long id, Order order);
     ResponseEntity<Page<Order>> getOrdersByDelivery(Delivery delivery, Pageable page);
+    Map<String, Object> countAll();
 
 }

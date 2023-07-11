@@ -7,6 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
+import java.util.Map;
+
 @Qualifier("user_service")
 public interface UserService extends UserDetailsService {
     ResponseEntity<User> addEmployee(User employee);
@@ -15,4 +17,5 @@ public interface UserService extends UserDetailsService {
     ResponseEntity<User> updateEmployee(User employee, Long id);
     ResponseEntity<Page<User>> getPageEmployees(Pageable pageable);
     ResponseEntity<User> getUserByUsername(String username);
+    Map<String, Object> countAll();
 }

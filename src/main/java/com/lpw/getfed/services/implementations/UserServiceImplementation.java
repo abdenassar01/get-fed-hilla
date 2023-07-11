@@ -14,6 +14,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service("user_service")
 public class UserServiceImplementation implements UserService {
 
@@ -68,6 +71,13 @@ public class UserServiceImplementation implements UserService {
     @Override
     public ResponseEntity<User> getUserByUsername(String username) {
         return ResponseEntity.ok(repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username)));
+    }
+
+    @Override
+    public Map<String, Object> countAll() {
+        Map<String, Object> count = new HashMap<>();
+        count.put("users", repository.countAll());
+        return count;
     }
 
     @Override
