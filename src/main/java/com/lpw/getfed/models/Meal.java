@@ -8,7 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -30,6 +32,8 @@ public class Meal {
     private String description;
     private Integer rating;
     private Double price;
+
+    private Date dateCreated;
 
     @Column(columnDefinition = "boolean default false")
     private Boolean custom;

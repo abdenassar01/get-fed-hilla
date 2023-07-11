@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix styles - [merge tailwind classNames]">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix admin role test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,14 +191,7 @@
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
       <workItem from="1689067443809" duration="11989000" />
-      <workItem from="1689085079117" duration="9614000" />
-    </task>
-    <task id="LOCAL-00028" summary="fix forms fields [custom-form-fields]">
-      <created>1688424541709</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1688424541709</updated>
+      <workItem from="1689085079117" duration="11073000" />
     </task>
     <task id="LOCAL-00029" summary="adding phone number field">
       <created>1688426739078</created>
@@ -534,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689090464936</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="fix admin role test">
+      <created>1689096397662</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1689096397662</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix loading indicator" />
     <MESSAGE value="fix field to match new background" />
     <MESSAGE value="fixes and adding admin panel wrapper" />
     <MESSAGE value="add upload file - update design" />
@@ -578,7 +579,8 @@
     <MESSAGE value="add authentication logic to adding items to cart" />
     <MESSAGE value="fix bug adding items to cart" />
     <MESSAGE value="fix styles - [merge tailwind classNames]" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix styles - [merge tailwind classNames]" />
+    <MESSAGE value="fix admin role test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix admin role test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

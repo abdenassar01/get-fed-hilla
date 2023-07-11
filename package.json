@@ -143,7 +143,8 @@
     "slick-carousel": "$slick-carousel",
     "zustand": "$zustand",
     "@uploadcare/upload-client": "$@uploadcare/upload-client",
-    "axios": "$axios"
+    "axios": "$axios",
+    "tailwind-merge": "$tailwind-merge"
   },
   "vaadin": {
     "dependencies": {
@@ -188,6 +189,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "d86839d5f47c0b82c60c29417bfbd835419f716e4dd7596e0a9e1b81997fd2ca"
+    "hash": "7692b743eb31ba0d1bd65f58fda6941323b1b218bf72ed1a63b2fc27335c3b5f"
   }
 }

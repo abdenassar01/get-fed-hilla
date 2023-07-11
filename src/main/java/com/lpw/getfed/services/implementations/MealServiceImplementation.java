@@ -41,7 +41,7 @@ public class MealServiceImplementation implements MealService {
 
     @Override
     public ResponseEntity<Page<Meal>> getMeals(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+        return ResponseEntity.ok(repository.findAllByCustom (false ,pageable));
     }
 
     @Override
@@ -75,7 +75,7 @@ public class MealServiceImplementation implements MealService {
     @Override
     public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable) {
         Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new IllegalStateException("can't find category with id: " + categoryId));
-        return ResponseEntity.ok(repository.findAllByCategory(category, pageable));
+        return ResponseEntity.ok(repository.findAllByCategoryAndCustom(category, false, pageable));
     }
 
     @Override

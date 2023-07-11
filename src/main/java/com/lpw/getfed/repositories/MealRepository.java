@@ -14,6 +14,7 @@ import java.util.List;
 public interface MealRepository extends JpaRepository<Meal, Long> {
 
     Page<Meal> findAllByCategory(Category category, Pageable pageable);
-
+    Page<Meal> findAllByCategoryAndCustom(Category category, boolean custom, Pageable pageable);
+    Page<Meal> findAllByCustom(boolean custom, Pageable pageable);
     List<Meal> findAllByTitleContaining(String title);
 }
