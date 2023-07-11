@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import illustration from "Frontend/assets/images/illustrations/login.svg";
-import { Button, HeaderTitle } from "Frontend/common/index.js";
+import { Alert, Button, HeaderTitle } from "Frontend/common/index.js";
 import { CheckboxField, TextInput } from "Frontend/common/form-fields/index.js";
 import { Link } from "react-router-dom";
 import { login } from "@hilla/frontend";
 import { UserEndpoint } from "Frontend/generated/endpoints.js";
+import { useUserStore } from "Frontend/stores/user-store.js";
 
 const schema = zod.object({
   username: zod.string({
@@ -23,21 +24,31 @@ const schema = zod.object({
 type FormValues = zod.infer<typeof schema>;
 
 export default function Login() {
+  const [error, setError] = useState<boolean>(false);
+  const [msgError, setMsgError] = useState<string>("");
+  const { setUser } = useUserStore();
   const { control, handleSubmit } = useForm<FormValues>({
     mode: "onChange",
     resolver: zodResolver(schema),
   });
 
   const onSubmit = (credentials: FormValues) => {
-    login(credentials.username, credentials.password)
-      .then(console.log)
-      .then(() =>
-        UserEndpoint.getUserByUsername(credentials.username).then(console.log)
-      );
+    login(credentials.username, credentials.password).then((res) => {
+      if (res.error) {
+        setError(true);
+        setMsgError(res.errorMessage || "");
+      } else {
+        UserEndpoint.getUserByUsername(credentials.username).then((res) =>
+          // @ts-ignore
+          setUser(res?.body)
+        );
+      }
+    });
   };
 
   return (
     <div className="w-[100%] bg-background ">
+      <Alert message={msgError} open={error} status="error" />
       <div className="container flex flex-col items-center py-[6.667vw]">
         <div className="flex w-full items-end gap-[24px] sm:flex-col">
           <div className="hidden w-full justify-center sm:flex ">
