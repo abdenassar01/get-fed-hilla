@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DrinkEndpoint } from "Frontend/generated/endpoints.js";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import { Alert, Loading } from "Frontend/common/index.js";
 import Slider from "react-slick";
 import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";

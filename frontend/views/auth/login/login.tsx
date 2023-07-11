@@ -1,37 +1,73 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import illustration from "Frontend/assets/images/illustrations/login.svg";
-import { Button, HeaderTitle } from "Frontend/common/index.js";
+import { Alert, Button, HeaderTitle, Loading } from "Frontend/common/index.js";
 import { CheckboxField, TextInput } from "Frontend/common/form-fields/index.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "@hilla/frontend";
+import { UserEndpoint } from "Frontend/generated/endpoints.js";
+import { useUserStore } from "Frontend/stores/user-store.js";
 
 const schema = zod.object({
   username: zod.string({
     required_error: "username / email required",
   }),
-  lastname: zod.string({
+  password: zod.string({
     required_error: "password required",
   }),
-  terms: zod.boolean(),
+  remember_me: zod.optional(zod.boolean()),
 });
 
 type FormValues = zod.infer<typeof schema>;
 
 export default function Login() {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const [msgError, setMsgError] = useState<string>("");
+
+  const { setUser, user } = useUserStore();
+  const navigate = useNavigate();
+
   const { control, handleSubmit } = useForm<FormValues>({
     mode: "onChange",
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: any) => {
-    console.log(data);
+  useEffect(() => {
+    if (sessionStorage.getItem("user") !== null) {
+      navigate("/");
+    }
+  }, [user]);
+
+  const onSubmit = (credentials: FormValues) => {
+    setLoading(true);
+    login(credentials.username, credentials.password)
+      .then((res) => {
+        if (res.error) {
+          setError(true);
+          setMsgError(res.errorMessage || "");
+        } else {
+          UserEndpoint.getUserByUsername(credentials.username).then((res) => {
+            // @ts-ignore
+            setUser(res?.body);
+            // @ts-ignore
+            sessionStorage.setItem("role", res?.body.role);
+            // @ts-ignore
+            sessionStorage.setItem("user", JSON.stringify(res?.body));
+          });
+        }
+      })
+      .then(() => setLoading(false));
   };
 
+  if (loading) return <Loading />;
+
   return (
-    <div className="w-[100%] bg-[url('/forms-background.svg')] bg-contain bg-no-repeat sm:bg-[url('/auth-background.svg')]">
+    <div className="w-[100%] bg-background ">
+      <Alert message={msgError} open={error} status="error" />
       <div className="container flex flex-col items-center py-[6.667vw]">
         <div className="flex w-full items-end gap-[24px] sm:flex-col">
           <div className="hidden w-full justify-center sm:flex ">
@@ -44,11 +80,11 @@ export default function Login() {
               className="w-[26.319vw] sm:w-[41.988vw]"
             />
           </div>
-          <div className="flex w-[41.042vw] flex-col gap-[1.667vw] sm:w-full">
+          <div className="flex w-[41.042vw] flex-col  sm:w-full">
             <div className="mb-[3.472vw] sm:hidden">
               <HeaderTitle title="Log in" subTitle="" />
             </div>
-            <div className="flex flex-col gap-[24px]">
+            <div className="flex flex-col gap-2">
               <TextInput
                 control={control}
                 label="username / email"
@@ -60,7 +96,7 @@ export default function Login() {
                 type="password"
                 control={control}
                 label="Your password?"
-                name="mail"
+                name="password"
                 placeholder="password"
                 className=""
               />

@@ -29,8 +29,8 @@ export default function Cart() {
   }, [meals, drinks]);
 
   return (
-    <div className="bg-mainText bg-[url('https://i.imgur.com/aWXoG4M.png')] bg-no-repeat bg-cover min-h-[700px] flex flex-col items-center">
-      <div className="my-12 py-6 w-[70vw] p-3 bg-background rounded-[8px] shadow-lg">
+    <div className="bg-mainText bg-[url('https://i.imgur.com/D1FTJJD.png')] bg-no-repeat bg-cover min-h-[700px] flex flex-col items-center">
+      <div className="my-12 py-6 w-[70vw] p-3 bg-white rounded-[8px] shadow-lg">
         <HeaderTitle title="My Cart" />
         {filtredMeals.length === 0 && filtredDrinks.length === 0 ? (
           <Alert message="You haven't added any item to you cart yet" />
@@ -93,7 +93,7 @@ export default function Cart() {
                         className="h-full w-[10vw] bg-no-repeat bg-cover bg-center"
                       />
                       <div
-                        onClick={() => removeMeal(drink.item.id || 0)}
+                        onClick={() => removeDrink(drink.item.id || 0)}
                         className="absolute top-1 right-3 text-error"
                       >
                         <IoIosCloseCircle size={24} />

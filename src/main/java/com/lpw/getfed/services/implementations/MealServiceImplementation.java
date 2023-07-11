@@ -11,7 +11,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service("meal_service")
 public class MealServiceImplementation implements MealService {
@@ -41,7 +43,7 @@ public class MealServiceImplementation implements MealService {
 
     @Override
     public ResponseEntity<Page<Meal>> getMeals(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+        return ResponseEntity.ok(repository.findAllByCustom (false ,pageable));
     }
 
     @Override
@@ -75,11 +77,34 @@ public class MealServiceImplementation implements MealService {
     @Override
     public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable) {
         Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new IllegalStateException("can't find category with id: " + categoryId));
-        return ResponseEntity.ok(repository.findAllByCategory(category, pageable));
+        return ResponseEntity.ok(repository.findAllByCategoryAndCustom(category, false, pageable));
     }
 
     @Override
     public ResponseEntity<List<Meal>> searchMeal(String query) {
         return ResponseEntity.ok(repository.findAllByTitleContaining(query));
+    }
+
+    @Override
+    public Map<String, Object> countAll() {
+        Map<String, Object> count = new HashMap<>();
+        count.put("meals", repository.count());
+        return count;
+    }
+
+    @Override
+    public Map<String, Object> countAllByCustom() {
+        Map<String, Object> count = new HashMap<>();
+        count.put("meals", repository.countAllByCustomFalse());
+        return count;
+    }
+
+    @Override
+    public Map<String, Object> countAllByCategory(Long categoryId) {
+        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new IllegalStateException("can't find category with id: " + categoryId));
+
+        Map<String, Object> count = new HashMap<>();
+        count.put("meals", repository.countAllByCategory(category));
+        return count;
     }
 }

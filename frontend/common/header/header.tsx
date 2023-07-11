@@ -6,8 +6,10 @@ import { ClassNames } from "Frontend/utils/classnames.js";
 import { useRef, useState } from "react";
 import profile from "Frontend/assets/icons/profile.svg";
 import { Button } from "Frontend/common/index.js";
-import { useOnHoverOutside } from "Frontend/common/utils/hooks/index.js";
+import { useOnHoverOutside } from "Frontend/utils/hooks/index.js";
 import { BsBasket2Fill } from "react-icons/bs";
+import { useCartStore } from "Frontend/stores/cart-store.js";
+import { logout } from "@hilla/frontend";
 
 export function Header() {
   const headerLinks = [
@@ -45,7 +47,7 @@ export function Header() {
     setShowProfileDropdown(false);
   };
   useOnHoverOutside(dropdownRef, closeDropdown);
-
+  const { meals, drinks } = useCartStore();
   return (
     <header className="font-nova bg-background">
       <div className="container flex justify-between items-center">
@@ -76,7 +78,13 @@ export function Header() {
                 )
               }
             >
-              <div className="">
+              <div
+                className={ClassNames(
+                  "relative ",
+                  meals.length + drinks.length > 0 ? "cart-nav-item" : ""
+                )}
+                after-data={meals.length + drinks.length}
+              >
                 <BsBasket2Fill size={18} />
               </div>
             </NavLink>
@@ -109,6 +117,8 @@ export function Header() {
             >
               <Button theme="tertiary" text="Log in" link="/login" />
               <Button theme="tertiary" text="Sign up" link="/register" />
+              <Button theme="tertiary" text="logout" link="/logout" />
+              <Button theme="tertiary" text="admin" link="/admin" />
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ import { FaCartPlus } from "react-icons/fa";
 import { Button, RichTextParser, StartRating } from "Frontend/common/index.js";
 import { truncate } from "Frontend/utils/truncate-html.js";
 import { useCartStore } from "Frontend/stores/cart-store.js";
+import { useUserStore } from "Frontend/stores/user-store.js";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   id: number;
@@ -20,17 +22,23 @@ export function DishCard({
   description,
   title,
 }: Props) {
+  const navigate = useNavigate();
   const { addMeal } = useCartStore();
+  const { authenticated } = useUserStore();
 
   const handleAddMeal = () => {
-    addMeal({
-      id,
-      image: img,
-      title,
-      price,
-      description,
-      rating,
-    });
+    if (authenticated) {
+      addMeal({
+        id,
+        image: img,
+        title,
+        price,
+        description,
+        rating,
+      });
+    } else {
+      return navigate("/login");
+    }
   };
 
   return (
@@ -40,7 +48,7 @@ export function DishCard({
           backgroundImage:
             `url('${img}')` || "url('https://i.imgur.com/iqWUU6x.png')",
         }}
-        className="mt-[-25%] bg-cover bg-no-repeat w-[13.472vw] h-[9.653vw] rounded-[8px]"
+        className="mt-[-25%] bg-cover shadow bg-no-repeat w-[13.472vw] h-[9.653vw] rounded-[8px]"
       />
       <h2 className="font-bold mt-[10px] text-xl">{title}</h2>
       <RichTextParser

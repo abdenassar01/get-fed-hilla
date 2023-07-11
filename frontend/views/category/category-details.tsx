@@ -3,7 +3,7 @@ import { useState } from "react";
 import { MealEndpoint } from "Frontend/generated/endpoints.js";
 import { Alert, Button, DishCard, Loading } from "Frontend/common/index.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
-import useFetch from "Frontend/utils/use-fetch.js";
+import useFetch from "Frontend/utils/hooks/use-fetch.js";
 
 export default function CategoryDetails({ category }: { category: number }) {
   const [page, setPage] = useState<number>(0);
@@ -17,13 +17,17 @@ export default function CategoryDetails({ category }: { category: number }) {
     }
   };
 
-  const { data, loading, error } = useFetch<Meal[]>(getData, [category, page]);
+  const { data, loading, error, isFetching } = useFetch<Meal[]>(getData, [
+    category,
+    page,
+  ]);
 
-  if (loading) return <Loading />;
+  if (loading || isFetching) return <Loading />;
   if (error) return <div>error</div>;
   if (data?.length === 0)
     return <Alert message="There is no meals on this category" />;
 
+  console.log(data);
   return (
     <div className="pt-6 container flex flex-col items-center gap-12">
       <div className="grid grid-cols-4 gap-[20px]">

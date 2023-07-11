@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the count ability to backend modals">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/pack-selector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -92,7 +96,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;293e82991ad8703a09bb62523dd91fb9&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/abdenassar/Desktop/get-fed-hilla/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -112,11 +116,11 @@
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/utils/hooks" />
+      <recent name="$PROJECT_DIR$/frontend/utils" />
+      <recent name="$PROJECT_DIR$/frontend/views/admin" />
       <recent name="$PROJECT_DIR$/frontend/views/custom-meal" />
       <recent name="$PROJECT_DIR$/frontend/assets/icons" />
-      <recent name="$PROJECT_DIR$/frontend/common/form-fields" />
-      <recent name="$PROJECT_DIR$/frontend/utils" />
-      <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -178,217 +182,19 @@
       <workItem from="1688742831436" duration="3749000" />
       <workItem from="1688748322639" duration="10396000" />
       <workItem from="1688760807355" duration="2470000" />
-      <workItem from="1688767333065" duration="1461000" />
-    </task>
-    <task id="LOCAL-00001" summary="setting up tailwind css">
-      <created>1685876343992</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1685876343992</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adding required modals">
-      <created>1685887611459</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1685887611459</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix database structure">
-      <created>1686007501462</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1686007501462</updated>
-    </task>
-    <task id="LOCAL-00004" summary="refactoring package structure and adding repos">
-      <created>1687695661682</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1687695661682</updated>
-    </task>
-    <task id="LOCAL-00005" summary="adding annotations to repos">
-      <created>1687695765228</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1687695765228</updated>
-    </task>
-    <task id="LOCAL-00006" summary="adding service interfaces">
-      <created>1687708880814</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1687708880814</updated>
-    </task>
-    <task id="LOCAL-00007" summary="adding category service and test endpoints">
-      <created>1687736828406</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1687736828406</updated>
-    </task>
-    <task id="LOCAL-00008" summary="adding sevices implementations for delivery, drink, employee and ingredient">
-      <created>1687861599925</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1687861599925</updated>
-    </task>
-    <task id="LOCAL-00009" summary="adding meal service implementation">
-      <created>1687876304668</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1687876304668</updated>
-    </task>
-    <task id="LOCAL-00010" summary="adding all endpoints">
-      <created>1687954196566</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1687954196566</updated>
-    </task>
-    <task id="LOCAL-00011" summary="fixing logger">
-      <created>1687957549074</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1687957549075</updated>
-    </task>
-    <task id="LOCAL-00012" summary="testing endpoints and fix errors">
-      <created>1687971190215</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1687971190215</updated>
-    </task>
-    <task id="LOCAL-00013" summary="adding frontend components and setting up frontend">
-      <created>1687976893652</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1687976893652</updated>
-    </task>
-    <task id="LOCAL-00014" summary="setting up menu page">
-      <created>1687997848333</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1687997848333</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix icon component">
-      <created>1688119815365</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1688119815365</updated>
-    </task>
-    <task id="LOCAL-00016" summary="refactoring">
-      <created>1688123128782</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1688123128782</updated>
-    </task>
-    <task id="LOCAL-00017" summary="fix getting meals by category">
-      <created>1688138306302</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1688138306302</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fix category page and meals cards">
-      <created>1688140431470</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1688140431470</updated>
-    </task>
-    <task id="LOCAL-00019" summary="adding fetcher func and fix fetching data logique">
-      <created>1688142283976</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1688142283976</updated>
-    </task>
-    <task id="LOCAL-00020" summary="adding alert, loading and pagination">
-      <created>1688146993663</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1688146993663</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fix header + adding about page">
-      <created>1688148060413</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1688148060413</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adding rich text parser component">
-      <created>1688149300247</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1688149300248</updated>
-    </task>
-    <task id="LOCAL-00023" summary="adding terms of use other fixes">
-      <created>1688162369993</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1688162369993</updated>
-    </task>
-    <task id="LOCAL-00024" summary="adding faq and required components">
-      <created>1688163834987</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1688163834987</updated>
-    </task>
-    <task id="LOCAL-00025" summary="meal details page">
-      <created>1688165253201</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1688165253201</updated>
-    </task>
-    <task id="LOCAL-00026" summary="adding auth pages and contact form">
-      <created>1688403595217</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1688403595217</updated>
-    </task>
-    <task id="LOCAL-00027" summary="adding dialogue and textarea components">
-      <created>1688404962835</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1688404962835</updated>
-    </task>
-    <task id="LOCAL-00028" summary="fix forms fields [custom-form-fields]">
-      <created>1688424541709</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1688424541709</updated>
-    </task>
-    <task id="LOCAL-00029" summary="adding phone number field">
-      <created>1688426739078</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1688426739078</updated>
-    </task>
-    <task id="LOCAL-00030" summary="fixing drop down field">
-      <created>1688427638056</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1688427638057</updated>
+      <workItem from="1688767333065" duration="1599000" />
+      <workItem from="1688811222697" duration="7615000" />
+      <workItem from="1688825913799" duration="1053000" />
+      <workItem from="1688828099940" duration="3950000" />
+      <workItem from="1688835216981" duration="5630000" />
+      <workItem from="1688888826615" duration="407000" />
+      <workItem from="1688889262668" duration="172000" />
+      <workItem from="1688889477391" duration="5497000" />
+      <workItem from="1688902035670" duration="88000" />
+      <workItem from="1689007886440" duration="8323000" />
+      <workItem from="1689029007117" duration="6826000" />
+      <workItem from="1689067443809" duration="11989000" />
+      <workItem from="1689085079117" duration="14275000" />
     </task>
     <task id="LOCAL-00031" summary="fixing upload file field">
       <created>1688427813564</created>
@@ -516,7 +322,224 @@
       <option name="project" value="LOCAL" />
       <updated>1688757929463</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fix custom meal and fix other styling">
+      <created>1688768895263</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1688768895264</updated>
+    </task>
+    <task id="LOCAL-00050" summary="fetching drink from db">
+      <created>1688812193905</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1688812193906</updated>
+    </task>
+    <task id="LOCAL-00051" summary="update background">
+      <created>1688812650964</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1688812650965</updated>
+    </task>
+    <task id="LOCAL-00052" summary="fix loading indicator">
+      <created>1688812946961</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1688812946961</updated>
+    </task>
+    <task id="LOCAL-00053" summary="fix field to match new background">
+      <created>1688812969276</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1688812969276</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fixes and adding admin panel wrapper">
+      <created>1688830417897</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1688830417898</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add upload file - update design">
+      <created>1688839142080</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1688839142081</updated>
+    </task>
+    <task id="LOCAL-00056" summary="update design of admin panel...">
+      <created>1688841760914</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1688841760914</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fix card item header">
+      <created>1688890824056</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1688890824057</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add admin dashboard layout">
+      <created>1688890842273</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1688890842274</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix remove drink from cart">
+      <created>1688891089052</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1688891089052</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fix update password page">
+      <created>1688894389818</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1688894389820</updated>
+    </task>
+    <task id="LOCAL-00061" summary="refactor (change employee to user and add role)">
+      <created>1689008589019</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1689008589020</updated>
+    </task>
+    <task id="LOCAL-00062" summary="implementing security based on user username and password">
+      <created>1689014208217</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1689014208217</updated>
+    </task>
+    <task id="LOCAL-00063" summary="fix all security problems - [test login]">
+      <created>1689032802389</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1689032802391</updated>
+    </task>
+    <task id="LOCAL-00064" summary="cleaning up">
+      <created>1689032876473</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1689032876473</updated>
+    </task>
+    <task id="LOCAL-00065" summary="small fixes">
+      <created>1689034916427</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1689034916427</updated>
+    </task>
+    <task id="LOCAL-00066" summary="add login scenario">
+      <created>1689035838667</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1689035838667</updated>
+    </task>
+    <task id="LOCAL-00067" summary="fix all login scenario [add session storage...]">
+      <created>1689068823008</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1689068823009</updated>
+    </task>
+    <task id="LOCAL-00068" summary="adding error element">
+      <created>1689071446665</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1689071446665</updated>
+    </task>
+    <task id="LOCAL-00069" summary="handling authorisation">
+      <created>1689073101093</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1689073101093</updated>
+    </task>
+    <task id="LOCAL-00070" summary="implementing logout functionality">
+      <created>1689077749276</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1689077749276</updated>
+    </task>
+    <task id="LOCAL-00071" summary="fix private route and other fixes">
+      <created>1689077767917</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1689077767917</updated>
+    </task>
+    <task id="LOCAL-00072" summary="redirect from register if logged in user">
+      <created>1689077878370</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1689077878372</updated>
+    </task>
+    <task id="LOCAL-00073" summary="fix login in register page">
+      <created>1689087977249</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1689087977251</updated>
+    </task>
+    <task id="LOCAL-00074" summary="add authentication logic to adding items to cart">
+      <created>1689088858042</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1689088858042</updated>
+    </task>
+    <task id="LOCAL-00075" summary="fix bug adding items to cart">
+      <created>1689089175441</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1689089175441</updated>
+    </task>
+    <task id="LOCAL-00076" summary="fix styles - [merge tailwind classNames]">
+      <created>1689090464935</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1689090464936</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fix admin role test">
+      <created>1689096397662</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1689096397662</updated>
+    </task>
+    <task id="LOCAL-00078" summary="update backend for meal">
+      <created>1689097977086</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1689097977086</updated>
+    </task>
+    <task id="LOCAL-00079" summary="adding the count ability to backend modals">
+      <created>1689099379305</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1689099379305</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,32 +558,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding auth pages and contact form" />
-    <MESSAGE value="adding dialogue and textarea components" />
-    <MESSAGE value="fix forms fields [custom-form-fields]" />
-    <MESSAGE value="adding phone number field" />
-    <MESSAGE value="fixing drop down field" />
-    <MESSAGE value="fixing upload file field" />
-    <MESSAGE value="fixing auth pages and routing" />
-    <MESSAGE value="add profile options to header" />
-    <MESSAGE value="fix header profile dropdown" />
-    <MESSAGE value="adding navigation header component" />
-    <MESSAGE value="refactor header" />
-    <MESSAGE value="adding drink card component and display it in drinks page" />
-    <MESSAGE value="fixing drinks slider in meal details" />
-    <MESSAGE value="adding zustand store to manage cart" />
-    <MESSAGE value="adding cart page and adding cart logique" />
-    <MESSAGE value="fixing cart to manage quantity of each product" />
-    <MESSAGE value="fix style of meal/drink cards in cart" />
-    <MESSAGE value="adding sub category functionality" />
-    <MESSAGE value="adding sub category endpoint" />
-    <MESSAGE value="refactor backend" />
-    <MESSAGE value="adding pack selector" />
-    <MESSAGE value="fix routing" />
-    <MESSAGE value="adding subcategorybyid endpoint" />
-    <MESSAGE value="change background" />
-    <MESSAGE value="finishing pack selector &quot;perfect&quot; component" />
-    <option name="LAST_COMMIT_MESSAGE" value="finishing pack selector &quot;perfect&quot; component" />
+    <MESSAGE value="add upload file - update design" />
+    <MESSAGE value="update design of admin panel..." />
+    <MESSAGE value="fix card item header" />
+    <MESSAGE value="add admin dashboard layout" />
+    <MESSAGE value="fix remove drink from cart" />
+    <MESSAGE value="fix update password page" />
+    <MESSAGE value="refactor (change employee to user and add role)" />
+    <MESSAGE value="implementing security based on user username and password" />
+    <MESSAGE value="fix all security problems - [test login]" />
+    <MESSAGE value="cleaning up" />
+    <MESSAGE value="small fixes" />
+    <MESSAGE value="add login scenario" />
+    <MESSAGE value="fix all login scenario [add session storage...]" />
+    <MESSAGE value="adding error element" />
+    <MESSAGE value="handling authorisation" />
+    <MESSAGE value="implementing logout functionality" />
+    <MESSAGE value="fix private route and other fixes" />
+    <MESSAGE value="redirect from register if logged in user" />
+    <MESSAGE value="fix login in register page" />
+    <MESSAGE value="add authentication logic to adding items to cart" />
+    <MESSAGE value="fix bug adding items to cart" />
+    <MESSAGE value="fix styles - [merge tailwind classNames]" />
+    <MESSAGE value="fix admin role test" />
+    <MESSAGE value="update backend for meal" />
+    <MESSAGE value="adding the count ability to backend modals" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding the count ability to backend modals" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

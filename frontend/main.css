@@ -40,6 +40,46 @@ body{
     display: flex !important;
 }
 
+.board-link-active em:first-child::after{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: #F3F4F6;
+    border-end-end-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.board-link-active em:last-child::after{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: #F3F4F6;
+    border-start-end-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.cart-nav-item::after{
+    content: attr(after-data);
+    height: 15px;
+    width: 15px;
+    background: #FF385C;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+}
+
 @font-face {
     font-family: 'Nova Script';
     src: url('./assets/fonts/NovaScript.woff') format('woff2'),

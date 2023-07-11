@@ -7,6 +7,10 @@ import {
   useMatches,
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
+import { PrivateRoute } from "Frontend/common/private-route/private-route.js";
+import Logout from "Frontend/views/auth/logout/logout.js";
+
+const Error = lazy(async () => import("Frontend/common/error/error.js"));
 
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
@@ -15,10 +19,29 @@ const MenuLayout = lazy(
   async () => import("Frontend/views/menu/menu-layout.js")
 );
 const About = lazy(async () => import("Frontend/views/about/About.js"));
-const Drink = lazy(async () => import("Frontend/views/drink/drink.js"));
+const Drinks = lazy(async () => import("Frontend/views/drink/drinks.js"));
 const Contact = lazy(async () => import("Frontend/views/contact/contact.js"));
 const Login = lazy(async () => import("Frontend/views/auth/login/login.js"));
 const Cart = lazy(async () => import("Frontend/views/cart/cart.js"));
+const AdminLayout = lazy(
+  async () => import("Frontend/views/admin/admin-layout.js")
+);
+const AddMeal = lazy(
+  async () => import("Frontend/views/admin/add-meal/add-meal.js")
+);
+const Dashboard = lazy(
+  async () => import("Frontend/views/admin/dashboard/dashboard.js")
+);
+const Orders = lazy(
+  async () => import("Frontend/views/admin/orders/orders.js")
+);
+const UpdatePassword = lazy(
+  async () => import("Frontend/views/admin/update-password/update-password.js")
+);
+
+const UserManagement = lazy(
+  async () => import("Frontend/views/admin/users-management/user-management.js")
+);
 const CustomMealIngredients = lazy(
   async () =>
     import("Frontend/views/custom-meal-ingredients/custom-meal-ingredients.js")
@@ -64,6 +87,7 @@ export const routes: readonly ViewRouteObject[] = [
   {
     element: <MainLayout />,
     handle: { icon: "null", title: "Main" },
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -72,7 +96,11 @@ export const routes: readonly ViewRouteObject[] = [
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <PrivateRoute>
+            <About />
+          </PrivateRoute>
+        ),
         handle: { icon: "globe-solid", title: "Get Fed | About us" },
       },
       {
@@ -96,6 +124,32 @@ export const routes: readonly ViewRouteObject[] = [
         ],
       },
       {
+        path: "/admin",
+        element: <AdminLayout />,
+        children: [
+          {
+            path: "/admin/add-meal",
+            element: <AddMeal />,
+          },
+          {
+            path: "/admin/board",
+            element: <Dashboard />,
+          },
+          {
+            path: "/admin/orders",
+            element: <Orders />,
+          },
+          {
+            path: "/admin/users",
+            element: <UserManagement />,
+          },
+          {
+            path: "/admin/security",
+            element: <UpdatePassword />,
+          },
+        ],
+      },
+      {
         path: "/contact",
         element: <Contact />,
       },
@@ -105,7 +159,7 @@ export const routes: readonly ViewRouteObject[] = [
       },
       {
         path: "/drink",
-        element: <Drink />,
+        element: <Drinks />,
       },
       {
         path: "/custom-meal",
@@ -128,6 +182,14 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: "/reset",
         element: <Reset />,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
+      },
+      {
+        path: "/*",
+        element: <Error />,
       },
     ],
   },
