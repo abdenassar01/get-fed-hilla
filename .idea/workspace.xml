@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="handling authorisation">
-      <change afterPath="$PROJECT_DIR$/frontend/common/private-route/private-route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/auth/logout/logout.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="redirect from register if logged in user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/user-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/user-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,28 +188,8 @@
       <workItem from="1688902035670" duration="88000" />
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
-      <workItem from="1689067443809" duration="9386000" />
-    </task>
-    <task id="LOCAL-00021" summary="fix header + adding about page">
-      <created>1688148060413</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1688148060413</updated>
-    </task>
-    <task id="LOCAL-00022" summary="adding rich text parser component">
-      <created>1688149300247</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1688149300248</updated>
-    </task>
-    <task id="LOCAL-00023" summary="adding terms of use other fixes">
-      <created>1688162369993</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1688162369993</updated>
+      <workItem from="1689067443809" duration="11989000" />
+      <workItem from="1689085079117" duration="2793000" />
     </task>
     <task id="LOCAL-00024" summary="adding faq and required components">
       <created>1688163834987</created>
@@ -539,7 +513,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689073101093</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="implementing logout functionality">
+      <created>1689077749276</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1689077749276</updated>
+    </task>
+    <task id="LOCAL-00071" summary="fix private route and other fixes">
+      <created>1689077767917</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1689077767917</updated>
+    </task>
+    <task id="LOCAL-00072" summary="redirect from register if logged in user">
+      <created>1689077878370</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1689077878372</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,9 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix routing" />
-    <MESSAGE value="adding subcategorybyid endpoint" />
-    <MESSAGE value="change background" />
     <MESSAGE value="finishing pack selector &quot;perfect&quot; component" />
     <MESSAGE value="fix custom meal and fix other styling" />
     <MESSAGE value="fetching drink from db" />
@@ -583,7 +575,10 @@
     <MESSAGE value="fix all login scenario [add session storage...]" />
     <MESSAGE value="adding error element" />
     <MESSAGE value="handling authorisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="handling authorisation" />
+    <MESSAGE value="implementing logout functionality" />
+    <MESSAGE value="fix private route and other fixes" />
+    <MESSAGE value="redirect from register if logged in user" />
+    <option name="LAST_COMMIT_MESSAGE" value="redirect from register if logged in user" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -70,9 +70,7 @@ export function TextInput({
           className="absolute right-[2%] top-[35%]"
         />
       )}
-      <p className="h-[1.667vw] text-xxs text-error">
-        {error?.message?.toString()}
-      </p>
+      <p className="text-xxs text-error">{error?.message?.toString()}</p>
     </div>
   );
 }
