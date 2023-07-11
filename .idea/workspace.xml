@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="small fixes">
-      <change afterPath="$PROJECT_DIR$/frontend/stores/user-store.ts" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,14 +186,8 @@
       <workItem from="1688889477391" duration="5497000" />
       <workItem from="1688902035670" duration="88000" />
       <workItem from="1689007886440" duration="8323000" />
-      <workItem from="1689029007117" duration="6773000" />
-    </task>
-    <task id="LOCAL-00017" summary="fix getting meals by category">
-      <created>1688138306302</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1688138306302</updated>
+      <workItem from="1689029007117" duration="6826000" />
+      <workItem from="1689067443809" duration="1322000" />
     </task>
     <task id="LOCAL-00018" summary="fix category page and meals cards">
       <created>1688140431470</created>
@@ -531,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689034916427</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="add login scenario">
+      <created>1689035838667</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1689035838667</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +551,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding sub category functionality" />
     <MESSAGE value="adding sub category endpoint" />
     <MESSAGE value="refactor backend" />
     <MESSAGE value="adding pack selector" />
@@ -575,7 +575,8 @@
     <MESSAGE value="fix all security problems - [test login]" />
     <MESSAGE value="cleaning up" />
     <MESSAGE value="small fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes" />
+    <MESSAGE value="add login scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login scenario" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

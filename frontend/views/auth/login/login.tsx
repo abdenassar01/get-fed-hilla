@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import illustration from "Frontend/assets/images/illustrations/login.svg";
-import { Alert, Button, HeaderTitle } from "Frontend/common/index.js";
+import { Alert, Button, HeaderTitle, Loading } from "Frontend/common/index.js";
 import { CheckboxField, TextInput } from "Frontend/common/form-fields/index.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "@hilla/frontend";
 import { UserEndpoint } from "Frontend/generated/endpoints.js";
 import { useUserStore } from "Frontend/stores/user-store.js";
@@ -24,27 +24,46 @@ const schema = zod.object({
 type FormValues = zod.infer<typeof schema>;
 
 export default function Login() {
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [msgError, setMsgError] = useState<string>("");
+
   const { setUser } = useUserStore();
+  const navigate = useNavigate();
+
   const { control, handleSubmit } = useForm<FormValues>({
     mode: "onChange",
     resolver: zodResolver(schema),
   });
 
+  useEffect(() => {
+    if (sessionStorage.getItem("user") !== null) {
+      navigate("/");
+    }
+  }, []);
+
   const onSubmit = (credentials: FormValues) => {
-    login(credentials.username, credentials.password).then((res) => {
-      if (res.error) {
-        setError(true);
-        setMsgError(res.errorMessage || "");
-      } else {
-        UserEndpoint.getUserByUsername(credentials.username).then((res) =>
-          // @ts-ignore
-          setUser(res?.body)
-        );
-      }
-    });
+    setLoading(true);
+    login(credentials.username, credentials.password)
+      .then((res) => {
+        if (res.error) {
+          setError(true);
+          setMsgError(res.errorMessage || "");
+        } else {
+          UserEndpoint.getUserByUsername(credentials.username).then((res) => {
+            // @ts-ignore
+            setUser(res?.body);
+            // @ts-ignore
+            sessionStorage.setItem("role", res?.body.role);
+            // @ts-ignore
+            sessionStorage.setItem("user", JSON.stringify(res?.body));
+          });
+        }
+      })
+      .then(() => setLoading(false));
   };
+
+  if (loading) return <Loading />;
 
   return (
     <div className="w-[100%] bg-background ">
