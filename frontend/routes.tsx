@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
 
+const Error = lazy(async () => import("Frontend/common/error/error.js"));
+
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
 );
@@ -83,6 +85,7 @@ export const routes: readonly ViewRouteObject[] = [
   {
     element: <MainLayout />,
     handle: { icon: "null", title: "Main" },
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -173,6 +176,10 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: "/reset",
         element: <Reset />,
+      },
+      {
+        path: "/*",
+        element: <Error />,
       },
     ],
   },
