@@ -88,14 +88,14 @@ public class MealServiceImplementation implements MealService {
     @Override
     public Map<String, Object> countAll() {
         Map<String, Object> count = new HashMap<>();
-        count.put("meals", repository.countAll());
+        count.put("meals", repository.count());
         return count;
     }
 
     @Override
     public Map<String, Object> countAllByCustom() {
         Map<String, Object> count = new HashMap<>();
-        count.put("meals", repository.countAllByCustom(false));
+        count.put("meals", repository.countAllByCustomFalse());
         return count;
     }
 

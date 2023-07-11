@@ -78,7 +78,7 @@ public class OrderServiceImplementation implements OrderService {
     @Override
     public Map<String, Object> countAll() {
         Map<String, Object> count = new HashMap<>();
-        count.put("orders", repository.countAll());
+        count.put("orders", repository.count());
         return count;
     }
 }

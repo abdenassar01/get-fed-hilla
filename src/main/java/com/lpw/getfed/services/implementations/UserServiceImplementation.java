@@ -76,7 +76,7 @@ public class UserServiceImplementation implements UserService {
     @Override
     public Map<String, Object> countAll() {
         Map<String, Object> count = new HashMap<>();
-        count.put("users", repository.countAll());
+        count.put("users", repository.count());
         return count;
     }
 

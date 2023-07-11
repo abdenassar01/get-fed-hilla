@@ -1,30 +1,51 @@
 import * as React from "react";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
+import { useEffect, useState } from "react";
+import { DashboardEndpoint } from "Frontend/generated/endpoints.js";
 
 export default function Dashboard() {
+  const [statistics, setStatistics] = useState({
+    meals: 0,
+    orders: 0,
+    users: 0,
+  });
+
   const cards = [
     {
       id: 1,
       title: "Orders",
-      value: "5000 dh",
+      value: statistics.orders,
       link: "/admin/orders",
       linkText: "See orders",
     },
     {
       id: 2,
       title: "Meals",
-      value: "12",
+      value: statistics.meals,
       link: "/admin/add-meal",
       linkText: "Manage meals",
     },
     {
       id: 3,
       title: "Users",
-      value: "20",
+      value: statistics.users,
       link: "/profile/users",
       linkText: "Manage users",
     },
   ];
+
+  useEffect(() => {
+    DashboardEndpoint.countAll().then((res) => {
+      setStatistics({
+        // @ts-ignore
+        meals: res?.meal?.meals,
+        // @ts-ignore
+        users: res?.user?.users,
+        // @ts-ignore
+        orders: res?.order?.orders,
+      });
+    });
+  }, [statistics]);
 
   return (
     <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] sm:p-0">

@@ -118,6 +118,7 @@ export function Header() {
               <Button theme="tertiary" text="Log in" link="/login" />
               <Button theme="tertiary" text="Sign up" link="/register" />
               <Button theme="tertiary" text="logout" link="/logout" />
+              <Button theme="tertiary" text="admin" link="/admin" />
             </div>
           </div>
         </div>
