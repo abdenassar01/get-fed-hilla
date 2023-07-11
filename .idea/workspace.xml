@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the count ability to backend modals">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +187,8 @@
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
       <workItem from="1689067443809" duration="11989000" />
-      <workItem from="1689085079117" duration="14275000" />
-    </task>
-    <task id="LOCAL-00031" summary="fixing upload file field">
-      <created>1688427813564</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1688427813564</updated>
+      <workItem from="1689085079117" duration="14528000" />
+      <workItem from="1689114979219" duration="895000" />
     </task>
     <task id="LOCAL-00032" summary="add profile options to header">
       <created>1688432180013</created>
@@ -539,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689099379305</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="fixing count endpoint">
+      <created>1689100755324</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1689100755324</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +552,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add upload file - update design" />
     <MESSAGE value="update design of admin panel..." />
     <MESSAGE value="fix card item header" />
     <MESSAGE value="add admin dashboard layout" />
@@ -583,7 +576,8 @@
     <MESSAGE value="fix admin role test" />
     <MESSAGE value="update backend for meal" />
     <MESSAGE value="adding the count ability to backend modals" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the count ability to backend modals" />
+    <MESSAGE value="fixing count endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing count endpoint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

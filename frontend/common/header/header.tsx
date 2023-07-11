@@ -9,7 +9,7 @@ import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/utils/hooks/index.js";
 import { BsBasket2Fill } from "react-icons/bs";
 import { useCartStore } from "Frontend/stores/cart-store.js";
-import { logout } from "@hilla/frontend";
+import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 
 export function Header() {
   const headerLinks = [
@@ -115,10 +115,29 @@ export function Header() {
                 (!showProfileDropdown && "invisible") || ""
               )}
             >
-              <Button theme="tertiary" text="Log in" link="/login" />
-              <Button theme="tertiary" text="Sign up" link="/register" />
-              <Button theme="tertiary" text="logout" link="/logout" />
-              <Button theme="tertiary" text="admin" link="/admin" />
+              <div className="group py-2 px-1 hover:bg-main transition ">
+                <NoStyleLink className="group-hover:text-white" link="/login">
+                  Log in
+                </NoStyleLink>
+              </div>
+              <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
+                <NoStyleLink
+                  className="group-hover:text-white"
+                  link="/register"
+                >
+                  Sign up
+                </NoStyleLink>
+              </div>
+              <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
+                <NoStyleLink className="group-hover:text-white" link="/admin">
+                  Admin
+                </NoStyleLink>
+              </div>
+              <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
+                <NoStyleLink className="group-hover:text-white" link="/logout">
+                  Logout
+                </NoStyleLink>
+              </div>
             </div>
           </div>
         </div>
