@@ -9,6 +9,7 @@ import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/utils/hooks/index.js";
 import { BsBasket2Fill } from "react-icons/bs";
 import { useCartStore } from "Frontend/stores/cart-store.js";
+import { logout } from "@hilla/frontend";
 
 export function Header() {
   const headerLinks = [
@@ -116,6 +117,7 @@ export function Header() {
             >
               <Button theme="tertiary" text="Log in" link="/login" />
               <Button theme="tertiary" text="Sign up" link="/register" />
+              <Button theme="tertiary" text="logout" link="/logout" />
             </div>
           </div>
         </div>

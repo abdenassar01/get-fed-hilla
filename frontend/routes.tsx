@@ -7,6 +7,8 @@ import {
   useMatches,
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
+import { PrivateRoute } from "Frontend/common/private-route/private-route.js";
+import Logout from "Frontend/views/auth/logout/logout.js";
 
 const Error = lazy(async () => import("Frontend/common/error/error.js"));
 
@@ -94,7 +96,11 @@ export const routes: readonly ViewRouteObject[] = [
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <PrivateRoute>
+            <About />
+          </PrivateRoute>
+        ),
         handle: { icon: "globe-solid", title: "Get Fed | About us" },
       },
       {
@@ -176,6 +182,10 @@ export const routes: readonly ViewRouteObject[] = [
       {
         path: "/reset",
         element: <Reset />,
+      },
+      {
+        path: "/logout",
+        element: <Logout />,
       },
       {
         path: "/*",

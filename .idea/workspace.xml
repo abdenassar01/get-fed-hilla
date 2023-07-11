@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding error element">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="handling authorisation">
+      <change afterPath="$PROJECT_DIR$/frontend/common/private-route/private-route.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/auth/logout/logout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/error/error.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/error/error.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/stores/user-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/user-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/utils/hooks/use-fetch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/use-fetch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,14 +194,7 @@
       <workItem from="1688902035670" duration="88000" />
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
-      <workItem from="1689067443809" duration="5418000" />
-    </task>
-    <task id="LOCAL-00020" summary="adding alert, loading and pagination">
-      <created>1688146993663</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1688146993663</updated>
+      <workItem from="1689067443809" duration="9386000" />
     </task>
     <task id="LOCAL-00021" summary="fix header + adding about page">
       <created>1688148060413</created>
@@ -536,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689071446665</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="handling authorisation">
+      <created>1689073101093</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1689073101093</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding pack selector" />
     <MESSAGE value="fix routing" />
     <MESSAGE value="adding subcategorybyid endpoint" />
     <MESSAGE value="change background" />
@@ -580,7 +582,8 @@
     <MESSAGE value="add login scenario" />
     <MESSAGE value="fix all login scenario [add session storage...]" />
     <MESSAGE value="adding error element" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding error element" />
+    <MESSAGE value="handling authorisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="handling authorisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
