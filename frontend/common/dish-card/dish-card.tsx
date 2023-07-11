@@ -2,6 +2,8 @@ import { FaCartPlus } from "react-icons/fa";
 import { Button, RichTextParser, StartRating } from "Frontend/common/index.js";
 import { truncate } from "Frontend/utils/truncate-html.js";
 import { useCartStore } from "Frontend/stores/cart-store.js";
+import { useUserStore } from "Frontend/stores/user-store.js";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   id: number;
@@ -20,9 +22,14 @@ export function DishCard({
   description,
   title,
 }: Props) {
+  const navigate = useNavigate();
   const { addMeal } = useCartStore();
+  const { authenticated } = useUserStore();
 
   const handleAddMeal = () => {
+    if (!authenticated) {
+      return navigate("/login");
+    }
     addMeal({
       id,
       image: img,

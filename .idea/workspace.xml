@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="redirect from register if logged in user">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix login in register page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/utils/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/utils/hooks/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,14 +189,7 @@
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
       <workItem from="1689067443809" duration="11989000" />
-      <workItem from="1689085079117" duration="2793000" />
-    </task>
-    <task id="LOCAL-00024" summary="adding faq and required components">
-      <created>1688163834987</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1688163834987</updated>
+      <workItem from="1689085079117" duration="3735000" />
     </task>
     <task id="LOCAL-00025" summary="meal details page">
       <created>1688165253201</created>
@@ -534,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689077878372</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="fix login in register page">
+      <created>1689087977249</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1689087977251</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +553,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finishing pack selector &quot;perfect&quot; component" />
     <MESSAGE value="fix custom meal and fix other styling" />
     <MESSAGE value="fetching drink from db" />
     <MESSAGE value="update background" />
@@ -578,7 +577,8 @@
     <MESSAGE value="implementing logout functionality" />
     <MESSAGE value="fix private route and other fixes" />
     <MESSAGE value="redirect from register if logged in user" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirect from register if logged in user" />
+    <MESSAGE value="fix login in register page" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix login in register page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
