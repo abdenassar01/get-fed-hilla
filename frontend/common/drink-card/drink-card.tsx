@@ -17,10 +17,11 @@ export function DrinkCard({
 
   const navigate = useNavigate();
   const handleAddDrink = () => {
-    if (!authenticated) {
+    if (authenticated) {
+      addDrink({ id, image, label, price, description });
+    } else {
       return navigate("/login");
     }
-    addDrink({ id, image, label, price, description });
   };
 
   return (

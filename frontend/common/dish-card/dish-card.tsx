@@ -27,17 +27,18 @@ export function DishCard({
   const { authenticated } = useUserStore();
 
   const handleAddMeal = () => {
-    if (!authenticated) {
+    if (authenticated) {
+      addMeal({
+        id,
+        image: img,
+        title,
+        price,
+        description,
+        rating,
+      });
+    } else {
       return navigate("/login");
     }
-    addMeal({
-      id,
-      image: img,
-      title,
-      price,
-      description,
-      rating,
-    });
   };
 
   return (
