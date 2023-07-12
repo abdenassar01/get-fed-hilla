@@ -1,11 +1,13 @@
 import * as React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 export default function Management() {
   const [file, setFile] = useState();
+
+  const navigate = useNavigate();
   const onFileChange = (event: any) => {
     // @ts-ignore
     setFile(event.target.files[0]);
@@ -13,9 +15,13 @@ export default function Management() {
   const onFileUpload = () => {
     useUploadImage(file).then((res) => console.log(res));
   };
+
+  useEffect(() => {
+    navigate("/admin/managements/meals");
+  }, []);
   return (
     <div className="w-full min-h-[120%]">
-      <div className="flex bg-background pl-6">
+      <div className="flex gap-4 bg-background pl-6">
         <NoStyleLink
           className="relative block h-full rounded-ss-[8px] rounded-se-[8px] whitespace-nowrap p-[1vw]"
           activeClassName="prose-em:block bg-white tab-link-active text-[#2D54DE]  font-normal sm:border-l-0 sm:border-b-[4px]"
@@ -47,8 +53,6 @@ export default function Management() {
       <div className="p-4 rounded-[8px] bg-white">
         <Outlet />
       </div>
-      <input name="file" type="file" onChange={onFileChange} />
-      <button onClick={onFileUpload}>Upload</button>
     </div>
   );
 }

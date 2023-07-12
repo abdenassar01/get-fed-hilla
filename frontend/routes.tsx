@@ -29,6 +29,27 @@ const AdminLayout = lazy(
 const Management = lazy(
   async () => import("Frontend/views/admin/management/management.js")
 );
+
+const MealsManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/meals-management/meals-management.js"
+    )
+);
+
+const DrinksManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/drinks-management/drinks-management.js"
+    )
+);
+
+const SubCategoriesManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/subcategories-management/subcategories-management.js"
+    )
+);
 const Dashboard = lazy(
   async () => import("Frontend/views/admin/dashboard/dashboard.js")
 );
@@ -133,7 +154,15 @@ export const routes: readonly ViewRouteObject[] = [
             children: [
               {
                 path: "/admin/managements/meals",
-                element: <div>Meals</div>,
+                element: <MealsManagement />,
+              },
+              {
+                path: "/admin/managements/drinks",
+                element: <DrinksManagement />,
+              },
+              {
+                path: "/admin/managements/subcategories",
+                element: <SubCategoriesManagement />,
               },
             ],
           },
