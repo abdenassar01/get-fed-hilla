@@ -104,6 +104,24 @@ body{
     z-index: 10;
 }
 
+/*rich text wrapper style*/
+.rdw-option-wrapper,
+.rdw-option-active {
+    border: none !important;
+    color: #0a2a43 !important;
+    padding: 5px;
+    margin: 5px;
+}
+
+.rdw-editor-toolbar, .rdw-inline-wrapper, .rdw-list-wrapper, .rdw-text-align-wrapper{
+    display: flex;
+}
+
+.rdw-option-active {
+    background-color: #74ffc8 !important;
+    box-shadow: none !important;
+}
+
 @font-face {
     font-family: 'Nova Script';
     src: url('./assets/fonts/NovaScript.woff') format('woff2'),

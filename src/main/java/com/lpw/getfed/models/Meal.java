@@ -39,7 +39,7 @@ public class Meal {
     private Boolean custom;
 
     @ManyToOne
-    @JsonIdentityReference(alwaysAsId = true)
+//    @JsonIdentityReference(alwaysAsId = true)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 

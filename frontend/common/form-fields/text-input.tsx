@@ -20,7 +20,7 @@ export function TextInput({
   className,
   labelClassname,
   placeholder,
-  type,
+  type = "text",
 }: Props) {
   const [isPassword, setIsPassword] = useState<boolean>(type === "password");
   const {
@@ -35,7 +35,7 @@ export function TextInput({
   return (
     <div
       className={ClassNames(
-        "group relative flex w-[100%] flex-col gap-[8px]",
+        "group relative flex w-[100%] flex-col gap-2",
         className || ""
       )}
     >
@@ -53,7 +53,7 @@ export function TextInput({
         onChange={onChange}
         value={value}
         onBlur={onBlur}
-        type={isPassword ? "password" : "text"}
+        type={isPassword ? "password" : type}
         style={{ borderRadius: 8 }}
         className={ClassNames(
           "rounded-[10px] border-none bg-white px-[24px] py-[16px] text-xs leading-4 placeholder-[#A6A6A6] focus-visible:outline-none focus:shadow-md sm:p-[5.097vw] sm:text-mb-xxs",

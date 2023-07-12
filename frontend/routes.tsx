@@ -8,10 +8,14 @@ import {
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
 import { PrivateRoute } from "Frontend/common/private-route/private-route.js";
-import Logout from "Frontend/views/auth/logout/logout.js";
-
 const Error = lazy(async () => import("Frontend/common/error/error.js"));
-
+const AddMeal = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/meals-management/add-meal/add-meal.js"
+    )
+);
+const Logout = lazy(async () => import("Frontend/views/auth/logout/logout.js"));
 const CategoryDetails = lazy(
   async () => import("Frontend/views/category/category-details.js")
 );
@@ -155,6 +159,12 @@ export const routes: readonly ViewRouteObject[] = [
               {
                 path: "/admin/managements/meals",
                 element: <MealsManagement />,
+                children: [
+                  {
+                    path: "/admin/managements/meals/new",
+                    element: <AddMeal />,
+                  },
+                ],
               },
               {
                 path: "/admin/managements/drinks",
