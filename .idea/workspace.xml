@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="removing relation between meal and ingredient">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="prevent too many rerender">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/admin-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,14 +192,7 @@
       <workItem from="1689067443809" duration="11989000" />
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
-      <workItem from="1689163980243" duration="1705000" />
-    </task>
-    <task id="LOCAL-00035" summary="refactor header">
-      <created>1688465275227</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1688465275227</updated>
+      <workItem from="1689163980243" duration="2494000" />
     </task>
     <task id="LOCAL-00036" summary="adding drink card component and display it in drinks page">
       <created>1688472403924</created>
@@ -534,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689164914425</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="prevent too many rerender">
+      <created>1689167604634</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1689167604634</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,7 +556,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix remove drink from cart" />
     <MESSAGE value="fix update password page" />
     <MESSAGE value="refactor (change employee to user and add role)" />
     <MESSAGE value="implementing security based on user username and password" />
@@ -578,7 +580,8 @@
     <MESSAGE value="fix header drop down appearance" />
     <MESSAGE value="adding orders table" />
     <MESSAGE value="removing relation between meal and ingredient" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing relation between meal and ingredient" />
+    <MESSAGE value="prevent too many rerender" />
+    <option name="LAST_COMMIT_MESSAGE" value="prevent too many rerender" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -22,14 +22,14 @@ export default function Dashboard() {
       id: 2,
       title: "Meals",
       value: statistics.meals,
-      link: "/admin/add-meal",
-      linkText: "Manage meals",
+      link: "/admin/managements",
+      linkText: "Manage meals, drinks and sub categories",
     },
     {
       id: 3,
       title: "Users",
       value: statistics.users,
-      link: "/profile/users",
+      link: "/admin/users",
       linkText: "Manage users",
     },
   ];
@@ -57,7 +57,7 @@ export default function Dashboard() {
           <NoStyleLink
             key={item.id}
             link={item.link}
-            className="relative flex w-full flex-col gap-[1.667vw] rounded-[4px] bg-background p-[14px] sm:w-full sm:gap-[2.222vw]"
+            className="relative flex w-full flex-col justify-between rounded-[4px] bg-background p-[14px] sm:w-full sm:gap-[2.222vw]"
           >
             <div className="">
               <div className="text-base text-cardText sm:text-mb-base">
@@ -67,12 +67,12 @@ export default function Dashboard() {
                 {item.value}
               </div>
             </div>
-            <div className="flex justify-between text-secondary">
+            <div className="flex items-center justify-between text-secondary">
               <div className="sm:text-mb-xbase">{item.linkText}</div>
               <img
                 src="https://i.imgur.com/fgTg5Kk.png"
                 alt="arrow right"
-                className="w-[1.667vw] sm:w-[5.825vw]"
+                className="min-w-[1.667vw] sm:w-[5.825vw]"
               />
             </div>
           </NoStyleLink>

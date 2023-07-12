@@ -26,8 +26,8 @@ const Cart = lazy(async () => import("Frontend/views/cart/cart.js"));
 const AdminLayout = lazy(
   async () => import("Frontend/views/admin/admin-layout.js")
 );
-const AddMeal = lazy(
-  async () => import("Frontend/views/admin/add-meal/add-meal.js")
+const Management = lazy(
+  async () => import("Frontend/views/admin/management/management.js")
 );
 const Dashboard = lazy(
   async () => import("Frontend/views/admin/dashboard/dashboard.js")
@@ -128,8 +128,8 @@ export const routes: readonly ViewRouteObject[] = [
         element: <AdminLayout />,
         children: [
           {
-            path: "/admin/add-meal",
-            element: <AddMeal />,
+            path: "/admin/managements",
+            element: <Management />,
           },
           {
             path: "/admin/board",

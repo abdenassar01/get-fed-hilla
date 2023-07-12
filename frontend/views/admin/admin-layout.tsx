@@ -15,13 +15,13 @@ function AdminLayout() {
     },
     {
       id: 2,
-      link: "/admin/add-meal",
-      label: "Add new meal",
+      link: "/admin/managements",
+      label: "Management",
     },
     {
       id: 3,
       link: "/admin/orders",
-      label: "My orders",
+      label: "Orders",
     },
     {
       id: 4,

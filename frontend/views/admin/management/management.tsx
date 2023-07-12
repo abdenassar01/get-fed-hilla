@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
 
-export default function AddMeal() {
+export default function Management() {
   const [file, setFile] = useState();
   const onFileChange = (event: any) => {
     // @ts-ignore
