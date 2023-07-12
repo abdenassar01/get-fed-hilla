@@ -52,7 +52,7 @@ body{
     z-index: 20;
 }
 
-.board-link-active em:last-child::after{
+.board-link-active em:last-child::after {
     content: '';
     height: 24px;
     width: 24px;
@@ -78,6 +78,30 @@ body{
     align-items: center;
     font-size: 10px;
     color: white;
+}
+
+.tab-link-active em:first-child::after{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: #F3F4F6;
+    border-end-end-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.tab-link-active em:last-child::after{
+    content: '';
+    height: 24px;
+    width: 24px;
+    background: #F3F4F6;
+    border-end-start-radius: 999px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 @font-face {

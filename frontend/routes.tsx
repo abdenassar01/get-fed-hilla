@@ -130,6 +130,12 @@ export const routes: readonly ViewRouteObject[] = [
           {
             path: "/admin/managements",
             element: <Management />,
+            children: [
+              {
+                path: "/admin/managements/meals",
+                element: <div>Meals</div>,
+              },
+            ],
           },
           {
             path: "/admin/board",
