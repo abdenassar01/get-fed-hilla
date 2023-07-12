@@ -111,7 +111,7 @@ export function Header() {
             <div
               onMouseLeave={() => setShowProfileDropdown(false)}
               className={ClassNames(
-                "lng-dropdown w-[80px] absolute left-[-50%] top-[60px] z-40 flex flex-col rounded-[4px] bg-background py-[5px] shadow-md",
+                "lng-dropdown w-[200px] absolute left-[-120px] top-[60px] z-40 flex flex-col rounded-[4px] bg-background py-[5px] shadow-md",
                 (!showProfileDropdown && "invisible") || ""
               )}
             >
