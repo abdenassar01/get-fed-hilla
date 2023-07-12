@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fetch categories and fix all category on menu">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/dish-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/category/category-details.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,21 +190,7 @@
       <workItem from="1689067443809" duration="11989000" />
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
-      <workItem from="1689163980243" duration="20741000" />
-    </task>
-    <task id="LOCAL-00043" summary="refactor backend">
-      <created>1688750243372</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1688750243372</updated>
-    </task>
-    <task id="LOCAL-00044" summary="adding pack selector">
-      <created>1688755343944</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1688755343944</updated>
+      <workItem from="1689163980243" duration="21375000" />
     </task>
     <task id="LOCAL-00045" summary="fix routing">
       <created>1688755357690</created>
@@ -535,7 +521,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689187945419</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="finish add meal functionality">
+      <created>1689189620396</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1689189620396</updated>
+    </task>
+    <task id="LOCAL-00093" summary="fix header">
+      <created>1689189796446</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1689189796446</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,8 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix all login scenario [add session storage...]" />
-    <MESSAGE value="adding error element" />
     <MESSAGE value="handling authorisation" />
     <MESSAGE value="implementing logout functionality" />
     <MESSAGE value="fix private route and other fixes" />
@@ -579,7 +577,9 @@
     <MESSAGE value="adding rich text editor components" />
     <MESSAGE value="adding the add meal page and fix &#10; components style" />
     <MESSAGE value="fetch categories and fix all category on menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetch categories and fix all category on menu" />
+    <MESSAGE value="finish add meal functionality" />
+    <MESSAGE value="fix header" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix header" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
