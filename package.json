@@ -18,6 +18,8 @@
     "@loadable/component": "^5.15.3",
     "@polymer/polymer": "3.5.1",
     "@tailwindcss/typography": "^0.5.9",
+    "@types/draftjs-to-html": "^0.8.1",
+    "@types/react-draft-wysiwyg": "^1.13.4",
     "@uploadcare/upload-client": "^6.6.1",
     "@vaadin-component-factory/vcf-nav": "1.1.0",
     "@vaadin/bundles": "24.0.3",
@@ -36,10 +38,13 @@
     "construct-style-sheets-polyfill": "3.1.0",
     "country-data": "^0.0.31",
     "country-flag-icons": "^1.5.7",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
     "libphonenumber-js": "^1.10.33",
     "lit": "2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "react-hook-form": "^7.45.1",
     "react-icons": "^4.10.1",
     "react-phone-input-2": "^2.15.1",
@@ -144,7 +149,12 @@
     "zustand": "$zustand",
     "@uploadcare/upload-client": "$@uploadcare/upload-client",
     "axios": "$axios",
-    "tailwind-merge": "$tailwind-merge"
+    "tailwind-merge": "$tailwind-merge",
+    "@types/draftjs-to-html": "$@types/draftjs-to-html",
+    "@types/react-draft-wysiwyg": "$@types/react-draft-wysiwyg",
+    "draft-js": "$draft-js",
+    "draftjs-to-html": "$draftjs-to-html",
+    "react-draft-wysiwyg": "$react-draft-wysiwyg"
   },
   "vaadin": {
     "dependencies": {
@@ -189,6 +199,6 @@
       "workbox-core": "6.5.4",
       "workbox-precaching": "6.5.4"
     },
-    "hash": "7692b743eb31ba0d1bd65f58fda6941323b1b218bf72ed1a63b2fc27335c3b5f"
+    "hash": "2289f1e55f2d633012101d80f663698a405464c36470b02556836fe9f73f6a3f"
   }
 }
