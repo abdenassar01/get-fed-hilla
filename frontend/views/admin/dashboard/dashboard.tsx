@@ -45,7 +45,7 @@ export default function Dashboard() {
         orders: res?.order?.orders,
       });
     });
-  }, [statistics]);
+  }, []);
 
   return (
     <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] sm:p-0">
