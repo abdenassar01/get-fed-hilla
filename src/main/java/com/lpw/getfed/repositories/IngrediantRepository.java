@@ -13,7 +13,6 @@ import java.util.List;
 @Repository
 public interface IngrediantRepository extends JpaRepository<Ingredient, Long> {
 
-    List<Ingredient> findAllByMeal(Meal meal);
     Page<Ingredient> findAllBySubCategory(SubCategory subCategory, Pageable pageable);
 
 }

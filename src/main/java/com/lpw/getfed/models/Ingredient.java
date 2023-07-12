@@ -24,10 +24,10 @@ public class Ingredient {
     private String image;
     private Double price;
 
-    @ManyToOne
-    @JsonIgnore
-//    @JoinColumn(name = "meal_id", referencedColumnName = "id")
-    private Meal meal;
+//    @ManyToOne
+//    @JsonIgnore
+////    @JoinColumn(name = "meal_id", referencedColumnName = "id")
+//    private Meal meal;
 
     @ManyToOne
 //    @JsonIdentityReference(alwaysAsId = true)

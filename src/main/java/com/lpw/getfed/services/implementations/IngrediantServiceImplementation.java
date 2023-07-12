@@ -55,20 +55,8 @@ public class IngrediantServiceImplementation implements IngrediantService {
     }
 
     @Override
-    public ResponseEntity<List<Ingredient>> getIngrediantsByMeal(Meal meal) {
-        mealRepository.findById(meal.getId()).orElseThrow(() -> new IllegalStateException("can't find meal with id:" + meal.getId()));
-        return ResponseEntity.ok(repository.findAllByMeal(meal));
-    }
-
-    @Override
     public ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, Pageable pageable) {
         SubCategory subCategory = subCategoryRepository.findById(subCategoryId).orElseThrow(() -> new IllegalStateException("can't find sub category with id: " + subCategoryId));
         return ResponseEntity.ok(repository.findAllBySubCategory(subCategory, pageable));
-    }
-
-    @Override
-    public ResponseEntity<List<Ingredient>> getIngrediantsByMealId(Long id) {
-        Meal meal = mealRepository.findById(id).orElseThrow(() -> new IllegalStateException("can't find meal with id:" + id));
-        return ResponseEntity.ok(repository.findAllByMeal(meal));
     }
 }
