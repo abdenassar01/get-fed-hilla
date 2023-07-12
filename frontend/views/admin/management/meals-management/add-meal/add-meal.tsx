@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   DropdownField,
   RichTextEditor,
@@ -9,11 +9,32 @@ import {
 } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
 import { Button } from "Frontend/common/index.js";
+import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
+import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 
 export default function AddMeal() {
   const [file, setFile] = useState();
-
+  const [categories, setCategories] = useState([]);
   const { control, handleSubmit } = useForm();
+
+  useEffect(() => {
+    async function getData() {
+      const result = await CategoryEndpoint.getCategories().then(
+        (res) => res?.body
+      );
+      console.log(result);
+      setCategories(
+        // @ts-ignore
+        result
+          .filter((item: Category) => item.id !== 0)
+          .map((item: Category) => ({
+            value: item.id,
+            label: item.label,
+          }))
+      );
+    }
+    getData();
+  }, []);
 
   const onFileChange = (event: any) => {
     // @ts-ignore
@@ -56,12 +77,7 @@ export default function AddMeal() {
               control={control}
               label="Category"
               name="category"
-              items={[
-                {
-                  label: "dinner",
-                  value: 1,
-                },
-              ]}
+              items={categories}
             />
             <TextInput
               type="date"

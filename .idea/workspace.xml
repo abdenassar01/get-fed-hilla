@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding rich text editor components">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the add meal page and fix &#10; components style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,14 +190,7 @@
       <workItem from="1689067443809" duration="11989000" />
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
-      <workItem from="1689163980243" duration="17930000" />
-    </task>
-    <task id="LOCAL-00041" summary="fix style of meal/drink cards in cart">
-      <created>1688583212909</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1688583212909</updated>
+      <workItem from="1689163980243" duration="18708000" />
     </task>
     <task id="LOCAL-00042" summary="adding sub category functionality">
       <created>1688639529506</created>
@@ -542,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689186401371</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="adding the add meal page and fix &#10; components style">
+      <created>1689186808717</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1689186808717</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="small fixes" />
     <MESSAGE value="add login scenario" />
     <MESSAGE value="fix all login scenario [add session storage...]" />
     <MESSAGE value="adding error element" />
@@ -586,7 +578,8 @@
     <MESSAGE value="adding managements pages to routes" />
     <MESSAGE value="showing meals data table" />
     <MESSAGE value="adding rich text editor components" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding rich text editor components" />
+    <MESSAGE value="adding the add meal page and fix &#10; components style" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding the add meal page and fix &#10; components style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

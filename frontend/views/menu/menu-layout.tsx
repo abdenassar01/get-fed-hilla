@@ -21,8 +21,8 @@ export default function MenuLayout() {
         setCurrentCategory(parseInt(meal));
         navigate(`/menu/${meal}`);
       } else {
-        setCurrentCategory(1);
-        navigate("/menu/1");
+        setCurrentCategory(0);
+        navigate("/menu/0");
       }
       // @ts-ignore
       return res?.body;
@@ -55,7 +55,7 @@ export default function MenuLayout() {
         </div>
       </div>
       <Suspense fallback={<Placeholder />}>
-        <CategoryDetails category={currentCategory || 1} />
+        <CategoryDetails category={currentCategory || 0} />
       </Suspense>
     </div>
   );

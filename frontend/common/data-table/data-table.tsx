@@ -20,7 +20,6 @@ type Props = {
 };
 
 export function DataTable({ header, data }: Props) {
-  console.log("table: ", data);
   return (
     <table className="w-full">
       <thead>
