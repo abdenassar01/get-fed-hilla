@@ -9,20 +9,25 @@ import {
 } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
 import { Button } from "Frontend/common/index.js";
-import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
+import {
+  CategoryEndpoint,
+  MealEndpoint,
+} from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
+import { useNavigate } from "react-router-dom";
 
 export default function AddMeal() {
-  const [file, setFile] = useState();
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState<boolean>(false);
   const { control, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getData() {
+      setLoading(true);
       const result = await CategoryEndpoint.getCategories().then(
         (res) => res?.body
       );
-      console.log(result);
       setCategories(
         // @ts-ignore
         result
@@ -32,20 +37,29 @@ export default function AddMeal() {
             label: item.label,
           }))
       );
+      setLoading(false);
     }
     getData();
   }, []);
 
-  const onFileChange = (event: any) => {
-    // @ts-ignore
-    setFile(event.target.files[0]);
-  };
-  const onFileUpload = () => {
-    useUploadImage(file).then((res) => console.log(res));
-  };
-
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
+    setLoading(true);
+    const img = await useUploadImage(data.image).then((res) => res);
+    MealEndpoint.addMeal({
+      title: data.title,
+      image: img,
+      rating: 5.0,
+      price: data.price,
+      category: {
+        id: data.category.value,
+      },
+      description: data.description,
+      dateCreated: new Date().toISOString(),
+      custom: false,
+    }).then((res) => {
+      setLoading(false);
+      navigate("/admin/managements/meals");
+    });
   };
 
   return (
@@ -80,23 +94,6 @@ export default function AddMeal() {
               items={categories}
             />
             <TextInput
-              type="date"
-              label="Title"
-              className=""
-              inputClassName="bg-background"
-              control={control}
-              name="date"
-            />
-          </div>
-          <div className="flex">
-            <RichTextEditor
-              control={control}
-              name="description"
-              label="Description"
-            />
-          </div>
-          <div className="flex gap-2 items-center">
-            <TextInput
               type="number"
               label="Price"
               className=""
@@ -104,6 +101,15 @@ export default function AddMeal() {
               control={control}
               name="price"
             />
+          </div>
+          <div className="flex mb-3">
+            <RichTextEditor
+              control={control}
+              name="description"
+              label="Description"
+            />
+          </div>
+          <div className="flex gap-2 items-center">
             <Button
               text="save meal"
               className="rounded-[8px] w-[65vw] py-[11px] h-fit"
@@ -111,9 +117,6 @@ export default function AddMeal() {
             />
           </div>
         </form>
-        add meal page
-        <input name="file" type="file" onChange={onFileChange} />
-        <button onClick={onFileUpload}>Upload</button>
       </div>
     </div>
   );

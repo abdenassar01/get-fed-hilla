@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the add meal page and fix &#10; components style">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fetch categories and fix all category on menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,14 +190,7 @@
       <workItem from="1689067443809" duration="11989000" />
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
-      <workItem from="1689163980243" duration="18708000" />
-    </task>
-    <task id="LOCAL-00042" summary="adding sub category functionality">
-      <created>1688639529506</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1688639529506</updated>
+      <workItem from="1689163980243" duration="20741000" />
     </task>
     <task id="LOCAL-00043" summary="refactor backend">
       <created>1688750243372</created>
@@ -535,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689186808717</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="fetch categories and fix all category on menu">
+      <created>1689187945419</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1689187945419</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add login scenario" />
     <MESSAGE value="fix all login scenario [add session storage...]" />
     <MESSAGE value="adding error element" />
     <MESSAGE value="handling authorisation" />
@@ -579,7 +578,8 @@
     <MESSAGE value="showing meals data table" />
     <MESSAGE value="adding rich text editor components" />
     <MESSAGE value="adding the add meal page and fix &#10; components style" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the add meal page and fix &#10; components style" />
+    <MESSAGE value="fetch categories and fix all category on menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="fetch categories and fix all category on menu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

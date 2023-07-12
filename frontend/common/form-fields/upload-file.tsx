@@ -27,7 +27,8 @@ export function UploadFile({
       {children}
       <input
         accept={accept}
-        onChange={onChange}
+        // @ts-ignore
+        onChange={(e) => onChange(e.target.files[0])}
         onBlur={onBlur}
         type="file"
         name={name}
