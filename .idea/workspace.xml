@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding tab navigator component">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding managements pages to routes">
+      <change afterPath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/common/data-table/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/loading/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/loading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/long-text/long-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/long-text/long-text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,14 +195,7 @@
       <workItem from="1689067443809" duration="11989000" />
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
-      <workItem from="1689163980243" duration="6681000" />
-    </task>
-    <task id="LOCAL-00038" summary="adding zustand store to manage cart">
-      <created>1688499183665</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1688499183665</updated>
+      <workItem from="1689163980243" duration="11959000" />
     </task>
     <task id="LOCAL-00039" summary="adding cart page and adding cart logique">
       <created>1688559438305</created>
@@ -538,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689172713654</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="adding managements pages to routes">
+      <created>1689174356426</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1689174356426</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implementing security based on user username and password" />
     <MESSAGE value="fix all security problems - [test login]" />
     <MESSAGE value="cleaning up" />
     <MESSAGE value="small fixes" />
@@ -582,7 +583,8 @@
     <MESSAGE value="prevent too many rerender" />
     <MESSAGE value="fix management data architecture" />
     <MESSAGE value="adding tab navigator component" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding tab navigator component" />
+    <MESSAGE value="adding managements pages to routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding managements pages to routes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
