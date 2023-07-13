@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix header show dropdown option based on auth">
-      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactor project structure">
+      <change afterPath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/data-table/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,11 +113,11 @@
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/utils/hooks" />
-      <recent name="$PROJECT_DIR$/frontend/utils" />
-      <recent name="$PROJECT_DIR$/frontend/views/admin" />
+      <recent name="$PROJECT_DIR$/frontend/common/tables" />
+      <recent name="$PROJECT_DIR$/frontend/views/meal" />
+      <recent name="$PROJECT_DIR$/frontend/views/menu" />
       <recent name="$PROJECT_DIR$/frontend/views/custom-meal" />
-      <recent name="$PROJECT_DIR$/frontend/assets/icons" />
+      <recent name="$PROJECT_DIR$/frontend/utils/hooks" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,21 +194,7 @@
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
-      <workItem from="1689207098332" duration="972000" />
-    </task>
-    <task id="LOCAL-00047" summary="change background">
-      <created>1688755394394</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1688755394394</updated>
-    </task>
-    <task id="LOCAL-00048" summary="finishing pack selector &quot;perfect&quot; component">
-      <created>1688757929463</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1688757929463</updated>
+      <workItem from="1689207098332" duration="1861000" />
     </task>
     <task id="LOCAL-00049" summary="fix custom meal and fix other styling">
       <created>1688768895263</created>
@@ -534,7 +525,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689207973218</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="fix profile dropdown hover effect">
+      <created>1689208181670</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1689208181670</updated>
+    </task>
+    <task id="LOCAL-00097" summary="refactor project structure">
+      <created>1689208516948</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1689208516948</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,8 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix private route and other fixes" />
-    <MESSAGE value="redirect from register if logged in user" />
     <MESSAGE value="fix login in register page" />
     <MESSAGE value="add authentication logic to adding items to cart" />
     <MESSAGE value="fix bug adding items to cart" />
@@ -578,7 +581,9 @@
     <MESSAGE value="fix header" />
     <MESSAGE value="fix dish card and a (bug in category details)" />
     <MESSAGE value="fix header show dropdown option based on auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix header show dropdown option based on auth" />
+    <MESSAGE value="fix profile dropdown hover effect" />
+    <MESSAGE value="refactor project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor project structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

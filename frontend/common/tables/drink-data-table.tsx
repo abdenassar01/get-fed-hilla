@@ -1,25 +1,13 @@
-import * as React from "react";
-import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
+import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 import { LongText } from "Frontend/common/long-text/index.js";
-
-type Column = {
-  img: string | undefined;
-  title: string;
-};
-
-type Row = {
-  isImg: boolean | undefined;
-  key: string;
-  value: string | undefined;
-  column: Column | undefined;
-};
+import * as React from "react";
 
 type Props = {
   header: string[];
-  data: Meal[] | undefined;
+  data: Drink[] | undefined;
 };
 
-export function DataTable({ header, data }: Props) {
+export function DrinkDataTable({ header, data }: Props) {
   return (
     <table className="w-full">
       <thead>
@@ -41,12 +29,12 @@ export function DataTable({ header, data }: Props) {
               <div className="flex h-full w-fit items-center justify-center gap-[0.972vw] px-[0.972vw]">
                 <img
                   src={row.image}
-                  alt={row.title}
+                  alt={row.label}
                   width={31}
                   height={31}
                   className="rounded-full"
                 />
-                <div>{row.title}</div>
+                <div>{row.label}</div>
               </div>
             </td>
             <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
@@ -57,16 +45,7 @@ export function DataTable({ header, data }: Props) {
               />
             </td>
             <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
-              {row.dateCreated?.split("T")[0]}
-            </td>
-            <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
               {row.price}
-            </td>
-            <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
-              {row.rating}
-            </td>
-            <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
-              {row.category?.label}
             </td>
           </tr>
         ))}

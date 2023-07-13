@@ -1,24 +1,36 @@
 import * as React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
+import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
+import { Outlet } from "react-router-dom";
+import { DrinkDataTable } from "Frontend/common/index.js";
+import useFetch from "Frontend/utils/hooks/index.js";
+import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
+import { DrinkEndpoint } from "Frontend/generated/endpoints.js";
 
 export default function DrinksManagement() {
-  const [file, setFile] = useState();
+  const { data, loading, error } = useFetch<Meal[]>(async () => {
+    const res = await DrinkEndpoint.getDrinks(0, 20);
+    return res?.body;
+  }, []);
 
-  const onFileChange = (event: any) => {
-    // @ts-ignore
-    setFile(event.target.files[0]);
-  };
-  const onFileUpload = () => {
-    useUploadImage(file).then((res) => console.log(res));
-  };
+  const header = ["title", "description", "price"];
 
   return (
-    <div>
-      <div className="">
-        <input name="file" type="file" onChange={onFileChange} />
-        <button onClick={onFileUpload}>Upload</button>
+    <div className="">
+      <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
+        Drinks
+      </div>
+      <div className="w-full">
+        <div className="my-3">
+          <NoStyleLink
+            className="bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"
+            link="/admin/managements/drinks/new"
+          >
+            add drink
+          </NoStyleLink>
+        </div>
+
+        <Outlet />
+        {data && <DrinkDataTable header={header} data={data} />}
       </div>
     </div>
   );
