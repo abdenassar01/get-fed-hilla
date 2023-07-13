@@ -2,8 +2,10 @@ package com.lpw.getfed.services.implementations;
 
 import com.lpw.getfed.models.Delivery;
 import com.lpw.getfed.models.Order;
+import com.lpw.getfed.repositories.DeliveryRepository;
 import com.lpw.getfed.repositories.OrderRepository;
 import com.lpw.getfed.services.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +18,12 @@ import java.util.Map;
 public class OrderServiceImplementation implements OrderService {
 
     private final OrderRepository repository;
+    private final DeliveryRepository deliveryRepository;
 
-    public OrderServiceImplementation(OrderRepository repository) {
+    @Autowired
+    public OrderServiceImplementation(OrderRepository repository, DeliveryRepository deliveryRepository) {
         this.repository = repository;
+        this.deliveryRepository = deliveryRepository;
     }
 
     @Override
@@ -42,6 +47,13 @@ public class OrderServiceImplementation implements OrderService {
 
     @Override
     public ResponseEntity<Order> createOrder(Order order) {
+        Delivery d = deliveryRepository.findById(
+                order.getDelivery().getId()).orElseThrow(
+                        () -> new IllegalStateException(
+                                "can't find delivery with id: " + order.getDelivery().getId()
+                        )
+        );
+        order.setDelivery(d);
         return ResponseEntity.ok(repository.save(order));
     }
 

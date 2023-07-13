@@ -2,6 +2,7 @@ package com.lpw.getfed.endpoints;
 
 import com.lpw.getfed.models.Delivery;
 import com.lpw.getfed.models.Order;
+import com.lpw.getfed.services.DeliveryService;
 import com.lpw.getfed.services.OrderService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import dev.hilla.Endpoint;
@@ -19,7 +20,6 @@ public class OrderEndpoint {
     Logger logger = LogManager.getLogger(CategoryEndpoint.class);
 
     private final OrderService service;
-
     @Autowired
     public OrderEndpoint(OrderService service) {
         this.service = service;

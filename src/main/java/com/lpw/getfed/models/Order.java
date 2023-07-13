@@ -25,7 +25,6 @@ public class Order {
 
     private OrderStatus status;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy, hh:mm:ss")
     private Date dateCreated;
 
     private Double totalPrice;
@@ -33,9 +32,13 @@ public class Order {
     private String address;
     private String paymentMethod;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "delivery_id", referencedColumnName = "id")
     private Delivery delivery;
+
+    @ManyToOne()
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
     @ManyToMany()
     private List<Drink> drinks;
