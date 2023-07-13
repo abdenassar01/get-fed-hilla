@@ -1,9 +1,9 @@
 import React from "react";
 import { Editor } from "react-draft-wysiwyg";
 import { Control, useController } from "react-hook-form";
-import { convertToRaw } from "draft-js";
 import draftToHtml from "draftjs-to-html";
 import { ClassNames } from "Frontend/utils/classnames.js";
+import { convertToRaw } from "draft-js";
 
 type Props = {
   control: Control<any>;
@@ -12,6 +12,7 @@ type Props = {
   labelClassName?: string;
   className?: string;
   placeholder?: string;
+  defaultValue?: string;
 };
 
 export function RichTextEditor({
@@ -21,13 +22,15 @@ export function RichTextEditor({
   className,
   labelClassName,
   placeholder,
+  defaultValue,
 }: Props) {
   const {
-    field: { onChange, onBlur },
+    field: { onChange, onBlur, value },
     fieldState: { error },
   } = useController({
     control,
     name,
+    defaultValue: defaultValue || "",
   });
 
   const hashConfig = {
@@ -62,7 +65,6 @@ export function RichTextEditor({
         wrapperClassName="bg-white"
         editorClassName="border-[1px] border-[#E6E6E6] bg-[#F3F4F6] px-[24px] py-[16px] rounded-es-[10px] rounded-ee-[10px]"
         placeholder={placeholder}
-        // onChange={onChange}
         onBlur={onBlur}
         onEditorStateChange={(e) =>
           onChange(draftToHtml(convertToRaw(e.getCurrentContent())))

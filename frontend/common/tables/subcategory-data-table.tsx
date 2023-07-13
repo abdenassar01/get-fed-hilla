@@ -1,6 +1,8 @@
 import SubCategory from "Frontend/generated/com/lpw/getfed/models/SubCategory.js";
 import { LongText } from "Frontend/common/long-text/index.js";
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { FaEdit } from "react-icons/fa";
 
 type Props = {
   header: string[];
@@ -8,6 +10,7 @@ type Props = {
 };
 
 export function SubcategoryDataTable({ header, data }: Props) {
+  const navigate = useNavigate();
   return (
     <table className="w-full">
       <thead>
@@ -58,6 +61,18 @@ export function SubcategoryDataTable({ header, data }: Props) {
             </td>
             <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
               {row.price}
+            </td>
+            <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
+              <button
+                className="text-main"
+                onClick={() =>
+                  navigate("/admin/managements/subcategories/new", {
+                    state: { id: row.id },
+                  })
+                }
+              >
+                <FaEdit size={24} />
+              </button>
             </td>
           </tr>
         ))}

@@ -13,7 +13,7 @@ export default function DrinksManagement() {
     return res?.body;
   }, []);
 
-  const header = ["title", "description", "price"];
+  const header = ["title", "description", "price", "#"];
 
   if (loading) return <ComponentLoader />;
   if (error) return <Error />;

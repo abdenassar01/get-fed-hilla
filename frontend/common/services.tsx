@@ -7,7 +7,7 @@ export function Services() {
       img: "https://i.imgur.com/9z1P1uE.png",
       name: "Best Taste",
       description:
-        "we offer the best taste in the town by the statement of our beloved clients, we are known to be the best over a longtime now.",
+        "we offer the best taste in the town by the statement of our beloved clients.",
     },
     {
       id: 2,

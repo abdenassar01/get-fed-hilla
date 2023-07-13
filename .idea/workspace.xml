@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="small changes, user management and orders table">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add loading and error handlers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/rich-text-editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/rich-text-editor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/services.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/ingredient-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/ingredient-data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/subcategory-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/subcategory-data-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +205,7 @@
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
       <workItem from="1689272069158" duration="6091000" />
-      <workItem from="1689286479509" duration="424000" />
-    </task>
-    <task id="LOCAL-00072" summary="redirect from register if logged in user">
-      <created>1689077878370</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1689077878372</updated>
+      <workItem from="1689286479509" duration="5090000" />
     </task>
     <task id="LOCAL-00073" summary="fix login in register page">
       <created>1689087977249</created>
@@ -539,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689279501294</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="add loading and error handlers">
+      <created>1689287027364</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1689287027364</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix profile dropdown hover effect" />
     <MESSAGE value="refactor project structure" />
     <MESSAGE value="adding add drink table and refactoring" />
     <MESSAGE value="add drink functionality working great" />
@@ -583,7 +593,8 @@
     <MESSAGE value="small fixes in home page" />
     <MESSAGE value="add user management page" />
     <MESSAGE value="small changes, user management and orders table" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes, user management and orders table" />
+    <MESSAGE value="add loading and error handlers" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loading and error handlers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

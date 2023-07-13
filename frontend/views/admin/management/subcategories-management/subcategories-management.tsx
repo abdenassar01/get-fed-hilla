@@ -17,7 +17,7 @@ export default function SubCategoriesManagement() {
     return res?.body;
   }, []);
 
-  const header = ["title", "label", "description", "price"];
+  const header = ["title", "label", "description", "price", "#"];
 
   if (loading) return <ComponentLoader />;
   if (error) return <Error />;

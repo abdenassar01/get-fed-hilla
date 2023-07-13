@@ -20,6 +20,7 @@ export default function MealsManagement() {
     "price",
     "rating",
     "category",
+    "#",
   ];
 
   if (loading) return <ComponentLoader />;

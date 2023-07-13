@@ -17,7 +17,7 @@ export default function IngredientsManagement() {
     return res?.body;
   }, []);
 
-  const header = ["title", "price", "sub category"];
+  const header = ["title", "price", "sub category", "#"];
 
   if (loading) return <ComponentLoader />;
   if (error) return <Error />;
