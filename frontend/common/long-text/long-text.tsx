@@ -8,9 +8,15 @@ type Props = {
   text: string;
   nbrCharacteres: number;
   className?: string;
+  showBtnText?: boolean;
 };
 
-export function LongText({ text, nbrCharacteres, className }: Props) {
+export function LongText({
+  text,
+  nbrCharacteres,
+  className,
+  showBtnText = true,
+}: Props) {
   const [displayedText, setDisplayedText] = useState<string>(
     truncate(text, nbrCharacteres)
   );
@@ -33,12 +39,14 @@ export function LongText({ text, nbrCharacteres, className }: Props) {
         text={displayedText}
         className={ClassNames("text-xs prose-p:text-xs", className || "")}
       />
-      <button
-        className="text-secondary sm:text-mb-xs"
-        onClick={toggleShowenText}
-      >
-        {buttonText}
-      </button>
+      {showBtnText && (
+        <button
+          className="text-secondary sm:text-mb-xs"
+          onClick={toggleShowenText}
+        >
+          {buttonText}
+        </button>
+      )}
     </div>
   );
 }

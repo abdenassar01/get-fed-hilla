@@ -52,18 +52,8 @@ public class IngredientEndpoint {
         return service.removeIngrediantById(id);
     }
 
-    public ResponseEntity<List<Ingredient>> getIngrediantsByMeal(Meal meal){
-        logger.info("getting the ingredients of meal: " + meal.getId());
-        return service.getIngrediantsByMeal(meal);
-    }
-
     public ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, int page, int size){
         logger.info("getting ingredient of sub category: " + subCategoryId);
         return service.getIngredientBySubCategory(subCategoryId, PageRequest.of(page, size));
-    }
-
-    public ResponseEntity<List<Ingredient>> getIngrediantsByMealId(Long id){
-        logger.info("getting the ingredients of meal: " + id);
-        return service.getIngrediantsByMealId(id);
     }
 }

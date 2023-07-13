@@ -39,13 +39,13 @@ public class Meal {
     private Boolean custom;
 
     @ManyToOne
-    @JsonIdentityReference(alwaysAsId = true)
+//    @JsonIdentityReference(alwaysAsId = true)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    @OneToMany(mappedBy = "meal", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Size(min=1, message="You must choose at least 1 ingredient")
-    private List<Ingredient> ingredients;
+//    @OneToMany(mappedBy = "meal", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @Size(min=1, message="You must choose at least 1 ingredient")
+//    private List<Ingredient> ingredients;
 
     @ManyToMany
     @JsonIgnore

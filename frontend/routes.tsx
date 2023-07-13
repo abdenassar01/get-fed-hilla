@@ -8,12 +8,16 @@ import {
 } from "react-router-dom";
 import { Home } from "Frontend/views/index.js";
 import { PrivateRoute } from "Frontend/common/private-route/private-route.js";
-import Logout from "Frontend/views/auth/logout/logout.js";
-
 const Error = lazy(async () => import("Frontend/common/error/error.js"));
-
+const AddMeal = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/meals-management/add-meal/add-meal.js"
+    )
+);
+const Logout = lazy(async () => import("Frontend/views/auth/logout/logout.js"));
 const CategoryDetails = lazy(
-  async () => import("Frontend/views/category/category-details.js")
+  async () => import("Frontend/views/menu/category/category-details.js")
 );
 const MenuLayout = lazy(
   async () => import("Frontend/views/menu/menu-layout.js")
@@ -26,8 +30,36 @@ const Cart = lazy(async () => import("Frontend/views/cart/cart.js"));
 const AdminLayout = lazy(
   async () => import("Frontend/views/admin/admin-layout.js")
 );
-const AddMeal = lazy(
-  async () => import("Frontend/views/admin/add-meal/add-meal.js")
+const Management = lazy(
+  async () => import("Frontend/views/admin/management/management.js")
+);
+
+const MealsManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/meals-management/meals-management.js"
+    )
+);
+
+const DrinksManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/drinks-management/drinks-management.js"
+    )
+);
+
+const AddDrink = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/drinks-management/add-drink/add-drink.js"
+    )
+);
+
+const SubCategoriesManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/subcategories-management/subcategories-management.js"
+    )
 );
 const Dashboard = lazy(
   async () => import("Frontend/views/admin/dashboard/dashboard.js")
@@ -44,10 +76,12 @@ const UserManagement = lazy(
 );
 const CustomMealIngredients = lazy(
   async () =>
-    import("Frontend/views/custom-meal-ingredients/custom-meal-ingredients.js")
+    import(
+      "Frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.js"
+    )
 );
 const MealDetails = lazy(
-  async () => import("Frontend/views/meal-details/meal-details.js")
+  async () => import("Frontend/views/meal/meal-details/meal-details.js")
 );
 const CustomizeMeal = lazy(
   async () => import("Frontend/views/custom-meal/customise-meal.js")
@@ -128,8 +162,34 @@ export const routes: readonly ViewRouteObject[] = [
         element: <AdminLayout />,
         children: [
           {
-            path: "/admin/add-meal",
-            element: <AddMeal />,
+            path: "/admin/managements",
+            element: <Management />,
+            children: [
+              {
+                path: "/admin/managements/meals",
+                element: <MealsManagement />,
+                children: [
+                  {
+                    path: "/admin/managements/meals/new",
+                    element: <AddMeal />,
+                  },
+                ],
+              },
+              {
+                path: "/admin/managements/drinks",
+                element: <DrinksManagement />,
+                children: [
+                  {
+                    path: "/admin/managements/drinks/new",
+                    element: <AddDrink />,
+                  },
+                ],
+              },
+              {
+                path: "/admin/managements/subcategories",
+                element: <SubCategoriesManagement />,
+              },
+            ],
           },
           {
             path: "/admin/board",

@@ -7,7 +7,7 @@ import { ClassNames } from "Frontend/utils/classnames.js";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 import useFetch from "Frontend/utils/hooks/use-fetch.js";
-import CategoryDetails from "Frontend/views/category/category-details.js";
+import CategoryDetails from "Frontend/views/menu/category/category-details.js";
 
 export default function MenuLayout() {
   const [currentCategory, setCurrentCategory] = useState<number>();
@@ -21,8 +21,8 @@ export default function MenuLayout() {
         setCurrentCategory(parseInt(meal));
         navigate(`/menu/${meal}`);
       } else {
-        setCurrentCategory(1);
-        navigate("/menu/1");
+        setCurrentCategory(0);
+        navigate("/menu/0");
       }
       // @ts-ignore
       return res?.body;
@@ -55,7 +55,7 @@ export default function MenuLayout() {
         </div>
       </div>
       <Suspense fallback={<Placeholder />}>
-        <CategoryDetails category={currentCategory || 1} />
+        <CategoryDetails category={currentCategory || 0} />
       </Suspense>
     </div>
   );

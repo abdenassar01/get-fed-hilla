@@ -10,3 +10,4 @@ export * from "./services.js";
 export * from "./text-toggle/index.js";
 export * from "./image-shape-maker/index.js";
 export * from "./ingredient-card/index.js";
+export * from "Frontend/common/tables/index.js";

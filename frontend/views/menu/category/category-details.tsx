@@ -8,7 +8,7 @@ import useFetch from "Frontend/utils/hooks/use-fetch.js";
 export default function CategoryDetails({ category }: { category: number }) {
   const [page, setPage] = useState<number>(0);
   const getData = async () => {
-    if (category && category === 1) {
+    if (category === 0) {
       return await MealEndpoint.getMeals(page, 12).then((res) => res?.body);
     } else {
       return await MealEndpoint.getMealByCategory(category, page, 12).then(

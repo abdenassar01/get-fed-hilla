@@ -10,7 +10,7 @@ type Props = {
   name: string;
   placeholder?: string;
   items: {
-    value: string;
+    value: string | number;
     label: string;
   }[];
   className?: string;

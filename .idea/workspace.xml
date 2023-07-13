@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the count ability to backend modals">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding add drink table and refactoring">
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/MealRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,11 +111,11 @@
       <recent name="$PROJECT_DIR$/frontend/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/utils/hooks" />
-      <recent name="$PROJECT_DIR$/frontend/utils" />
-      <recent name="$PROJECT_DIR$/frontend/views/admin" />
+      <recent name="$PROJECT_DIR$/frontend/common/tables" />
+      <recent name="$PROJECT_DIR$/frontend/views/meal" />
+      <recent name="$PROJECT_DIR$/frontend/views/menu" />
       <recent name="$PROJECT_DIR$/frontend/views/custom-meal" />
-      <recent name="$PROJECT_DIR$/frontend/assets/icons" />
+      <recent name="$PROJECT_DIR$/frontend/utils/hooks" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,140 +189,10 @@
       <workItem from="1689007886440" duration="8323000" />
       <workItem from="1689029007117" duration="6826000" />
       <workItem from="1689067443809" duration="11989000" />
-      <workItem from="1689085079117" duration="14275000" />
-    </task>
-    <task id="LOCAL-00031" summary="fixing upload file field">
-      <created>1688427813564</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1688427813564</updated>
-    </task>
-    <task id="LOCAL-00032" summary="add profile options to header">
-      <created>1688432180013</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1688432180013</updated>
-    </task>
-    <task id="LOCAL-00033" summary="fix header profile dropdown">
-      <created>1688463061705</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1688463061705</updated>
-    </task>
-    <task id="LOCAL-00034" summary="adding navigation header component">
-      <created>1688465267020</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1688465267020</updated>
-    </task>
-    <task id="LOCAL-00035" summary="refactor header">
-      <created>1688465275227</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1688465275227</updated>
-    </task>
-    <task id="LOCAL-00036" summary="adding drink card component and display it in drinks page">
-      <created>1688472403924</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1688472403924</updated>
-    </task>
-    <task id="LOCAL-00037" summary="fixing drinks slider in meal details">
-      <created>1688493068126</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1688493068126</updated>
-    </task>
-    <task id="LOCAL-00038" summary="adding zustand store to manage cart">
-      <created>1688499183665</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1688499183665</updated>
-    </task>
-    <task id="LOCAL-00039" summary="adding cart page and adding cart logique">
-      <created>1688559438305</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1688559438306</updated>
-    </task>
-    <task id="LOCAL-00040" summary="fixing cart to manage quantity of each product">
-      <created>1688582621924</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1688582621924</updated>
-    </task>
-    <task id="LOCAL-00041" summary="fix style of meal/drink cards in cart">
-      <created>1688583212909</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1688583212909</updated>
-    </task>
-    <task id="LOCAL-00042" summary="adding sub category functionality">
-      <created>1688639529506</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1688639529506</updated>
-    </task>
-    <task id="LOCAL-00043" summary="refactor backend">
-      <created>1688750243372</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1688750243372</updated>
-    </task>
-    <task id="LOCAL-00044" summary="adding pack selector">
-      <created>1688755343944</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1688755343944</updated>
-    </task>
-    <task id="LOCAL-00045" summary="fix routing">
-      <created>1688755357690</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1688755357690</updated>
-    </task>
-    <task id="LOCAL-00046" summary="adding subcategorybyid endpoint">
-      <created>1688755380647</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1688755380647</updated>
-    </task>
-    <task id="LOCAL-00047" summary="change background">
-      <created>1688755394394</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1688755394394</updated>
-    </task>
-    <task id="LOCAL-00048" summary="finishing pack selector &quot;perfect&quot; component">
-      <created>1688757929463</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1688757929463</updated>
-    </task>
-    <task id="LOCAL-00049" summary="fix custom meal and fix other styling">
-      <created>1688768895263</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1688768895264</updated>
+      <workItem from="1689085079117" duration="14528000" />
+      <workItem from="1689114979219" duration="4089000" />
+      <workItem from="1689163980243" duration="21441000" />
+      <workItem from="1689207098332" duration="2599000" />
     </task>
     <task id="LOCAL-00050" summary="fetching drink from db">
       <created>1688812193905</created>
@@ -539,7 +404,140 @@
       <option name="project" value="LOCAL" />
       <updated>1689099379305</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="fixing count endpoint">
+      <created>1689100755324</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1689100755324</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fix header drop down appearance">
+      <created>1689116395295</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1689116395297</updated>
+    </task>
+    <task id="LOCAL-00082" summary="adding orders table">
+      <created>1689119681131</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1689119681131</updated>
+    </task>
+    <task id="LOCAL-00083" summary="removing relation between meal and ingredient">
+      <created>1689164914424</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1689164914425</updated>
+    </task>
+    <task id="LOCAL-00084" summary="prevent too many rerender">
+      <created>1689167604634</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1689167604634</updated>
+    </task>
+    <task id="LOCAL-00085" summary="fix management data architecture">
+      <created>1689170773098</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1689170773098</updated>
+    </task>
+    <task id="LOCAL-00086" summary="adding tab navigator component">
+      <created>1689172713652</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1689172713654</updated>
+    </task>
+    <task id="LOCAL-00087" summary="adding managements pages to routes">
+      <created>1689174356426</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1689174356426</updated>
+    </task>
+    <task id="LOCAL-00088" summary="showing meals data table">
+      <created>1689180789537</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1689180789537</updated>
+    </task>
+    <task id="LOCAL-00089" summary="adding rich text editor components">
+      <created>1689186401371</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1689186401371</updated>
+    </task>
+    <task id="LOCAL-00090" summary="adding the add meal page and fix &#10; components style">
+      <created>1689186808717</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1689186808717</updated>
+    </task>
+    <task id="LOCAL-00091" summary="fetch categories and fix all category on menu">
+      <created>1689187945419</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1689187945419</updated>
+    </task>
+    <task id="LOCAL-00092" summary="finish add meal functionality">
+      <created>1689189620396</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1689189620396</updated>
+    </task>
+    <task id="LOCAL-00093" summary="fix header">
+      <created>1689189796446</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1689189796446</updated>
+    </task>
+    <task id="LOCAL-00094" summary="fix dish card and a (bug in category details)">
+      <created>1689190244826</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1689190244826</updated>
+    </task>
+    <task id="LOCAL-00095" summary="fix header show dropdown option based on auth">
+      <created>1689207973218</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1689207973218</updated>
+    </task>
+    <task id="LOCAL-00096" summary="fix profile dropdown hover effect">
+      <created>1689208181670</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1689208181670</updated>
+    </task>
+    <task id="LOCAL-00097" summary="refactor project structure">
+      <created>1689208516948</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1689208516948</updated>
+    </task>
+    <task id="LOCAL-00098" summary="adding add drink table and refactoring">
+      <created>1689209035567</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1689209035568</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,32 +556,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add upload file - update design" />
-    <MESSAGE value="update design of admin panel..." />
-    <MESSAGE value="fix card item header" />
-    <MESSAGE value="add admin dashboard layout" />
-    <MESSAGE value="fix remove drink from cart" />
-    <MESSAGE value="fix update password page" />
-    <MESSAGE value="refactor (change employee to user and add role)" />
-    <MESSAGE value="implementing security based on user username and password" />
-    <MESSAGE value="fix all security problems - [test login]" />
-    <MESSAGE value="cleaning up" />
-    <MESSAGE value="small fixes" />
-    <MESSAGE value="add login scenario" />
-    <MESSAGE value="fix all login scenario [add session storage...]" />
-    <MESSAGE value="adding error element" />
-    <MESSAGE value="handling authorisation" />
-    <MESSAGE value="implementing logout functionality" />
-    <MESSAGE value="fix private route and other fixes" />
-    <MESSAGE value="redirect from register if logged in user" />
-    <MESSAGE value="fix login in register page" />
     <MESSAGE value="add authentication logic to adding items to cart" />
     <MESSAGE value="fix bug adding items to cart" />
     <MESSAGE value="fix styles - [merge tailwind classNames]" />
     <MESSAGE value="fix admin role test" />
     <MESSAGE value="update backend for meal" />
     <MESSAGE value="adding the count ability to backend modals" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the count ability to backend modals" />
+    <MESSAGE value="fixing count endpoint" />
+    <MESSAGE value="fix header drop down appearance" />
+    <MESSAGE value="adding orders table" />
+    <MESSAGE value="removing relation between meal and ingredient" />
+    <MESSAGE value="prevent too many rerender" />
+    <MESSAGE value="fix management data architecture" />
+    <MESSAGE value="adding tab navigator component" />
+    <MESSAGE value="adding managements pages to routes" />
+    <MESSAGE value="showing meals data table" />
+    <MESSAGE value="adding rich text editor components" />
+    <MESSAGE value="adding the add meal page and fix &#10; components style" />
+    <MESSAGE value="fetch categories and fix all category on menu" />
+    <MESSAGE value="finish add meal functionality" />
+    <MESSAGE value="fix header" />
+    <MESSAGE value="fix dish card and a (bug in category details)" />
+    <MESSAGE value="fix header show dropdown option based on auth" />
+    <MESSAGE value="fix profile dropdown hover effect" />
+    <MESSAGE value="refactor project structure" />
+    <MESSAGE value="adding add drink table and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding add drink table and refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
