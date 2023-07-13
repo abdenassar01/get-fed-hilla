@@ -2,6 +2,7 @@ package com.lpw.getfed.services;
 
 import com.lpw.getfed.models.SubCategory;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -10,4 +11,5 @@ public interface SubCategoryService {
 
     List<SubCategory> getSubCategories();
     SubCategory getSubCategoryById(Long id);
+    ResponseEntity<SubCategory> addSubCategory(SubCategory subCategory);
 }

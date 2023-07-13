@@ -32,6 +32,11 @@ public class CategoryEndpoint {
         return service.addCategory(category);
     }
 
+    public ResponseEntity<SubCategory> addSubCategory(SubCategory subCategory){
+        logger.info("Added a new sub category named: " + subCategory.getTitle());
+        return subCategoryService.addSubCategory(subCategory);
+    }
+
     public ResponseEntity<String> removeCategory(Category category){
         logger.warn("removed category named: " + category.getLabel());
         return service.removeCategory(category);
