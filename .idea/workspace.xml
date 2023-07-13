@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the add subcategory endpoint">
-      <change afterPath="$PROJECT_DIR$/frontend/common/tables/subcategory-data-table.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="implement add sub category functionality">
+      <change afterPath="$PROJECT_DIR$/frontend/common/tables/ingredient-table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/upload-file.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +196,7 @@
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
       <workItem from="1689207098332" duration="3136000" />
-      <workItem from="1689242392045" duration="5317000" />
-    </task>
-    <task id="LOCAL-00054" summary="fixes and adding admin panel wrapper">
-      <created>1688830417897</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1688830417898</updated>
+      <workItem from="1689242392045" duration="7273000" />
     </task>
     <task id="LOCAL-00055" summary="add upload file - update design">
       <created>1688839142080</created>
@@ -539,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689246587821</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="implement add sub category functionality">
+      <created>1689248813115</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1689248813115</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +560,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update backend for meal" />
     <MESSAGE value="adding the count ability to backend modals" />
     <MESSAGE value="fixing count endpoint" />
     <MESSAGE value="fix header drop down appearance" />
@@ -583,7 +584,8 @@
     <MESSAGE value="fix rounding image in drink card" />
     <MESSAGE value="add subcategory, fix loader, add small component loader(don't take whole screen)" />
     <MESSAGE value="adding the add subcategory endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the add subcategory endpoint" />
+    <MESSAGE value="implement add sub category functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement add sub category functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

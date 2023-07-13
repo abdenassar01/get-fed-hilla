@@ -68,6 +68,21 @@ const AddSubcategory = lazy(
       "Frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.js"
     )
 );
+
+const IngredientsManagement = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/ingredients-management/ingredients-management.js"
+    )
+);
+
+const AddIngredient = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.js"
+    )
+);
+
 const Dashboard = lazy(
   async () => import("Frontend/views/admin/dashboard/dashboard.js")
 );
@@ -199,6 +214,16 @@ export const routes: readonly ViewRouteObject[] = [
                   {
                     path: "/admin/managements/subcategories/new",
                     element: <AddSubcategory />,
+                  },
+                ],
+              },
+              {
+                path: "/admin/managements/ingredients",
+                element: <IngredientsManagement />,
+                children: [
+                  {
+                    path: "/admin/managements/ingredients/new",
+                    element: <AddIngredient />,
                   },
                 ],
               },
