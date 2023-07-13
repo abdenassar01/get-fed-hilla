@@ -41,7 +41,7 @@ export function DrinkCard({
       </div>
       <div
         style={{ backgroundImage: `url('${image}')` }}
-        className="h-full w-[10vw] bg-no-repeat bg-contain"
+        className="h-full w-[10vw] bg-no-repeat bg-contain rounded-[8px]"
       />
     </div>
   );
