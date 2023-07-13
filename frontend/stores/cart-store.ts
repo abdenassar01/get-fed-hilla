@@ -43,7 +43,9 @@ export const useCartStore = create<State & Action>((set) => ({
         ...state.drinks,
         {
           item: drink,
-          qte: 2,
+          qte: ++state.drinks.filter(
+            (drinkItem) => drinkItem.item.id === drink.id
+          ).length,
         },
       ],
     })),
