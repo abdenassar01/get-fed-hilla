@@ -17,10 +17,8 @@ public class Delivery {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    private String label;
     private Double estimateTime;
-
-    @Column
     private Double price;
 
     @OneToOne(mappedBy = "delivery")

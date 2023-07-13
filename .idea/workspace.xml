@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="extract drink and meal cards in cart to separate components">
-      <change afterPath="$PROJECT_DIR$/frontend/utils/get-unique.ts" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add payment method to order model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/meal-card-with-quantity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/meal-card-with-quantity.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card-with-quantity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card-with-quantity.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,28 +191,7 @@
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
       <workItem from="1689207098332" duration="3136000" />
-      <workItem from="1689242392045" duration="15254000" />
-    </task>
-    <task id="LOCAL-00061" summary="refactor (change employee to user and add role)">
-      <created>1689008589019</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1689008589020</updated>
-    </task>
-    <task id="LOCAL-00062" summary="implementing security based on user username and password">
-      <created>1689014208217</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1689014208217</updated>
-    </task>
-    <task id="LOCAL-00063" summary="fix all security problems - [test login]">
-      <created>1689032802389</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1689032802391</updated>
+      <workItem from="1689242392045" duration="15896000" />
     </task>
     <task id="LOCAL-00064" summary="cleaning up">
       <created>1689032876473</created>
@@ -542,7 +515,28 @@
       <option name="project" value="LOCAL" />
       <updated>1689262851206</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="adding the checkout form and design fixes">
+      <created>1689264012643</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264012643</updated>
+    </task>
+    <task id="LOCAL-00111" summary="change the order model (add phone and shipping adress)">
+      <created>1689264049005</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264049006</updated>
+    </task>
+    <task id="LOCAL-00112" summary="add payment method to order model">
+      <created>1689264099574</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264099574</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,9 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix management data architecture" />
-    <MESSAGE value="adding tab navigator component" />
-    <MESSAGE value="adding managements pages to routes" />
     <MESSAGE value="showing meals data table" />
     <MESSAGE value="adding rich text editor components" />
     <MESSAGE value="adding the add meal page and fix &#10; components style" />
@@ -586,7 +577,10 @@
     <MESSAGE value="adding checkout empty page and fix rerender issue" />
     <MESSAGE value="fix adding drink (qte error)" />
     <MESSAGE value="extract drink and meal cards in cart to separate components" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract drink and meal cards in cart to separate components" />
+    <MESSAGE value="adding the checkout form and design fixes" />
+    <MESSAGE value="change the order model (add phone and shipping adress)" />
+    <MESSAGE value="add payment method to order model" />
+    <option name="LAST_COMMIT_MESSAGE" value="add payment method to order model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
