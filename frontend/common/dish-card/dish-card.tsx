@@ -53,8 +53,8 @@ export function DishCard({
       <div className="flex justify-between w-[100%]">
         <StartRating rating={rating} />
         <div className="text-main flex">
-          <s className="text-xl">{price}</s>
-          <p className="xbase font-medium">/{price - 2}MAD</p>
+          <s className="text-xl">{price + 5}</s>
+          <p className="xbase font-medium">/{price} MAD</p>
         </div>
       </div>
       <div className="flex mt-[20px] justify-end items-center gap-[10px] w-[100%]">

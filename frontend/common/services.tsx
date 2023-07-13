@@ -7,21 +7,21 @@ export function Services() {
       img: "https://i.imgur.com/9z1P1uE.png",
       name: "Best Taste",
       description:
-        "we offer the worst tast in the town we are known to be the best over a decate now.",
+        "we offer the best taste in the town by the statement of our beloved clients, we are known to be the best over a longtime now.",
     },
     {
       id: 2,
       img: "https://i.imgur.com/7QAsPM2.png",
       name: "Fast Delivery",
       description:
-        "we offer the best tast in the town we are known to be the best over a decate now.",
+        "we have two delivery services to get your order as fast as we possibly can.",
     },
     {
       id: 3,
       img: "https://i.imgur.com/rlU36S8.png",
-      name: "Best Taste",
+      name: "Great Service",
       description:
-        "we offer the best tast in the town we are known to be the best over a decate now.",
+        "we try to offer the best service, as we always work on the user experience and try to improve upon that ",
     },
   ];
 
