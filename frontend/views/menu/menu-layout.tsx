@@ -7,7 +7,7 @@ import { ClassNames } from "Frontend/utils/classnames.js";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 import useFetch from "Frontend/utils/hooks/use-fetch.js";
-import CategoryDetails from "Frontend/views/category/category-details.js";
+import CategoryDetails from "Frontend/views/menu/category/category-details.js";
 
 export default function MenuLayout() {
   const [currentCategory, setCurrentCategory] = useState<number>();

@@ -10,7 +10,7 @@ import {
   StartRating,
 } from "Frontend/common/index.js";
 import { LongText } from "Frontend/common/long-text/index.js";
-import { DrinksSlider } from "Frontend/views/meal-details/drinks-slider.js";
+import { DrinksSlider } from "Frontend/views/meal/meal-details/drinks-slider.js";
 import { FaCartPlus } from "react-icons/fa";
 
 export default function MealDetails() {
