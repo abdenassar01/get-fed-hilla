@@ -3,13 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 
 import logo from "Frontend/assets/images/logo.svg";
 import { ClassNames } from "Frontend/utils/classnames.js";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import profile from "Frontend/assets/icons/profile.svg";
-import { Button } from "Frontend/common/index.js";
 import { useOnHoverOutside } from "Frontend/utils/hooks/index.js";
 import { BsBasket2Fill } from "react-icons/bs";
 import { useCartStore } from "Frontend/stores/cart-store.js";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
+import { useUserStore } from "Frontend/stores/user-store.js";
 
 export function Header() {
   const headerLinks = [
@@ -39,6 +39,9 @@ export function Header() {
       link: "/about",
     },
   ];
+  const { user } = useUserStore();
+
+  useEffect(() => {}, [user]);
 
   const [showProfileDropdown, setShowProfileDropdown] =
     useState<boolean>(false);
@@ -115,29 +118,42 @@ export function Header() {
                 (!showProfileDropdown && "invisible") || ""
               )}
             >
-              <div className="group py-2 px-1 hover:bg-main transition ">
-                <NoStyleLink className="group-hover:text-white" link="/login">
-                  Log in
-                </NoStyleLink>
-              </div>
-              <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
-                <NoStyleLink
-                  className="group-hover:text-white"
-                  link="/register"
-                >
-                  Sign up
-                </NoStyleLink>
-              </div>
-              <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
-                <NoStyleLink className="group-hover:text-white" link="/admin">
-                  Admin
-                </NoStyleLink>
-              </div>
-              <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
-                <NoStyleLink className="group-hover:text-white" link="/logout">
-                  Logout
-                </NoStyleLink>
-              </div>
+              {user.role === "ADMIN" && (
+                <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
+                  <NoStyleLink className="group-hover:text-white" link="/admin">
+                    Admin
+                  </NoStyleLink>
+                </div>
+              )}
+              {user.id ? (
+                <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
+                  <NoStyleLink
+                    className="group-hover:text-white"
+                    link="/logout"
+                  >
+                    Logout
+                  </NoStyleLink>
+                </div>
+              ) : (
+                <>
+                  <div className="group py-2 px-1 hover:bg-main transition ">
+                    <NoStyleLink
+                      className="group-hover:text-white"
+                      link="/login"
+                    >
+                      Log in
+                    </NoStyleLink>
+                  </div>
+                  <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
+                    <NoStyleLink
+                      className="group-hover:text-white"
+                      link="/register"
+                    >
+                      Sign up
+                    </NoStyleLink>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
