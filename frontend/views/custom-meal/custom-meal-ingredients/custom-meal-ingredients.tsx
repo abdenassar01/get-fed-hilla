@@ -19,6 +19,7 @@ import { IngrediantCard } from "Frontend/common/ingredient-card/ingredient-card.
 import { PackSelector } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
 import { useCartStore } from "Frontend/stores/cart-store.js";
+import Error from "Frontend/common/error/error.js";
 
 export default function CustomMealIngredients() {
   const [subCategory, setSubCategory] = useState<SubCategory>({});
@@ -33,7 +34,6 @@ export default function CustomMealIngredients() {
   const { data, error, loading, isFetching } = useFetch<
     Ingredient[]
   >(async () => {
-    setSaveLoading(true);
     CategoryEndpoint.getSubCategoryById(parseInt(subCategoryId || "1")).then(
       // @ts-ignore
       (res) => setSubCategory(res?.body)
@@ -48,6 +48,7 @@ export default function CustomMealIngredients() {
   }, [subCategoryId]);
 
   const onSubmit = (formData: { ingredients: Ingredient[] }) => {
+    setSaveLoading(true);
     let price = subCategory.price;
     // @ts-ignore
     const ingredients: Ingredient[] = formData?.ingredients?.map((item) => {
@@ -59,7 +60,6 @@ export default function CustomMealIngredients() {
     MealEndpoint.addMeal({
       custom: true,
       title: subCategory.label,
-      ingredients: ingredients,
       price: price,
       image: subCategory.image,
       description: subCategory.description,
@@ -87,8 +87,8 @@ export default function CustomMealIngredients() {
     ),
   }));
 
-  if (loading || isFetching) return <Loading />;
-  if (error) return <div>error</div>;
+  if (loading || isFetching || saveLoading) return <Loading />;
+  if (error) return <Error />;
 
   return (
     <div className="py-12 flex gap-2 ">

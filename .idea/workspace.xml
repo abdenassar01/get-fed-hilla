@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="finish checkout scenario">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="update the order table data">
       <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/table-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/table-row.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +193,7 @@
       <workItem from="1689207098332" duration="3136000" />
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
-      <workItem from="1689272069158" duration="2589000" />
-    </task>
-    <task id="LOCAL-00067" summary="fix all login scenario [add session storage...]">
-      <created>1689068823008</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1689068823009</updated>
+      <workItem from="1689272069158" duration="2890000" />
     </task>
     <task id="LOCAL-00068" summary="adding error element">
       <created>1689071446665</created>
@@ -539,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689273577682</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="update the order table data">
+      <created>1689274782139</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1689274782139</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +557,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fetch categories and fix all category on menu" />
     <MESSAGE value="finish add meal functionality" />
     <MESSAGE value="fix header" />
     <MESSAGE value="fix dish card and a (bug in category details)" />
@@ -583,7 +581,8 @@
     <MESSAGE value="updating delivery model" />
     <MESSAGE value="fix errors and add fields in backend" />
     <MESSAGE value="finish checkout scenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish checkout scenario" />
+    <MESSAGE value="update the order table data" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the order table data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

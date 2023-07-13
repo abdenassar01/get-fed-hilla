@@ -1,5 +1,3 @@
-// import eye from "@/assets/icons/eye-gray-ouline.svg";
-// import arrow from "@/assets/icons/down-arrow-outline.svg";
 import { useState } from "react";
 import { ClassNames } from "Frontend/utils/classnames.js";
 import Order from "Frontend/generated/com/lpw/getfed/models/Order.js";
@@ -31,7 +29,6 @@ export function TableRow({ item }: Props) {
             alt="eye icon"
             className="w-[3vw]"
           />
-          {/*<img src={arrow} alt="eye icon" className="w-[9.709vw]" />*/}
         </div>
       </div>
       <div
