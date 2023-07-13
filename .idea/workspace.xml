@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="small fixes in home page">
-      <change afterPath="$PROJECT_DIR$/frontend/common/tables/user-data-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/tables/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add user management page" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,14 +190,7 @@
       <workItem from="1689207098332" duration="3136000" />
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
-      <workItem from="1689272069158" duration="5189000" />
-    </task>
-    <task id="LOCAL-00070" summary="implementing logout functionality">
-      <created>1689077749276</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1689077749276</updated>
+      <workItem from="1689272069158" duration="5876000" />
     </task>
     <task id="LOCAL-00071" summary="fix private route and other fixes">
       <created>1689077767917</created>
@@ -540,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689276887725</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="add user management page">
+      <created>1689277515286</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1689277515286</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +554,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix dish card and a (bug in category details)" />
     <MESSAGE value="fix header show dropdown option based on auth" />
     <MESSAGE value="fix profile dropdown hover effect" />
     <MESSAGE value="refactor project structure" />
@@ -584,7 +578,8 @@
     <MESSAGE value="update the order table data" />
     <MESSAGE value="fix alignment and styles in ingredient" />
     <MESSAGE value="small fixes in home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes in home page" />
+    <MESSAGE value="add user management page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user management page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

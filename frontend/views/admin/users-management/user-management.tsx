@@ -22,17 +22,7 @@ export default function UserManagement() {
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
         Users
       </div>
-      <div className="w-full">
-        <div className="my-3">
-          <NoStyleLink
-            className="bg-main px-[32px] transition-all ease-in delay-75 py-[7px] border-[1px] rounded-full border-main text-white hover:text-main hover:bg-[transparent]"
-            link="/admin/managements/subcategories/new"
-          >
-            add new user
-          </NoStyleLink>
-        </div>
-
-        <Outlet />
+      <div className="w-full min-h-[50vh]">
         {data && <UserDataTable header={header} data={data} />}
       </div>
     </div>
