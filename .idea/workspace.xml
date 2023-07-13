@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add ingredients management page to show ingredients data">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="implementing adding ingredient functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
     </list>
@@ -191,14 +191,7 @@
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
       <workItem from="1689207098332" duration="3136000" />
-      <workItem from="1689242392045" duration="8469000" />
-    </task>
-    <task id="LOCAL-00056" summary="update design of admin panel...">
-      <created>1688841760914</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1688841760914</updated>
+      <workItem from="1689242392045" duration="10022000" />
     </task>
     <task id="LOCAL-00057" summary="fix card item header">
       <created>1688890824056</created>
@@ -536,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689250497317</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="implementing adding ingredient functionality">
+      <created>1689251480953</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1689251480953</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +555,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixing count endpoint" />
     <MESSAGE value="fix header drop down appearance" />
     <MESSAGE value="adding orders table" />
     <MESSAGE value="removing relation between meal and ingredient" />
@@ -580,7 +579,8 @@
     <MESSAGE value="adding the add subcategory endpoint" />
     <MESSAGE value="implement add sub category functionality" />
     <MESSAGE value="add ingredients management page to show ingredients data" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ingredients management page to show ingredients data" />
+    <MESSAGE value="implementing adding ingredient functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing adding ingredient functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
