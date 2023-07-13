@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="updating delivery model">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="finish checkout scenario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/stores/cart-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/cart-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/OrderEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/OrderEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Delivery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/table-row.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/table-row.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,21 +194,7 @@
       <workItem from="1689207098332" duration="3136000" />
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
-      <workItem from="1689272069158" duration="1103000" />
-    </task>
-    <task id="LOCAL-00065" summary="small fixes">
-      <created>1689034916427</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1689034916427</updated>
-    </task>
-    <task id="LOCAL-00066" summary="add login scenario">
-      <created>1689035838667</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1689035838667</updated>
+      <workItem from="1689272069158" duration="2589000" />
     </task>
     <task id="LOCAL-00067" summary="fix all login scenario [add session storage...]">
       <created>1689068823008</created>
@@ -546,7 +525,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689264827064</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="fix errors and add fields in backend">
+      <created>1689273545601</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1689273545601</updated>
+    </task>
+    <task id="LOCAL-00115" summary="finish checkout scenario">
+      <created>1689273577682</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1689273577682</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,8 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding rich text editor components" />
-    <MESSAGE value="adding the add meal page and fix &#10; components style" />
     <MESSAGE value="fetch categories and fix all category on menu" />
     <MESSAGE value="finish add meal functionality" />
     <MESSAGE value="fix header" />
@@ -590,7 +581,9 @@
     <MESSAGE value="change the order model (add phone and shipping adress)" />
     <MESSAGE value="add payment method to order model" />
     <MESSAGE value="updating delivery model" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating delivery model" />
+    <MESSAGE value="fix errors and add fields in backend" />
+    <MESSAGE value="finish checkout scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish checkout scenario" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
