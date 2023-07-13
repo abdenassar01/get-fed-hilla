@@ -16,6 +16,6 @@ export default function App() {
         setAuthenticated(true);
       }
     }
-  }, []);
+  }, [authenticated, user]);
   return <RouterProvider router={router} />;
 }

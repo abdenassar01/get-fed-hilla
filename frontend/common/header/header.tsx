@@ -28,11 +28,11 @@ export function Header() {
       label: "Drink",
       link: "/drink",
     },
-    {
-      id: 4,
-      label: "Offers",
-      link: "/offers",
-    },
+    // {
+    //   id: 4,
+    //   label: "Offers",
+    //   link: "/offers",
+    // },
     {
       id: 5,
       label: "About",
