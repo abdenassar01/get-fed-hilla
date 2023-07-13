@@ -8,7 +8,7 @@ import {
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
-import { Button } from "Frontend/common/index.js";
+import { Button, Loading } from "Frontend/common/index.js";
 import {
   CategoryEndpoint,
   MealEndpoint,
@@ -61,6 +61,8 @@ export default function AddMeal() {
       navigate("/admin/managements/meals");
     });
   };
+
+  if (loading) return <Loading />;
 
   return (
     <div>

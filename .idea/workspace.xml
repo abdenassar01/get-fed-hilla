@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactor project structure">
-      <change afterPath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding add drink table and refactoring">
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/data-table/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/data-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/data-table/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +192,7 @@
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
-      <workItem from="1689207098332" duration="1861000" />
-    </task>
-    <task id="LOCAL-00049" summary="fix custom meal and fix other styling">
-      <created>1688768895263</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1688768895264</updated>
+      <workItem from="1689207098332" duration="2599000" />
     </task>
     <task id="LOCAL-00050" summary="fetching drink from db">
       <created>1688812193905</created>
@@ -539,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689208516948</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="adding add drink table and refactoring">
+      <created>1689209035567</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1689209035568</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +556,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix login in register page" />
     <MESSAGE value="add authentication logic to adding items to cart" />
     <MESSAGE value="fix bug adding items to cart" />
     <MESSAGE value="fix styles - [merge tailwind classNames]" />
@@ -583,7 +580,8 @@
     <MESSAGE value="fix header show dropdown option based on auth" />
     <MESSAGE value="fix profile dropdown hover effect" />
     <MESSAGE value="refactor project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor project structure" />
+    <MESSAGE value="adding add drink table and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding add drink table and refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

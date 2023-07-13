@@ -48,6 +48,13 @@ const DrinksManagement = lazy(
     )
 );
 
+const AddDrink = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/drinks-management/add-drink/add-drink.js"
+    )
+);
+
 const SubCategoriesManagement = lazy(
   async () =>
     import(
@@ -171,6 +178,12 @@ export const routes: readonly ViewRouteObject[] = [
               {
                 path: "/admin/managements/drinks",
                 element: <DrinksManagement />,
+                children: [
+                  {
+                    path: "/admin/managements/drinks/new",
+                    element: <AddDrink />,
+                  },
+                ],
               },
               {
                 path: "/admin/managements/subcategories",
