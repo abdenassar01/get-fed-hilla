@@ -31,6 +31,7 @@ public class Order {
     private Double totalPrice;
     private String phone;
     private String address;
+    private String paymentMethod;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id", referencedColumnName = "id")
