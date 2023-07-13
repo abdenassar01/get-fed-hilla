@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add payment method to order model">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="updating delivery model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/stores/cart-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/stores/cart-store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/OrderEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/OrderEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,14 +199,9 @@
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
       <workItem from="1689207098332" duration="3136000" />
-      <workItem from="1689242392045" duration="15896000" />
-    </task>
-    <task id="LOCAL-00064" summary="cleaning up">
-      <created>1689032876473</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1689032876473</updated>
+      <workItem from="1689242392045" duration="20266000" />
+      <workItem from="1689271008351" duration="1020000" />
+      <workItem from="1689272069158" duration="1103000" />
     </task>
     <task id="LOCAL-00065" summary="small fixes">
       <created>1689034916427</created>
@@ -536,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689264099574</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="updating delivery model">
+      <created>1689264827064</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1689264827064</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +565,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="showing meals data table" />
     <MESSAGE value="adding rich text editor components" />
     <MESSAGE value="adding the add meal page and fix &#10; components style" />
     <MESSAGE value="fetch categories and fix all category on menu" />
@@ -580,7 +589,8 @@
     <MESSAGE value="adding the checkout form and design fixes" />
     <MESSAGE value="change the order model (add phone and shipping adress)" />
     <MESSAGE value="add payment method to order model" />
-    <option name="LAST_COMMIT_MESSAGE" value="add payment method to order model" />
+    <MESSAGE value="updating delivery model" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating delivery model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -27,7 +27,6 @@ export default function CategoryDetails({ category }: { category: number }) {
   if (data?.length === 0)
     return <Alert message="There is no meals on this category" />;
 
-  console.log(data);
   return (
     <div className="pt-6 container flex flex-col items-center gap-12">
       <div className="grid grid-cols-4 gap-[20px]">

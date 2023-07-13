@@ -13,6 +13,7 @@ type Action = {
   removeMeal: (id: number) => void;
   removeDrink: (id: number) => void;
   addDrink: (drink: Drink) => void;
+  reset: () => void;
 };
 
 export const useCartStore = create<State & Action>((set) => ({
@@ -21,6 +22,12 @@ export const useCartStore = create<State & Action>((set) => ({
   removeMeal: (id: number) =>
     set((state) => ({
       meals: state.meals.filter((meal) => meal.item.id !== id),
+    })),
+
+  reset: () =>
+    set((state) => ({
+      meals: [],
+      drinks: [],
     })),
   removeDrink: (id: number) =>
     set((state) => ({
