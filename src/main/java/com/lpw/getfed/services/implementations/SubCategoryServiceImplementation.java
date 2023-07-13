@@ -1,9 +1,11 @@
 package com.lpw.getfed.services.implementations;
 
+import com.lpw.getfed.models.Category;
 import com.lpw.getfed.models.SubCategory;
 import com.lpw.getfed.repositories.SubCategoryRepository;
 import com.lpw.getfed.services.SubCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +20,10 @@ public class SubCategoryServiceImplementation implements SubCategoryService {
         this.repository = repository;
     }
 
+    @Override
+    public ResponseEntity<SubCategory> addSubCategory(SubCategory subCategory) {
+        return ResponseEntity.ok(repository.save(subCategory));
+    }
 
     @Override
     public List<SubCategory> getSubCategories() {

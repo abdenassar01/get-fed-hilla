@@ -1,23 +1,22 @@
-import * as React from "react";
-import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
-import { useEffect, useState } from "react";
 import {
   DropdownField,
-  RichTextEditor,
   TextInput,
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
-import { useForm } from "react-hook-form";
 import { Button, ComponentLoader } from "Frontend/common/index.js";
+import * as React from "react";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import {
   CategoryEndpoint,
-  MealEndpoint,
+  IngredientEndpoint,
 } from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
-import { useNavigate } from "react-router-dom";
+import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
 
-export default function AddMeal() {
-  const [categories, setCategories] = useState([]);
+export default function AddIngredient() {
+  const [subCategories, setSubCategories] = useState([]);
   const [loading, setLoading] = useState<boolean>(false);
   const { control, handleSubmit } = useForm();
   const navigate = useNavigate();
@@ -25,17 +24,15 @@ export default function AddMeal() {
   useEffect(() => {
     async function getData() {
       setLoading(true);
-      const result = await CategoryEndpoint.getCategories().then(
+      const result = await CategoryEndpoint.getSubCategories().then(
         (res) => res?.body
       );
-      setCategories(
+      setSubCategories(
         // @ts-ignore
-        result
-          .filter((item: Category) => item.id !== 0)
-          .map((item: Category) => ({
-            value: item.id,
-            label: item.label,
-          }))
+        result.map((item: Category) => ({
+          value: item.id,
+          label: item.label,
+        }))
       );
       setLoading(false);
     }
@@ -44,21 +41,17 @@ export default function AddMeal() {
 
   const onSubmit = async (data: any) => {
     setLoading(true);
-    const img = await useUploadImage(data.image).then((res) => res);
-    MealEndpoint.addMeal({
-      title: data.title,
-      image: img,
-      rating: 5.0,
+    const image = await useUploadImage(data.image).then((res) => res);
+    IngredientEndpoint.addIngrediant({
+      label: data.label,
+      image,
       price: data.price,
-      category: {
-        id: data.category.value,
+      subCategory: {
+        id: data.subcategory.value,
       },
-      description: data.description,
-      dateCreated: new Date().toISOString(),
-      custom: false,
     }).then((res) => {
       setLoading(false);
-      navigate("/admin/managements/meals");
+      navigate("/admin/managements/ingredients");
     });
   };
 
@@ -70,12 +63,12 @@ export default function AddMeal() {
         <form className="py-10">
           <div className="flex gap-2">
             <TextInput
-              label="Title"
+              label="Label"
               className=""
               inputClassName="bg-background"
               control={control}
-              placeholder="meal title?"
-              name="title"
+              placeholder="ingredient label?"
+              name="label"
             />
             <UploadFile name="image" control={control}>
               <div className="group relative flex w-[100%] flex-col gap-2">
@@ -91,9 +84,9 @@ export default function AddMeal() {
           <div className="flex gap-2">
             <DropdownField
               control={control}
-              label="Category"
-              name="category"
-              items={categories}
+              label="Sub category"
+              name="subcategory"
+              items={subCategories}
             />
             <TextInput
               type="number"
@@ -104,17 +97,10 @@ export default function AddMeal() {
               name="price"
             />
           </div>
-          <div className="flex mb-3">
-            <RichTextEditor
-              control={control}
-              name="description"
-              label="Description"
-            />
-          </div>
           <div className="flex gap-2 items-center">
             <Button
-              text="save meal"
-              className="rounded-[8px] w-[65vw] py-[11px] h-fit"
+              text="save ingredient"
+              className="rounded-[8px] w-full py-[11px] h-fit"
               onClick={handleSubmit(onSubmit)}
             />
           </div>

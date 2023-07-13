@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding add drink table and refactoring">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="extract drink and meal cards in cart to separate components">
+      <change afterPath="$PROJECT_DIR$/frontend/utils/get-unique.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/dish-card/meal-card-with-quantity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/dish-card/meal-card-with-quantity.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/drink-card/drink-card-with-quantity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/drink-card/drink-card-with-quantity.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/utils/buttons/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,84 +196,8 @@
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
-      <workItem from="1689207098332" duration="2599000" />
-    </task>
-    <task id="LOCAL-00050" summary="fetching drink from db">
-      <created>1688812193905</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1688812193906</updated>
-    </task>
-    <task id="LOCAL-00051" summary="update background">
-      <created>1688812650964</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1688812650965</updated>
-    </task>
-    <task id="LOCAL-00052" summary="fix loading indicator">
-      <created>1688812946961</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1688812946961</updated>
-    </task>
-    <task id="LOCAL-00053" summary="fix field to match new background">
-      <created>1688812969276</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1688812969276</updated>
-    </task>
-    <task id="LOCAL-00054" summary="fixes and adding admin panel wrapper">
-      <created>1688830417897</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1688830417898</updated>
-    </task>
-    <task id="LOCAL-00055" summary="add upload file - update design">
-      <created>1688839142080</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1688839142081</updated>
-    </task>
-    <task id="LOCAL-00056" summary="update design of admin panel...">
-      <created>1688841760914</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1688841760914</updated>
-    </task>
-    <task id="LOCAL-00057" summary="fix card item header">
-      <created>1688890824056</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1688890824057</updated>
-    </task>
-    <task id="LOCAL-00058" summary="add admin dashboard layout">
-      <created>1688890842273</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1688890842274</updated>
-    </task>
-    <task id="LOCAL-00059" summary="fix remove drink from cart">
-      <created>1688891089052</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1688891089052</updated>
-    </task>
-    <task id="LOCAL-00060" summary="fix update password page">
-      <created>1688894389818</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1688894389820</updated>
+      <workItem from="1689207098332" duration="3136000" />
+      <workItem from="1689242392045" duration="15254000" />
     </task>
     <task id="LOCAL-00061" summary="refactor (change employee to user and add role)">
       <created>1689008589019</created>
@@ -537,7 +465,84 @@
       <option name="project" value="LOCAL" />
       <updated>1689209035568</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="add drink functionality working great">
+      <created>1689210226424</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1689210226424</updated>
+    </task>
+    <task id="LOCAL-00100" summary="fix rounding image in drink card">
+      <created>1689244504633</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1689244504634</updated>
+    </task>
+    <task id="LOCAL-00101" summary="add subcategory, fix loader, add small component loader(don't take whole screen)">
+      <created>1689244658166</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1689244658166</updated>
+    </task>
+    <task id="LOCAL-00102" summary="adding the add subcategory endpoint">
+      <created>1689246587821</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1689246587821</updated>
+    </task>
+    <task id="LOCAL-00103" summary="implement add sub category functionality">
+      <created>1689248813115</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1689248813115</updated>
+    </task>
+    <task id="LOCAL-00104" summary="add ingredients management page to show ingredients data">
+      <created>1689250497317</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1689250497317</updated>
+    </task>
+    <task id="LOCAL-00105" summary="implementing adding ingredient functionality">
+      <created>1689251480953</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1689251480953</updated>
+    </task>
+    <task id="LOCAL-00106" summary="update header">
+      <created>1689259092759</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1689259092759</updated>
+    </task>
+    <task id="LOCAL-00107" summary="adding checkout empty page and fix rerender issue">
+      <created>1689259684802</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1689259684803</updated>
+    </task>
+    <task id="LOCAL-00108" summary="fix adding drink (qte error)">
+      <created>1689261200078</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1689261200078</updated>
+    </task>
+    <task id="LOCAL-00109" summary="extract drink and meal cards in cart to separate components">
+      <created>1689262851206</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1689262851206</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,17 +561,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add authentication logic to adding items to cart" />
-    <MESSAGE value="fix bug adding items to cart" />
-    <MESSAGE value="fix styles - [merge tailwind classNames]" />
-    <MESSAGE value="fix admin role test" />
-    <MESSAGE value="update backend for meal" />
-    <MESSAGE value="adding the count ability to backend modals" />
-    <MESSAGE value="fixing count endpoint" />
-    <MESSAGE value="fix header drop down appearance" />
-    <MESSAGE value="adding orders table" />
-    <MESSAGE value="removing relation between meal and ingredient" />
-    <MESSAGE value="prevent too many rerender" />
     <MESSAGE value="fix management data architecture" />
     <MESSAGE value="adding tab navigator component" />
     <MESSAGE value="adding managements pages to routes" />
@@ -581,7 +575,18 @@
     <MESSAGE value="fix profile dropdown hover effect" />
     <MESSAGE value="refactor project structure" />
     <MESSAGE value="adding add drink table and refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding add drink table and refactoring" />
+    <MESSAGE value="add drink functionality working great" />
+    <MESSAGE value="fix rounding image in drink card" />
+    <MESSAGE value="add subcategory, fix loader, add small component loader(don't take whole screen)" />
+    <MESSAGE value="adding the add subcategory endpoint" />
+    <MESSAGE value="implement add sub category functionality" />
+    <MESSAGE value="add ingredients management page to show ingredients data" />
+    <MESSAGE value="implementing adding ingredient functionality" />
+    <MESSAGE value="update header" />
+    <MESSAGE value="adding checkout empty page and fix rerender issue" />
+    <MESSAGE value="fix adding drink (qte error)" />
+    <MESSAGE value="extract drink and meal cards in cart to separate components" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract drink and meal cards in cart to separate components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

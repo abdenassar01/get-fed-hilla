@@ -4,18 +4,9 @@ import { Alert, Button, HeaderTitle } from "Frontend/common/index.js";
 import { useEffect, useState } from "react";
 import { DrinkItem, MealItem } from "Frontend/types/types.js";
 import { IoIosCloseCircle } from "react-icons/io";
-
-function getUniqueListBy(
-  arr: (MealItem | DrinkItem)[]
-): (MealItem | DrinkItem)[] {
-  return Object.values(
-    arr.reduce((a, item) => {
-      // @ts-ignore
-      a[item.item.id] = item;
-      return a;
-    }, {})
-  );
-}
+import { MealCardWithQuantity } from "Frontend/common/dish-card/meal-card-with-quantity.js";
+import { DrinkCardWithQuantity } from "Frontend/common/drink-card/drink-card-with-quantity.js";
+import { getUniqueListBy } from "Frontend/utils/get-unique.js";
 
 export default function Cart() {
   const { meals, drinks, removeMeal, removeDrink } = useCartStore();
@@ -44,35 +35,11 @@ export default function Cart() {
             ) : (
               <ul className="grid grid-cols-2 gap-2">
                 {filtredMeals?.map((meal) => (
-                  <li key={`meal-item-${meal.item.id}`}>
-                    <div className="transition-all delay-1000 relative bg-white shadow-1 border-[1px] border-[#F4F4F4] h-[10vw] rounded-[8px] flex items-center justify-between">
-                      <div
-                        style={{ backgroundImage: `url('${meal.item.image}')` }}
-                        className="h-full w-[10vw] bg-no-repeat bg-cover bg-center"
-                      />
-                      <div
-                        onClick={() => removeMeal(meal.item.id || 0)}
-                        className="absolute top-1 right-3 text-error"
-                      >
-                        <IoIosCloseCircle size={24} />
-                      </div>
-                      <div className="flex flex-col p-4 justify-between items-end mt-4">
-                        <div className="text-[#949494]">{meal.item.title}</div>
-                        <div className="flex flex-col justify-between items-end gap-2">
-                          <div className="text-mainText">
-                            {
-                              // @ts-ignore
-                              meal.item.price * meal.qte
-                            }{" "}
-                            Mad
-                          </div>
-                          <div className="px-5 py-2 bg-secondary text-white rounded-[4px]">
-                            Quantity: {meal.qte}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  <MealCardWithQuantity
+                    key={`meal-item-${meal.item.id}`}
+                    meal={meal}
+                    onClick={() => removeMeal(meal.item.id || 0)}
+                  />
                 ))}
               </ul>
             )}
@@ -84,37 +51,11 @@ export default function Cart() {
             ) : (
               <ul className="grid grid-cols-2 gap-2">
                 {filtredDrinks.map((drink) => (
-                  <li key={`meal-item-${drink.item.id}`}>
-                    <div className="relative bg-white shadow-1 border-[1px] border-[#F4F4F4] h-[10vw] rounded-[8px] flex items-center justify-between">
-                      <div
-                        style={{
-                          backgroundImage: `url('${drink.item.image}')`,
-                        }}
-                        className="h-full w-[10vw] bg-no-repeat bg-cover bg-center"
-                      />
-                      <div
-                        onClick={() => removeDrink(drink.item.id || 0)}
-                        className="absolute top-1 right-3 text-error"
-                      >
-                        <IoIosCloseCircle size={24} />
-                      </div>
-                      <div className="flex flex-col p-4 justify-between items-end mt-4">
-                        <div className="text-[#949494]">{drink.item.label}</div>
-                        <div className="flex flex-col justify-between items-end gap-2">
-                          <div className="text-mainText">
-                            {
-                              // @ts-ignore
-                              drink.item.price * drink.qte
-                            }{" "}
-                            Mad
-                          </div>
-                          <div className="px-5 py-2 bg-secondary text-white rounded-[4px]">
-                            Quantity: {drink.qte}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+                  <DrinkCardWithQuantity
+                    key={`meal-item-${drink.item.id}`}
+                    drink={drink}
+                    onClick={() => removeDrink(drink.item.id || 0)}
+                  />
                 ))}
               </ul>
             )}

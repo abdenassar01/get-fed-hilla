@@ -23,7 +23,7 @@ export function UploadFile({
   });
 
   return (
-    <label htmlFor="file">
+    <label htmlFor={`file-${name}`}>
       {children}
       <input
         accept={accept}
@@ -32,7 +32,7 @@ export function UploadFile({
         onBlur={onBlur}
         type="file"
         name={name}
-        id="file"
+        id={`file-${name}`}
         className="hidden"
       />
       <p className="text-xxs text-error">{error?.message}</p>

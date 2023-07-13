@@ -28,11 +28,11 @@ export function Header() {
       label: "Drink",
       link: "/drink",
     },
-    {
-      id: 4,
-      label: "Offers",
-      link: "/offers",
-    },
+    // {
+    //   id: 4,
+    //   label: "Offers",
+    //   link: "/offers",
+    // },
     {
       id: 5,
       label: "About",
@@ -119,39 +119,34 @@ export function Header() {
               )}
             >
               {user.role === "ADMIN" && (
-                <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
-                  <NoStyleLink className="group-hover:text-white" link="/admin">
-                    Admin
-                  </NoStyleLink>
-                </div>
+                <NoStyleLink
+                  className="group py-2 px-1 hover:bg-main transition hover:text-white"
+                  link="/admin"
+                >
+                  Admin
+                </NoStyleLink>
               )}
               {user.id ? (
-                <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
-                  <NoStyleLink
-                    className="group-hover:text-white"
-                    link="/logout"
-                  >
-                    Logout
-                  </NoStyleLink>
-                </div>
+                <NoStyleLink
+                  link="/logout"
+                  className="py-2 px-1 hover:bg-main transition hover:text-white"
+                >
+                  Logout
+                </NoStyleLink>
               ) : (
                 <>
-                  <div className="group py-2 px-1 hover:bg-main transition ">
-                    <NoStyleLink
-                      className="group-hover:text-white"
-                      link="/login"
-                    >
-                      Log in
-                    </NoStyleLink>
-                  </div>
-                  <div className="group py-2 px-1 hover:bg-main transition hover:prose-a:text-white">
-                    <NoStyleLink
-                      className="group-hover:text-white"
-                      link="/register"
-                    >
-                      Sign up
-                    </NoStyleLink>
-                  </div>
+                  <NoStyleLink
+                    link="/login"
+                    className="group py-2 px-1 transition hover:bg-main hover:text-white"
+                  >
+                    Log in
+                  </NoStyleLink>
+                  <NoStyleLink
+                    link="/register"
+                    className="group py-2 px-1 hover:bg-main transition hover:text-white"
+                  >
+                    Sign up
+                  </NoStyleLink>
                 </>
               )}
             </div>
