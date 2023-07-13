@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding add drink table and refactoring">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add drink functionality working great">
+      <change afterPath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/loading/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/loading/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/loading.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,14 +198,8 @@
       <workItem from="1689085079117" duration="14528000" />
       <workItem from="1689114979219" duration="4089000" />
       <workItem from="1689163980243" duration="21441000" />
-      <workItem from="1689207098332" duration="2599000" />
-    </task>
-    <task id="LOCAL-00050" summary="fetching drink from db">
-      <created>1688812193905</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1688812193906</updated>
+      <workItem from="1689207098332" duration="3136000" />
+      <workItem from="1689242392045" duration="1921000" />
     </task>
     <task id="LOCAL-00051" summary="update background">
       <created>1688812650964</created>
@@ -537,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689209035568</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="add drink functionality working great">
+      <created>1689210226424</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1689210226424</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add authentication logic to adding items to cart" />
     <MESSAGE value="fix bug adding items to cart" />
     <MESSAGE value="fix styles - [merge tailwind classNames]" />
     <MESSAGE value="fix admin role test" />
@@ -581,7 +587,8 @@
     <MESSAGE value="fix profile dropdown hover effect" />
     <MESSAGE value="refactor project structure" />
     <MESSAGE value="adding add drink table and refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding add drink table and refactoring" />
+    <MESSAGE value="add drink functionality working great" />
+    <option name="LAST_COMMIT_MESSAGE" value="add drink functionality working great" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

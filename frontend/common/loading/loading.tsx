@@ -1,4 +1,4 @@
-import { PacmanLoader } from "react-spinners";
+import { BounceLoader } from "react-spinners";
 import { ProgressBar } from "@hilla/react-components/ProgressBar";
 import { ClassNames } from "Frontend/utils/classnames.js";
 
@@ -12,7 +12,7 @@ export const Loading = ({ size = 40 }: { size?: number }) => {
           size === 40 ? "min-h-[80vh]" : ""
         )}
       >
-        <PacmanLoader size={size} color="#FF385C" />
+        <BounceLoader size={size} color="#FF385C" />
       </div>
     </>
   );

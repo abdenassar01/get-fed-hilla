@@ -3,7 +3,7 @@ import {
   TextInput,
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
-import { Button, Loading } from "Frontend/common/index.js";
+import { Button, ComponentLoader } from "Frontend/common/index.js";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
@@ -28,11 +28,9 @@ export default function AddDrink() {
       setLoading(false);
       navigate("/admin/managements/drinks");
     });
-
-    console.log(data);
   };
 
-  if (loading) return <Loading />;
+  if (loading) return <ComponentLoader />;
 
   return (
     <form className="py-10">

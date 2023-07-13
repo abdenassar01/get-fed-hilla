@@ -8,7 +8,7 @@ import {
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
-import { Button, Loading } from "Frontend/common/index.js";
+import { Button, ComponentLoader } from "Frontend/common/index.js";
 import {
   CategoryEndpoint,
   MealEndpoint,
@@ -62,7 +62,7 @@ export default function AddMeal() {
     });
   };
 
-  if (loading) return <Loading />;
+  if (loading) return <ComponentLoader />;
 
   return (
     <div>

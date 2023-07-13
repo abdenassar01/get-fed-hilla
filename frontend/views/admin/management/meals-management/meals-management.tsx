@@ -2,7 +2,7 @@ import * as React from "react";
 import useFetch from "Frontend/utils/hooks/index.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
 import { MealEndpoint } from "Frontend/generated/endpoints.js";
-import { DataTable, Loading } from "Frontend/common/index.js";
+import { ComponentLoader, DataTable } from "Frontend/common/index.js";
 import Error from "Frontend/common/error/error.js";
 import { Outlet } from "react-router-dom";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
@@ -22,7 +22,7 @@ export default function MealsManagement() {
     "category",
   ];
 
-  if (loading) return <Loading size={10} />;
+  if (loading) return <ComponentLoader />;
   if (error) return <Error />;
 
   return (
