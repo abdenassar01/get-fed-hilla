@@ -29,6 +29,8 @@ public class Order {
     private Date dateCreated;
 
     private Double totalPrice;
+    private String phone;
+    private String address;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id", referencedColumnName = "id")
