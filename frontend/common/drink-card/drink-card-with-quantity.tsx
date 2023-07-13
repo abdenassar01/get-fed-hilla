@@ -5,15 +5,16 @@ import * as React from "react";
 export function DrinkCardWithQuantity(props: {
   drink: DrinkItem;
   onClick: () => void;
+  className?: string;
 }) {
   return (
-    <li>
+    <li className={props.className}>
       <div className="relative bg-white shadow-1 border-[1px] border-[#F4F4F4] h-[10vw] rounded-[8px] flex items-center justify-between">
         <div
           style={{
             backgroundImage: `url('${props.drink.item.image}')`,
           }}
-          className="h-full w-[10vw] bg-no-repeat bg-cover bg-center"
+          className="h-full w-[10vw] bg-no-repeat bg-cover bg-center rounded-[8px]"
         />
         <div
           onClick={props.onClick}

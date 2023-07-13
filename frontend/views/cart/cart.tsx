@@ -6,18 +6,7 @@ import { DrinkItem, MealItem } from "Frontend/types/types.js";
 import { IoIosCloseCircle } from "react-icons/io";
 import { MealCardWithQuantity } from "Frontend/common/dish-card/meal-card-with-quantity.js";
 import { DrinkCardWithQuantity } from "Frontend/common/drink-card/drink-card-with-quantity.js";
-
-function getUniqueListBy(
-  arr: (MealItem | DrinkItem)[]
-): (MealItem | DrinkItem)[] {
-  return Object.values(
-    arr.reduce((a, item) => {
-      // @ts-ignore
-      a[item.item.id] = item;
-      return a;
-    }, {})
-  );
-}
+import { getUniqueListBy } from "Frontend/utils/get-unique.js";
 
 export default function Cart() {
   const { meals, drinks, removeMeal, removeDrink } = useCartStore();

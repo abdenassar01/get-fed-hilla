@@ -4,13 +4,14 @@ import { IoIosCloseCircle } from "react-icons/io";
 export function MealCardWithQuantity(props: {
   meal: MealItem;
   onClick: () => void;
+  className?: string;
 }) {
   return (
-    <li>
+    <li className={props.className}>
       <div className="transition-all delay-1000 relative bg-white shadow-1 border-[1px] border-[#F4F4F4] h-[10vw] rounded-[8px] flex items-center justify-between">
         <div
           style={{ backgroundImage: `url('${props.meal.item.image}')` }}
-          className="h-full w-[10vw] bg-no-repeat bg-cover bg-center"
+          className="h-full w-[10vw] bg-no-repeat bg-cover bg-center rounded-[8px]"
         />
         <div
           onClick={props.onClick}
