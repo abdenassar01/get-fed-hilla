@@ -1,1 +1,1 @@
-export { Contact } from './contact'
+export { default } from "./contact.js";

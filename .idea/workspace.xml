@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactoring backend [remove response entity from return value]">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactoring frontend to match">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/sections/special-dishes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/sections/special-dishes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal-details/drinks-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal-details/drinks-slider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal-details/meal-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal-details/meal-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/header-title/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/header-title/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/reset-password/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/reset-password/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/contact/form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/contact/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/contact/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,14 +243,7 @@
       <workItem from="1689332062619" duration="2339000" />
       <workItem from="1689334579233" duration="915000" />
       <workItem from="1689343364213" duration="23000" />
-      <workItem from="1689355693210" duration="3573000" />
-    </task>
-    <task id="LOCAL-00079" summary="adding the count ability to backend modals">
-      <created>1689099379305</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1689099379305</updated>
+      <workItem from="1689355693210" duration="5081000" />
     </task>
     <task id="LOCAL-00080" summary="fixing count endpoint">
       <created>1689100755324</created>
@@ -602,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689357739280</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="refactoring frontend to match">
+      <created>1689359570935</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1689359570935</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +607,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="implement add sub category functionality" />
     <MESSAGE value="add ingredients management page to show ingredients data" />
     <MESSAGE value="implementing adding ingredient functionality" />
     <MESSAGE value="update header" />
@@ -646,7 +631,8 @@
     <MESSAGE value="update meal working" />
     <MESSAGE value="adding the update sub category functionality" />
     <MESSAGE value="refactoring backend [remove response entity from return value]" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring backend [remove response entity from return value]" />
+    <MESSAGE value="refactoring frontend to match" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring frontend to match" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

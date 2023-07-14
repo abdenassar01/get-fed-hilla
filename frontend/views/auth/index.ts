@@ -1,3 +1,3 @@
-export { Login } from "./login/index.js";
-export { ResetPassword } from "./reset-password/index.js";
-export { Register } from "./register/index.js";
+export * from "./login/index.js";
+export * from "./reset-password/index.js";
+export * from "./register/index.js";
