@@ -40,6 +40,11 @@ public class IngrediantServiceImplementation implements IngrediantService {
     }
 
     @Override
+    public ResponseEntity<Ingredient> getIngredientById(Long id) {
+        return ResponseEntity.ok(repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find ingredient with id: " + id)));
+    }
+
+    @Override
     public ResponseEntity<String> removeIngrediant(Ingredient ingredient) {
         repository.delete(ingredient);
         return ResponseEntity.ok("ingredient " + ingredient.getLabel() + " deleted successfully");

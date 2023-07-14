@@ -15,6 +15,7 @@ public interface IngrediantService {
 
     ResponseEntity<Page<Ingredient>> getAll(Pageable pageable);
     ResponseEntity<Ingredient> addIngrediant(Ingredient ingredient);
+    ResponseEntity<Ingredient> getIngredientById(Long id);
     ResponseEntity<String> removeIngrediant(Ingredient ingredient);
     ResponseEntity<Ingredient> removeIngrediantById(Long id);
     ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, Pageable pageable);

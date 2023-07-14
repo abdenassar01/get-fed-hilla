@@ -42,6 +42,11 @@ public class IngredientEndpoint {
         return service.addIngrediant(ingredient);
     }
 
+    public ResponseEntity<Ingredient> getIngrediantById(Long id){
+        logger.info("getting ingredient: " + id);
+        return service.getIngredientById(id);
+    }
+
     public ResponseEntity<String> removeIngrediant(Ingredient ingredient){
         logger.warn("removing ingredient: " + ingredient.getId());
         return service.removeIngrediant(ingredient);
