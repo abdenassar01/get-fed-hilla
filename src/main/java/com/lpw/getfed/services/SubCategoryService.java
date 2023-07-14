@@ -11,5 +11,5 @@ public interface SubCategoryService {
 
     List<SubCategory> getSubCategories();
     SubCategory getSubCategoryById(Long id);
-    ResponseEntity<SubCategory> addSubCategory(SubCategory subCategory);
+    SubCategory addSubCategory(SubCategory subCategory);
 }

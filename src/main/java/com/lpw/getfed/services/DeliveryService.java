@@ -9,11 +9,11 @@ import org.springframework.http.ResponseEntity;
 @Qualifier("delivery_service")
 public interface DeliveryService {
 
-    ResponseEntity<Delivery> getDeliveryById(Long id);
-    ResponseEntity<Delivery> addDelivery(Delivery delivery);
-    ResponseEntity<String> removeDelivery(Delivery delivery);
-    ResponseEntity<Delivery> updateDelivery(Long id, Delivery delivery);
-    ResponseEntity<Delivery> removeDeliveryById(Long id);
-    ResponseEntity<Page<Delivery>> getDeliveryOptions(Pageable pageable);
+    Delivery getDeliveryById(Long id);
+    Delivery addDelivery(Delivery delivery);
+    String removeDelivery(Delivery delivery);
+    Delivery updateDelivery(Long id, Delivery delivery);
+    Delivery removeDeliveryById(Long id);
+    Page<Delivery> getDeliveryOptions(Pageable pageable);
 
 }

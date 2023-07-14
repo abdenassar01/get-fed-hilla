@@ -27,43 +27,43 @@ public class CategoryEndpoint {
         this.subCategoryService = subCategoryService;
     }
 
-    public ResponseEntity<Category> addCategory(Category category){
+    public Category addCategory(Category category){
         logger.info("Added a new category named: " + category.getLabel());
         return service.addCategory(category);
     }
 
-    public ResponseEntity<SubCategory> addSubCategory(SubCategory subCategory){
+    public SubCategory addSubCategory(SubCategory subCategory){
         logger.info("Added a new sub category named: " + subCategory.getTitle());
         return subCategoryService.addSubCategory(subCategory);
     }
 
-    public ResponseEntity<String> removeCategory(Category category){
+    public String removeCategory(Category category){
         logger.warn("removed category named: " + category.getLabel());
         return service.removeCategory(category);
     }
 
-    public ResponseEntity<Category> removeCategoryById(Long id){
+    public Category removeCategoryById(Long id){
         logger.warn("removed category by id: " + id);
         return service.removeCategoryById(id);
     }
 
-    public ResponseEntity<Category> updateCategory(Long id, Category category){
+    public Category updateCategory(Long id, Category category){
         logger.info("updating the category " + id + " infos");
         return service.updateCategory(id, category);
     }
 
-    public ResponseEntity<List<Category>> getCategories(){
+    public List<Category> getCategories(){
         logger.info("getting all categories");
         return service.getCategories();
     }
 
-    public ResponseEntity<List<SubCategory>> getSubCategories(){
+    public List<SubCategory> getSubCategories(){
         logger.info("getting all sub categories");
-        return ResponseEntity.ok(subCategoryService.getSubCategories());
+        return subCategoryService.getSubCategories();
     }
 
-    public ResponseEntity<SubCategory> getSubCategoryById(Long id){
+    public SubCategory getSubCategoryById(Long id){
         logger.info("getting sub categories: " + id );
-        return ResponseEntity.ok(subCategoryService.getSubCategoryById(id));
+        return subCategoryService.getSubCategoryById(id);
     }
 }

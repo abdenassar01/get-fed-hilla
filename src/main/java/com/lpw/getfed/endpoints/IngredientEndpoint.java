@@ -27,37 +27,37 @@ public class IngredientEndpoint {
         this.service = service;
     }
 
-    public ResponseEntity<Page<Ingredient>> getAll(int page, int size){
+    public Page<Ingredient> getAll(int page, int size){
         logger.info("getting page " + page + " of ingredients");
         return service.getAll(PageRequest.of(page, size));
     }
 
-    public ResponseEntity<Page<Ingredient>> getAll(){
+    public Page<Ingredient> getAll(){
         logger.info("getting page " + 1 + " of ingredients");
         return service.getAll(PageRequest.of(0, 20));
     }
 
-    public ResponseEntity<Ingredient> addIngrediant(Ingredient ingredient){
+    public Ingredient addIngrediant(Ingredient ingredient){
         logger.info("adding new ingredient: " + ingredient.getLabel());
         return service.addIngrediant(ingredient);
     }
 
-    public ResponseEntity<Ingredient> getIngrediantById(Long id){
+    public Ingredient getIngrediantById(Long id){
         logger.info("getting ingredient: " + id);
         return service.getIngredientById(id);
     }
 
-    public ResponseEntity<String> removeIngrediant(Ingredient ingredient){
+    public String removeIngrediant(Ingredient ingredient){
         logger.warn("removing ingredient: " + ingredient.getId());
         return service.removeIngrediant(ingredient);
     }
 
-    public ResponseEntity<Ingredient> removeIngrediantById(Long id){
+    public Ingredient removeIngrediantById(Long id){
         logger.warn("removing ingredient by id: " + id);
         return service.removeIngrediantById(id);
     }
 
-    public ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, int page, int size){
+    public Page<Ingredient> getIngredientBySubCategory(Long subCategoryId, int page, int size){
         logger.info("getting ingredient of sub category: " + subCategoryId);
         return service.getIngredientBySubCategory(subCategoryId, PageRequest.of(page, size));
     }

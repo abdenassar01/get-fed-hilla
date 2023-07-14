@@ -20,43 +20,42 @@ public class DeliveryServiceImplementation implements DeliveryService {
     }
 
     @Override
-    public ResponseEntity<Delivery> getDeliveryById(Long id) {
-        return ResponseEntity.ok(
+    public Delivery getDeliveryById(Long id) {
+        return
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find a delivery with id: " + id)
-                )
-        );
+                );
     }
 
     @Override
-    public ResponseEntity<Delivery> addDelivery(Delivery delivery) {
-        return ResponseEntity.ok(repository.save(delivery));
+    public Delivery addDelivery(Delivery delivery) {
+        return repository.save(delivery);
     }
 
     @Override
-    public ResponseEntity<String> removeDelivery(Delivery delivery) {
+    public String removeDelivery(Delivery delivery) {
         repository.delete(delivery);
-        return ResponseEntity.ok("delivery item removed successfully");
+        return "delivery item removed successfully";
     }
 
     @Override
-    public ResponseEntity<Delivery> updateDelivery(Long id, Delivery delivery) {
+    public Delivery updateDelivery(Long id, Delivery delivery) {
         Delivery oldDelivery = repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find delivery item with id: " + id));
 
         delivery.setId(oldDelivery.getId());
         repository.delete(oldDelivery);
-        return ResponseEntity.ok(repository.save(delivery));
+        return repository.save(delivery);
     }
 
     @Override
-    public ResponseEntity<Delivery> removeDeliveryById(Long id) {
+    public Delivery removeDeliveryById(Long id) {
         Delivery oldDelivery = repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find delivery item with id: " + id));
         repository.delete(oldDelivery);
-        return ResponseEntity.ok(oldDelivery);
+        return oldDelivery;
     }
 
     @Override
-    public ResponseEntity<Page<Delivery>> getDeliveryOptions(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+    public Page<Delivery> getDeliveryOptions(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 }
