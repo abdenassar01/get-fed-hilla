@@ -18,7 +18,7 @@ export default function MealDetails() {
 
   const getData = async () => {
     return await MealEndpoint.getMealById(parseInt(meal || "")).then(
-      (res) => res?.body
+      (res) => res
     );
   };
 

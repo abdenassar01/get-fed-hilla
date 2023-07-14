@@ -3,7 +3,7 @@ import {
   TextInput,
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
-import { Button, ComponentLoader } from "Frontend/common/index.js";
+import { Alert, Button, ComponentLoader } from "Frontend/common/index.js";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -16,9 +16,7 @@ import {
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
 import useFetch from "Frontend/utils/hooks/index.js";
-import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 import Ingredient from "Frontend/generated/com/lpw/getfed/models/Ingredient.js";
-import Error from "Frontend/common/error/error.js";
 
 export default function AddIngredient() {
   const [subCategories, setSubCategories] = useState([]);
@@ -34,7 +32,7 @@ export default function AddIngredient() {
     async function getData() {
       setSaveLoading(true);
       const result = await CategoryEndpoint.getSubCategories().then(
-        (res) => res?.body
+        (res) => res
       );
       setSubCategories(
         // @ts-ignore
@@ -49,9 +47,7 @@ export default function AddIngredient() {
   }, []);
 
   const { data, loading, error } = useFetch<Ingredient>(async () => {
-    return await IngredientEndpoint.getIngrediantById(id).then(
-      (res) => res?.body
-    );
+    return await IngredientEndpoint.getIngrediantById(id).then((res) => res);
   }, [id]);
 
   const onSubmit = async (formdata: any) => {
@@ -74,7 +70,10 @@ export default function AddIngredient() {
   };
 
   if (loading || saveLoading) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error)
+    return (
+      <Alert message={`can't find ingredient with id: ${id}`} status="error" />
+    );
 
   return (
     <div>

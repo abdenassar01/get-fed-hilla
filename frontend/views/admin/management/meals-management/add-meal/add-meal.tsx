@@ -8,21 +8,17 @@ import {
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
-import { Button, ComponentLoader } from "Frontend/common/index.js";
+import { Alert, Button, ComponentLoader } from "Frontend/common/index.js";
 import {
   CategoryEndpoint,
-  IngredientEndpoint,
   MealEndpoint,
 } from "Frontend/generated/endpoints.js";
-import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 import { useLocation, useNavigate } from "react-router-dom";
 import useFetch from "Frontend/utils/hooks/index.js";
-import Ingredient from "Frontend/generated/com/lpw/getfed/models/Ingredient.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
-import Error from "Frontend/common/error/error.js";
 
 export default function AddMeal() {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<any>([]);
   const [saveLoading, setSaveLoading] = useState<boolean>(false);
   const { control, handleSubmit } = useForm();
   const navigate = useNavigate();
@@ -34,16 +30,13 @@ export default function AddMeal() {
   useEffect(() => {
     async function getData() {
       setSaveLoading(true);
-      const result = await CategoryEndpoint.getCategories().then(
-        (res) => res?.body
-      );
+      const result = await CategoryEndpoint.getCategories().then((res) => res);
       setCategories(
-        // @ts-ignore
         result
-          .filter((item: Category) => item.id !== 0)
-          .map((item: Category) => ({
-            value: item.id,
-            label: item.label,
+          ?.filter((item) => item?.id !== 0)
+          ?.map((item) => ({
+            value: item?.id,
+            label: item?.label,
           }))
       );
       setSaveLoading(false);
@@ -52,7 +45,7 @@ export default function AddMeal() {
   }, []);
 
   const { data, loading, error } = useFetch<Meal>(async () => {
-    return await MealEndpoint.getMealById(id).then((res) => res?.body);
+    return await MealEndpoint.getMealById(id).then((res) => res);
   }, [id]);
 
   const onSubmit = async (formdata: any) => {
@@ -79,7 +72,8 @@ export default function AddMeal() {
   };
 
   if (loading || saveLoading) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error)
+    return <Alert message={`can't get meal with id: ${id}`} status="error" />;
 
   return (
     <div>

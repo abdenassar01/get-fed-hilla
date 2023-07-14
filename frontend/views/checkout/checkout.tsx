@@ -42,7 +42,7 @@ export default function Checkout() {
     async function getData() {
       setLoading(true);
       const result = await DeliveryEndpoint.getDeliveryOptions(0, 5).then(
-        (res) => res?.body
+        (res) => res
       );
       setDeliveryServices(
         // @ts-ignore

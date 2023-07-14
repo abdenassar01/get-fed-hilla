@@ -52,11 +52,11 @@ export default function Login() {
         } else {
           UserEndpoint.getUserByUsername(credentials.username).then((res) => {
             // @ts-ignore
-            setUser(res?.body);
+            setUser(res);
             // @ts-ignore
-            sessionStorage.setItem("role", res?.body.role);
+            sessionStorage.setItem("role", res?.role);
             // @ts-ignore
-            sessionStorage.setItem("user", JSON.stringify(res?.body));
+            sessionStorage.setItem("user", JSON.stringify(res));
           });
         }
       })

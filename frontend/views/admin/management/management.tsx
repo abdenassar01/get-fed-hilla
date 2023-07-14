@@ -1,22 +1,10 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 import { Outlet, useNavigate } from "react-router-dom";
-import { data } from "autoprefixer";
 
 export default function Management() {
-  const [file, setFile] = useState();
-
   const navigate = useNavigate();
-  const onFileChange = (event: any) => {
-    // @ts-ignore
-    setFile(event.target.files[0]);
-  };
-  const onFileUpload = () => {
-    useUploadImage(file).then((res) => console.log(res));
-  };
-
   const tabs = [
     {
       id: 1,
@@ -43,6 +31,7 @@ export default function Management() {
   useEffect(() => {
     navigate("/admin/managements/meals");
   }, []);
+
   return (
     <div className="w-full min-h-[70vh]">
       <div className="flex gap-4 bg-background pl-6">

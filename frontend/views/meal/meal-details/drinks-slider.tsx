@@ -13,7 +13,7 @@ type Props = {
 
 export function DrinksSlider({ number }: Props) {
   const getData = async () => {
-    return await DrinkEndpoint.getDrinks(0, number).then((res) => res?.body);
+    return await DrinkEndpoint.getDrinks(0, number).then((res) => res);
   };
 
   const { data, loading, error } = useFetch<any>(getData, []);

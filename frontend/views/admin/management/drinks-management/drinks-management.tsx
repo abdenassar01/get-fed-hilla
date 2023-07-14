@@ -1,22 +1,23 @@
-import * as React from "react";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 import { Outlet } from "react-router-dom";
-import { ComponentLoader, DrinkDataTable } from "Frontend/common/index.js";
+import {
+  Alert,
+  ComponentLoader,
+  DrinkDataTable,
+} from "Frontend/common/index.js";
 import useFetch from "Frontend/utils/hooks/index.js";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
 import { DrinkEndpoint } from "Frontend/generated/endpoints.js";
-import Error from "Frontend/common/error/error.js";
 
 export default function DrinksManagement() {
   const { data, loading, error } = useFetch<Meal[]>(async () => {
-    const res = await DrinkEndpoint.getDrinks(0, 20);
-    return res?.body;
+    return await DrinkEndpoint.getDrinks(0, 20);
   }, []);
 
   const header = ["title", "description", "price", "#"];
 
   if (loading) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error) return <Alert message="error getting drinks" status="error" />;
 
   return (
     <div className="">

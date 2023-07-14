@@ -3,18 +3,13 @@ import {
   TextInput,
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
-import { Button, ComponentLoader } from "Frontend/common/index.js";
+import { Alert, Button, ComponentLoader } from "Frontend/common/index.js";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
-import {
-  CategoryEndpoint,
-  IngredientEndpoint,
-} from "Frontend/generated/endpoints.js";
+import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
 import useFetch from "Frontend/utils/hooks/index.js";
-import Ingredient from "Frontend/generated/com/lpw/getfed/models/Ingredient.js";
-import Error from "Frontend/common/error/error.js";
 import SubCategory from "Frontend/generated/com/lpw/getfed/models/SubCategory.js";
 
 export default function AddSubcategory() {
@@ -27,9 +22,7 @@ export default function AddSubcategory() {
   } = useLocation();
 
   const { data, loading, error } = useFetch<SubCategory>(async () => {
-    return await CategoryEndpoint.getSubCategoryById(id).then(
-      (res) => res?.body
-    );
+    return await CategoryEndpoint.getSubCategoryById(id).then((res) => res);
   }, [id]);
 
   const onSubmit = async (formdata: any) => {
@@ -55,7 +48,10 @@ export default function AddSubcategory() {
   };
 
   if (loading || saveLoading) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error)
+    return (
+      <Alert message={`can't find subcategory with id: ${id}`} status="error" />
+    );
 
   return (
     <div className="py-3">

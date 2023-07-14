@@ -11,7 +11,7 @@ import Error from "Frontend/common/error/error.js";
 
 export function SpecialDishes() {
   const { data, loading, error } = useFetch<Meal[]>(async () => {
-    return await MealEndpoint.getMeals(0, 9).then((res) => res?.body);
+    return await MealEndpoint.getMeals(0, 9).then((res) => res);
   }, []);
 
   if (loading) return <ComponentLoader />;

@@ -9,10 +9,10 @@ export default function CategoryDetails({ category }: { category: number }) {
   const [page, setPage] = useState<number>(0);
   const getData = async () => {
     if (category === 0) {
-      return await MealEndpoint.getMeals(page, 12).then((res) => res?.body);
+      return await MealEndpoint.getMeals(page, 12).then((res) => res);
     } else {
       return await MealEndpoint.getMealByCategory(category, page, 12).then(
-        (res) => res?.body
+        (res) => res
       );
     }
   };

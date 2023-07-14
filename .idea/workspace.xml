@@ -4,25 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="adding the update sub category functionality">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactoring backend [remove response entity from return value]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DeliveryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DrinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/DrinkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/MealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/SubCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/SubCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/CategoryServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/CategoryServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/DeliveryServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/DeliveryServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/DrinkServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/DrinkServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/MealServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/OrderServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/SubCategoryServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/SubCategoryServiceImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/UserServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/orders/orders.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/users-management/user-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/auth/register/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/cart/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/checkout/checkout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/custom-meal-ingredients/custom-meal-ingredients.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/custom-meal/customise-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/drink/drinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/home/sections/special-dishes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/sections/special-dishes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal-details/drinks-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal-details/drinks-slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal-details/meal-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal-details/meal-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/category/category-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,14 +257,7 @@
       <workItem from="1689332062619" duration="2339000" />
       <workItem from="1689334579233" duration="915000" />
       <workItem from="1689343364213" duration="23000" />
-      <workItem from="1689355693210" duration="1399000" />
-    </task>
-    <task id="LOCAL-00078" summary="update backend for meal">
-      <created>1689097977086</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1689097977086</updated>
+      <workItem from="1689355693210" duration="3573000" />
     </task>
     <task id="LOCAL-00079" summary="adding the count ability to backend modals">
       <created>1689099379305</created>
@@ -596,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689294301201</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="refactoring backend [remove response entity from return value]">
+      <created>1689357739279</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1689357739280</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +621,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding the add subcategory endpoint" />
     <MESSAGE value="implement add sub category functionality" />
     <MESSAGE value="add ingredients management page to show ingredients data" />
     <MESSAGE value="implementing adding ingredient functionality" />
@@ -640,7 +645,8 @@
     <MESSAGE value="add update ingredient functionality" />
     <MESSAGE value="update meal working" />
     <MESSAGE value="adding the update sub category functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the update sub category functionality" />
+    <MESSAGE value="refactoring backend [remove response entity from return value]" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring backend [remove response entity from return value]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

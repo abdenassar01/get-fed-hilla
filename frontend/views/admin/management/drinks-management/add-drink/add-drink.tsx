@@ -3,8 +3,7 @@ import {
   TextInput,
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
-import { Button, ComponentLoader } from "Frontend/common/index.js";
-import * as React from "react";
+import { Alert, Button, ComponentLoader } from "Frontend/common/index.js";
 import { useForm } from "react-hook-form";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
 import { useState } from "react";
@@ -12,7 +11,6 @@ import { DrinkEndpoint } from "Frontend/generated/endpoints.js";
 import { useLocation, useNavigate } from "react-router-dom";
 import useFetch from "Frontend/utils/hooks/index.js";
 import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
-import Error from "Frontend/common/error/error.js";
 
 export default function AddDrink() {
   const [saveLoader, setSaveLoader] = useState<boolean>(false);
@@ -24,7 +22,7 @@ export default function AddDrink() {
   } = useLocation();
 
   const { data, loading, error } = useFetch<Drink>(async () => {
-    return await DrinkEndpoint.getDrinkById(id).then((res) => res?.body);
+    return await DrinkEndpoint.getDrinkById(id).then((res) => res);
   }, [id]);
 
   const onSubmit = async (formData: any) => {
@@ -45,7 +43,8 @@ export default function AddDrink() {
   };
 
   if (loading || saveLoader) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error)
+    return <Alert message={`can't find drink with id: ${id}`} status="error" />;
 
   return (
     <form className="py-10">

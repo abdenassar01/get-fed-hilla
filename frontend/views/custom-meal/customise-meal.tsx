@@ -1,17 +1,16 @@
 import * as React from "react";
+import { Suspense, useEffect } from "react";
 import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
 import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
-import { Loading } from "Frontend/common/index.js";
-import { Suspense, useEffect } from "react";
+import { Alert, Loading } from "Frontend/common/index.js";
 import { Outlet, useNavigate } from "react-router-dom";
 import SubCategory from "Frontend/generated/com/lpw/getfed/models/SubCategory.js";
 
 export default function CustomiseMeal() {
   const navigate = useNavigate();
   const getData = async () => {
-    const res = await CategoryEndpoint.getSubCategories();
-    return res?.body;
+    return await CategoryEndpoint.getSubCategories();
   };
 
   useEffect(() => {
@@ -20,12 +19,7 @@ export default function CustomiseMeal() {
 
   const { data, loading, error } = useFetch<SubCategory[]>(getData, []);
 
-  if (error)
-    return (
-      <div className="text-red h-[90vh] w-[100vw] flex justify-center items-center">
-        error accured
-      </div>
-    );
+  if (error) return <Alert message="error accured" status="error" />;
 
   return (
     <div className="bg-background">
