@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add update ingredient functionality">
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="update meal working">
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +193,7 @@
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
       <workItem from="1689272069158" duration="6091000" />
-      <workItem from="1689286479509" duration="7063000" />
-    </task>
-    <task id="LOCAL-00076" summary="fix styles - [merge tailwind classNames]">
-      <created>1689090464935</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1689090464936</updated>
+      <workItem from="1689286479509" duration="7574000" />
     </task>
     <task id="LOCAL-00077" summary="fix admin role test">
       <created>1689096397662</created>
@@ -539,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689293275759</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="update meal working">
+      <created>1689293846735</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1689293846735</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +557,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix rounding image in drink card" />
     <MESSAGE value="add subcategory, fix loader, add small component loader(don't take whole screen)" />
     <MESSAGE value="adding the add subcategory endpoint" />
     <MESSAGE value="implement add sub category functionality" />
@@ -583,7 +581,8 @@
     <MESSAGE value="fix updating meal and add the icon for ingredient, drink and sub category" />
     <MESSAGE value="add get ingredient by id functionality in backend" />
     <MESSAGE value="add update ingredient functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="add update ingredient functionality" />
+    <MESSAGE value="update meal working" />
+    <option name="LAST_COMMIT_MESSAGE" value="update meal working" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
