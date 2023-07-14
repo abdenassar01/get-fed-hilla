@@ -26,6 +26,10 @@ export default function AddIngredient() {
   const { control, handleSubmit } = useForm();
   const navigate = useNavigate();
 
+  const {
+    state: { id },
+  } = useLocation();
+
   useEffect(() => {
     async function getData() {
       setSaveLoading(true);
@@ -44,10 +48,6 @@ export default function AddIngredient() {
     getData();
   }, []);
 
-  const {
-    state: { id },
-  } = useLocation();
-
   const { data, loading, error } = useFetch<Ingredient>(async () => {
     return await IngredientEndpoint.getIngrediantById(id).then(
       (res) => res?.body
@@ -60,6 +60,7 @@ export default function AddIngredient() {
       ? await useUploadImage(formdata.image).then((res) => res)
       : data?.image || "";
     IngredientEndpoint.addIngrediant({
+      id: id || undefined,
       label: formdata.label || data?.label,
       image,
       price: formdata.price || data?.price,
@@ -121,7 +122,7 @@ export default function AddIngredient() {
           <div className="flex gap-2 items-center">
             <Button
               text="save ingredient"
-              className="rounded-[8px] w-full py-[11px] h-fit"
+              className="rounded-[8px]  py-[11px] h-fit"
               onClick={handleSubmit(onSubmit)}
             />
           </div>

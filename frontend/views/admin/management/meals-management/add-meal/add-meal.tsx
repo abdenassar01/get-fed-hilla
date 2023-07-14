@@ -11,20 +11,29 @@ import { useForm } from "react-hook-form";
 import { Button, ComponentLoader } from "Frontend/common/index.js";
 import {
   CategoryEndpoint,
+  IngredientEndpoint,
   MealEndpoint,
 } from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import useFetch from "Frontend/utils/hooks/index.js";
+import Ingredient from "Frontend/generated/com/lpw/getfed/models/Ingredient.js";
+import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
+import Error from "Frontend/common/error/error.js";
 
 export default function AddMeal() {
   const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [saveLoading, setSaveLoading] = useState<boolean>(false);
   const { control, handleSubmit } = useForm();
   const navigate = useNavigate();
 
+  const {
+    state: { id },
+  } = useLocation();
+
   useEffect(() => {
     async function getData() {
-      setLoading(true);
+      setSaveLoading(true);
       const result = await CategoryEndpoint.getCategories().then(
         (res) => res?.body
       );
@@ -37,32 +46,40 @@ export default function AddMeal() {
             label: item.label,
           }))
       );
-      setLoading(false);
+      setSaveLoading(false);
     }
     getData();
   }, []);
 
-  const onSubmit = async (data: any) => {
-    setLoading(true);
-    const img = await useUploadImage(data.image).then((res) => res);
+  const { data, loading, error } = useFetch<Meal>(async () => {
+    return await MealEndpoint.getMealById(id).then((res) => res?.body);
+  }, [id]);
+
+  const onSubmit = async (formdata: any) => {
+    setSaveLoading(true);
+    const image = formdata?.image
+      ? await useUploadImage(formdata.image).then((res) => res)
+      : data?.image || "";
     MealEndpoint.addMeal({
-      title: data.title,
-      image: img,
-      rating: 5.0,
-      price: data.price,
+      id: id || undefined,
+      title: formdata.title || data?.title,
+      image,
+      rating: 5.0 || data?.rating,
+      price: formdata.price || data?.price,
       category: {
-        id: data.category.value,
+        id: formdata.category.value || data?.category?.id,
       },
-      description: data.description,
-      dateCreated: new Date().toISOString(),
+      description: formdata.description || data?.description,
+      dateCreated: new Date().toISOString() || data?.dateCreated,
       custom: false,
     }).then((res) => {
-      setLoading(false);
+      setSaveLoading(false);
       navigate("/admin/managements/meals");
     });
   };
 
-  if (loading) return <ComponentLoader />;
+  if (loading || saveLoading) return <ComponentLoader />;
+  if (error) return <Error />;
 
   return (
     <div>
@@ -76,6 +93,7 @@ export default function AddMeal() {
               control={control}
               placeholder="meal title?"
               name="title"
+              defaultValue={data?.title}
             />
             <UploadFile name="image" control={control}>
               <div className="group relative flex w-[100%] flex-col gap-2">
@@ -90,12 +108,14 @@ export default function AddMeal() {
           </div>
           <div className="flex gap-2">
             <DropdownField
+              defaultValue={data?.category?.label}
               control={control}
               label="Category"
               name="category"
               items={categories}
             />
             <TextInput
+              defaultValue={data?.price}
               type="number"
               label="Price"
               className=""
@@ -114,7 +134,7 @@ export default function AddMeal() {
           <div className="flex gap-2 items-center">
             <Button
               text="save meal"
-              className="rounded-[8px] w-[65vw] py-[11px] h-fit"
+              className="rounded-[8px] py-[11px] h-fit"
               onClick={handleSubmit(onSubmit)}
             />
           </div>

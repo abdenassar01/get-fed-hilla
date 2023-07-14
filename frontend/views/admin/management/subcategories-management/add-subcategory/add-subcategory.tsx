@@ -96,7 +96,7 @@ export default function AddSubcategory() {
             />
             <Button
               text="save meal"
-              className="rounded-[8px] w-[65vw] py-[11px] h-fit"
+              className="rounded-[8px] py-[11px] h-fit"
               onClick={handleSubmit(onSubmit)}
             />
           </div>

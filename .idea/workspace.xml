@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix updating meal and add the icon for ingredient, drink and sub category">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add update ingredient functionality">
       <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/IngredientEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/IngredientEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,21 +194,7 @@
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
       <workItem from="1689272069158" duration="6091000" />
-      <workItem from="1689286479509" duration="6510000" />
-    </task>
-    <task id="LOCAL-00074" summary="add authentication logic to adding items to cart">
-      <created>1689088858042</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1689088858042</updated>
-    </task>
-    <task id="LOCAL-00075" summary="fix bug adding items to cart">
-      <created>1689089175441</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1689089175441</updated>
+      <workItem from="1689286479509" duration="7063000" />
     </task>
     <task id="LOCAL-00076" summary="fix styles - [merge tailwind classNames]">
       <created>1689090464935</created>
@@ -544,7 +525,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689291850603</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="add get ingredient by id functionality in backend">
+      <created>1689293162717</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1689293162717</updated>
+    </task>
+    <task id="LOCAL-00124" summary="add update ingredient functionality">
+      <created>1689293275758</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1689293275759</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,8 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding add drink table and refactoring" />
-    <MESSAGE value="add drink functionality working great" />
     <MESSAGE value="fix rounding image in drink card" />
     <MESSAGE value="add subcategory, fix loader, add small component loader(don't take whole screen)" />
     <MESSAGE value="adding the add subcategory endpoint" />
@@ -588,7 +581,9 @@
     <MESSAGE value="small changes, user management and orders table" />
     <MESSAGE value="add loading and error handlers" />
     <MESSAGE value="fix updating meal and add the icon for ingredient, drink and sub category" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix updating meal and add the icon for ingredient, drink and sub category" />
+    <MESSAGE value="add get ingredient by id functionality in backend" />
+    <MESSAGE value="add update ingredient functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="add update ingredient functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
