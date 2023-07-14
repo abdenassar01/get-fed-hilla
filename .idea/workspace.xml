@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="add loading and error handlers">
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix updating meal and add the icon for ingredient, drink and sub category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/rich-text-editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/rich-text-editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/text-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/tables/data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/data-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/tables/ingredient-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/ingredient-data-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/common/tables/subcategory-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/subcategory-data-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/drinks-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/ingredients-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/meals-management.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/subcategories-management/subcategories-management.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/form-fields/dropdown-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/IngredientEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/endpoints/IngredientEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/models/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/IngrediantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lpw/getfed/services/implementations/IngrediantServiceImplementation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,14 +199,7 @@
       <workItem from="1689242392045" duration="20266000" />
       <workItem from="1689271008351" duration="1020000" />
       <workItem from="1689272069158" duration="6091000" />
-      <workItem from="1689286479509" duration="5090000" />
-    </task>
-    <task id="LOCAL-00073" summary="fix login in register page">
-      <created>1689087977249</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1689087977251</updated>
+      <workItem from="1689286479509" duration="6510000" />
     </task>
     <task id="LOCAL-00074" summary="add authentication logic to adding items to cart">
       <created>1689088858042</created>
@@ -550,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689287027364</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="fix updating meal and add the icon for ingredient, drink and sub category">
+      <created>1689291850603</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1689291850603</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor project structure" />
     <MESSAGE value="adding add drink table and refactoring" />
     <MESSAGE value="add drink functionality working great" />
     <MESSAGE value="fix rounding image in drink card" />
@@ -594,7 +587,8 @@
     <MESSAGE value="add user management page" />
     <MESSAGE value="small changes, user management and orders table" />
     <MESSAGE value="add loading and error handlers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loading and error handlers" />
+    <MESSAGE value="fix updating meal and add the icon for ingredient, drink and sub category" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix updating meal and add the icon for ingredient, drink and sub category" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
