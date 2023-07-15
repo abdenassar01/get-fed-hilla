@@ -20,52 +20,50 @@ public class DrinkServiceImplementation implements DrinkService {
     }
 
     @Override
-    public ResponseEntity<Drink> getDrinkById(Long id) {
-        return ResponseEntity.ok(
-                repository.findById(id).orElseThrow(
+    public Drink getDrinkById(Long id) {
+        return repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find drink item with id: " + id)
-                )
-        );
+                );
     }
 
     @Override
-    public ResponseEntity<Page<Drink>> getDrinks(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+    public Page<Drink> getDrinks(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override
-    public ResponseEntity<Drink> addDrink(Drink drink) {
-        return ResponseEntity.ok(repository.save(drink));
+    public Drink addDrink(Drink drink) {
+        return repository.save(drink);
     }
 
     @Override
-    public ResponseEntity<Drink> removeDrinkById(Long id) {
+    public Drink removeDrinkById(Long id) {
         Drink drink = repository.findById(id).orElseThrow(
                 () -> new IllegalStateException("can't find drink item with id: " + id)
         );
         repository.deleteById(id);
-        return ResponseEntity.ok(drink);
+        return drink;
     }
 
     @Override
-    public ResponseEntity<String> removeDrink(Drink drink) {
+    public String removeDrink(Drink drink) {
         repository.delete(drink);
-        return ResponseEntity.ok("drink " +  drink.getId() + " deleted successfully");
+        return "drink " +  drink.getId() + " deleted successfully";
     }
 
     @Override
-    public ResponseEntity<Drink> updateDrink(Long id, Drink drink) {
+    public Drink updateDrink(Long id, Drink drink) {
         Drink oldDrink = repository.findById(id).orElseThrow(
                 () -> new IllegalStateException("can't find drink item with id: " + id)
         );
 
         drink.setId(id);
         repository.delete(oldDrink);
-        return ResponseEntity.ok(repository.save(oldDrink));
+        return repository.save(oldDrink);
     }
 
     @Override
-    public ResponseEntity<Page<Drink>> searchDrink(String query, Pageable pageable) {
-        return ResponseEntity.ok(repository.findByLabelContaining(query, pageable));
+    public Page<Drink> searchDrink(String query, Pageable pageable) {
+        return repository.findByLabelContaining(query, pageable);
     }
 }

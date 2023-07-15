@@ -13,10 +13,11 @@ import java.util.List;
 @Qualifier("ingrediant_service")
 public interface IngrediantService {
 
-    ResponseEntity<Page<Ingredient>> getAll(Pageable pageable);
-    ResponseEntity<Ingredient> addIngrediant(Ingredient ingredient);
-    ResponseEntity<String> removeIngrediant(Ingredient ingredient);
-    ResponseEntity<Ingredient> removeIngrediantById(Long id);
-    ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, Pageable pageable);
+    Page<Ingredient> getAll(Pageable pageable);
+    Ingredient addIngrediant(Ingredient ingredient);
+    Ingredient getIngredientById(Long id);
+    String removeIngrediant(Ingredient ingredient);
+    Ingredient removeIngrediantById(Long id);
+    Page<Ingredient> getIngredientBySubCategory(Long subCategoryId, Pageable pageable);
 
 }

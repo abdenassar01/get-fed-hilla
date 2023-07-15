@@ -10,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 import static com.lpw.getfed.security.roles.UserRoles.*;
 
@@ -33,6 +34,10 @@ public class User implements UserDetails {
     private String address;
     private String phone;
     private String role;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.MERGE, orphanRemoval = true)
+    @JsonIgnore
+    private List<Order> orders;
 
     @JsonIgnore
     @Override

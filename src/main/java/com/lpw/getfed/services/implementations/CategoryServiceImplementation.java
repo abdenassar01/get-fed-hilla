@@ -21,37 +21,37 @@ public class CategoryServiceImplementation implements CategoryService {
     }
 
     @Override
-    public ResponseEntity<Category> addCategory(Category category) {
-        return ResponseEntity.ok(repository.save(category));
+    public Category addCategory(Category category) {
+        return repository.save(category);
     }
 
     @Override
-    public ResponseEntity<String> removeCategory(Category category) {
+    public String removeCategory(Category category) {
         repository.delete(category);
 
-        return ResponseEntity.ok("category deleted successfully");
+        return "category deleted successfully";
     }
 
     @Override
-    public ResponseEntity<Category> removeCategoryById(Long id) {
+    public Category removeCategoryById(Long id) {
         Category category = repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find Category with id: " + id));
         repository.delete(category);
-        return ResponseEntity.ok(category);
+        return category;
     }
 
     @Override
-    public ResponseEntity<Category> updateCategory(Long id, Category category) {
+    public Category updateCategory(Long id, Category category) {
 
         Category oldCategory = repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find Category with id: " + id));
         category.setId(oldCategory.getId());
 
         repository.delete(oldCategory);
-        return ResponseEntity.ok(repository.save(category));
+        return repository.save(category);
     }
 
     @Override
-    public ResponseEntity<List<Category>> getCategories() {
-        return ResponseEntity.ok(repository.findAll());
+    public List<Category> getCategories() {
+        return repository.findAll();
     }
 }
 

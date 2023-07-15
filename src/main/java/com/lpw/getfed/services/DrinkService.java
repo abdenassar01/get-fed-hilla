@@ -9,11 +9,11 @@ import org.springframework.http.ResponseEntity;
 @Qualifier("drink_service")
 public interface DrinkService {
 
-    ResponseEntity<Drink> getDrinkById(Long id);
-    ResponseEntity<Page<Drink>> getDrinks(Pageable pageable);
-    ResponseEntity<Drink> addDrink(Drink drink);
-    ResponseEntity<Drink> removeDrinkById(Long id);
-    ResponseEntity<String> removeDrink(Drink drink);
-    ResponseEntity<Drink> updateDrink(Long id, Drink drink);
-    ResponseEntity<Page<Drink>> searchDrink(String query, Pageable pageable);
+    Drink getDrinkById(Long id);
+    Page<Drink> getDrinks(Pageable pageable);
+    Drink addDrink(Drink drink);
+    Drink removeDrinkById(Long id);
+    String removeDrink(Drink drink);
+    Drink updateDrink(Long id, Drink drink);
+    Page<Drink> searchDrink(String query, Pageable pageable);
 }

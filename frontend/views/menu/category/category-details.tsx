@@ -9,10 +9,10 @@ export default function CategoryDetails({ category }: { category: number }) {
   const [page, setPage] = useState<number>(0);
   const getData = async () => {
     if (category === 0) {
-      return await MealEndpoint.getMeals(page, 12).then((res) => res?.body);
+      return await MealEndpoint.getMeals(page, 12).then((res) => res);
     } else {
       return await MealEndpoint.getMealByCategory(category, page, 12).then(
-        (res) => res?.body
+        (res) => res
       );
     }
   };
@@ -27,7 +27,6 @@ export default function CategoryDetails({ category }: { category: number }) {
   if (data?.length === 0)
     return <Alert message="There is no meals on this category" />;
 
-  console.log(data);
   return (
     <div className="pt-6 container flex flex-col items-center gap-12">
       <div className="grid grid-cols-4 gap-[20px]">

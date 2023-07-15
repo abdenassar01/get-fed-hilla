@@ -11,9 +11,9 @@ import java.util.List;
 @Qualifier("category_service")
 public interface CategoryService{
 
-    ResponseEntity<Category> addCategory(Category category);
-    ResponseEntity<String> removeCategory(Category category);
-    ResponseEntity<Category> removeCategoryById(Long id);
-    ResponseEntity<Category> updateCategory(Long id, Category category);
-    ResponseEntity<List<Category>> getCategories();
+    Category addCategory(Category category);
+    String removeCategory(Category category);
+    Category removeCategoryById(Long id);
+    Category updateCategory(Long id, Category category);
+    List<Category> getCategories();
 }

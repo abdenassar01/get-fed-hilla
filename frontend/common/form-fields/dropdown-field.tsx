@@ -16,6 +16,7 @@ type Props = {
   className?: string;
   labelClassName?: string;
   wrapperClassName?: string;
+  defaultValue?: string | number;
 };
 
 export function DropdownField({
@@ -27,6 +28,7 @@ export function DropdownField({
   label,
   labelClassName,
   wrapperClassName,
+  defaultValue,
 }: Props) {
   const dropdownRef = useRef(null);
   const [openDropdown, setOpenDropdown] = useState<boolean>(false);
@@ -37,6 +39,7 @@ export function DropdownField({
   } = useController({
     control,
     name: name || "",
+    defaultValue: defaultValue || "",
   });
   useOutsideClick(dropdownRef, () => setOpenDropdown(false));
 
@@ -62,11 +65,11 @@ export function DropdownField({
         className={ClassNames(
           "flex w-[100%] items-center justify-between rounded-[10px] border-none bg-[#F3F4F6] px-[24px] py-[14px] text-xs text-[#A6A6A6] sm:text-mb-xxs",
           className || "",
-          value && "text-black",
+          (value || defaultValue) && "text-black",
           (error && "border-[1px] border-error") || ""
         )}
       >
-        <div>{value?.label ?? placeholder ?? label}</div>
+        <div>{value?.label || defaultValue || placeholder || label}</div>
         <IoIosArrowDown />
       </div>
       <p className="mb-[-1.667vw] h-[1.667vw] text-xxs text-error">

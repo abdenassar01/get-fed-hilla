@@ -1,8 +1,8 @@
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 import { Outlet } from "react-router-dom";
 import {
+  Alert,
   ComponentLoader,
-  DrinkDataTable,
   IngredientDataTable,
 } from "Frontend/common/index.js";
 import * as React from "react";
@@ -13,14 +13,14 @@ import Ingredient from "Frontend/generated/com/lpw/getfed/models/Ingredient.js";
 
 export default function IngredientsManagement() {
   const { data, loading, error } = useFetch<Ingredient[]>(async () => {
-    const res = await IngredientEndpoint.getAll(0, 20);
-    return res?.body;
+    return await IngredientEndpoint.getAll(0, 20);
   }, []);
 
-  const header = ["title", "price", "sub category"];
+  const header = ["title", "price", "sub category", "#"];
 
   if (loading) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error)
+    return <Alert message="error getting ingredients" status="error" />;
 
   return (
     <div className="">

@@ -11,11 +11,11 @@ import java.util.Map;
 
 @Qualifier("user_service")
 public interface UserService extends UserDetailsService {
-    ResponseEntity<User> addEmployee(User employee);
-    ResponseEntity<String> removeEmployee(User employee);
-    ResponseEntity<User> removeEmployeeById(Long id);
-    ResponseEntity<User> updateEmployee(User employee, Long id);
-    ResponseEntity<Page<User>> getPageEmployees(Pageable pageable);
-    ResponseEntity<User> getUserByUsername(String username);
+    User addEmployee(User employee);
+    String removeEmployee(User employee);
+    User removeEmployeeById(Long id);
+    User updateEmployee(User employee, Long id);
+    Page<User> getPageEmployees(Pageable pageable);
+    User getUserByUsername(String username);
     Map<String, Object> countAll();
 }

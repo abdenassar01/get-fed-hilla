@@ -85,15 +85,15 @@ export default function Register() {
 
         .then((res) => {
           // @ts-ignore
-          return login(res?.body.username, res?.body.password).then(() => res);
+          return login(res?.username, res?.password).then(() => res);
         })
         .then((data) => {
           // @ts-ignore
-          setUser(data?.body);
+          setUser(data);
           // @ts-ignore
-          sessionStorage.setItem("role", data?.body.role);
+          sessionStorage.setItem("role", data.role);
           // @ts-ignore
-          sessionStorage.setItem("user", JSON.stringify(data?.body));
+          sessionStorage.setItem("user", JSON.stringify(data));
         });
     } else {
       setOpen(true);

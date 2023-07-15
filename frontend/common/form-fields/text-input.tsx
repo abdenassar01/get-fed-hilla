@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HTMLProps, useState } from "react";
+import { HTMLProps, useEffect, useState } from "react";
 import { Control, useController } from "react-hook-form";
 import icon from "Frontend/assets/icons/password-toggle.svg";
 import { ClassNames } from "Frontend/utils/classnames.js";
@@ -10,6 +10,7 @@ type Props = HTMLProps<HTMLInputElement> & {
   inputClassName?: string;
   className?: string;
   labelClassname?: string;
+  defaultValue?: string | number;
 };
 
 export function TextInput({
@@ -21,6 +22,7 @@ export function TextInput({
   labelClassname,
   placeholder,
   type = "text",
+  defaultValue,
 }: Props) {
   const [isPassword, setIsPassword] = useState<boolean>(type === "password");
   const {
@@ -29,7 +31,7 @@ export function TextInput({
   } = useController({
     control,
     name: name || "text",
-    defaultValue: "",
+    defaultValue: defaultValue || "",
   });
 
   return (
@@ -51,7 +53,7 @@ export function TextInput({
       <input
         id={name}
         onChange={onChange}
-        value={value}
+        value={value ? value : defaultValue}
         onBlur={onBlur}
         type={isPassword ? "password" : type}
         style={{ borderRadius: 8 }}

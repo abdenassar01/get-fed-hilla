@@ -21,8 +21,8 @@ public class SubCategoryServiceImplementation implements SubCategoryService {
     }
 
     @Override
-    public ResponseEntity<SubCategory> addSubCategory(SubCategory subCategory) {
-        return ResponseEntity.ok(repository.save(subCategory));
+    public SubCategory addSubCategory(SubCategory subCategory) {
+        return repository.save(subCategory);
     }
 
     @Override

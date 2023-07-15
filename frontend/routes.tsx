@@ -148,11 +148,7 @@ export const routes: readonly ViewRouteObject[] = [
       },
       {
         path: "/about",
-        element: (
-          <PrivateRoute>
-            <About />
-          </PrivateRoute>
-        ),
+        element: <About />,
         handle: { icon: "globe-solid", title: "Get Fed | About us" },
       },
       {

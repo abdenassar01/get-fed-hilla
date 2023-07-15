@@ -30,33 +30,38 @@ public class IngrediantServiceImplementation implements IngrediantService {
     }
 
     @Override
-    public ResponseEntity<Page<Ingredient>> getAll(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+    public Page<Ingredient> getAll(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override
-    public ResponseEntity<Ingredient> addIngrediant(Ingredient ingredient) {
-        return ResponseEntity.ok(repository.save(ingredient));
+    public Ingredient addIngrediant(Ingredient ingredient) {
+        return repository.save(ingredient);
     }
 
     @Override
-    public ResponseEntity<String> removeIngrediant(Ingredient ingredient) {
+    public Ingredient getIngredientById(Long id) {
+        return repository.findById(id).orElseThrow(() -> new IllegalStateException("can't find ingredient with id: " + id));
+    }
+
+    @Override
+    public String removeIngrediant(Ingredient ingredient) {
         repository.delete(ingredient);
-        return ResponseEntity.ok("ingredient " + ingredient.getLabel() + " deleted successfully");
+        return "ingredient " + ingredient.getLabel() + " deleted successfully";
     }
 
     @Override
-    public ResponseEntity<Ingredient> removeIngrediantById(Long id) {
+    public Ingredient removeIngrediantById(Long id) {
         Ingredient ingredient =
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find ingredient with id: " + id));
         repository.deleteById(id);
-        return ResponseEntity.ok(ingredient);
+        return ingredient;
     }
 
     @Override
-    public ResponseEntity<Page<Ingredient>> getIngredientBySubCategory(Long subCategoryId, Pageable pageable) {
+    public Page<Ingredient> getIngredientBySubCategory(Long subCategoryId, Pageable pageable) {
         SubCategory subCategory = subCategoryRepository.findById(subCategoryId).orElseThrow(() -> new IllegalStateException("can't find sub category with id: " + subCategoryId));
-        return ResponseEntity.ok(repository.findAllBySubCategory(subCategory, pageable));
+        return repository.findAllBySubCategory(subCategory, pageable);
     }
 }

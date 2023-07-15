@@ -25,7 +25,7 @@ export default function MenuLayout() {
         navigate("/menu/0");
       }
       // @ts-ignore
-      return res?.body;
+      return res;
     });
   };
 

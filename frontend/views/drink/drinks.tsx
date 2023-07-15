@@ -1,18 +1,17 @@
 import * as React from "react";
 import { DrinkCard } from "Frontend/common/drink-card/drink-card.js";
-import { HeaderTitle, Loading } from "Frontend/common/index.js";
+import { Alert, HeaderTitle, Loading } from "Frontend/common/index.js";
 import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import Drink from "Frontend/generated/com/lpw/getfed/models/Drink.js";
 import { DrinkEndpoint } from "Frontend/generated/endpoints.js";
 
 export default function Drinks() {
   const { data, error, loading } = useFetch<Drink[]>(async () => {
-    const res = await DrinkEndpoint.getDrinks(0, 12);
-    return res?.body;
+    return await DrinkEndpoint.getDrinks(0, 12);
   }, []);
 
   if (loading) return <Loading />;
-  if (error) return <div>error occured</div>;
+  if (error) return <Alert message="error accured" status="error" />;
 
   return (
     <div className="bg-background">

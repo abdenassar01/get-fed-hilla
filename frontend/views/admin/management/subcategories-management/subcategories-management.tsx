@@ -6,7 +6,7 @@ import {
   CategoryEndpoint,
   MealEndpoint,
 } from "Frontend/generated/endpoints.js";
-import { ComponentLoader } from "Frontend/common/index.js";
+import { Alert, ComponentLoader } from "Frontend/common/index.js";
 import Error from "Frontend/common/error/error.js";
 import SubCategory from "Frontend/generated/com/lpw/getfed/models/SubCategory.js";
 import { SubcategoryDataTable } from "Frontend/common/tables/subcategory-data-table.js";
@@ -14,13 +14,14 @@ import { SubcategoryDataTable } from "Frontend/common/tables/subcategory-data-ta
 export default function SubCategoriesManagement() {
   const { data, loading, error } = useFetch<SubCategory[]>(async () => {
     const res = await CategoryEndpoint.getSubCategories();
-    return res?.body;
+    return res;
   }, []);
 
-  const header = ["title", "label", "description", "price"];
+  const header = ["title", "label", "description", "price", "#"];
 
   if (loading) return <ComponentLoader />;
-  if (error) return <Error />;
+  if (error)
+    return <Alert message="error getting subcategories" status="error" />;
 
   return (
     <div>

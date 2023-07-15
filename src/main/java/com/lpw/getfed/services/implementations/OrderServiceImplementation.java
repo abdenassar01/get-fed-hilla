@@ -2,8 +2,10 @@ package com.lpw.getfed.services.implementations;
 
 import com.lpw.getfed.models.Delivery;
 import com.lpw.getfed.models.Order;
+import com.lpw.getfed.repositories.DeliveryRepository;
 import com.lpw.getfed.repositories.OrderRepository;
 import com.lpw.getfed.services.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -16,14 +18,17 @@ import java.util.Map;
 public class OrderServiceImplementation implements OrderService {
 
     private final OrderRepository repository;
+    private final DeliveryRepository deliveryRepository;
 
-    public OrderServiceImplementation(OrderRepository repository) {
+    @Autowired
+    public OrderServiceImplementation(OrderRepository repository, DeliveryRepository deliveryRepository) {
         this.repository = repository;
+        this.deliveryRepository = deliveryRepository;
     }
 
     @Override
-    public ResponseEntity<Page<Order>> getRestorantOrders(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+    public Page<Order> getRestorantOrders(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
 //    @Override
@@ -32,47 +37,53 @@ public class OrderServiceImplementation implements OrderService {
 //    }
 
     @Override
-    public ResponseEntity<Order> getOrderById(Long id) {
-        return ResponseEntity.ok(
+    public Order getOrderById(Long id) {
+        return
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find order with id: " + id)
-                )
+                );
+    }
+
+    @Override
+    public Order createOrder(Order order) {
+        Delivery d = deliveryRepository.findById(
+                order.getDelivery().getId()).orElseThrow(
+                        () -> new IllegalStateException(
+                                "can't find delivery with id: " + order.getDelivery().getId()
+                        )
         );
+        order.setDelivery(d);
+        return repository.save(order);
     }
 
     @Override
-    public ResponseEntity<Order> createOrder(Order order) {
-        return ResponseEntity.ok(repository.save(order));
-    }
-
-    @Override
-    public ResponseEntity<String> deleteOrder(Order order) {
+    public String deleteOrder(Order order) {
         repository.delete(order);
-        return ResponseEntity.ok("order " + order.getId() + " deleted successfully");
+        return "order " + order.getId() + " deleted successfully";
     }
 
     @Override
-    public ResponseEntity<Order> deleteOrderById(Long id) {
+    public Order deleteOrderById(Long id) {
         Order order = repository.findById(id).orElseThrow(
                 () -> new IllegalStateException("can't find order with id: " + id)
         );
         repository.deleteById(id);
-        return ResponseEntity.ok(order);
+        return order;
     }
 
     @Override
-    public ResponseEntity<Order> updateOrder(Long id, Order order) {
+    public Order updateOrder(Long id, Order order) {
         repository.findById(id).orElseThrow(
                 () -> new IllegalStateException("can't find order with id: " + id)
         );
 
         order.setId(id);
-        return ResponseEntity.ok(repository.save(order));
+        return repository.save(order);
     }
 
     @Override
-    public ResponseEntity<Page<Order>> getOrdersByDelivery(Delivery delivery, Pageable pageable) {
-        return ResponseEntity.ok(repository.findAllByDelivery(delivery, pageable));
+    public Page<Order> getOrdersByDelivery(Delivery delivery, Pageable pageable) {
+        return repository.findAllByDelivery(delivery, pageable);
     }
 
     @Override

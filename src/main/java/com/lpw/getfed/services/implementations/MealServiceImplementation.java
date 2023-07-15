@@ -28,26 +28,25 @@ public class MealServiceImplementation implements MealService {
     }
 
     @Override
-    public ResponseEntity<Meal> addMeal(Meal meal) {
-        return ResponseEntity.ok(repository.save(meal));
+    public Meal addMeal(Meal meal) {
+        return repository.save(meal);
     }
 
     @Override
-    public ResponseEntity<Meal> getMealById(Long id) {
-        return ResponseEntity.ok(
+    public Meal getMealById(Long id) {
+        return
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find meal with id:" + id)
-                )
-        );
+                );
     }
 
     @Override
-    public ResponseEntity<Page<Meal>> getMeals(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAllByCustom (false ,pageable));
+    public Page<Meal> getMeals(Pageable pageable) {
+        return repository.findAllByCustom (false ,pageable);
     }
 
     @Override
-    public ResponseEntity<Meal> removeMealById(Long id) {
+    public Meal removeMealById(Long id) {
 
         Meal meal = repository.findById(id).orElseThrow(
                 () -> new IllegalStateException("can't find meal with id:" + id)
@@ -55,34 +54,34 @@ public class MealServiceImplementation implements MealService {
 
         repository.deleteById(id);
 
-        return ResponseEntity.ok(meal);
+        return meal;
     }
 
     @Override
-    public ResponseEntity<String> removeMeal(Meal meal) {
-        return ResponseEntity.ok("can't find meal with id: " + meal.getId() );
+    public String removeMeal(Meal meal) {
+        return "can't find meal with id: " + meal.getId();
     }
 
     @Override
-    public ResponseEntity<Meal> updateMeal(Long id, Meal meal) {
+    public Meal updateMeal(Long id, Meal meal) {
         Meal oldMeal = repository.findById(id).orElseThrow(
                 () -> new IllegalStateException("can't find meal with id:" + id)
         );
 
         meal.setId(id);
         repository.delete(oldMeal);
-        return ResponseEntity.ok(repository.save(meal));
+        return repository.save(meal);
     }
 
     @Override
-    public ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable) {
+    public Page<Meal> getMealByCategory(Long categoryId, Pageable pageable) {
         Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new IllegalStateException("can't find category with id: " + categoryId));
-        return ResponseEntity.ok(repository.findAllByCategoryAndCustom(category, false, pageable));
+        return repository.findAllByCategoryAndCustom(category, false, pageable);
     }
 
     @Override
-    public ResponseEntity<List<Meal>> searchMeal(String query) {
-        return ResponseEntity.ok(repository.findAllByTitleContaining(query));
+    public List<Meal> searchMeal(String query) {
+        return repository.findAllByTitleContaining(query);
     }
 
     @Override

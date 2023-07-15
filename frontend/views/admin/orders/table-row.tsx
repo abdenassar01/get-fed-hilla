@@ -1,5 +1,3 @@
-// import eye from "@/assets/icons/eye-gray-ouline.svg";
-// import arrow from "@/assets/icons/down-arrow-outline.svg";
 import { useState } from "react";
 import { ClassNames } from "Frontend/utils/classnames.js";
 import Order from "Frontend/generated/com/lpw/getfed/models/Order.js";
@@ -26,8 +24,11 @@ export function TableRow({ item }: Props) {
           <div className="">{item.totalPrice} Mad</div>
         </div>
         <div className="flex gap-[8px]">
-          {/*<img src={eye} alt="eye icon" className="w-[9.709vw]" />*/}
-          {/*<img src={arrow} alt="eye icon" className="w-[9.709vw]" />*/}
+          <img
+            src="https://i.imgur.com/Y1ENOtQ.png"
+            alt="eye icon"
+            className="w-[3vw]"
+          />
         </div>
       </div>
       <div
@@ -73,8 +74,8 @@ export function TableRow({ item }: Props) {
                 Delivery
               </div>
               <div className="text-[#A6A6A6]">
-                will be delivered at: {item.delivery?.estimateTime} for{" "}
-                {item.delivery?.price}
+                will be delivered at: {item.delivery?.estimateTime} min for{" "}
+                {item.delivery?.price} Mad, by {item.delivery?.label}
               </div>
             </div>
             <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
@@ -82,6 +83,26 @@ export function TableRow({ item }: Props) {
                 Price
               </div>
               <div className="text-[#A6A6A6]">{item.totalPrice} Mad</div>
+            </div>
+            <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
+              <div className="min-w-[18.204vw] font-bold text-cardText">
+                Shipping address:
+              </div>
+              <div className="text-[#A6A6A6]">{item.address}</div>
+            </div>
+            <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
+              <div className="min-w-[18.204vw] font-bold text-cardText">
+                Phone:
+              </div>
+              <div className="text-[#A6A6A6]">{item.phone}</div>
+            </div>
+            <div className="flex pl-3 py-2 border-[1px] border-[#f3f3f3] items-center gap-[5.825vw]">
+              <div className="min-w-[18.204vw] font-bold text-cardText">
+                Placed By:
+              </div>
+              <div className="text-[#A6A6A6]">
+                {`${item.user?.firstName} ${item.user?.lastName}`}
+              </div>
             </div>
           </div>
         </div>

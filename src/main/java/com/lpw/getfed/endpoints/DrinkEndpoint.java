@@ -26,41 +26,39 @@ public class DrinkEndpoint {
         this.service = service;
     }
 
-    public ResponseEntity<Drink> getDrinkById(Long id){
+    public Drink getDrinkById(Long id){
         logger.info("getting drink " + id + " details");
         return service.getDrinkById(id);
     }
 
-    public ResponseEntity<Page<Drink>> getDrinks(int page, int size){
+    public Page<Drink> getDrinks(int page, int size){
         logger.info("getting page " + page + " of drinks  details");
         return service.getDrinks(PageRequest.of(page, size));
     }
 
-    public ResponseEntity<Drink> addDrink(Drink drink){
+    public Drink addDrink(Drink drink){
         logger.info("adding new drink item");
         return service.addDrink(drink);
     }
 
-    public ResponseEntity<Drink> removeDrinkById(Long id){
+    public Drink removeDrinkById(Long id){
         logger.warn("deleting a drink item with id: " + id);
         return service.removeDrinkById(id);
     }
 
-    public ResponseEntity<String> removeDrink(Drink drink){
+    public String removeDrink(Drink drink){
         logger.warn("removing drink item with object " + drink.getLabel());
         return service.removeDrink(drink);
     }
 
-    public ResponseEntity<Drink> updateDrink(Long id, Drink drink){
+    public Drink updateDrink(Long id, Drink drink){
         logger.info("updating drink " + id + " details");
         return service.updateDrink(id, drink);
     }
 
-    public ResponseEntity<Page<Drink>> searchDrinkPaging(String query, int page, int size){
+    public Page<Drink> searchDrinkPaging(String query, int page, int size){
         logger.info("searching with value: " + query);
-        ResponseEntity<Page<Drink>> data = service.searchDrink(query, PageRequest.of(page, size));
-        System.out.println(Objects.requireNonNull(data.getBody()).getTotalElements());
-        return data;
+        return service.searchDrink(query, PageRequest.of(page, size));
     }
 
 //    public ResponseEntity<Page<Drink>> searchDrink(String query){

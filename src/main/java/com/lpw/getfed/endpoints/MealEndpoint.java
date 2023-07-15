@@ -26,42 +26,42 @@ public class MealEndpoint {
         this.service = service;
     }
 
-    public ResponseEntity<Meal> addMeal(Meal meal){
+    public Meal addMeal(Meal meal){
         return service.addMeal(meal);
     }
 
-    public ResponseEntity<Meal> getMealById(Long id){
+    public Meal getMealById(Long id){
         logger.info("getting meal " + id + " details");
         return service.getMealById(id);
     }
 
-    public ResponseEntity<Page<Meal>> getMeals(int page, int size){
+    public Page<Meal> getMeals(int page, int size){
         logger.info("getting page " + page + " of meals");
         return service.getMeals(PageRequest.of(page, size));
     }
 
-    public ResponseEntity<Meal> removeMealById(Long id){
+    public Meal removeMealById(Long id){
         logger.warn("deleting meal: " + id);
         return service.removeMealById(id);
     }
 
-    public ResponseEntity<String> removeMeal(Meal meal){
+    public String removeMeal(Meal meal){
         logger.warn("deleting meal " + meal.getId());
         return service.removeMeal(meal);
     }
 
-    public ResponseEntity<Meal> updateMeal(Long id, Meal meal){
+    public Meal updateMeal(Long id, Meal meal){
         logger.info("updating meal " + id + " details");
         return service.updateMeal(id, meal);
     }
 
-    public ResponseEntity<Page<Meal>> getMealByCategory(Long category, int page, int size){
+    public Page<Meal> getMealByCategory(Long category, int page, int size){
         logger.info("getting page " + page + " by category " + category);
         return service.getMealByCategory(category, PageRequest.of(page, size));
     }
 
 
-    public ResponseEntity<List<Meal>> searchMeal(String query){
+    public List<Meal> searchMeal(String query){
         logger.info("searching for: " + query);
         return service.searchMeal(query);
     }

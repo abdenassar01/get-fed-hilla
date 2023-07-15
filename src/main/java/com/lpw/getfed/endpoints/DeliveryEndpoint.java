@@ -24,42 +24,42 @@ public class DeliveryEndpoint {
         this.service = service;
     }
 
-    public ResponseEntity<Delivery> getDeliveryById(Long id){
+    public Delivery getDeliveryById(Long id){
         logger.info("getting the delivery " + id + " details");
         return service.getDeliveryById(id);
     }
 
-    public ResponseEntity<Delivery> addDelivery(Delivery delivery){
+    public Delivery addDelivery(Delivery delivery){
         logger.info("saving new delivery");
         return service.addDelivery(delivery);
     }
 
-    public ResponseEntity<String> removeDelivery(Delivery delivery){
+    public String removeDelivery(Delivery delivery){
         logger.warn("deleting a delivery item: " + delivery.getId());
         return service.removeDelivery(delivery);
     }
 
-    public ResponseEntity<Delivery> updateDelivery(Long id, Delivery delivery){
+    public Delivery updateDelivery(Long id, Delivery delivery){
         logger.info("updating the delivery " + id + " details");
         return service.updateDelivery(id, delivery);
     }
 
-    public ResponseEntity<Delivery> removeDeliveryById(Long id){
+    public Delivery removeDeliveryById(Long id){
         logger.warn("deleting a delivery item: " + id);
         return service.removeDeliveryById(id);
     }
 
-    public ResponseEntity<Page<Delivery>> getDeliveryOptions(int page, int size){
+    public Page<Delivery> getDeliveryOptions(int page, int size){
         logger.info("getting page: " + page + " of delivery options");
         return service.getDeliveryOptions(PageRequest.of(page, size));
     }
 
-    public ResponseEntity<Page<Delivery>> getDeliveryOptions(int page){
+    public Page<Delivery> getDeliveryOptions(int page){
         logger.info("getting page: " + page + " of 10 delivery options");
         return service.getDeliveryOptions(PageRequest.of(page, 10));
     }
 
-    public ResponseEntity<Page<Delivery>> getDeliveryOptions(){
+    public Page<Delivery> getDeliveryOptions(){
         logger.info("getting a page of delivery options");
         return service.getDeliveryOptions(PageRequest.of(0, 20));
     }

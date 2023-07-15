@@ -30,29 +30,29 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public ResponseEntity<User> addEmployee(User user) {
+    public User addEmployee(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return ResponseEntity.ok(repository.save(user));
+        return repository.save(user);
     }
 
     @Override
-    public ResponseEntity<String> removeEmployee(User employee) {
+    public String removeEmployee(User employee) {
         repository.delete(employee);
-        return ResponseEntity.ok("Employee " + employee.getUsername() + " removed successfully");
+        return "Employee " + employee.getUsername() + " removed successfully";
     }
 
     @Override
-    public ResponseEntity<User> removeEmployeeById(Long id) {
+    public User removeEmployeeById(Long id) {
         User employee =
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find employee with id: " + id)
                 );
         repository.deleteById(id);
-        return ResponseEntity.ok(employee);
+        return employee;
     }
 
     @Override
-    public ResponseEntity<User> updateEmployee(User employee, Long id) {
+    public User updateEmployee(User employee, Long id) {
         User oldEmployee =
                 repository.findById(id).orElseThrow(
                         () -> new IllegalStateException("can't find employee with id: " + id)
@@ -60,17 +60,17 @@ public class UserServiceImplementation implements UserService {
 
         employee.setId(id);
         repository.delete(oldEmployee);
-        return ResponseEntity.ok(repository.save(employee));
+        return repository.save(employee);
     }
 
     @Override
-    public ResponseEntity<Page<User>> getPageEmployees(Pageable pageable) {
-        return ResponseEntity.ok(repository.findAll(pageable));
+    public Page<User> getPageEmployees(Pageable pageable) {
+        return repository.findAll(pageable);
     }
 
     @Override
-    public ResponseEntity<User> getUserByUsername(String username) {
-        return ResponseEntity.ok(repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username)));
+    public User getUserByUsername(String username) {
+        return repository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No user present with username: " + username));
     }
 
     @Override

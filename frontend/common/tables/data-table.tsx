@@ -1,6 +1,8 @@
 import * as React from "react";
 import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
 import { LongText } from "Frontend/common/long-text/index.js";
+import { FaEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   header: string[];
@@ -8,6 +10,7 @@ type Props = {
 };
 
 export function DataTable({ header, data }: Props) {
+  const navigate = useNavigate();
   return (
     <table className="w-full">
       <thead>
@@ -55,6 +58,18 @@ export function DataTable({ header, data }: Props) {
             </td>
             <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
               {row.category?.label}
+            </td>
+            <td className="border-r-[1px] border-t-[1px] border-[#E6E6E6] py-[0.938vw] text-center">
+              <button
+                className="text-main"
+                onClick={() =>
+                  navigate("/admin/managements/meals/new", {
+                    state: { id: row.id },
+                  })
+                }
+              >
+                <FaEdit size={24} />
+              </button>
             </td>
           </tr>
         ))}

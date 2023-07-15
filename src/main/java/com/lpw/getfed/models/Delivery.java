@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.List;
 
 @Entity
 @Setter
@@ -17,12 +20,11 @@ public class Delivery {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    private String label;
     private Double estimateTime;
-
-    @Column
     private Double price;
 
-    @OneToOne(mappedBy = "delivery")
-    private Order order;
+    @OneToMany(mappedBy = "delivery", cascade = CascadeType.MERGE, orphanRemoval = true)
+    @JsonIgnore
+    private List<Order> orders;
 }

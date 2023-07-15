@@ -1,18 +1,38 @@
-import * as React from 'react';
-import {DishCard, HeaderTitle} from "Frontend/common/index.js";
+import * as React from "react";
+import {
+  ComponentLoader,
+  DishCard,
+  HeaderTitle,
+} from "Frontend/common/index.js";
+import useFetch from "Frontend/utils/hooks/index.js";
+import Meal from "Frontend/generated/com/lpw/getfed/models/Meal.js";
+import { MealEndpoint } from "Frontend/generated/endpoints.js";
+import Error from "Frontend/common/error/error.js";
 
 export function SpecialDishes() {
-    return (
-        <div className="py-[2.361vw]">
-            <HeaderTitle title="Our Special dishes" />
-            <div className="grid grid-cols-3 gap-[20px]">
-                <DishCard id={1} img="https://i.imgur.com/OJ6nb6i.png" title="Special Dish" description="<p>This text should me a very long description that shouldn’t fit here so ...  </p>" rating={5} price={47} />
-                <DishCard id={1} img="https://i.imgur.com/OJ6nb6i.png" title="Special Dish" description="<p>This text should me a very long description that shouldn’t fit here so ...  </p>" rating={5} price={47} />
-                <DishCard id={1} img="https://i.imgur.com/OJ6nb6i.png" title="Special Dish" description="<p>This text should me a very long description that shouldn’t fit here so ...  </p>" rating={5} price={47} />
-                <DishCard id={1} img="https://i.imgur.com/OJ6nb6i.png" title="Special Dish" description="<p>This text should me a very long description that shouldn’t fit here so ...  </p>" rating={5} price={47} />
-                <DishCard id={1} img="https://i.imgur.com/OJ6nb6i.png" title="Special Dish" description="<p>This text should me a very long description that shouldn’t fit here so ...  </p>" rating={5} price={47} />
-                <DishCard id={1} img="https://i.imgur.com/OJ6nb6i.png" title="Special Dish" description="<p>This text should me a very long description that shouldn’t fit here so ...  </p>" rating={5} price={47} />
-            </div>
-        </div>
-    );
-};
+  const { data, loading, error } = useFetch<Meal[]>(async () => {
+    return await MealEndpoint.getMeals(0, 9).then((res) => res);
+  }, []);
+
+  if (loading) return <ComponentLoader />;
+  if (error) return <Error />;
+
+  return (
+    <div className="py-[2.361vw]">
+      <HeaderTitle title="Our Special dishes" />
+      <div className="grid grid-cols-3 gap-[20px]">
+        {data?.map((meal) => (
+          <DishCard
+            key={`meal-item-${meal.id}`}
+            id={meal.id || 0}
+            img={meal.image || ""}
+            title={meal.title || ""}
+            description={meal.description || ""}
+            rating={meal.rating || 0}
+            price={meal.price || 0}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

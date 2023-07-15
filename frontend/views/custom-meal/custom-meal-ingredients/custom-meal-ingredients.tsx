@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import useFetch from "Frontend/utils/hooks/use-fetch.js";
 import {
   CategoryEndpoint,
@@ -6,7 +7,6 @@ import {
   MealEndpoint,
 } from "Frontend/generated/endpoints.js";
 import SubCategory from "Frontend/generated/com/lpw/getfed/models/SubCategory.js";
-import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   Alert,
@@ -19,6 +19,7 @@ import { IngrediantCard } from "Frontend/common/ingredient-card/ingredient-card.
 import { PackSelector } from "Frontend/common/form-fields/index.js";
 import { useForm } from "react-hook-form";
 import { useCartStore } from "Frontend/stores/cart-store.js";
+import Error from "Frontend/common/error/error.js";
 
 export default function CustomMealIngredients() {
   const [subCategory, setSubCategory] = useState<SubCategory>({});
@@ -28,50 +29,48 @@ export default function CustomMealIngredients() {
   const { subCategoryId } = useParams();
   const { control, handleSubmit } = useForm<{ ingredients: Ingredient[] }>();
   const { addMeal } = useCartStore();
-  const navigete = useNavigate();
+  const navigate = useNavigate();
 
   const { data, error, loading, isFetching } = useFetch<
     Ingredient[]
   >(async () => {
-    setSaveLoading(true);
     CategoryEndpoint.getSubCategoryById(parseInt(subCategoryId || "1")).then(
       // @ts-ignore
-      (res) => setSubCategory(res?.body)
+      (res) => setSubCategory(res)
     );
 
-    const res = await IngredientEndpoint.getIngredientBySubCategory(
+    return await IngredientEndpoint.getIngredientBySubCategory(
       parseInt(subCategoryId || "1"),
       0,
       12
     );
-    return res?.body;
   }, [subCategoryId]);
 
   const onSubmit = (formData: { ingredients: Ingredient[] }) => {
+    setSaveLoading(true);
     let price = subCategory.price;
     // @ts-ignore
     const ingredients: Ingredient[] = formData?.ingredients?.map((item) => {
       // @ts-ignore
       price += item.price || 0;
-      return IngredientEndpoint.addIngrediant(item).then((res) => res?.body);
+      return IngredientEndpoint.addIngrediant(item).then((res) => res);
     });
 
     MealEndpoint.addMeal({
       custom: true,
       title: subCategory.label,
-      ingredients: ingredients,
       price: price,
       image: subCategory.image,
       description: subCategory.description,
     })
       .then((res) =>
         // @ts-ignore
-        addMeal(res?.body)
+        addMeal(res)
       )
       .then(() => setSaveLoading(false));
 
     setOpen(true);
-    setTimeout(() => navigete("/menu"), 3000);
+    setTimeout(() => navigate("/menu"), 3000);
   };
 
   const tabs = data?.map((item) => ({
@@ -87,8 +86,8 @@ export default function CustomMealIngredients() {
     ),
   }));
 
-  if (loading || isFetching) return <Loading />;
-  if (error) return <div>error</div>;
+  if (loading || isFetching || saveLoading) return <Loading />;
+  if (error) return <Error />;
 
   return (
     <div className="py-12 flex gap-2 ">

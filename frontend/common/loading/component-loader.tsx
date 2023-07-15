@@ -8,7 +8,9 @@ type Props = {
 export function ComponentLoader({ className }: Props) {
   return (
     <div
-      className={ClassNames("w-full h-full text-main flex justify-center my-6")}
+      className={ClassNames(
+        "bg-background w-full h-full text-main flex justify-center py-6"
+      )}
     >
       <PacmanLoader color="#FF385C" />
     </div>

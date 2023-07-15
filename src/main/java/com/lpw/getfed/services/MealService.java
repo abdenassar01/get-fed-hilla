@@ -14,14 +14,14 @@ import java.util.Map;
 @Qualifier("meal_service")
 public interface MealService {
 
-    ResponseEntity<Meal> addMeal(Meal meal);
-    ResponseEntity<Meal> getMealById(Long id);
-    ResponseEntity<Page<Meal>> getMeals(Pageable pageable);
-    ResponseEntity<Meal> removeMealById(Long id);
-    ResponseEntity<String> removeMeal(Meal meal);
-    ResponseEntity<Meal> updateMeal(Long id, Meal meal);
-    ResponseEntity<Page<Meal>> getMealByCategory(Long categoryId, Pageable pageable);
-    ResponseEntity<List<Meal>> searchMeal(String query);
+    Meal addMeal(Meal meal);
+    Meal getMealById(Long id);
+    Page<Meal> getMeals(Pageable pageable);
+    Meal removeMealById(Long id);
+    String removeMeal(Meal meal);
+    Meal updateMeal(Long id, Meal meal);
+    Page<Meal> getMealByCategory(Long categoryId, Pageable pageable);
+    List<Meal> searchMeal(String query);
     Map<String, Object> countAll();
     Map<String, Object> countAllByCustom();
     Map<String, Object> countAllByCategory(Long categoryId);

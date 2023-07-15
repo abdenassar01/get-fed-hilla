@@ -9,7 +9,7 @@ export const IngrediantCard = ({ id, label, price, image }: Ingredient) => {
         alt={label}
         className="w-[7vw] aspect-square rounded-full"
       />
-      <div className="">{label}</div>
+      <div className="text-center">{label}</div>
       <div className="flex w-full justify-end">
         <div className="font-bold text-main">{price} Mad</div>
       </div>

@@ -2,13 +2,10 @@ import * as React from "react";
 import { Services, SpecialDishes } from "Frontend/views/home/sections/index.js";
 import img from "../../assets/images/hero-section-blob.svg";
 import { Button } from "Frontend/common/index.js";
-import { useUserStore } from "Frontend/stores/user-store.js";
 
 export function Home() {
-  const { user } = useUserStore();
-
   return (
-    <main className="bg-background bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-contain overflow-x-hidden">
+    <main className="bg-background bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-cover overflow-x-hidden">
       <div className="container flex flex-col gap-[2.361vw] items-center">
         <div className="flex items-center justify-between">
           <div className="w-[45vw] flex flex-col gap-[24px]">

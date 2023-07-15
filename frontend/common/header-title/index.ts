@@ -1,1 +1,1 @@
-export {HeaderTitle} from "./header-title"
+export { HeaderTitle } from "./header-title.js";

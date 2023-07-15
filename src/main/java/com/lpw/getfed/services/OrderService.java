@@ -12,14 +12,14 @@ import java.util.Map;
 @Qualifier("order_service")
 public interface OrderService {
 
-    ResponseEntity<Page<Order>> getRestorantOrders(Pageable pageable);
-//    ResponseEntity<Page<Order>> getOrdersServedByEmployee(Employee employee, Pageable pageable);
-    ResponseEntity<Order> getOrderById(Long id);
-    ResponseEntity<Order> createOrder(Order order);
-    ResponseEntity<String> deleteOrder(Order order);
-    ResponseEntity<Order> deleteOrderById(Long id);
-    ResponseEntity<Order> updateOrder(Long id, Order order);
-    ResponseEntity<Page<Order>> getOrdersByDelivery(Delivery delivery, Pageable page);
+    Page<Order> getRestorantOrders(Pageable pageable);
+//    Page<Order> getOrdersServedByEmployee(Employee employee, Pageable pageable);
+    Order getOrderById(Long id);
+    Order createOrder(Order order);
+    String deleteOrder(Order order);
+    Order deleteOrderById(Long id);
+    Order updateOrder(Long id, Order order);
+    Page<Order> getOrdersByDelivery(Delivery delivery, Pageable page);
     Map<String, Object> countAll();
 
 }

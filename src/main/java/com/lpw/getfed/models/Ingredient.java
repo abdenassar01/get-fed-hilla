@@ -14,8 +14,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Ingredient {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

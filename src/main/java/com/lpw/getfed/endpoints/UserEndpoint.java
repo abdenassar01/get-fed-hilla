@@ -25,32 +25,32 @@ public class UserEndpoint {
         this.service = service;
     }
 
-    public ResponseEntity<User> addEmployee(User employee){
+    public User addEmployee(User employee){
         logger.info("adding new employee: " + employee.getUsername());
         return service.addEmployee(employee);
     }
 
-    public ResponseEntity<String> removeEmployee(User employee){
+    public String removeEmployee(User employee){
         logger.warn("deleting employee " + employee.getUsername());
         return service.removeEmployee(employee);
     }
 
-    public ResponseEntity<User> removeEmployeeById(Long id){
+    public User removeEmployeeById(Long id){
         logger.warn("deleting employee: " + id);
         return service.removeEmployeeById(id);
     }
 
-    public ResponseEntity<User> updateEmployee(User employee, Long id){
+    public User updateEmployee(User employee, Long id){
         logger.info("updating employee " + id + " details");
         return service.updateEmployee(employee, id);
     }
 
-    public ResponseEntity<Page<User>> getPageUsers(int page){
+    public Page<User> getPageUsers(int page){
         logger.info("getting page " + page + " of employees");
         return service.getPageEmployees(PageRequest.of(page, 10));
     }
 
-    public ResponseEntity<User> getUserByUsername(String username){
+    public User getUserByUsername(String username){
         logger.info("getting user: " + username);
         return service.getUserByUsername(username);
     }
