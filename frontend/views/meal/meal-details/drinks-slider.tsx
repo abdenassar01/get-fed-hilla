@@ -31,7 +31,7 @@ export function DrinksSlider({ number }: Props) {
         to="/drink"
         className="text-mainText font-bold hover:no-underline  "
       >
-        <div className="shadow-1 border-[1px] items-center border-[#F4F4F4] h-[10vw] w-[10vw] rounded-[8px] flex justify-between px-4 hover:bg-main hover:text-white">
+        <div className="shadow-1 border-[1px] items-center min-w-[30vw] border-[#F4F4F4] h-[10vw] rounded-[8px] flex justify-center px-4 hover:bg-main hover:text-white">
           <div className="text-xl">More Drinks</div>
         </div>
       </Link>

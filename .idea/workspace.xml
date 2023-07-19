@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix (update/add) meal">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/update-meal/update-meal.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="setting up routing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/loading/component-loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/long-text/long-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/long-text/long-text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/dashboard/dashboard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/meals-management/add-meal/add-meal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal-details/drinks-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal-details/drinks-slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/meal/meal-details/meal-details.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/meal/meal-details/meal-details.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/menu/menu-layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,21 +243,7 @@
       <workItem from="1689343364213" duration="23000" />
       <workItem from="1689355693210" duration="5081000" />
       <workItem from="1689772537515" duration="239000" />
-      <workItem from="1689780701196" duration="1093000" />
-    </task>
-    <task id="LOCAL-00082" summary="adding orders table">
-      <created>1689119681131</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1689119681131</updated>
-    </task>
-    <task id="LOCAL-00083" summary="removing relation between meal and ingredient">
-      <created>1689164914424</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1689164914425</updated>
+      <workItem from="1689780701196" duration="4995000" />
     </task>
     <task id="LOCAL-00084" summary="prevent too many rerender">
       <created>1689167604634</created>
@@ -582,7 +574,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689781587582</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="fix meals and subcategory">
+      <created>1689781939120</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1689781939120</updated>
+    </task>
+    <task id="LOCAL-00132" summary="setting up routing">
+      <created>1689782176278</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1689782176278</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,8 +607,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update header" />
-    <MESSAGE value="adding checkout empty page and fix rerender issue" />
     <MESSAGE value="fix adding drink (qte error)" />
     <MESSAGE value="extract drink and meal cards in cart to separate components" />
     <MESSAGE value="adding the checkout form and design fixes" />
@@ -626,7 +630,9 @@
     <MESSAGE value="refactoring frontend to match" />
     <MESSAGE value="fix add drink id undefined" />
     <MESSAGE value="fix (update/add) meal" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix (update/add) meal" />
+    <MESSAGE value="fix meals and subcategory" />
+    <MESSAGE value="setting up routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting up routing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

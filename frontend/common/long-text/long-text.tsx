@@ -37,7 +37,10 @@ export function LongText({
     <div>
       <RichTextParser
         text={displayedText}
-        className={ClassNames("text-xs prose-p:text-xs", className || "")}
+        className={ClassNames(
+          "text-xs prose-p:text-xs !bg-[transparent]",
+          className || ""
+        )}
       />
       {showBtnText && (
         <button

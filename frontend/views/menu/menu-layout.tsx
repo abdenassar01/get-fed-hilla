@@ -34,10 +34,10 @@ export default function MenuLayout() {
   if (loading) return <div>loading...</div>;
   if (error) return <div>error</div>;
   return (
-    <div className="py-[3.819vw] bg-background">
+    <div className="py-[3.819vw] bg-background min-h-[70vh]">
       <div className="container flex flex-col items-center">
         <HeaderTitle title="Menu" />
-        <div className="mt-[1.5vw] flex gap-[24px]">
+        <div className="mt-[1.5vw] flex gap-[24px] w-[70vw] overflow-scroll no-scrollbar">
           {data &&
             data.map((category) => (
               <Link
@@ -45,7 +45,7 @@ export default function MenuLayout() {
                 onClick={() => setCurrentCategory(category.id)}
                 to={`/menu/${category.id}`}
                 className={ClassNames(
-                  "px-[32px] py-[7px] gap-[10px] font-bold w-[11.389vw] text-main flex justify-center items-center rounded-[50px] border-[1px] border-main hover:text-white hover:bg-main",
+                  "px-[32px] py-[7px] gap-[10px] min-w-[10vw] font-bold w-[11.389vw] text-main flex justify-center items-center rounded-[50px] border-[1px] border-main hover:text-white hover:bg-main",
                   currentCategory === category.id ? "text-white bg-main" : ""
                 )}
               >

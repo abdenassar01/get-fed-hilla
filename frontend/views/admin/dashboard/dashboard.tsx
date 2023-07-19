@@ -48,7 +48,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] sm:p-0">
+    <div className="flex w-full flex-col gap-[32px] rounded-[8px] bg-white p-[2.222vw] min-h-[70vh] sm:p-0">
       <div className="text-xbase font-bold text-cardText sm:text-[5.340vw]">
         Dashboard
       </div>

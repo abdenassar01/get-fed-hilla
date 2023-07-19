@@ -28,13 +28,13 @@ export default function MealDetails() {
   if (error) return <Alert message="error accured" status="error" />;
 
   return (
-    <div>
+    <div className="bg-background">
       <div className="container flex flex-col gap-12">
         <HeaderTitle title={data?.title || ""} />
-        <div className="flex gap-12">
+        <div className="flex gap-5">
           <div
             style={{ backgroundImage: `url('${data?.image}')` }}
-            className={`bg-contain bg-no-repeat w-[30vw] h-[30vw] rounded-md`}
+            className={`bg-cover bg-no-repeat w-[30vw] h-[30vw] rounded-md`}
           />
           <div className="flex">
             <div className="">
