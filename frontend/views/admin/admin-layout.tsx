@@ -46,7 +46,7 @@ function AdminLayout() {
   }, [authenticated]);
 
   return (
-    <div className="bg-background py-4">
+    <div className="bg-background py-4 min-h-[50vw]">
       <div className="container flex sm:flex-col">
         <div className="w-[19.444vw] sm:w-[100%]">
           <ul className="mt-[30px] sm:no-scrollbar w-full sm:flex sm:gap-[24px] sm:overflow-y-scroll">

@@ -96,7 +96,7 @@ export default function CustomMealIngredients() {
         status="success"
         open={open}
       />
-      <div className="w-[24vw] rounded-[8px] shadow">
+      <div className="w-[24vw] ">
         <div
           style={{ backgroundImage: `url('${subCategory.image}')` }}
           className="w-full bg-white rounded-[8px] aspect-square bg-no-repeat bg-cover bg-center"
