@@ -28,6 +28,6 @@ public class SubCategory {
     private Double price;
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.MERGE)
     private List<Ingredient> ingredients;
 }

@@ -27,7 +27,7 @@ public class Ingredient {
 ////    @JoinColumn(name = "meal_id", referencedColumnName = "id")
 //    private Meal meal;
 
-    @ManyToOne
+    @ManyToMany
 //    @JsonIdentityReference(alwaysAsId = true)
     @JoinColumn(name = "sub_category_id", referencedColumnName = "id")
     private SubCategory subCategory;
