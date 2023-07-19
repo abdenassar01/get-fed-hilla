@@ -2,7 +2,6 @@ import * as React from "react";
 import { Services, SpecialDishes } from "Frontend/views/home/sections/index.js";
 import img from "../../assets/images/hero-section-blob.svg";
 import { Button } from "Frontend/common/index.js";
-
 export function Home() {
   return (
     <main className="bg-background bg-[url('https://i.imgur.com/o1oOjuM.png')] w-full bg-no-repeat bg-cover overflow-x-hidden">
