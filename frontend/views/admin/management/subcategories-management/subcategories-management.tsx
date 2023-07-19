@@ -2,19 +2,14 @@ import * as React from "react";
 import { Outlet } from "react-router-dom";
 import { NoStyleLink } from "Frontend/common/no-style-link/no-style-link.js";
 import useFetch from "Frontend/utils/hooks/index.js";
-import {
-  CategoryEndpoint,
-  MealEndpoint,
-} from "Frontend/generated/endpoints.js";
+import { CategoryEndpoint } from "Frontend/generated/endpoints.js";
 import { Alert, ComponentLoader } from "Frontend/common/index.js";
-import Error from "Frontend/common/error/error.js";
 import SubCategory from "Frontend/generated/com/lpw/getfed/models/SubCategory.js";
 import { SubcategoryDataTable } from "Frontend/common/tables/subcategory-data-table.js";
 
 export default function SubCategoriesManagement() {
   const { data, loading, error } = useFetch<SubCategory[]>(async () => {
-    const res = await CategoryEndpoint.getSubCategories();
-    return res;
+    return await CategoryEndpoint.getSubCategories();
   }, []);
 
   const header = ["title", "label", "description", "price", "#"];

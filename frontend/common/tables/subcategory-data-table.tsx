@@ -66,7 +66,7 @@ export function SubcategoryDataTable({ header, data }: Props) {
               <button
                 className="text-main"
                 onClick={() =>
-                  navigate("/admin/managements/subcategories/new", {
+                  navigate("/admin/managements/subcategories/update", {
                     state: { id: row.id },
                   })
                 }

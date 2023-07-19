@@ -63,7 +63,7 @@ export function DataTable({ header, data }: Props) {
               <button
                 className="text-main"
                 onClick={() =>
-                  navigate("/admin/managements/meals/new", {
+                  navigate("/admin/managements/meals/update", {
                     state: { id: row.id },
                   })
                 }
