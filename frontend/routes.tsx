@@ -44,6 +44,12 @@ const AddMeal = lazy(
       "Frontend/views/admin/management/meals-management/add-meal/add-meal.js"
     )
 );
+const UpdateMeal = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/meals-management/update-meal/update-meal.js"
+    )
+);
 const DrinksManagement = lazy(
   async () =>
     import(
@@ -54,6 +60,12 @@ const AddDrink = lazy(
   async () =>
     import(
       "Frontend/views/admin/management/drinks-management/add-drink/add-drink.js"
+    )
+);
+const UpdateDrink = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/drinks-management/update-drink/update-drink.js"
     )
 );
 const SubCategoriesManagement = lazy(
@@ -68,6 +80,12 @@ const AddSubcategory = lazy(
       "Frontend/views/admin/management/subcategories-management/add-subcategory/add-subcategory.js"
     )
 );
+const UpdateSubcategory = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/subcategories-management/update-subcategory/update-subcategory.js"
+    )
+);
 const IngredientsManagement = lazy(
   async () =>
     import(
@@ -78,6 +96,12 @@ const AddIngredient = lazy(
   async () =>
     import(
       "Frontend/views/admin/management/ingredients-management/add-ingredient/add-ingredient.js"
+    )
+);
+const UpdateIngredient = lazy(
+  async () =>
+    import(
+      "Frontend/views/admin/management/ingredients-management/update-ingredient/update-ingredient.js"
     )
 );
 const Dashboard = lazy(
@@ -187,6 +211,10 @@ export const routes: readonly ViewRouteObject[] = [
                     path: "/admin/managements/meals/new",
                     element: <AddMeal />,
                   },
+                  {
+                    path: "/admin/managements/meals/update",
+                    element: <UpdateMeal />,
+                  },
                 ],
               },
               {
@@ -196,6 +224,10 @@ export const routes: readonly ViewRouteObject[] = [
                   {
                     path: "/admin/managements/drinks/new",
                     element: <AddDrink />,
+                  },
+                  {
+                    path: "/admin/managements/drinks/update",
+                    element: <UpdateDrink />,
                   },
                 ],
               },
@@ -207,6 +239,10 @@ export const routes: readonly ViewRouteObject[] = [
                     path: "/admin/managements/subcategories/new",
                     element: <AddSubcategory />,
                   },
+                  {
+                    path: "/admin/managements/subcategories/update",
+                    element: <UpdateSubcategory />,
+                  },
                 ],
               },
               {
@@ -216,6 +252,10 @@ export const routes: readonly ViewRouteObject[] = [
                   {
                     path: "/admin/managements/ingredients/new",
                     element: <AddIngredient />,
+                  },
+                  {
+                    path: "/admin/managements/ingredients/update",
+                    element: <UpdateIngredient />,
                   },
                 ],
               },
