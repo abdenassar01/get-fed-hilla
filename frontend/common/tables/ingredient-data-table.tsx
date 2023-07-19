@@ -49,7 +49,7 @@ export function IngredientDataTable({ header, data }: Props) {
               <button
                 className="text-main"
                 onClick={() =>
-                  navigate("/admin/managements/ingredients/new", {
+                  navigate("/admin/managements/ingredients/update", {
                     state: { id: row.id },
                   })
                 }

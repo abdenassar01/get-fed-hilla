@@ -54,7 +54,7 @@ export function DrinkDataTable({ header, data }: Props) {
               <button
                 className="text-main"
                 onClick={() =>
-                  navigate("/admin/managements/drinks/new", {
+                  navigate("/admin/managements/drinks/update", {
                     state: { id: row.id },
                   })
                 }

@@ -3,27 +3,34 @@ import {
   TextInput,
   UploadFile,
 } from "Frontend/common/form-fields/index.js";
-import { Button, ComponentLoader } from "Frontend/common/index.js";
+import { Alert, Button, ComponentLoader } from "Frontend/common/index.js";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   CategoryEndpoint,
+  DrinkEndpoint,
   IngredientEndpoint,
 } from "Frontend/generated/endpoints.js";
 import Category from "Frontend/generated/com/lpw/getfed/models/Category.js";
 import { useUploadImage } from "Frontend/utils/hooks/use-upload-image.js";
+import useFetch from "Frontend/utils/hooks/index.js";
+import Ingredient from "Frontend/generated/com/lpw/getfed/models/Ingredient.js";
 
 export default function AddIngredient() {
   const [subCategories, setSubCategories] = useState([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [saveLoading, setSaveLoading] = useState<boolean>(false);
   const { control, handleSubmit } = useForm();
   const navigate = useNavigate();
 
+  const {
+    state: { id },
+  } = useLocation();
+
   useEffect(() => {
     async function getData() {
-      setLoading(true);
+      setSaveLoading(true);
       const result = await CategoryEndpoint.getSubCategories().then(
         (res) => res
       );
@@ -34,28 +41,39 @@ export default function AddIngredient() {
           label: item.label,
         }))
       );
-      setLoading(false);
+      setSaveLoading(false);
     }
     getData();
   }, []);
 
-  const onSubmit = async (data: any) => {
-    setLoading(true);
-    const image = await useUploadImage(data.image).then((res) => res);
+  const { data, loading, error } = useFetch<Ingredient>(async () => {
+    return await IngredientEndpoint.getIngrediantById(id).then((res) => res);
+  }, [id]);
+
+  const onSubmit = async (formdata: any) => {
+    setSaveLoading(true);
+    const image = formdata?.image
+      ? await useUploadImage(formdata.image).then((res) => res)
+      : data?.image || "";
     IngredientEndpoint.addIngrediant({
-      label: data.label,
+      id: id || undefined,
+      label: formdata.label || data?.label,
       image,
-      price: data.price,
+      price: formdata.price || data?.price,
       subCategory: {
-        id: data.subcategory.value,
+        id: formdata.subcategory.value || data?.subCategory?.id,
       },
     }).then((res) => {
-      setLoading(false);
+      setSaveLoading(false);
       navigate("/admin/managements/ingredients");
     });
   };
 
-  if (loading) return <ComponentLoader />;
+  if (loading || saveLoading) return <ComponentLoader />;
+  if (error)
+    return (
+      <Alert message={`can't find ingredient with id: ${id}`} status="error" />
+    );
 
   return (
     <div>
@@ -63,6 +81,7 @@ export default function AddIngredient() {
         <form className="py-10">
           <div className="flex gap-2">
             <TextInput
+              defaultValue={data?.label}
               label="Label"
               className=""
               inputClassName="bg-background"
@@ -83,12 +102,14 @@ export default function AddIngredient() {
           </div>
           <div className="flex gap-2">
             <DropdownField
+              defaultValue={data?.subCategory?.label}
               control={control}
               label="Sub category"
               name="subcategory"
               items={subCategories}
             />
             <TextInput
+              defaultValue={data?.price}
               type="number"
               label="Price"
               className=""
@@ -100,7 +121,7 @@ export default function AddIngredient() {
           <div className="flex gap-2 items-center">
             <Button
               text="save ingredient"
-              className="rounded-[8px] w-full py-[11px] h-fit"
+              className="rounded-[8px]  py-[11px] h-fit"
               onClick={handleSubmit(onSubmit)}
             />
           </div>

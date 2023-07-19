@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="refactoring frontend to match">
-      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/update-drink/update-drink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/admin/management/drinks-management/add-drink/add-drink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/views/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/views/home/home.tsx" afterDir="false" />
+    <list default="true" id="e5e40cdf-b84c-4bac-8609-e70900b6547e" name="Changes" comment="fix add drink id undefined">
+      <change afterPath="$PROJECT_DIR$/frontend/views/admin/management/ingredients-management/update-ingredient/update-ingredient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/common/tables/drink-data-table.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,14 +237,7 @@
       <workItem from="1689343364213" duration="23000" />
       <workItem from="1689355693210" duration="5081000" />
       <workItem from="1689772537515" duration="239000" />
-      <workItem from="1689780701196" duration="328000" />
-    </task>
-    <task id="LOCAL-00080" summary="fixing count endpoint">
-      <created>1689100755324</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1689100755324</updated>
+      <workItem from="1689780701196" duration="783000" />
     </task>
     <task id="LOCAL-00081" summary="fix header drop down appearance">
       <created>1689116395295</created>
@@ -584,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689359570935</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="fix add drink id undefined">
+      <created>1689781412180</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1689781412181</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add ingredients management page to show ingredients data" />
     <MESSAGE value="implementing adding ingredient functionality" />
     <MESSAGE value="update header" />
     <MESSAGE value="adding checkout empty page and fix rerender issue" />
@@ -628,7 +625,8 @@
     <MESSAGE value="adding the update sub category functionality" />
     <MESSAGE value="refactoring backend [remove response entity from return value]" />
     <MESSAGE value="refactoring frontend to match" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring frontend to match" />
+    <MESSAGE value="fix add drink id undefined" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix add drink id undefined" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
